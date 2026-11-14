@@ -1,0 +1,698 @@
+{
+  "summary": {
+    "objective_value": 51.0,
+    "misroute_cost": 39.0,
+    "maintenance_cost": 12,
+    "n_rules": 4,
+    "default_queue": "general",
+    "n_default_routed": 2,
+    "n_error_cases": 10
+  },
+  "rules": [
+    {
+      "position": 0,
+      "predicate": {
+        "id": "not_technical",
+        "field": "technical",
+        "op": "eq",
+        "value": 0
+      },
+      "queue": "billing",
+      "first_hit_cases": [
+        {
+          "case_id": "case-02",
+          "target": "billing",
+          "weight": 2
+        },
+        {
+          "case_id": "case-04",
+          "target": "general",
+          "assigned_queue": "billing",
+          "weight": 1,
+          "unit_cost": 2,
+          "error_cost": 2
+        },
+        {
+          "case_id": "case-07",
+          "target": "billing",
+          "weight": 1
+        },
+        {
+          "case_id": "case-11",
+          "target": "general",
+          "assigned_queue": "billing",
+          "weight": 2,
+          "unit_cost": 2,
+          "error_cost": 4
+        },
+        {
+          "case_id": "case-16",
+          "target": "general",
+          "assigned_queue": "billing",
+          "weight": 1,
+          "unit_cost": 2,
+          "error_cost": 2
+        },
+        {
+          "case_id": "case-18",
+          "target": "billing",
+          "weight": 3
+        },
+        {
+          "case_id": "case-19",
+          "target": "billing",
+          "weight": 1
+        },
+        {
+          "case_id": "case-20",
+          "target": "general",
+          "assigned_queue": "billing",
+          "weight": 2,
+          "unit_cost": 2,
+          "error_cost": 4
+        },
+        {
+          "case_id": "case-22",
+          "target": "general",
+          "assigned_queue": "billing",
+          "weight": 1,
+          "unit_cost": 2,
+          "error_cost": 2
+        },
+        {
+          "case_id": "case-23",
+          "target": "general",
+          "assigned_queue": "billing",
+          "weight": 2,
+          "unit_cost": 2,
+          "error_cost": 4
+        },
+        {
+          "case_id": "case-26",
+          "target": "billing",
+          "weight": 2
+        },
+        {
+          "case_id": "case-29",
+          "target": "general",
+          "assigned_queue": "billing",
+          "weight": 2,
+          "unit_cost": 2,
+          "error_cost": 4
+        },
+        {
+          "case_id": "case-30",
+          "target": "general",
+          "assigned_queue": "billing",
+          "weight": 3,
+          "unit_cost": 2,
+          "error_cost": 6
+        },
+        {
+          "case_id": "case-31",
+          "target": "billing",
+          "weight": 1
+        },
+        {
+          "case_id": "case-32",
+          "target": "billing",
+          "weight": 2
+        },
+        {
+          "case_id": "case-33",
+          "target": "billing",
+          "weight": 3
+        },
+        {
+          "case_id": "case-34",
+          "target": "general",
+          "assigned_queue": "billing",
+          "weight": 1,
+          "unit_cost": 2,
+          "error_cost": 2
+        },
+        {
+          "case_id": "case-37",
+          "target": "billing",
+          "weight": 1
+        },
+        {
+          "case_id": "case-38",
+          "target": "billing",
+          "weight": 2
+        }
+      ],
+      "shadowed_cases": [],
+      "rule_error_cost": 30
+    },
+    {
+      "position": 1,
+      "predicate": {
+        "id": "has_attachment",
+        "field": "attachments",
+        "op": "ge",
+        "value": 1
+      },
+      "queue": "specialist",
+      "first_hit_cases": [
+        {
+          "case_id": "case-01",
+          "target": "specialist",
+          "weight": 1
+        },
+        {
+          "case_id": "case-05",
+          "target": "specialist",
+          "weight": 2
+        },
+        {
+          "case_id": "case-06",
+          "target": "specialist",
+          "weight": 3
+        },
+        {
+          "case_id": "case-09",
+          "target": "specialist",
+          "weight": 3
+        },
+        {
+          "case_id": "case-12",
+          "target": "specialist",
+          "weight": 3
+        },
+        {
+          "case_id": "case-13",
+          "target": "specialist",
+          "weight": 1
+        },
+        {
+          "case_id": "case-14",
+          "target": "specialist",
+          "weight": 2
+        },
+        {
+          "case_id": "case-15",
+          "target": "specialist",
+          "weight": 3
+        },
+        {
+          "case_id": "case-21",
+          "target": "specialist",
+          "weight": 3
+        },
+        {
+          "case_id": "case-24",
+          "target": "general",
+          "assigned_queue": "specialist",
+          "weight": 3,
+          "unit_cost": 3,
+          "error_cost": 9
+        },
+        {
+          "case_id": "case-25",
+          "target": "specialist",
+          "weight": 1
+        },
+        {
+          "case_id": "case-28",
+          "target": "specialist",
+          "weight": 1
+        },
+        {
+          "case_id": "case-35",
+          "target": "specialist",
+          "weight": 2
+        },
+        {
+          "case_id": "case-36",
+          "target": "specialist",
+          "weight": 3
+        },
+        {
+          "case_id": "case-39",
+          "target": "specialist",
+          "weight": 3
+        },
+        {
+          "case_id": "case-40",
+          "target": "specialist",
+          "weight": 1
+        }
+      ],
+      "shadowed_cases": [
+        {
+          "case_id": "case-02",
+          "target": "billing",
+          "captured_by_position": 0,
+          "captured_by_predicate": "not_technical",
+          "assigned_queue": "billing"
+        },
+        {
+          "case_id": "case-04",
+          "target": "general",
+          "captured_by_position": 0,
+          "captured_by_predicate": "not_technical",
+          "assigned_queue": "billing"
+        },
+        {
+          "case_id": "case-07",
+          "target": "billing",
+          "captured_by_position": 0,
+          "captured_by_predicate": "not_technical",
+          "assigned_queue": "billing"
+        },
+        {
+          "case_id": "case-16",
+          "target": "general",
+          "captured_by_position": 0,
+          "captured_by_predicate": "not_technical",
+          "assigned_queue": "billing"
+        },
+        {
+          "case_id": "case-18",
+          "target": "billing",
+          "captured_by_position": 0,
+          "captured_by_predicate": "not_technical",
+          "assigned_queue": "billing"
+        },
+        {
+          "case_id": "case-19",
+          "target": "billing",
+          "captured_by_position": 0,
+          "captured_by_predicate": "not_technical",
+          "assigned_queue": "billing"
+        },
+        {
+          "case_id": "case-20",
+          "target": "general",
+          "captured_by_position": 0,
+          "captured_by_predicate": "not_technical",
+          "assigned_queue": "billing"
+        },
+        {
+          "case_id": "case-22",
+          "target": "general",
+          "captured_by_position": 0,
+          "captured_by_predicate": "not_technical",
+          "assigned_queue": "billing"
+        },
+        {
+          "case_id": "case-23",
+          "target": "general",
+          "captured_by_position": 0,
+          "captured_by_predicate": "not_technical",
+          "assigned_queue": "billing"
+        },
+        {
+          "case_id": "case-26",
+          "target": "billing",
+          "captured_by_position": 0,
+          "captured_by_predicate": "not_technical",
+          "assigned_queue": "billing"
+        },
+        {
+          "case_id": "case-29",
+          "target": "general",
+          "captured_by_position": 0,
+          "captured_by_predicate": "not_technical",
+          "assigned_queue": "billing"
+        },
+        {
+          "case_id": "case-30",
+          "target": "general",
+          "captured_by_position": 0,
+          "captured_by_predicate": "not_technical",
+          "assigned_queue": "billing"
+        },
+        {
+          "case_id": "case-31",
+          "target": "billing",
+          "captured_by_position": 0,
+          "captured_by_predicate": "not_technical",
+          "assigned_queue": "billing"
+        },
+        {
+          "case_id": "case-32",
+          "target": "billing",
+          "captured_by_position": 0,
+          "captured_by_predicate": "not_technical",
+          "assigned_queue": "billing"
+        },
+        {
+          "case_id": "case-33",
+          "target": "billing",
+          "captured_by_position": 0,
+          "captured_by_predicate": "not_technical",
+          "assigned_queue": "billing"
+        },
+        {
+          "case_id": "case-34",
+          "target": "general",
+          "captured_by_position": 0,
+          "captured_by_predicate": "not_technical",
+          "assigned_queue": "billing"
+        },
+        {
+          "case_id": "case-37",
+          "target": "billing",
+          "captured_by_position": 0,
+          "captured_by_predicate": "not_technical",
+          "assigned_queue": "billing"
+        },
+        {
+          "case_id": "case-38",
+          "target": "billing",
+          "captured_by_position": 0,
+          "captured_by_predicate": "not_technical",
+          "assigned_queue": "billing"
+        }
+      ],
+      "rule_error_cost": 9
+    },
+    {
+      "position": 2,
+      "predicate": {
+        "id": "vip",
+        "field": "vip",
+        "op": "eq",
+        "value": 1
+      },
+      "queue": "general",
+      "first_hit_cases": [
+        {
+          "case_id": "case-03",
+          "target": "general",
+          "weight": 3
+        },
+        {
+          "case_id": "case-17",
+          "target": "general",
+          "weight": 2
+        }
+      ],
+      "shadowed_cases": [
+        {
+          "case_id": "case-11",
+          "target": "general",
+          "captured_by_position": 0,
+          "captured_by_predicate": "not_technical",
+          "assigned_queue": "billing"
+        },
+        {
+          "case_id": "case-14",
+          "target": "specialist",
+          "captured_by_position": 1,
+          "captured_by_predicate": "has_attachment",
+          "assigned_queue": "specialist"
+        },
+        {
+          "case_id": "case-28",
+          "target": "specialist",
+          "captured_by_position": 1,
+          "captured_by_predicate": "has_attachment",
+          "assigned_queue": "specialist"
+        },
+        {
+          "case_id": "case-33",
+          "target": "billing",
+          "captured_by_position": 0,
+          "captured_by_predicate": "not_technical",
+          "assigned_queue": "billing"
+        }
+      ],
+      "rule_error_cost": 0
+    },
+    {
+      "position": 3,
+      "predicate": {
+        "id": "old",
+        "field": "age_days",
+        "op": "ge",
+        "value": 4
+      },
+      "queue": "billing",
+      "first_hit_cases": [
+        {
+          "case_id": "case-08",
+          "target": "billing",
+          "weight": 2
+        }
+      ],
+      "shadowed_cases": [
+        {
+          "case_id": "case-01",
+          "target": "specialist",
+          "captured_by_position": 1,
+          "captured_by_predicate": "has_attachment",
+          "assigned_queue": "specialist"
+        },
+        {
+          "case_id": "case-04",
+          "target": "general",
+          "captured_by_position": 0,
+          "captured_by_predicate": "not_technical",
+          "assigned_queue": "billing"
+        },
+        {
+          "case_id": "case-05",
+          "target": "specialist",
+          "captured_by_position": 1,
+          "captured_by_predicate": "has_attachment",
+          "assigned_queue": "specialist"
+        },
+        {
+          "case_id": "case-07",
+          "target": "billing",
+          "captured_by_position": 0,
+          "captured_by_predicate": "not_technical",
+          "assigned_queue": "billing"
+        },
+        {
+          "case_id": "case-09",
+          "target": "specialist",
+          "captured_by_position": 1,
+          "captured_by_predicate": "has_attachment",
+          "assigned_queue": "specialist"
+        },
+        {
+          "case_id": "case-12",
+          "target": "specialist",
+          "captured_by_position": 1,
+          "captured_by_predicate": "has_attachment",
+          "assigned_queue": "specialist"
+        },
+        {
+          "case_id": "case-16",
+          "target": "general",
+          "captured_by_position": 0,
+          "captured_by_predicate": "not_technical",
+          "assigned_queue": "billing"
+        },
+        {
+          "case_id": "case-17",
+          "target": "general",
+          "captured_by_position": 2,
+          "captured_by_predicate": "vip",
+          "assigned_queue": "general"
+        },
+        {
+          "case_id": "case-19",
+          "target": "billing",
+          "captured_by_position": 0,
+          "captured_by_predicate": "not_technical",
+          "assigned_queue": "billing"
+        },
+        {
+          "case_id": "case-25",
+          "target": "specialist",
+          "captured_by_position": 1,
+          "captured_by_predicate": "has_attachment",
+          "assigned_queue": "specialist"
+        },
+        {
+          "case_id": "case-26",
+          "target": "billing",
+          "captured_by_position": 0,
+          "captured_by_predicate": "not_technical",
+          "assigned_queue": "billing"
+        },
+        {
+          "case_id": "case-28",
+          "target": "specialist",
+          "captured_by_position": 1,
+          "captured_by_predicate": "has_attachment",
+          "assigned_queue": "specialist"
+        },
+        {
+          "case_id": "case-29",
+          "target": "general",
+          "captured_by_position": 0,
+          "captured_by_predicate": "not_technical",
+          "assigned_queue": "billing"
+        },
+        {
+          "case_id": "case-31",
+          "target": "billing",
+          "captured_by_position": 0,
+          "captured_by_predicate": "not_technical",
+          "assigned_queue": "billing"
+        },
+        {
+          "case_id": "case-35",
+          "target": "specialist",
+          "captured_by_position": 1,
+          "captured_by_predicate": "has_attachment",
+          "assigned_queue": "specialist"
+        },
+        {
+          "case_id": "case-36",
+          "target": "specialist",
+          "captured_by_position": 1,
+          "captured_by_predicate": "has_attachment",
+          "assigned_queue": "specialist"
+        },
+        {
+          "case_id": "case-37",
+          "target": "billing",
+          "captured_by_position": 0,
+          "captured_by_predicate": "not_technical",
+          "assigned_queue": "billing"
+        },
+        {
+          "case_id": "case-38",
+          "target": "billing",
+          "captured_by_position": 0,
+          "captured_by_predicate": "not_technical",
+          "assigned_queue": "billing"
+        },
+        {
+          "case_id": "case-40",
+          "target": "specialist",
+          "captured_by_position": 1,
+          "captured_by_predicate": "has_attachment",
+          "assigned_queue": "specialist"
+        }
+      ],
+      "rule_error_cost": 0
+    }
+  ],
+  "default": {
+    "queue": "general",
+    "cases": [
+      {
+        "case_id": "case-10",
+        "target": "general",
+        "weight": 1
+      },
+      {
+        "case_id": "case-27",
+        "target": "general",
+        "weight": 3
+      }
+    ],
+    "error_cases": [],
+    "error_cost": 0
+  },
+  "error_cases": [
+    {
+      "case_id": "case-04",
+      "target": "general",
+      "assigned_queue": "billing",
+      "weight": 1,
+      "unit_cost": 2,
+      "error_cost": 2,
+      "hit_index": 0,
+      "predicate_id": "not_technical"
+    },
+    {
+      "case_id": "case-11",
+      "target": "general",
+      "assigned_queue": "billing",
+      "weight": 2,
+      "unit_cost": 2,
+      "error_cost": 4,
+      "hit_index": 0,
+      "predicate_id": "not_technical"
+    },
+    {
+      "case_id": "case-16",
+      "target": "general",
+      "assigned_queue": "billing",
+      "weight": 1,
+      "unit_cost": 2,
+      "error_cost": 2,
+      "hit_index": 0,
+      "predicate_id": "not_technical"
+    },
+    {
+      "case_id": "case-20",
+      "target": "general",
+      "assigned_queue": "billing",
+      "weight": 2,
+      "unit_cost": 2,
+      "error_cost": 4,
+      "hit_index": 0,
+      "predicate_id": "not_technical"
+    },
+    {
+      "case_id": "case-22",
+      "target": "general",
+      "assigned_queue": "billing",
+      "weight": 1,
+      "unit_cost": 2,
+      "error_cost": 2,
+      "hit_index": 0,
+      "predicate_id": "not_technical"
+    },
+    {
+      "case_id": "case-23",
+      "target": "general",
+      "assigned_queue": "billing",
+      "weight": 2,
+      "unit_cost": 2,
+      "error_cost": 4,
+      "hit_index": 0,
+      "predicate_id": "not_technical"
+    },
+    {
+      "case_id": "case-24",
+      "target": "general",
+      "assigned_queue": "specialist",
+      "weight": 3,
+      "unit_cost": 3,
+      "error_cost": 9,
+      "hit_index": 1,
+      "predicate_id": "has_attachment"
+    },
+    {
+      "case_id": "case-29",
+      "target": "general",
+      "assigned_queue": "billing",
+      "weight": 2,
+      "unit_cost": 2,
+      "error_cost": 4,
+      "hit_index": 0,
+      "predicate_id": "not_technical"
+    },
+    {
+      "case_id": "case-30",
+      "target": "general",
+      "assigned_queue": "billing",
+      "weight": 3,
+      "unit_cost": 2,
+      "error_cost": 6,
+      "hit_index": 0,
+      "predicate_id": "not_technical"
+    },
+    {
+      "case_id": "case-34",
+      "target": "general",
+      "assigned_queue": "billing",
+      "weight": 1,
+      "unit_cost": 2,
+      "error_cost": 2,
+      "hit_index": 0,
+      "predicate_id": "not_technical"
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "objective_value": 1.0,
+  "n_optimal_terminals": 2,
+  "optimal_terminals": [
+    {
+      "predicate_ids": [
+        "technical"
+      ],
+      "default_queue": "general",
+      "value": 1.0
+    },
+    {
+      "predicate_ids": [
+        "urgent"
+      ],
+      "default_queue": "general",
+      "value": 1.0
+    }
+  ],
+  "canonical_plan": {
+    "rules": [
+      {
+        "predicate": {
+          "id": "technical",
+          "field": "technical",
+          "op": "eq",
+          "value": 1
+        },
+        "queue": "specialist"
+      }
+    ],
+    "default_queue": "general"
+  },
+  "tie_break_rule": "先按规则数升序，再按谓词 id 排序列表字典序，再按默认队列名字典序；序列内部按 (谓词id, 队列名) 字典序贪心且每步经后缀 DP 可行性校验。仅依赖谓词 id 与队列名，不依赖输入行顺序。",
+  "probes": [
+    {
+      "probe_id": "unseen-a",
+      "matched_predicate_ids": [
+        "urgent"
+      ],
+      "reachable_queues": [
+        "general",
+        "specialist"
+      ],
+      "determined": false,
+      "witnesses": [
+        {
+          "queue": "general",
+          "plan": {
+            "rules": [
+              {
+                "predicate": {
+                  "id": "technical",
+                  "field": "technical",
+                  "op": "eq",
+                  "value": 1
+                },
+                "queue": "specialist"
+              }
+            ],
+            "default_queue": "general"
+          }
+        },
+        {
+          "queue": "specialist",
+          "plan": {
+            "rules": [
+              {
+                "predicate": {
+                  "id": "urgent",
+                  "field": "urgent",
+                  "op": "eq",
+                  "value": 1
+                },
+                "queue": "specialist"
+              }
+            ],
+            "default_queue": "general"
+          }
+        }
+      ]
+    },
+    {
+      "probe_id": "unseen-b",
+      "matched_predicate_ids": [
+        "technical"
+      ],
+      "reachable_queues": [
+        "general",
+        "specialist"
+      ],
+      "determined": false,
+      "witnesses": [
+        {
+          "queue": "general",
+          "plan": {
+            "rules": [
+              {
+                "predicate": {
+                  "id": "urgent",
+                  "field": "urgent",
+                  "op": "eq",
+                  "value": 1
+                },
+                "queue": "specialist"
+              }
+            ],
+            "default_queue": "general"
+          }
+        },
+        {
+          "queue": "specialist",
+          "plan": {
+            "rules": [
+              {
+                "predicate": {
+                  "id": "technical",
+                  "field": "technical",
+                  "op": "eq",
+                  "value": 1
+                },
+                "queue": "specialist"
+              }
+            ],
+            "default_queue": "general"
+          }
+        }
+      ]
+    }
+  ]
+}

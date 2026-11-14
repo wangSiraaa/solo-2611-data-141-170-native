@@ -1,0 +1,55 @@
+{
+  "summary": {
+    "objective_value": 1.0,
+    "misroute_cost": 0.0,
+    "maintenance_cost": 1,
+    "n_rules": 1,
+    "default_queue": "general",
+    "n_default_routed": 2,
+    "n_error_cases": 0
+  },
+  "rules": [
+    {
+      "position": 0,
+      "predicate": {
+        "id": "technical",
+        "field": "technical",
+        "op": "eq",
+        "value": 1
+      },
+      "queue": "specialist",
+      "first_hit_cases": [
+        {
+          "case_id": "small-2",
+          "target": "specialist",
+          "weight": 10
+        },
+        {
+          "case_id": "small-4",
+          "target": "specialist",
+          "weight": 10
+        }
+      ],
+      "shadowed_cases": [],
+      "rule_error_cost": 0
+    }
+  ],
+  "default": {
+    "queue": "general",
+    "cases": [
+      {
+        "case_id": "small-1",
+        "target": "general",
+        "weight": 10
+      },
+      {
+        "case_id": "small-3",
+        "target": "general",
+        "weight": 10
+      }
+    ],
+    "error_cases": [],
+    "error_cost": 0
+  },
+  "error_cases": []
+}

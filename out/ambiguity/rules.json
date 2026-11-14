@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "default_queue": "general",
+  "rules": [
+    {
+      "position": 0,
+      "predicate": {
+        "id": "technical",
+        "field": "technical",
+        "op": "eq",
+        "value": 1
+      },
+      "queue": "specialist"
+    }
+  ],
+  "objective": {
+    "value": 1.0,
+    "formula": "sum(case weight * misroute cost) + rule_penalty * number of rules",
+    "rule_penalty": 1,
+    "rule_count": 1
+  },
+  "meta": {
+    "n_predicates_available": 2,
+    "max_rules": 1,
+    "allowed_default_queues": [
+      "general",
+      "specialist"
+    ]
+  }
+}

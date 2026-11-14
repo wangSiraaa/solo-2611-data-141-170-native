@@ -1,0 +1,255 @@
+{
+  "all_passed": true,
+  "checks": [
+    {
+      "check": "replayed_objective_matches_saved",
+      "passed": true,
+      "detail": {
+        "replayed": 1.0,
+        "saved": 1.0,
+        "misroute": 0.0,
+        "maintenance": 1,
+        "n_error_cases": 0
+      }
+    },
+    {
+      "check": "row_order_invariance",
+      "passed": true,
+      "detail": {
+        "optimum_original": 1.0,
+        "optimum_shuffled": 1.0,
+        "canonical_signature_equal": true
+      }
+    },
+    {
+      "check": "every_optimal_terminal_replays_to_its_value",
+      "passed": true,
+      "detail": {
+        "n_terminals": 2,
+        "terminals": [
+          {
+            "predicate_ids": [
+              "urgent"
+            ],
+            "default_queue": "general",
+            "dp_value": 1.0,
+            "direct_replay_value": 1,
+            "matches": true
+          },
+          {
+            "predicate_ids": [
+              "technical"
+            ],
+            "default_queue": "general",
+            "dp_value": 1.0,
+            "direct_replay_value": 1,
+            "matches": true
+          }
+        ]
+      }
+    },
+    {
+      "check": "benchmark_dp_equals_brute_force",
+      "passed": true,
+      "detail": {
+        "dp_value": 6.0,
+        "brute_force_value": 6,
+        "n_optima_dp": 2,
+        "n_optima_brute_force": 2,
+        "probe_ambiguity_equal": true
+      }
+    },
+    {
+      "check": "benchmark_required_properties",
+      "passed": true,
+      "detail": {
+        "order_dependence": {
+          "rule_set": [
+            "aged",
+            "p_one"
+          ],
+          "value_when_aged_first": 28,
+          "value_when_p_one_first": 8,
+          "order_matters": true
+        },
+        "shortest_not_best": {
+          "zero_rule_value": 16,
+          "global_optimum": 6,
+          "holds": true
+        },
+        "ambiguous_probes": [
+          "pr-x",
+          "pr-y"
+        ],
+        "best_value_by_rule_count": {
+          "0": 16,
+          "1": 6,
+          "2": 8,
+          "3": 10,
+          "4": 12
+        }
+      }
+    },
+    {
+      "check": "probe_witnesses_are_optimal_and_distinct",
+      "passed": true,
+      "detail": {
+        "probes": [
+          {
+            "probe_id": "unseen-a",
+            "passed": true,
+            "queues_proved": [
+              "general",
+              "specialist"
+            ]
+          },
+          {
+            "probe_id": "unseen-b",
+            "passed": true,
+            "queues_proved": [
+              "general",
+              "specialist"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "benchmark_properties": {
+    "benchmark": {
+      "n_predicates": 4,
+      "n_cases": 8,
+      "n_queues": 2,
+      "rule_penalty": 2,
+      "max_rules": 4,
+      "ops_covered": [
+        "eq",
+        "ge",
+        "le"
+      ]
+    },
+    "brute_force_optimum": 6,
+    "n_optimal_plans": 2,
+    "best_value_by_rule_count": {
+      "0": 16,
+      "1": 6,
+      "2": 8,
+      "3": 10,
+      "4": 12
+    },
+    "order_dependence": {
+      "rule_set": [
+        "aged",
+        "p_one"
+      ],
+      "value_when_aged_first": 28,
+      "value_when_p_one_first": 8,
+      "order_matters": true
+    },
+    "shortest_not_best": {
+      "zero_rule_value": 16,
+      "global_optimum": 6,
+      "holds": true
+    },
+    "probes": [
+      {
+        "probe_id": "pr-x",
+        "reachable_queues": [
+          "general",
+          "specialist"
+        ],
+        "determined": false,
+        "witnesses": [
+          {
+            "queue": "general",
+            "plan": {
+              "rules": [
+                {
+                  "predicate": {
+                    "id": "q_one",
+                    "field": "f2",
+                    "op": "eq",
+                    "value": 1
+                  },
+                  "queue": "specialist"
+                }
+              ],
+              "default_queue": "general"
+            }
+          },
+          {
+            "queue": "specialist",
+            "plan": {
+              "rules": [
+                {
+                  "predicate": {
+                    "id": "p_one",
+                    "field": "f1",
+                    "op": "eq",
+                    "value": 1
+                  },
+                  "queue": "specialist"
+                }
+              ],
+              "default_queue": "general"
+            }
+          }
+        ]
+      },
+      {
+        "probe_id": "pr-y",
+        "reachable_queues": [
+          "general",
+          "specialist"
+        ],
+        "determined": false,
+        "witnesses": [
+          {
+            "queue": "general",
+            "plan": {
+              "rules": [
+                {
+                  "predicate": {
+                    "id": "p_one",
+                    "field": "f1",
+                    "op": "eq",
+                    "value": 1
+                  },
+                  "queue": "specialist"
+                }
+              ],
+              "default_queue": "general"
+            }
+          },
+          {
+            "queue": "specialist",
+            "plan": {
+              "rules": [
+                {
+                  "predicate": {
+                    "id": "q_one",
+                    "field": "f2",
+                    "op": "eq",
+                    "value": 1
+                  },
+                  "queue": "specialist"
+                }
+              ],
+              "default_queue": "general"
+            }
+          }
+        ]
+      },
+      {
+        "probe_id": "pr-z",
+        "reachable_queues": [
+          "general"
+        ],
+        "determined": true,
+        "witnesses": []
+      }
+    ],
+    "ambiguity_real": true,
+    "all_properties_hold": true
+  }
+}

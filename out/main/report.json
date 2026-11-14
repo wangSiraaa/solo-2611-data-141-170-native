@@ -1,0 +1,132 @@
+{
+  "objective_value": 51.0,
+  "n_optimal_terminals": 1,
+  "optimal_terminals": [
+    {
+      "predicate_ids": [
+        "has_attachment",
+        "not_technical",
+        "old",
+        "vip"
+      ],
+      "default_queue": "general",
+      "value": 51.0
+    }
+  ],
+  "canonical_plan": {
+    "rules": [
+      {
+        "predicate": {
+          "id": "not_technical",
+          "field": "technical",
+          "op": "eq",
+          "value": 0
+        },
+        "queue": "billing"
+      },
+      {
+        "predicate": {
+          "id": "has_attachment",
+          "field": "attachments",
+          "op": "ge",
+          "value": 1
+        },
+        "queue": "specialist"
+      },
+      {
+        "predicate": {
+          "id": "vip",
+          "field": "vip",
+          "op": "eq",
+          "value": 1
+        },
+        "queue": "general"
+      },
+      {
+        "predicate": {
+          "id": "old",
+          "field": "age_days",
+          "op": "ge",
+          "value": 4
+        },
+        "queue": "billing"
+      }
+    ],
+    "default_queue": "general"
+  },
+  "tie_break_rule": "先按规则数升序，再按谓词 id 排序列表字典序，再按默认队列名字典序；序列内部按 (谓词id, 队列名) 字典序贪心且每步经后缀 DP 可行性校验。仅依赖谓词 id 与队列名，不依赖输入行顺序。",
+  "probes": [
+    {
+      "probe_id": "probe-1",
+      "matched_predicate_ids": [
+        "fresh",
+        "refund",
+        "technical",
+        "urgent"
+      ],
+      "reachable_queues": [
+        "general"
+      ],
+      "determined": true,
+      "witnesses": []
+    },
+    {
+      "probe_id": "probe-2",
+      "matched_predicate_ids": [
+        "has_attachment",
+        "many_attachments",
+        "not_refund",
+        "old",
+        "technical",
+        "vip"
+      ],
+      "reachable_queues": [
+        "specialist"
+      ],
+      "determined": true,
+      "witnesses": []
+    },
+    {
+      "probe_id": "probe-3",
+      "matched_predicate_ids": [
+        "has_attachment",
+        "many_attachments",
+        "not_technical",
+        "refund"
+      ],
+      "reachable_queues": [
+        "billing"
+      ],
+      "determined": true,
+      "witnesses": []
+    },
+    {
+      "probe_id": "probe-4",
+      "matched_predicate_ids": [
+        "not_refund",
+        "not_technical",
+        "old",
+        "urgent",
+        "vip"
+      ],
+      "reachable_queues": [
+        "billing"
+      ],
+      "determined": true,
+      "witnesses": []
+    },
+    {
+      "probe_id": "probe-5",
+      "matched_predicate_ids": [
+        "fresh",
+        "not_refund",
+        "technical"
+      ],
+      "reachable_queues": [
+        "general"
+      ],
+      "determined": true,
+      "witnesses": []
+    }
+  ]
+}

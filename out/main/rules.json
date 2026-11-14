@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "default_queue": "general",
+  "rules": [
+    {
+      "position": 0,
+      "predicate": {
+        "id": "not_technical",
+        "field": "technical",
+        "op": "eq",
+        "value": 0
+      },
+      "queue": "billing"
+    },
+    {
+      "position": 1,
+      "predicate": {
+        "id": "has_attachment",
+        "field": "attachments",
+        "op": "ge",
+        "value": 1
+      },
+      "queue": "specialist"
+    },
+    {
+      "position": 2,
+      "predicate": {
+        "id": "vip",
+        "field": "vip",
+        "op": "eq",
+        "value": 1
+      },
+      "queue": "general"
+    },
+    {
+      "position": 3,
+      "predicate": {
+        "id": "old",
+        "field": "age_days",
+        "op": "ge",
+        "value": 4
+      },
+      "queue": "billing"
+    }
+  ],
+  "objective": {
+    "value": 51.0,
+    "formula": "sum(case weight * misroute cost) + rule_penalty * number of rules",
+    "rule_penalty": 3,
+    "rule_count": 4
+  },
+  "meta": {
+    "n_predicates_available": 10,
+    "max_rules": 4,
+    "allowed_default_queues": [
+      "general",
+      "billing",
+      "specialist"
+    ]
+  }
+}
