@@ -1,5 +1,7 @@
-# Data engineering task inputs: 141-170
+# 显微标签帧
 
-Each question has its own branch and frozen initial commit. Task-specific README and input fixtures are supplied in that branch. The full task prompt is provided separately for each independent session.
+本目录仅含题目输入，不含待实现程序。全部材料为本地合成，无真实个人或仪器数据。Python 3.11；若使用列出的库，可执行 `python -m pip install -r requirements.txt`。无需 Docker、账号或网络数据下载。
 
-The base contains environment documentation only. Use Python 3.11 and any dependencies explicitly needed by the question; PostgreSQL 16 and SQLite are available. See environment/README.md for native local database setup.
+TIFF 为二维 uint16，0 是背景；正整数仅在本帧内标识分割对象，并不表示跨帧身份。像素坐标为列 x、行 y；series.json 给出微米尺寸和分钟时间。图像已分割，本题不用做分割。
+
+只考虑相邻帧延续、一母两女分裂、出生和消失。距离与面积范围是候选支持边界，其余代价和不确定判据需实现者说明。不要把不同帧相同/相近标签数字当身份线索。

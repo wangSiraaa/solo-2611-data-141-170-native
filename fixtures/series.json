@@ -1,0 +1,44 @@
+{
+  "pixel_size_um": [
+    0.5,
+    0.5
+  ],
+  "background": 0,
+  "frames": [
+    {
+      "frame_id": "f0",
+      "file": "frame_00.tif",
+      "time_minutes": 0
+    },
+    {
+      "frame_id": "f1",
+      "file": "frame_01.tif",
+      "time_minutes": 3
+    },
+    {
+      "frame_id": "f2",
+      "file": "frame_02.tif",
+      "time_minutes": 6
+    },
+    {
+      "frame_id": "f3",
+      "file": "frame_03.tif",
+      "time_minutes": 9
+    },
+    {
+      "frame_id": "f4",
+      "file": "frame_04.tif",
+      "time_minutes": 12
+    },
+    {
+      "frame_id": "f5",
+      "file": "frame_05.tif",
+      "time_minutes": 15
+    }
+  ],
+  "max_centroid_speed_um_per_min": 2.5,
+  "division_area_ratio_range": [
+    0.65,
+    1.6
+  ]
+}
