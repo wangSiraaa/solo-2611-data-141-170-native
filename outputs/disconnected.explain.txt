@@ -1,0 +1,176 @@
+==============================================================================
+COMPARABLE-MONTH PRICE INDEX  (supplier-balanced additive log-price model)
+==============================================================================
+
+Quotes: 120   months: 6   suppliers: 8   SKUs: 6
+Base month (index = 100): 2025-01
+Normalization: month_effect(2025-01) = 0, supplier_level(supplier-1) = 0
+
+------------------------------------------------------------------------------
+1. IDENTIFICATION DIAGNOSTIC (exact rational null space)
+------------------------------------------------------------------------------
+Design parameters: 18   independent columns: 17   null directions: 1
+Pivot columns (exactly independent fit basis): item:A-new, item:A-old, item:B-new, item:B-old, item:C-new, item:C-old, month:2025-02, month:2025-03, month:2025-04, month:2025-05, supplier:supplier-2, supplier:supplier-3, supplier:supplier-4, supplier:supplier-5, supplier:supplier-6, supplier:supplier-7, supplier:supplier-8
+
+Observed item-month graph components (edges are actual quotes, never families):
+  component 0:
+    items  : ['A-new', 'B-new', 'C-new']
+    months : ['2025-04', '2025-05', '2025-06']
+    suppliers present: ['supplier-1', 'supplier-2', 'supplier-3', 'supplier-4', 'supplier-5', 'supplier-6', 'supplier-7', 'supplier-8']
+    cells/quotes: 60/60
+  component 1:
+    items  : ['A-old', 'B-old', 'C-old']
+    months : ['2025-01', '2025-02', '2025-03']
+    suppliers present: ['supplier-1', 'supplier-2', 'supplier-3', 'supplier-4', 'supplier-5', 'supplier-6', 'supplier-7', 'supplier-8']
+    cells/quotes: 60/60
+
+Month index identification:
+  2025-01: identified
+  2025-02: identified
+  2025-03: identified
+  2025-04: NOT IDENTIFIED
+    confounding null direction: item_levels={'A-new': '-1', 'B-new': '-1', 'C-new': '-1'}, month_effects={'2025-04': '1', '2025-05': '1', '2025-06': '1'}
+    witness quotes (60): ['q0013', 'q0015', 'q0016', 'q0017', 'q0018', 'q0019', 'q0020', 'q0021', 'q0022', 'q0032', 'q0034', 'q0035', 'q0036', 'q0037', 'q0038', 'q0051', 'q0053', 'q0054', 'q0055', 'q0056', 'q0057', 'q0058', 'q0059', 'q0060', 'q0070', 'q0072', 'q0073', 'q0074', 'q0075', 'q0076', 'q0089', 'q0091', 'q0092', 'q0093', 'q0094', 'q0095', 'q0096', 'q0097', 'q0098', 'q0108', 'q0110', 'q0111', 'q0112', 'q0113', 'q0114', 'q0127', 'q0129', 'q0130', 'q0131', 'q0132', 'q0133', 'q0134', 'q0135', 'q0136', 'q0146', 'q0148', 'q0149', 'q0150', 'q0151', 'q0152']
+  2025-05: NOT IDENTIFIED
+    confounding null direction: item_levels={'A-new': '-1', 'B-new': '-1', 'C-new': '-1'}, month_effects={'2025-04': '1', '2025-05': '1', '2025-06': '1'}
+    witness quotes (60): ['q0013', 'q0015', 'q0016', 'q0017', 'q0018', 'q0019', 'q0020', 'q0021', 'q0022', 'q0032', 'q0034', 'q0035', 'q0036', 'q0037', 'q0038', 'q0051', 'q0053', 'q0054', 'q0055', 'q0056', 'q0057', 'q0058', 'q0059', 'q0060', 'q0070', 'q0072', 'q0073', 'q0074', 'q0075', 'q0076', 'q0089', 'q0091', 'q0092', 'q0093', 'q0094', 'q0095', 'q0096', 'q0097', 'q0098', 'q0108', 'q0110', 'q0111', 'q0112', 'q0113', 'q0114', 'q0127', 'q0129', 'q0130', 'q0131', 'q0132', 'q0133', 'q0134', 'q0135', 'q0136', 'q0146', 'q0148', 'q0149', 'q0150', 'q0151', 'q0152']
+  2025-06: NOT IDENTIFIED
+    confounding null direction: item_levels={'A-new': '-1', 'B-new': '-1', 'C-new': '-1'}, month_effects={'2025-04': '1', '2025-05': '1', '2025-06': '1'}
+    witness quotes (60): ['q0013', 'q0015', 'q0016', 'q0017', 'q0018', 'q0019', 'q0020', 'q0021', 'q0022', 'q0032', 'q0034', 'q0035', 'q0036', 'q0037', 'q0038', 'q0051', 'q0053', 'q0054', 'q0055', 'q0056', 'q0057', 'q0058', 'q0059', 'q0060', 'q0070', 'q0072', 'q0073', 'q0074', 'q0075', 'q0076', 'q0089', 'q0091', 'q0092', 'q0093', 'q0094', 'q0095', 'q0096', 'q0097', 'q0098', 'q0108', 'q0110', 'q0111', 'q0112', 'q0113', 'q0114', 'q0127', 'q0129', 'q0130', 'q0131', 'q0132', 'q0133', 'q0134', 'q0135', 'q0136', 'q0146', 'q0148', 'q0149', 'q0150', 'q0151', 'q0152']
+
+Sole-supplier cells (cells quoted by exactly one supplier):
+  none
+
+Critical bridge suppliers (removing a whole supplier makes a month unidentified):
+  none
+
+Families spanning disconnected components (NOT usable as an equivalence key):
+  family-A: items ['A-new', 'A-old'] span components [0, 1]
+  family-B: items ['B-new', 'B-old'] span components [0, 1]
+  family-C: items ['C-new', 'C-old'] span components [0, 1]
+
+Delete-one-supplier identification sweep:
+  remove supplier-1: identified months ['2025-01', '2025-02', '2025-03']; unidentified ['2025-04', '2025-05', '2025-06']; graph components now 2
+  remove supplier-2: identified months ['2025-01', '2025-02', '2025-03']; unidentified ['2025-04', '2025-05', '2025-06']; graph components now 2
+  remove supplier-3: identified months ['2025-01', '2025-02', '2025-03']; unidentified ['2025-04', '2025-05', '2025-06']; graph components now 2
+  remove supplier-4: identified months ['2025-01', '2025-02', '2025-03']; unidentified ['2025-04', '2025-05', '2025-06']; graph components now 2
+  remove supplier-5: identified months ['2025-01', '2025-02', '2025-03']; unidentified ['2025-04', '2025-05', '2025-06']; graph components now 2
+  remove supplier-6: identified months ['2025-01', '2025-02', '2025-03']; unidentified ['2025-04', '2025-05', '2025-06']; graph components now 2
+  remove supplier-7: identified months ['2025-01', '2025-02', '2025-03']; unidentified ['2025-04', '2025-05', '2025-06']; graph components now 2
+  remove supplier-8: identified months ['2025-01', '2025-02', '2025-03']; unidentified ['2025-04', '2025-05', '2025-06']; graph components now 2
+
+------------------------------------------------------------------------------
+2. MONTH INDICES (base = 100)
+------------------------------------------------------------------------------
+  month         index  status                     95% interval (same base)
+  2025-01      100.00  identified                         [100.00, 100.00]
+  2025-02      102.13  identified                         [101.27, 102.69]
+  2025-03      105.28  identified                         [104.41, 105.81]
+  2025-04    NOT IDENTIFIED  insufficient_support                              -
+  2025-05    NOT IDENTIFIED  insufficient_support                              -
+  2025-06    NOT IDENTIFIED  insufficient_support                              -
+
+Replicate support per month (whole-supplier resampling):
+  2025-01: base normalization, 500/500 replicates identified
+  2025-02: 500/500 (100.0%) replicates retained identification; interval_reportable=True
+  2025-03: 500/500 (100.0%) replicates retained identification; interval_reportable=True
+  2025-04: 0/500 (0.0%) replicates retained identification; interval_reportable=False
+      failure reasons: {'contrast_not_identified_in_replicate': 500}
+  2025-05: 0/500 (0.0%) replicates retained identification; interval_reportable=False
+      failure reasons: {'contrast_not_identified_in_replicate': 500}
+  2025-06: 0/500 (0.0%) replicates retained identification; interval_reportable=False
+      failure reasons: {'contrast_not_identified_in_replicate': 500}
+
+------------------------------------------------------------------------------
+3. PERSISTENT SKU LEVELS AND FAMILY PAIR SPREADS
+------------------------------------------------------------------------------
+Centered item levels (log scale; identified from overlap only):
+  A-new: insufficient_support
+  A-old: insufficient_support
+  B-new: insufficient_support
+  B-old: insufficient_support
+  C-new: insufficient_support
+  C-old: insufficient_support
+
+Measured price level ratios for old/new SKUs within a family:
+  family-A A-new / A-old: insufficient_support  (SKU level difference not identified: no observed overlap separates it from month movement)
+  family-B B-new / B-old: insufficient_support  (SKU level difference not identified: no observed overlap separates it from month movement)
+  family-C C-new / C-old: insufficient_support  (SKU level difference not identified: no observed overlap separates it from month movement)
+  NOTE: these ratios are measured level differences, not quality-equality claims.
+
+------------------------------------------------------------------------------
+4. SUPPLIER TRAJECTORY LEVELS (centered; not a price index)
+------------------------------------------------------------------------------
+  supplier-1: -0.0384 (ratio 0.9624), 18 quotes, months ['2025-01', '2025-02', '2025-03', '2025-04', '2025-05', '2025-06'], items ['A-new', 'A-old', 'B-new', 'B-old', 'C-new', 'C-old']
+  supplier-2: -0.0181 (ratio 0.9820), 12 quotes, months ['2025-01', '2025-02', '2025-03', '2025-04', '2025-05', '2025-06'], items ['A-new', 'A-old', 'B-new', 'B-old']
+  supplier-3: +0.0068 (ratio 1.0068), 18 quotes, months ['2025-01', '2025-02', '2025-03', '2025-04', '2025-05', '2025-06'], items ['A-new', 'A-old', 'B-new', 'B-old', 'C-new', 'C-old']
+  supplier-4: -0.0209 (ratio 0.9794), 12 quotes, months ['2025-01', '2025-02', '2025-03', '2025-04', '2025-05', '2025-06'], items ['A-new', 'A-old', 'B-new', 'B-old']
+  supplier-5: +0.0088 (ratio 1.0088), 18 quotes, months ['2025-01', '2025-02', '2025-03', '2025-04', '2025-05', '2025-06'], items ['A-new', 'A-old', 'B-new', 'B-old', 'C-new', 'C-old']
+  supplier-6: +0.0293 (ratio 1.0297), 12 quotes, months ['2025-01', '2025-02', '2025-03', '2025-04', '2025-05', '2025-06'], items ['A-new', 'A-old', 'B-new', 'B-old']
+  supplier-7: +0.0066 (ratio 1.0066), 18 quotes, months ['2025-01', '2025-02', '2025-03', '2025-04', '2025-05', '2025-06'], items ['A-new', 'A-old', 'B-new', 'B-old', 'C-new', 'C-old']
+  supplier-8: +0.0259 (ratio 1.0262), 12 quotes, months ['2025-01', '2025-02', '2025-03', '2025-04', '2025-05', '2025-06'], items ['A-new', 'A-old', 'B-new', 'B-old']
+
+------------------------------------------------------------------------------
+5. STABILITY: LEAVE-ONE-SUPPLIER-OUT
+------------------------------------------------------------------------------
+  remove supplier-1: 2025-01: 100.00; 2025-02: 102.18; 2025-03: 105.44; 2025-04: UNIDENTIFIED; 2025-05: UNIDENTIFIED; 2025-06: UNIDENTIFIED
+  remove supplier-2: 2025-01: 100.00; 2025-02: 102.09; 2025-03: 105.21; 2025-04: UNIDENTIFIED; 2025-05: UNIDENTIFIED; 2025-06: UNIDENTIFIED
+  remove supplier-3: 2025-01: 100.00; 2025-02: 102.05; 2025-03: 105.19; 2025-04: UNIDENTIFIED; 2025-05: UNIDENTIFIED; 2025-06: UNIDENTIFIED
+  remove supplier-4: 2025-01: 100.00; 2025-02: 102.35; 2025-03: 105.51; 2025-04: UNIDENTIFIED; 2025-05: UNIDENTIFIED; 2025-06: UNIDENTIFIED
+  remove supplier-5: 2025-01: 100.00; 2025-02: 102.11; 2025-03: 105.28; 2025-04: UNIDENTIFIED; 2025-05: UNIDENTIFIED; 2025-06: UNIDENTIFIED
+  remove supplier-6: 2025-01: 100.00; 2025-02: 101.95; 2025-03: 105.14; 2025-04: UNIDENTIFIED; 2025-05: UNIDENTIFIED; 2025-06: UNIDENTIFIED
+  remove supplier-7: 2025-01: 100.00; 2025-02: 102.26; 2025-03: 105.34; 2025-04: UNIDENTIFIED; 2025-05: UNIDENTIFIED; 2025-06: UNIDENTIFIED
+  remove supplier-8: 2025-01: 100.00; 2025-02: 102.01; 2025-03: 105.15; 2025-04: UNIDENTIFIED; 2025-05: UNIDENTIFIED; 2025-06: UNIDENTIFIED
+
+------------------------------------------------------------------------------
+6. WEIGHTS, OUTLIERS, ERROR ASSUMPTION
+------------------------------------------------------------------------------
+  supplier-balanced: quote weight = 1/n_supplier_quotes, scaled to mean 1
+  effective number of quotes: 113.6; downweighted: 13
+  residual scale (log): 0.010720; IRLS iterations 25, converged=True
+    supplier-1: 18 quotes, weight share 11.7%, mean Huber weight 0.901
+    supplier-2: 12 quotes, weight share 13.0%, mean Huber weight 1.000
+    supplier-3: 18 quotes, weight share 12.4%, mean Huber weight 0.954
+    supplier-4: 12 quotes, weight share 12.2%, mean Huber weight 0.940
+    supplier-5: 18 quotes, weight share 12.8%, mean Huber weight 0.981
+    supplier-6: 12 quotes, weight share 12.2%, mean Huber weight 0.938
+    supplier-7: 18 quotes, weight share 12.8%, mean Huber weight 0.986
+    supplier-8: 12 quotes, weight share 12.9%, mean Huber weight 0.990
+  Outlying quotes (Huber-downweighted, retained):
+    q0114 supplier-6 2025-06 B-new z=+2.50 huber_w=0.538
+    q0004 supplier-1 2025-02 A-old z=+2.49 huber_w=0.540
+    q0021 supplier-1 2025-06 B-new z=-2.48 huber_w=0.543
+    q0018 supplier-1 2025-05 B-new z=-2.41 huber_w=0.558
+    q0056 supplier-3 2025-05 B-new z=+2.26 huber_w=0.594
+    q0061 supplier-4 2025-01 A-old z=+2.14 huber_w=0.629
+    q0131 supplier-7 2025-05 A-new z=-1.79 huber_w=0.752
+    q0019 supplier-1 2025-05 C-new z=-1.77 huber_w=0.761
+    q0100 supplier-6 2025-01 B-old z=-1.74 huber_w=0.772
+    q0060 supplier-3 2025-06 C-new z=+1.72 huber_w=0.783
+    q0062 supplier-4 2025-01 B-old z=+1.71 huber_w=0.789
+    q0044 supplier-3 2025-02 C-old z=-1.70 huber_w=0.792
+    q0089 supplier-5 2025-04 A-new z=+1.62 huber_w=0.829
+
+------------------------------------------------------------------------------
+7. TRACEABILITY
+------------------------------------------------------------------------------
+Every quote is decomposed in the result JSON / quote_trace.csv as
+  log_price = item_level + month_effect + supplier_level + residual,
+with per-quote identification flags and Huber weights.
+Trace note: individual raw levels depend on the chosen normalization; use identified contrasts
+
+------------------------------------------------------------------------------
+8. WARNINGS AND LIMITATIONS
+------------------------------------------------------------------------------
+  WARNING: month 2025-04: month effect is not identifiable relative to 2025-01; see confounding_direction
+  WARNING: month 2025-05: month effect is not identifiable relative to 2025-01; see confounding_direction
+  WARNING: month 2025-06: month effect is not identifiable relative to 2025-01; see confounding_direction
+  WARNING: month 2025-04: index not reported; no observed overlap supports it and no external bridge is used
+  WARNING: month 2025-05: index not reported; no observed overlap supports it and no external bridge is used
+  WARNING: month 2025-06: index not reported; no observed overlap supports it and no external bridge is used
+  LIMIT: The model is additive on log prices with persistent item and supplier levels; if relative SKU prices drift within the six-month window the month effect is biased toward the average drift.
+  LIMIT: Families only record a replacement relationship. Any old/new level difference reported here is a measured persistent level difference from overlap, not a quality or equivalence claim.
+  LIMIT: Identification is exact and conditional on the observed quote pattern; absence of overlap is reported as insufficient support rather than bridged with external product prices.
+  LIMIT: Supplier-level disturbance dependence is handled only by whole-trajectory resampling; no parametric covariance model is fitted.
+  LIMIT: Percentile bootstrap intervals are descriptive and may be optimistic when the bridge rests on a single supplier, which is shown explicitly by the delete-one stability table.
+  LIMIT: No forecasting, hedonic regression, rolling analysis or automatic product matching is performed.

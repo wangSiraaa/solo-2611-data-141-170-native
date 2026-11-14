@@ -1,0 +1,4106 @@
+{
+  "metadata": {
+    "method": "supplier-balanced, Huber-robust additive log-price model with exact rational identification of month contrasts",
+    "base_month": "2025-01",
+    "months": [
+      "2025-01",
+      "2025-02",
+      "2025-03",
+      "2025-04",
+      "2025-05",
+      "2025-06"
+    ],
+    "n_quotes": 120,
+    "n_suppliers": 8,
+    "n_items": 6,
+    "seed": 20250101
+  },
+  "model": {
+    "equation": "log price(s,m,i) = item_level(i) + month_effect(m) + supplier_level(s) + error",
+    "normalization": {
+      "base_month": "2025-01",
+      "reference_supplier": "supplier-1",
+      "base_month_effect_fixed_to": 0.0,
+      "reference_supplier_level_fixed_to": 0.0
+    },
+    "weights": "each supplier trajectory has equal total weight; a quote gets 1/n_s for its supplier, rescaled to mean 1",
+    "error_assumption": "var(error) = sigma^2 / base_weight; within-supplier correlation is not modelled parametrically but is preserved by trajectory resampling",
+    "outlier_handling": "Huber IRLS, tuning 1.345 on MAD-standardized residuals; quotes are downweighted, never deleted, so all observed support stays in the design",
+    "product_semantics": "families are used only to label old/new replacement pairs; they are not equivalence keys for estimation"
+  },
+  "identification": {
+    "normalization": {
+      "base_month": "2025-01",
+      "reference_supplier": "supplier-1",
+      "base_month_effect_fixed_to": 0.0,
+      "reference_supplier_level_fixed_to": 0.0
+    },
+    "design": {
+      "n_parameters": 18,
+      "n_independent_columns": 17,
+      "n_null_directions": 1,
+      "columns": [
+        {
+          "kind": "item",
+          "name": "A-new"
+        },
+        {
+          "kind": "item",
+          "name": "A-old"
+        },
+        {
+          "kind": "item",
+          "name": "B-new"
+        },
+        {
+          "kind": "item",
+          "name": "B-old"
+        },
+        {
+          "kind": "item",
+          "name": "C-new"
+        },
+        {
+          "kind": "item",
+          "name": "C-old"
+        },
+        {
+          "kind": "month",
+          "name": "2025-02"
+        },
+        {
+          "kind": "month",
+          "name": "2025-03"
+        },
+        {
+          "kind": "month",
+          "name": "2025-04"
+        },
+        {
+          "kind": "month",
+          "name": "2025-05"
+        },
+        {
+          "kind": "month",
+          "name": "2025-06"
+        },
+        {
+          "kind": "supplier",
+          "name": "supplier-2"
+        },
+        {
+          "kind": "supplier",
+          "name": "supplier-3"
+        },
+        {
+          "kind": "supplier",
+          "name": "supplier-4"
+        },
+        {
+          "kind": "supplier",
+          "name": "supplier-5"
+        },
+        {
+          "kind": "supplier",
+          "name": "supplier-6"
+        },
+        {
+          "kind": "supplier",
+          "name": "supplier-7"
+        },
+        {
+          "kind": "supplier",
+          "name": "supplier-8"
+        }
+      ],
+      "pivot_columns": [
+        {
+          "kind": "item",
+          "name": "A-new"
+        },
+        {
+          "kind": "item",
+          "name": "A-old"
+        },
+        {
+          "kind": "item",
+          "name": "B-new"
+        },
+        {
+          "kind": "item",
+          "name": "B-old"
+        },
+        {
+          "kind": "item",
+          "name": "C-new"
+        },
+        {
+          "kind": "item",
+          "name": "C-old"
+        },
+        {
+          "kind": "month",
+          "name": "2025-02"
+        },
+        {
+          "kind": "month",
+          "name": "2025-03"
+        },
+        {
+          "kind": "month",
+          "name": "2025-04"
+        },
+        {
+          "kind": "month",
+          "name": "2025-05"
+        },
+        {
+          "kind": "supplier",
+          "name": "supplier-2"
+        },
+        {
+          "kind": "supplier",
+          "name": "supplier-3"
+        },
+        {
+          "kind": "supplier",
+          "name": "supplier-4"
+        },
+        {
+          "kind": "supplier",
+          "name": "supplier-5"
+        },
+        {
+          "kind": "supplier",
+          "name": "supplier-6"
+        },
+        {
+          "kind": "supplier",
+          "name": "supplier-7"
+        },
+        {
+          "kind": "supplier",
+          "name": "supplier-8"
+        }
+      ],
+      "note": "Pivot columns are a maximal independent set of the design; they are used for fitting so no numerical routine decides rank."
+    },
+    "components": [
+      {
+        "component_id": 0,
+        "items": [
+          "A-new",
+          "B-new",
+          "C-new"
+        ],
+        "months": [
+          "2025-04",
+          "2025-05",
+          "2025-06"
+        ],
+        "suppliers": [
+          "supplier-1",
+          "supplier-2",
+          "supplier-3",
+          "supplier-4",
+          "supplier-5",
+          "supplier-6",
+          "supplier-7",
+          "supplier-8"
+        ],
+        "n_cells": 60,
+        "n_quotes": 60,
+        "quote_ids": [
+          "q0013",
+          "q0015",
+          "q0016",
+          "q0017",
+          "q0018",
+          "q0019",
+          "q0020",
+          "q0021",
+          "q0022",
+          "q0032",
+          "q0034",
+          "q0035",
+          "q0036",
+          "q0037",
+          "q0038",
+          "q0051",
+          "q0053",
+          "q0054",
+          "q0055",
+          "q0056",
+          "q0057",
+          "q0058",
+          "q0059",
+          "q0060",
+          "q0070",
+          "q0072",
+          "q0073",
+          "q0074",
+          "q0075",
+          "q0076",
+          "q0089",
+          "q0091",
+          "q0092",
+          "q0093",
+          "q0094",
+          "q0095",
+          "q0096",
+          "q0097",
+          "q0098",
+          "q0108",
+          "q0110",
+          "q0111",
+          "q0112",
+          "q0113",
+          "q0114",
+          "q0127",
+          "q0129",
+          "q0130",
+          "q0131",
+          "q0132",
+          "q0133",
+          "q0134",
+          "q0135",
+          "q0136",
+          "q0146",
+          "q0148",
+          "q0149",
+          "q0150",
+          "q0151",
+          "q0152"
+        ]
+      },
+      {
+        "component_id": 1,
+        "items": [
+          "A-old",
+          "B-old",
+          "C-old"
+        ],
+        "months": [
+          "2025-01",
+          "2025-02",
+          "2025-03"
+        ],
+        "suppliers": [
+          "supplier-1",
+          "supplier-2",
+          "supplier-3",
+          "supplier-4",
+          "supplier-5",
+          "supplier-6",
+          "supplier-7",
+          "supplier-8"
+        ],
+        "n_cells": 60,
+        "n_quotes": 60,
+        "quote_ids": [
+          "q0001",
+          "q0002",
+          "q0003",
+          "q0004",
+          "q0005",
+          "q0006",
+          "q0007",
+          "q0009",
+          "q0011",
+          "q0023",
+          "q0024",
+          "q0025",
+          "q0026",
+          "q0027",
+          "q0029",
+          "q0039",
+          "q0040",
+          "q0041",
+          "q0042",
+          "q0043",
+          "q0044",
+          "q0045",
+          "q0047",
+          "q0049",
+          "q0061",
+          "q0062",
+          "q0063",
+          "q0064",
+          "q0065",
+          "q0067",
+          "q0077",
+          "q0078",
+          "q0079",
+          "q0080",
+          "q0081",
+          "q0082",
+          "q0083",
+          "q0085",
+          "q0087",
+          "q0099",
+          "q0100",
+          "q0101",
+          "q0102",
+          "q0103",
+          "q0105",
+          "q0115",
+          "q0116",
+          "q0117",
+          "q0118",
+          "q0119",
+          "q0120",
+          "q0121",
+          "q0123",
+          "q0125",
+          "q0137",
+          "q0138",
+          "q0139",
+          "q0140",
+          "q0141",
+          "q0143"
+        ]
+      }
+    ],
+    "months": [
+      {
+        "month": "2025-01",
+        "identified": true,
+        "component_id": 1,
+        "critical_suppliers": [],
+        "confounding_direction": null
+      },
+      {
+        "month": "2025-02",
+        "identified": true,
+        "component_id": 1,
+        "critical_suppliers": [],
+        "confounding_direction": null
+      },
+      {
+        "month": "2025-03",
+        "identified": true,
+        "component_id": 1,
+        "critical_suppliers": [],
+        "confounding_direction": null
+      },
+      {
+        "month": "2025-04",
+        "identified": false,
+        "component_id": 0,
+        "critical_suppliers": [],
+        "confounding_direction": {
+          "null_direction": {
+            "item_levels": {
+              "A-new": "-1",
+              "B-new": "-1",
+              "C-new": "-1"
+            },
+            "month_effects": {
+              "2025-04": "1",
+              "2025-05": "1",
+              "2025-06": "1"
+            },
+            "supplier_levels": {}
+          },
+          "explanation": "Adding this direction to the parameters leaves every observed quote unchanged, so the month effect cannot be separated from the listed item/supplier levels.",
+          "n_witness_quotes": 60,
+          "witness_quote_ids": [
+            "q0013",
+            "q0015",
+            "q0016",
+            "q0017",
+            "q0018",
+            "q0019",
+            "q0020",
+            "q0021",
+            "q0022",
+            "q0032",
+            "q0034",
+            "q0035",
+            "q0036",
+            "q0037",
+            "q0038",
+            "q0051",
+            "q0053",
+            "q0054",
+            "q0055",
+            "q0056",
+            "q0057",
+            "q0058",
+            "q0059",
+            "q0060",
+            "q0070",
+            "q0072",
+            "q0073",
+            "q0074",
+            "q0075",
+            "q0076",
+            "q0089",
+            "q0091",
+            "q0092",
+            "q0093",
+            "q0094",
+            "q0095",
+            "q0096",
+            "q0097",
+            "q0098",
+            "q0108",
+            "q0110",
+            "q0111",
+            "q0112",
+            "q0113",
+            "q0114",
+            "q0127",
+            "q0129",
+            "q0130",
+            "q0131",
+            "q0132",
+            "q0133",
+            "q0134",
+            "q0135",
+            "q0136",
+            "q0146",
+            "q0148",
+            "q0149",
+            "q0150",
+            "q0151",
+            "q0152"
+          ]
+        }
+      },
+      {
+        "month": "2025-05",
+        "identified": false,
+        "component_id": 0,
+        "critical_suppliers": [],
+        "confounding_direction": {
+          "null_direction": {
+            "item_levels": {
+              "A-new": "-1",
+              "B-new": "-1",
+              "C-new": "-1"
+            },
+            "month_effects": {
+              "2025-04": "1",
+              "2025-05": "1",
+              "2025-06": "1"
+            },
+            "supplier_levels": {}
+          },
+          "explanation": "Adding this direction to the parameters leaves every observed quote unchanged, so the month effect cannot be separated from the listed item/supplier levels.",
+          "n_witness_quotes": 60,
+          "witness_quote_ids": [
+            "q0013",
+            "q0015",
+            "q0016",
+            "q0017",
+            "q0018",
+            "q0019",
+            "q0020",
+            "q0021",
+            "q0022",
+            "q0032",
+            "q0034",
+            "q0035",
+            "q0036",
+            "q0037",
+            "q0038",
+            "q0051",
+            "q0053",
+            "q0054",
+            "q0055",
+            "q0056",
+            "q0057",
+            "q0058",
+            "q0059",
+            "q0060",
+            "q0070",
+            "q0072",
+            "q0073",
+            "q0074",
+            "q0075",
+            "q0076",
+            "q0089",
+            "q0091",
+            "q0092",
+            "q0093",
+            "q0094",
+            "q0095",
+            "q0096",
+            "q0097",
+            "q0098",
+            "q0108",
+            "q0110",
+            "q0111",
+            "q0112",
+            "q0113",
+            "q0114",
+            "q0127",
+            "q0129",
+            "q0130",
+            "q0131",
+            "q0132",
+            "q0133",
+            "q0134",
+            "q0135",
+            "q0136",
+            "q0146",
+            "q0148",
+            "q0149",
+            "q0150",
+            "q0151",
+            "q0152"
+          ]
+        }
+      },
+      {
+        "month": "2025-06",
+        "identified": false,
+        "component_id": 0,
+        "critical_suppliers": [],
+        "confounding_direction": {
+          "null_direction": {
+            "item_levels": {
+              "A-new": "-1",
+              "B-new": "-1",
+              "C-new": "-1"
+            },
+            "month_effects": {
+              "2025-04": "1",
+              "2025-05": "1",
+              "2025-06": "1"
+            },
+            "supplier_levels": {}
+          },
+          "explanation": "Adding this direction to the parameters leaves every observed quote unchanged, so the month effect cannot be separated from the listed item/supplier levels.",
+          "n_witness_quotes": 60,
+          "witness_quote_ids": [
+            "q0013",
+            "q0015",
+            "q0016",
+            "q0017",
+            "q0018",
+            "q0019",
+            "q0020",
+            "q0021",
+            "q0022",
+            "q0032",
+            "q0034",
+            "q0035",
+            "q0036",
+            "q0037",
+            "q0038",
+            "q0051",
+            "q0053",
+            "q0054",
+            "q0055",
+            "q0056",
+            "q0057",
+            "q0058",
+            "q0059",
+            "q0060",
+            "q0070",
+            "q0072",
+            "q0073",
+            "q0074",
+            "q0075",
+            "q0076",
+            "q0089",
+            "q0091",
+            "q0092",
+            "q0093",
+            "q0094",
+            "q0095",
+            "q0096",
+            "q0097",
+            "q0098",
+            "q0108",
+            "q0110",
+            "q0111",
+            "q0112",
+            "q0113",
+            "q0114",
+            "q0127",
+            "q0129",
+            "q0130",
+            "q0131",
+            "q0132",
+            "q0133",
+            "q0134",
+            "q0135",
+            "q0136",
+            "q0146",
+            "q0148",
+            "q0149",
+            "q0150",
+            "q0151",
+            "q0152"
+          ]
+        }
+      }
+    ],
+    "sole_supplier_cells": [],
+    "bridge_cells": {},
+    "deletion": [
+      {
+        "removed_supplier": "supplier-1",
+        "n_quotes_remaining": 102,
+        "identified_months": [
+          "2025-01",
+          "2025-02",
+          "2025-03"
+        ],
+        "unidentified_months": [
+          "2025-04",
+          "2025-05",
+          "2025-06"
+        ],
+        "newly_unidentified_months": [],
+        "components": [
+          {
+            "component_id": 0,
+            "items": [
+              "A-new",
+              "B-new",
+              "C-new"
+            ],
+            "months": [
+              "2025-04",
+              "2025-05",
+              "2025-06"
+            ],
+            "suppliers": [
+              "supplier-2",
+              "supplier-3",
+              "supplier-4",
+              "supplier-5",
+              "supplier-6",
+              "supplier-7",
+              "supplier-8"
+            ]
+          },
+          {
+            "component_id": 1,
+            "items": [
+              "A-old",
+              "B-old",
+              "C-old"
+            ],
+            "months": [
+              "2025-01",
+              "2025-02",
+              "2025-03"
+            ],
+            "suppliers": [
+              "supplier-2",
+              "supplier-3",
+              "supplier-4",
+              "supplier-5",
+              "supplier-6",
+              "supplier-7",
+              "supplier-8"
+            ]
+          }
+        ],
+        "month_component": {
+          "2025-01": 1,
+          "2025-02": 1,
+          "2025-03": 1,
+          "2025-04": 0,
+          "2025-05": 0,
+          "2025-06": 0
+        }
+      },
+      {
+        "removed_supplier": "supplier-2",
+        "n_quotes_remaining": 108,
+        "identified_months": [
+          "2025-01",
+          "2025-02",
+          "2025-03"
+        ],
+        "unidentified_months": [
+          "2025-04",
+          "2025-05",
+          "2025-06"
+        ],
+        "newly_unidentified_months": [],
+        "components": [
+          {
+            "component_id": 0,
+            "items": [
+              "A-new",
+              "B-new",
+              "C-new"
+            ],
+            "months": [
+              "2025-04",
+              "2025-05",
+              "2025-06"
+            ],
+            "suppliers": [
+              "supplier-1",
+              "supplier-3",
+              "supplier-4",
+              "supplier-5",
+              "supplier-6",
+              "supplier-7",
+              "supplier-8"
+            ]
+          },
+          {
+            "component_id": 1,
+            "items": [
+              "A-old",
+              "B-old",
+              "C-old"
+            ],
+            "months": [
+              "2025-01",
+              "2025-02",
+              "2025-03"
+            ],
+            "suppliers": [
+              "supplier-1",
+              "supplier-3",
+              "supplier-4",
+              "supplier-5",
+              "supplier-6",
+              "supplier-7",
+              "supplier-8"
+            ]
+          }
+        ],
+        "month_component": {
+          "2025-01": 1,
+          "2025-02": 1,
+          "2025-03": 1,
+          "2025-04": 0,
+          "2025-05": 0,
+          "2025-06": 0
+        }
+      },
+      {
+        "removed_supplier": "supplier-3",
+        "n_quotes_remaining": 102,
+        "identified_months": [
+          "2025-01",
+          "2025-02",
+          "2025-03"
+        ],
+        "unidentified_months": [
+          "2025-04",
+          "2025-05",
+          "2025-06"
+        ],
+        "newly_unidentified_months": [],
+        "components": [
+          {
+            "component_id": 0,
+            "items": [
+              "A-new",
+              "B-new",
+              "C-new"
+            ],
+            "months": [
+              "2025-04",
+              "2025-05",
+              "2025-06"
+            ],
+            "suppliers": [
+              "supplier-1",
+              "supplier-2",
+              "supplier-4",
+              "supplier-5",
+              "supplier-6",
+              "supplier-7",
+              "supplier-8"
+            ]
+          },
+          {
+            "component_id": 1,
+            "items": [
+              "A-old",
+              "B-old",
+              "C-old"
+            ],
+            "months": [
+              "2025-01",
+              "2025-02",
+              "2025-03"
+            ],
+            "suppliers": [
+              "supplier-1",
+              "supplier-2",
+              "supplier-4",
+              "supplier-5",
+              "supplier-6",
+              "supplier-7",
+              "supplier-8"
+            ]
+          }
+        ],
+        "month_component": {
+          "2025-01": 1,
+          "2025-02": 1,
+          "2025-03": 1,
+          "2025-04": 0,
+          "2025-05": 0,
+          "2025-06": 0
+        }
+      },
+      {
+        "removed_supplier": "supplier-4",
+        "n_quotes_remaining": 108,
+        "identified_months": [
+          "2025-01",
+          "2025-02",
+          "2025-03"
+        ],
+        "unidentified_months": [
+          "2025-04",
+          "2025-05",
+          "2025-06"
+        ],
+        "newly_unidentified_months": [],
+        "components": [
+          {
+            "component_id": 0,
+            "items": [
+              "A-new",
+              "B-new",
+              "C-new"
+            ],
+            "months": [
+              "2025-04",
+              "2025-05",
+              "2025-06"
+            ],
+            "suppliers": [
+              "supplier-1",
+              "supplier-2",
+              "supplier-3",
+              "supplier-5",
+              "supplier-6",
+              "supplier-7",
+              "supplier-8"
+            ]
+          },
+          {
+            "component_id": 1,
+            "items": [
+              "A-old",
+              "B-old",
+              "C-old"
+            ],
+            "months": [
+              "2025-01",
+              "2025-02",
+              "2025-03"
+            ],
+            "suppliers": [
+              "supplier-1",
+              "supplier-2",
+              "supplier-3",
+              "supplier-5",
+              "supplier-6",
+              "supplier-7",
+              "supplier-8"
+            ]
+          }
+        ],
+        "month_component": {
+          "2025-01": 1,
+          "2025-02": 1,
+          "2025-03": 1,
+          "2025-04": 0,
+          "2025-05": 0,
+          "2025-06": 0
+        }
+      },
+      {
+        "removed_supplier": "supplier-5",
+        "n_quotes_remaining": 102,
+        "identified_months": [
+          "2025-01",
+          "2025-02",
+          "2025-03"
+        ],
+        "unidentified_months": [
+          "2025-04",
+          "2025-05",
+          "2025-06"
+        ],
+        "newly_unidentified_months": [],
+        "components": [
+          {
+            "component_id": 0,
+            "items": [
+              "A-new",
+              "B-new",
+              "C-new"
+            ],
+            "months": [
+              "2025-04",
+              "2025-05",
+              "2025-06"
+            ],
+            "suppliers": [
+              "supplier-1",
+              "supplier-2",
+              "supplier-3",
+              "supplier-4",
+              "supplier-6",
+              "supplier-7",
+              "supplier-8"
+            ]
+          },
+          {
+            "component_id": 1,
+            "items": [
+              "A-old",
+              "B-old",
+              "C-old"
+            ],
+            "months": [
+              "2025-01",
+              "2025-02",
+              "2025-03"
+            ],
+            "suppliers": [
+              "supplier-1",
+              "supplier-2",
+              "supplier-3",
+              "supplier-4",
+              "supplier-6",
+              "supplier-7",
+              "supplier-8"
+            ]
+          }
+        ],
+        "month_component": {
+          "2025-01": 1,
+          "2025-02": 1,
+          "2025-03": 1,
+          "2025-04": 0,
+          "2025-05": 0,
+          "2025-06": 0
+        }
+      },
+      {
+        "removed_supplier": "supplier-6",
+        "n_quotes_remaining": 108,
+        "identified_months": [
+          "2025-01",
+          "2025-02",
+          "2025-03"
+        ],
+        "unidentified_months": [
+          "2025-04",
+          "2025-05",
+          "2025-06"
+        ],
+        "newly_unidentified_months": [],
+        "components": [
+          {
+            "component_id": 0,
+            "items": [
+              "A-new",
+              "B-new",
+              "C-new"
+            ],
+            "months": [
+              "2025-04",
+              "2025-05",
+              "2025-06"
+            ],
+            "suppliers": [
+              "supplier-1",
+              "supplier-2",
+              "supplier-3",
+              "supplier-4",
+              "supplier-5",
+              "supplier-7",
+              "supplier-8"
+            ]
+          },
+          {
+            "component_id": 1,
+            "items": [
+              "A-old",
+              "B-old",
+              "C-old"
+            ],
+            "months": [
+              "2025-01",
+              "2025-02",
+              "2025-03"
+            ],
+            "suppliers": [
+              "supplier-1",
+              "supplier-2",
+              "supplier-3",
+              "supplier-4",
+              "supplier-5",
+              "supplier-7",
+              "supplier-8"
+            ]
+          }
+        ],
+        "month_component": {
+          "2025-01": 1,
+          "2025-02": 1,
+          "2025-03": 1,
+          "2025-04": 0,
+          "2025-05": 0,
+          "2025-06": 0
+        }
+      },
+      {
+        "removed_supplier": "supplier-7",
+        "n_quotes_remaining": 102,
+        "identified_months": [
+          "2025-01",
+          "2025-02",
+          "2025-03"
+        ],
+        "unidentified_months": [
+          "2025-04",
+          "2025-05",
+          "2025-06"
+        ],
+        "newly_unidentified_months": [],
+        "components": [
+          {
+            "component_id": 0,
+            "items": [
+              "A-new",
+              "B-new",
+              "C-new"
+            ],
+            "months": [
+              "2025-04",
+              "2025-05",
+              "2025-06"
+            ],
+            "suppliers": [
+              "supplier-1",
+              "supplier-2",
+              "supplier-3",
+              "supplier-4",
+              "supplier-5",
+              "supplier-6",
+              "supplier-8"
+            ]
+          },
+          {
+            "component_id": 1,
+            "items": [
+              "A-old",
+              "B-old",
+              "C-old"
+            ],
+            "months": [
+              "2025-01",
+              "2025-02",
+              "2025-03"
+            ],
+            "suppliers": [
+              "supplier-1",
+              "supplier-2",
+              "supplier-3",
+              "supplier-4",
+              "supplier-5",
+              "supplier-6",
+              "supplier-8"
+            ]
+          }
+        ],
+        "month_component": {
+          "2025-01": 1,
+          "2025-02": 1,
+          "2025-03": 1,
+          "2025-04": 0,
+          "2025-05": 0,
+          "2025-06": 0
+        }
+      },
+      {
+        "removed_supplier": "supplier-8",
+        "n_quotes_remaining": 108,
+        "identified_months": [
+          "2025-01",
+          "2025-02",
+          "2025-03"
+        ],
+        "unidentified_months": [
+          "2025-04",
+          "2025-05",
+          "2025-06"
+        ],
+        "newly_unidentified_months": [],
+        "components": [
+          {
+            "component_id": 0,
+            "items": [
+              "A-new",
+              "B-new",
+              "C-new"
+            ],
+            "months": [
+              "2025-04",
+              "2025-05",
+              "2025-06"
+            ],
+            "suppliers": [
+              "supplier-1",
+              "supplier-2",
+              "supplier-3",
+              "supplier-4",
+              "supplier-5",
+              "supplier-6",
+              "supplier-7"
+            ]
+          },
+          {
+            "component_id": 1,
+            "items": [
+              "A-old",
+              "B-old",
+              "C-old"
+            ],
+            "months": [
+              "2025-01",
+              "2025-02",
+              "2025-03"
+            ],
+            "suppliers": [
+              "supplier-1",
+              "supplier-2",
+              "supplier-3",
+              "supplier-4",
+              "supplier-5",
+              "supplier-6",
+              "supplier-7"
+            ]
+          }
+        ],
+        "month_component": {
+          "2025-01": 1,
+          "2025-02": 1,
+          "2025-03": 1,
+          "2025-04": 0,
+          "2025-05": 0,
+          "2025-06": 0
+        }
+      }
+    ],
+    "family_cross_component": [
+      {
+        "family": "family-A",
+        "items": [
+          "A-new",
+          "A-old"
+        ],
+        "components": [
+          0,
+          1
+        ],
+        "note": "Family membership spans components, but no single SKU is observed in both; the family name is not used as an equivalence key."
+      },
+      {
+        "family": "family-B",
+        "items": [
+          "B-new",
+          "B-old"
+        ],
+        "components": [
+          0,
+          1
+        ],
+        "note": "Family membership spans components, but no single SKU is observed in both; the family name is not used as an equivalence key."
+      },
+      {
+        "family": "family-C",
+        "items": [
+          "C-new",
+          "C-old"
+        ],
+        "components": [
+          0,
+          1
+        ],
+        "note": "Family membership spans components, but no single SKU is observed in both; the family name is not used as an equivalence key."
+      }
+    ],
+    "warnings": [
+      "month 2025-04: month effect is not identifiable relative to 2025-01; see confounding_direction",
+      "month 2025-05: month effect is not identifiable relative to 2025-01; see confounding_direction",
+      "month 2025-06: month effect is not identifiable relative to 2025-01; see confounding_direction"
+    ]
+  },
+  "estimates": {
+    "month_index": [
+      {
+        "month": "2025-01",
+        "identified_in_full_sample": true,
+        "status": "identified",
+        "log_value": 0.0,
+        "ratio": 1.0,
+        "ci_log": [
+          0.0,
+          0.0
+        ],
+        "ci_ratio": [
+          1.0,
+          1.0
+        ],
+        "interval_reportable": true,
+        "valid_replicates": 500,
+        "total_replicates": 500,
+        "valid_fraction": 1.0,
+        "failure_reasons": {},
+        "reason": "base-month normalization; index fixed at 100",
+        "index_base100": 100.0
+      },
+      {
+        "month": "2025-02",
+        "identified_in_full_sample": true,
+        "status": "identified",
+        "log_value": 0.021079189746039256,
+        "ratio": 1.021302925154582,
+        "ci_log": [
+          0.01266467991079651,
+          0.026526534704663204
+        ],
+        "ci_ratio": [
+          1.0127452166007593,
+          1.026881494897368
+        ],
+        "interval_reportable": true,
+        "valid_replicates": 500,
+        "total_replicates": 500,
+        "valid_fraction": 1.0,
+        "failure_reasons": {},
+        "reason": null,
+        "index_base100": 102.1302925154582
+      },
+      {
+        "month": "2025-03",
+        "identified_in_full_sample": true,
+        "status": "identified",
+        "log_value": 0.051486677419250726,
+        "ratio": 1.0528351597172674,
+        "ci_log": [
+          0.04318308471295858,
+          0.056444780763805005
+        ],
+        "ci_ratio": [
+          1.0441290414179112,
+          1.0580681874699303
+        ],
+        "interval_reportable": true,
+        "valid_replicates": 500,
+        "total_replicates": 500,
+        "valid_fraction": 1.0,
+        "failure_reasons": {},
+        "reason": null,
+        "index_base100": 105.28351597172674
+      },
+      {
+        "month": "2025-04",
+        "identified_in_full_sample": false,
+        "status": "insufficient_support",
+        "log_value": null,
+        "ratio": null,
+        "ci_log": null,
+        "ci_ratio": null,
+        "interval_reportable": false,
+        "valid_replicates": 0,
+        "total_replicates": 500,
+        "valid_fraction": 0.0,
+        "failure_reasons": {
+          "contrast_not_identified_in_replicate": 500
+        },
+        "reason": "month effect not identified from observed overlap; the exact design null space contains a direction with a non-zero coefficient on 2025-04"
+      },
+      {
+        "month": "2025-05",
+        "identified_in_full_sample": false,
+        "status": "insufficient_support",
+        "log_value": null,
+        "ratio": null,
+        "ci_log": null,
+        "ci_ratio": null,
+        "interval_reportable": false,
+        "valid_replicates": 0,
+        "total_replicates": 500,
+        "valid_fraction": 0.0,
+        "failure_reasons": {
+          "contrast_not_identified_in_replicate": 500
+        },
+        "reason": "month effect not identified from observed overlap; the exact design null space contains a direction with a non-zero coefficient on 2025-05"
+      },
+      {
+        "month": "2025-06",
+        "identified_in_full_sample": false,
+        "status": "insufficient_support",
+        "log_value": null,
+        "ratio": null,
+        "ci_log": null,
+        "ci_ratio": null,
+        "interval_reportable": false,
+        "valid_replicates": 0,
+        "total_replicates": 500,
+        "valid_fraction": 0.0,
+        "failure_reasons": {
+          "contrast_not_identified_in_replicate": 500
+        },
+        "reason": "month effect not identified from observed overlap; the exact design null space contains a direction with a non-zero coefficient on 2025-06"
+      }
+    ],
+    "item_levels": {
+      "A-new": {
+        "status": "insufficient_support",
+        "log_value": null,
+        "ratio": null,
+        "ci_log": null,
+        "ci_ratio": null,
+        "interval_reportable": false,
+        "valid_replicates": 0,
+        "total_replicates": 0,
+        "valid_fraction": null,
+        "failure_reasons": {},
+        "reason": "centered item level is not identified"
+      },
+      "A-old": {
+        "status": "insufficient_support",
+        "log_value": null,
+        "ratio": null,
+        "ci_log": null,
+        "ci_ratio": null,
+        "interval_reportable": false,
+        "valid_replicates": 0,
+        "total_replicates": 0,
+        "valid_fraction": null,
+        "failure_reasons": {},
+        "reason": "centered item level is not identified"
+      },
+      "B-new": {
+        "status": "insufficient_support",
+        "log_value": null,
+        "ratio": null,
+        "ci_log": null,
+        "ci_ratio": null,
+        "interval_reportable": false,
+        "valid_replicates": 0,
+        "total_replicates": 0,
+        "valid_fraction": null,
+        "failure_reasons": {},
+        "reason": "centered item level is not identified"
+      },
+      "B-old": {
+        "status": "insufficient_support",
+        "log_value": null,
+        "ratio": null,
+        "ci_log": null,
+        "ci_ratio": null,
+        "interval_reportable": false,
+        "valid_replicates": 0,
+        "total_replicates": 0,
+        "valid_fraction": null,
+        "failure_reasons": {},
+        "reason": "centered item level is not identified"
+      },
+      "C-new": {
+        "status": "insufficient_support",
+        "log_value": null,
+        "ratio": null,
+        "ci_log": null,
+        "ci_ratio": null,
+        "interval_reportable": false,
+        "valid_replicates": 0,
+        "total_replicates": 0,
+        "valid_fraction": null,
+        "failure_reasons": {},
+        "reason": "centered item level is not identified"
+      },
+      "C-old": {
+        "status": "insufficient_support",
+        "log_value": null,
+        "ratio": null,
+        "ci_log": null,
+        "ci_ratio": null,
+        "interval_reportable": false,
+        "valid_replicates": 0,
+        "total_replicates": 0,
+        "valid_fraction": null,
+        "failure_reasons": {},
+        "reason": "centered item level is not identified"
+      }
+    },
+    "item_spreads_within_family": [
+      {
+        "family": "family-A",
+        "item_a": "A-old",
+        "item_b": "A-new",
+        "contrast": "log_level(A-new) - log_level(A-old)",
+        "ratio_definition": "A-new price / A-old price at equal month/supplier",
+        "status": "insufficient_support",
+        "log_value": null,
+        "price_ratio_b_over_a": null,
+        "reason": "SKU level difference not identified: no observed overlap separates it from month movement"
+      },
+      {
+        "family": "family-B",
+        "item_a": "B-old",
+        "item_b": "B-new",
+        "contrast": "log_level(B-new) - log_level(B-old)",
+        "ratio_definition": "B-new price / B-old price at equal month/supplier",
+        "status": "insufficient_support",
+        "log_value": null,
+        "price_ratio_b_over_a": null,
+        "reason": "SKU level difference not identified: no observed overlap separates it from month movement"
+      },
+      {
+        "family": "family-C",
+        "item_a": "C-old",
+        "item_b": "C-new",
+        "contrast": "log_level(C-new) - log_level(C-old)",
+        "ratio_definition": "C-new price / C-old price at equal month/supplier",
+        "status": "insufficient_support",
+        "log_value": null,
+        "price_ratio_b_over_a": null,
+        "reason": "SKU level difference not identified: no observed overlap separates it from month movement"
+      }
+    ],
+    "supplier_levels": [
+      {
+        "supplier_id": "supplier-1",
+        "status": "identified",
+        "n_quotes": 18,
+        "months": [
+          "2025-01",
+          "2025-02",
+          "2025-03",
+          "2025-04",
+          "2025-05",
+          "2025-06"
+        ],
+        "items": [
+          "A-new",
+          "A-old",
+          "B-new",
+          "B-old",
+          "C-new",
+          "C-old"
+        ],
+        "centered_log_level": -0.038372624449968924,
+        "level_ratio_to_mean": 0.9623542773386765
+      },
+      {
+        "supplier_id": "supplier-2",
+        "status": "identified",
+        "n_quotes": 12,
+        "months": [
+          "2025-01",
+          "2025-02",
+          "2025-03",
+          "2025-04",
+          "2025-05",
+          "2025-06"
+        ],
+        "items": [
+          "A-new",
+          "A-old",
+          "B-new",
+          "B-old"
+        ],
+        "centered_log_level": -0.018140811831868067,
+        "level_ratio_to_mean": 0.9820227422008186
+      },
+      {
+        "supplier_id": "supplier-3",
+        "status": "identified",
+        "n_quotes": 18,
+        "months": [
+          "2025-01",
+          "2025-02",
+          "2025-03",
+          "2025-04",
+          "2025-05",
+          "2025-06"
+        ],
+        "items": [
+          "A-new",
+          "A-old",
+          "B-new",
+          "B-old",
+          "C-new",
+          "C-old"
+        ],
+        "centered_log_level": 0.006821652657033774,
+        "level_ratio_to_mean": 1.0068449731274114
+      },
+      {
+        "supplier_id": "supplier-4",
+        "status": "identified",
+        "n_quotes": 12,
+        "months": [
+          "2025-01",
+          "2025-02",
+          "2025-03",
+          "2025-04",
+          "2025-05",
+          "2025-06"
+        ],
+        "items": [
+          "A-new",
+          "A-old",
+          "B-new",
+          "B-old"
+        ],
+        "centered_log_level": -0.020854409024825257,
+        "level_ratio_to_mean": 0.9793615403920455
+      },
+      {
+        "supplier_id": "supplier-5",
+        "status": "identified",
+        "n_quotes": 18,
+        "months": [
+          "2025-01",
+          "2025-02",
+          "2025-03",
+          "2025-04",
+          "2025-05",
+          "2025-06"
+        ],
+        "items": [
+          "A-new",
+          "A-old",
+          "B-new",
+          "B-old",
+          "C-new",
+          "C-old"
+        ],
+        "centered_log_level": 0.008792780885965254,
+        "level_ratio_to_mean": 1.0088315509326842
+      },
+      {
+        "supplier_id": "supplier-6",
+        "status": "identified",
+        "n_quotes": 12,
+        "months": [
+          "2025-01",
+          "2025-02",
+          "2025-03",
+          "2025-04",
+          "2025-05",
+          "2025-06"
+        ],
+        "items": [
+          "A-new",
+          "A-old",
+          "B-new",
+          "B-old"
+        ],
+        "centered_log_level": 0.029285779754728715,
+        "level_ratio_to_mean": 1.0297188252238447
+      },
+      {
+        "supplier_id": "supplier-7",
+        "status": "identified",
+        "n_quotes": 18,
+        "months": [
+          "2025-01",
+          "2025-02",
+          "2025-03",
+          "2025-04",
+          "2025-05",
+          "2025-06"
+        ],
+        "items": [
+          "A-new",
+          "A-old",
+          "B-new",
+          "B-old",
+          "C-new",
+          "C-old"
+        ],
+        "centered_log_level": 0.00659716737549969,
+        "level_ratio_to_mean": 1.0066189766175517
+      },
+      {
+        "supplier_id": "supplier-8",
+        "status": "identified",
+        "n_quotes": 12,
+        "months": [
+          "2025-01",
+          "2025-02",
+          "2025-03",
+          "2025-04",
+          "2025-05",
+          "2025-06"
+        ],
+        "items": [
+          "A-new",
+          "A-old",
+          "B-new",
+          "B-old"
+        ],
+        "centered_log_level": 0.02587046463343482,
+        "level_ratio_to_mean": 1.0262080096327875
+      }
+    ]
+  },
+  "stability": {
+    "leave_one_supplier_out": [
+      {
+        "removed_supplier": "supplier-1",
+        "months": {
+          "2025-01": {
+            "status": "identified",
+            "index_base100": 100.0
+          },
+          "2025-02": {
+            "status": "identified",
+            "index_base100": 102.17882354054908
+          },
+          "2025-03": {
+            "status": "identified",
+            "index_base100": 105.4417298639468
+          },
+          "2025-04": {
+            "status": "insufficient_support",
+            "index_base100": null
+          },
+          "2025-05": {
+            "status": "insufficient_support",
+            "index_base100": null
+          },
+          "2025-06": {
+            "status": "insufficient_support",
+            "index_base100": null
+          }
+        }
+      },
+      {
+        "removed_supplier": "supplier-2",
+        "months": {
+          "2025-01": {
+            "status": "identified",
+            "index_base100": 100.0
+          },
+          "2025-02": {
+            "status": "identified",
+            "index_base100": 102.08778906986102
+          },
+          "2025-03": {
+            "status": "identified",
+            "index_base100": 105.2121051248427
+          },
+          "2025-04": {
+            "status": "insufficient_support",
+            "index_base100": null
+          },
+          "2025-05": {
+            "status": "insufficient_support",
+            "index_base100": null
+          },
+          "2025-06": {
+            "status": "insufficient_support",
+            "index_base100": null
+          }
+        }
+      },
+      {
+        "removed_supplier": "supplier-3",
+        "months": {
+          "2025-01": {
+            "status": "identified",
+            "index_base100": 100.0
+          },
+          "2025-02": {
+            "status": "identified",
+            "index_base100": 102.04722360333527
+          },
+          "2025-03": {
+            "status": "identified",
+            "index_base100": 105.19086745298267
+          },
+          "2025-04": {
+            "status": "insufficient_support",
+            "index_base100": null
+          },
+          "2025-05": {
+            "status": "insufficient_support",
+            "index_base100": null
+          },
+          "2025-06": {
+            "status": "insufficient_support",
+            "index_base100": null
+          }
+        }
+      },
+      {
+        "removed_supplier": "supplier-4",
+        "months": {
+          "2025-01": {
+            "status": "identified",
+            "index_base100": 100.0
+          },
+          "2025-02": {
+            "status": "identified",
+            "index_base100": 102.35326629042527
+          },
+          "2025-03": {
+            "status": "identified",
+            "index_base100": 105.5118011777869
+          },
+          "2025-04": {
+            "status": "insufficient_support",
+            "index_base100": null
+          },
+          "2025-05": {
+            "status": "insufficient_support",
+            "index_base100": null
+          },
+          "2025-06": {
+            "status": "insufficient_support",
+            "index_base100": null
+          }
+        }
+      },
+      {
+        "removed_supplier": "supplier-5",
+        "months": {
+          "2025-01": {
+            "status": "identified",
+            "index_base100": 100.0
+          },
+          "2025-02": {
+            "status": "identified",
+            "index_base100": 102.11364849565585
+          },
+          "2025-03": {
+            "status": "identified",
+            "index_base100": 105.27591541794317
+          },
+          "2025-04": {
+            "status": "insufficient_support",
+            "index_base100": null
+          },
+          "2025-05": {
+            "status": "insufficient_support",
+            "index_base100": null
+          },
+          "2025-06": {
+            "status": "insufficient_support",
+            "index_base100": null
+          }
+        }
+      },
+      {
+        "removed_supplier": "supplier-6",
+        "months": {
+          "2025-01": {
+            "status": "identified",
+            "index_base100": 100.0
+          },
+          "2025-02": {
+            "status": "identified",
+            "index_base100": 101.94825302161424
+          },
+          "2025-03": {
+            "status": "identified",
+            "index_base100": 105.138092016654
+          },
+          "2025-04": {
+            "status": "insufficient_support",
+            "index_base100": null
+          },
+          "2025-05": {
+            "status": "insufficient_support",
+            "index_base100": null
+          },
+          "2025-06": {
+            "status": "insufficient_support",
+            "index_base100": null
+          }
+        }
+      },
+      {
+        "removed_supplier": "supplier-7",
+        "months": {
+          "2025-01": {
+            "status": "identified",
+            "index_base100": 100.0
+          },
+          "2025-02": {
+            "status": "identified",
+            "index_base100": 102.26174096519019
+          },
+          "2025-03": {
+            "status": "identified",
+            "index_base100": 105.33944634685528
+          },
+          "2025-04": {
+            "status": "insufficient_support",
+            "index_base100": null
+          },
+          "2025-05": {
+            "status": "insufficient_support",
+            "index_base100": null
+          },
+          "2025-06": {
+            "status": "insufficient_support",
+            "index_base100": null
+          }
+        }
+      },
+      {
+        "removed_supplier": "supplier-8",
+        "months": {
+          "2025-01": {
+            "status": "identified",
+            "index_base100": 100.0
+          },
+          "2025-02": {
+            "status": "identified",
+            "index_base100": 102.01127008259844
+          },
+          "2025-03": {
+            "status": "identified",
+            "index_base100": 105.14524460830224
+          },
+          "2025-04": {
+            "status": "insufficient_support",
+            "index_base100": null
+          },
+          "2025-05": {
+            "status": "insufficient_support",
+            "index_base100": null
+          },
+          "2025-06": {
+            "status": "insufficient_support",
+            "index_base100": null
+          }
+        }
+      }
+    ],
+    "critical_bridge_suppliers": {}
+  },
+  "uncertainty": {
+    "method": "whole-supplier-trajectory bootstrap with replacement; identification re-tested exactly in every replicate; percentile intervals",
+    "resampling_unit": "supplier trajectory (all quotes of one supplier)",
+    "n_boot": 500,
+    "seed": 20250101,
+    "ci_level": 0.95,
+    "min_valid_fraction": 0.8,
+    "min_valid_replicates": 20,
+    "coverage_note": "Percentile intervals from a finite supplier bootstrap are descriptive; no exact finite-sample coverage guarantee is claimed. Replicates that lose identification are failures, not zero estimates."
+  },
+  "outliers": [
+    {
+      "quote_id": "q0114",
+      "supplier_id": "supplier-6",
+      "month": "2025-06",
+      "item_id": "B-new",
+      "price": 202.54,
+      "log_residual": 0.026792540927443653,
+      "standardized_residual": 2.4992093426122683,
+      "huber_weight": 0.5381702033042259,
+      "disposition": "downweighted, retained"
+    },
+    {
+      "quote_id": "q0004",
+      "supplier_id": "supplier-1",
+      "month": "2025-02",
+      "item_id": "A-old",
+      "price": 100.86,
+      "log_residual": 0.02671870289796452,
+      "standardized_residual": 2.4923217281223224,
+      "huber_weight": 0.5396574546672673,
+      "disposition": "downweighted, retained"
+    },
+    {
+      "quote_id": "q0021",
+      "supplier_id": "supplier-1",
+      "month": "2025-06",
+      "item_id": "B-new",
+      "price": 179.46,
+      "log_residual": -0.026534110902085573,
+      "standardized_residual": -2.4751029789965324,
+      "huber_weight": 0.5434117333282948,
+      "disposition": "downweighted, retained"
+    },
+    {
+      "quote_id": "q0018",
+      "supplier_id": "supplier-1",
+      "month": "2025-05",
+      "item_id": "B-new",
+      "price": 173.12,
+      "log_residual": -0.02583284216968096,
+      "standardized_residual": -2.409688602194657,
+      "huber_weight": 0.5581634069935509,
+      "disposition": "downweighted, retained"
+    },
+    {
+      "quote_id": "q0056",
+      "supplier_id": "supplier-3",
+      "month": "2025-05",
+      "item_id": "B-new",
+      "price": 190.43,
+      "log_residual": 0.024272558035925762,
+      "standardized_residual": 2.2641452326885405,
+      "huber_weight": 0.5940431649780481,
+      "disposition": "downweighted, retained"
+    },
+    {
+      "quote_id": "q0061",
+      "supplier_id": "supplier-4",
+      "month": "2025-01",
+      "item_id": "A-old",
+      "price": 100.12,
+      "log_residual": 0.022915727133854702,
+      "standardized_residual": 2.137579989176022,
+      "huber_weight": 0.6292162196688851,
+      "disposition": "downweighted, retained"
+    },
+    {
+      "quote_id": "q0131",
+      "supplier_id": "supplier-7",
+      "month": "2025-05",
+      "item_id": "A-new",
+      "price": 131.26,
+      "log_residual": -0.01917268277027695,
+      "standardized_residual": -1.788428653787607,
+      "huber_weight": 0.7520568389295316,
+      "disposition": "downweighted, retained"
+    },
+    {
+      "quote_id": "q0019",
+      "supplier_id": "supplier-1",
+      "month": "2025-05",
+      "item_id": "C-new",
+      "price": 207.4,
+      "log_residual": -0.018946060552896604,
+      "standardized_residual": -1.7672893238355036,
+      "huber_weight": 0.7610525236751544,
+      "disposition": "downweighted, retained"
+    },
+    {
+      "quote_id": "q0100",
+      "supplier_id": "supplier-6",
+      "month": "2025-01",
+      "item_id": "B-old",
+      "price": 157.35,
+      "log_residual": -0.018683058191427904,
+      "standardized_residual": -1.742756452515397,
+      "huber_weight": 0.7717658988086837,
+      "disposition": "downweighted, retained"
+    },
+    {
+      "quote_id": "q0060",
+      "supplier_id": "supplier-3",
+      "month": "2025-06",
+      "item_id": "C-new",
+      "price": 233.66,
+      "log_residual": 0.01840881888947621,
+      "standardized_residual": 1.7171753989152472,
+      "huber_weight": 0.7832630265296029,
+      "disposition": "downweighted, retained"
+    },
+    {
+      "quote_id": "q0062",
+      "supplier_id": "supplier-4",
+      "month": "2025-01",
+      "item_id": "B-old",
+      "price": 155.29,
+      "log_residual": 0.018278843658808164,
+      "standardized_residual": 1.7050513039414468,
+      "huber_weight": 0.7888325688030656,
+      "disposition": "downweighted, retained"
+    },
+    {
+      "quote_id": "q0044",
+      "supplier_id": "supplier-3",
+      "month": "2025-02",
+      "item_id": "C-old",
+      "price": 211.62,
+      "log_residual": -0.018212519120862858,
+      "standardized_residual": -1.6988645482572344,
+      "huber_weight": 0.7917052606646565,
+      "disposition": "downweighted, retained"
+    },
+    {
+      "quote_id": "q0089",
+      "supplier_id": "supplier-5",
+      "month": "2025-04",
+      "item_id": "A-new",
+      "price": 133.58,
+      "log_residual": 0.017392198524427194,
+      "standardized_residual": 1.6223450085800812,
+      "huber_weight": 0.8290468382967527,
+      "disposition": "downweighted, retained"
+    }
+  ],
+  "weights": {
+    "scheme": "supplier-balanced: quote weight = 1/n_supplier_quotes, scaled to mean 1",
+    "total_base_weight": 120.0,
+    "total_final_weight": 115.34322812486971,
+    "effective_n_quotes": 113.64408377958021,
+    "per_supplier": [
+      {
+        "supplier_id": "supplier-1",
+        "n_quotes": 18,
+        "base_weight_share": 0.125,
+        "final_weight_share": 0.11712320866330021,
+        "mean_huber_weight": 0.9006245983711838
+      },
+      {
+        "supplier_id": "supplier-2",
+        "n_quotes": 12,
+        "base_weight_share": 0.125,
+        "final_weight_share": 0.1300466463775499,
+        "mean_huber_weight": 1.0
+      },
+      {
+        "supplier_id": "supplier-3",
+        "n_quotes": 18,
+        "base_weight_share": 0.125,
+        "final_weight_share": 0.12404290894293092,
+        "mean_huber_weight": 0.9538339695651281
+      },
+      {
+        "supplier_id": "supplier-4",
+        "n_quotes": 12,
+        "base_weight_share": 0.125,
+        "final_weight_share": 0.1222453501835481,
+        "mean_huber_weight": 0.9400115542283712
+      },
+      {
+        "supplier_id": "supplier-5",
+        "n_quotes": 18,
+        "base_weight_share": 0.125,
+        "final_weight_share": 0.12761085999110625,
+        "mean_huber_weight": 0.9812699023443316
+      },
+      {
+        "supplier_id": "supplier-6",
+        "n_quotes": 12,
+        "base_weight_share": 0.125,
+        "final_weight_share": 0.12193746913828711,
+        "mean_huber_weight": 0.9376440879857807
+      },
+      {
+        "supplier_id": "supplier-7",
+        "n_quotes": 18,
+        "base_weight_share": 0.125,
+        "final_weight_share": 0.12825530323369083,
+        "mean_huber_weight": 0.9862253799405296
+      },
+      {
+        "supplier_id": "supplier-8",
+        "n_quotes": 12,
+        "base_weight_share": 0.125,
+        "final_weight_share": 0.12873825346958667,
+        "mean_huber_weight": 0.9899390492226557
+      }
+    ],
+    "n_downweighted": 13,
+    "residual_scale_log": 0.010720406838524009,
+    "irls_iterations": 25,
+    "irls_converged": true
+  },
+  "effective_support": {
+    "n_quotes": 120,
+    "n_cells": 120,
+    "n_replicates": 500,
+    "min_valid_fraction_required": 0.8,
+    "min_valid_replicates_required": 20,
+    "months": {
+      "2025-01": {
+        "identified_full_sample": true,
+        "valid_replicate_fraction": 1.0,
+        "interval_reportable": true
+      },
+      "2025-02": {
+        "identified_full_sample": true,
+        "valid_replicate_fraction": 1.0,
+        "interval_reportable": true
+      },
+      "2025-03": {
+        "identified_full_sample": true,
+        "valid_replicate_fraction": 1.0,
+        "interval_reportable": true
+      },
+      "2025-04": {
+        "identified_full_sample": false,
+        "valid_replicate_fraction": 0.0,
+        "interval_reportable": false
+      },
+      "2025-05": {
+        "identified_full_sample": false,
+        "valid_replicate_fraction": 0.0,
+        "interval_reportable": false
+      },
+      "2025-06": {
+        "identified_full_sample": false,
+        "valid_replicate_fraction": 0.0,
+        "interval_reportable": false
+      }
+    },
+    "bootstrap": {
+      "n_boot": 500,
+      "seed": 20250101,
+      "n_suppliers": 8,
+      "n_distinct_present_sets": 145,
+      "replicate_component_counts": {
+        "replicate_components=2": 500
+      }
+    },
+    "critical_bridge_suppliers": {}
+  },
+  "quote_trace": {
+    "note": "individual raw levels depend on the chosen normalization; use identified contrasts",
+    "rows": [
+      {
+        "quote_id": "q0001",
+        "supplier_id": "supplier-1",
+        "month": "2025-01",
+        "item_id": "A-old",
+        "price": 97.59,
+        "log_price": 4.5807750291533695,
+        "item_level": 4.565935524004575,
+        "month_effect": 0.0,
+        "supplier_level": 0.0,
+        "predicted_log_price": 4.565935524004575,
+        "residual": 0.014839505148794174,
+        "huber_weight": 0.9716595704289086,
+        "item_level_identified": true,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0002",
+        "supplier_id": "supplier-1",
+        "month": "2025-01",
+        "item_id": "B-old",
+        "price": 150.7,
+        "log_price": 5.01529110563245,
+        "item_level": 5.009497277497146,
+        "month_effect": 0.0,
+        "supplier_level": 0.0,
+        "predicted_log_price": 5.009497277497146,
+        "residual": 0.005793828135304047,
+        "huber_weight": 1.0,
+        "item_level_identified": true,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0003",
+        "supplier_id": "supplier-1",
+        "month": "2025-01",
+        "item_id": "C-old",
+        "price": 203.98,
+        "log_price": 5.318021949822372,
+        "item_level": 5.306731265743836,
+        "month_effect": 0.0,
+        "supplier_level": 0.0,
+        "predicted_log_price": 5.306731265743836,
+        "residual": 0.01129068407853584,
+        "huber_weight": 1.0,
+        "item_level_identified": true,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0004",
+        "supplier_id": "supplier-1",
+        "month": "2025-02",
+        "item_id": "A-old",
+        "price": 100.86,
+        "log_price": 4.6137334166485795,
+        "item_level": 4.565935524004575,
+        "month_effect": 0.021079189746039256,
+        "supplier_level": 0.0,
+        "predicted_log_price": 4.587014713750615,
+        "residual": 0.02671870289796452,
+        "huber_weight": 0.5396574546672673,
+        "item_level_identified": true,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0005",
+        "supplier_id": "supplier-1",
+        "month": "2025-02",
+        "item_id": "B-old",
+        "price": 155.03,
+        "log_price": 5.04361864657827,
+        "item_level": 5.009497277497146,
+        "month_effect": 0.021079189746039256,
+        "supplier_level": 0.0,
+        "predicted_log_price": 5.030576467243185,
+        "residual": 0.013042179335085002,
+        "huber_weight": 1.0,
+        "item_level_identified": true,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0006",
+        "supplier_id": "supplier-1",
+        "month": "2025-02",
+        "item_id": "C-old",
+        "price": 206.65,
+        "log_price": 5.331026540957741,
+        "item_level": 5.306731265743836,
+        "month_effect": 0.021079189746039256,
+        "supplier_level": 0.0,
+        "predicted_log_price": 5.3278104554898755,
+        "residual": 0.0032160854678657813,
+        "huber_weight": 1.0,
+        "item_level_identified": true,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0007",
+        "supplier_id": "supplier-1",
+        "month": "2025-03",
+        "item_id": "A-old",
+        "price": 100.09,
+        "log_price": 4.606069781230928,
+        "item_level": 4.565935524004575,
+        "month_effect": 0.051486677419250726,
+        "supplier_level": 0.0,
+        "predicted_log_price": 4.617422201423826,
+        "residual": -0.011352420192898727,
+        "huber_weight": 1.0,
+        "item_level_identified": true,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0009",
+        "supplier_id": "supplier-1",
+        "month": "2025-03",
+        "item_id": "B-old",
+        "price": 160.29,
+        "log_price": 5.07698467463779,
+        "item_level": 5.009497277497146,
+        "month_effect": 0.051486677419250726,
+        "supplier_level": 0.0,
+        "predicted_log_price": 5.060983954916397,
+        "residual": 0.01600071972139272,
+        "huber_weight": 0.9011436640957671,
+        "item_level_identified": true,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0011",
+        "supplier_id": "supplier-1",
+        "month": "2025-03",
+        "item_id": "C-old",
+        "price": 214.05,
+        "log_price": 5.366209632590955,
+        "item_level": 5.306731265743836,
+        "month_effect": 0.051486677419250726,
+        "supplier_level": 0.0,
+        "predicted_log_price": 5.358217943163087,
+        "residual": 0.00799168942786821,
+        "huber_weight": 1.0,
+        "item_level_identified": true,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0013",
+        "supplier_id": "supplier-1",
+        "month": "2025-04",
+        "item_id": "A-new",
+        "price": 124.3,
+        "log_price": 4.822697998516666,
+        "item_level": 4.888051594934585,
+        "month_effect": -0.05790864949745637,
+        "supplier_level": 0.0,
+        "predicted_log_price": 4.830142945437129,
+        "residual": -0.00744494692046338,
+        "huber_weight": 1.0,
+        "item_level_identified": false,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0015",
+        "supplier_id": "supplier-1",
+        "month": "2025-04",
+        "item_id": "B-new",
+        "price": 175.28,
+        "log_price": 5.166384695287211,
+        "item_level": 5.216486452771997,
+        "month_effect": -0.05790864949745637,
+        "supplier_level": 0.0,
+        "predicted_log_price": 5.158577803274541,
+        "residual": 0.007806892012669486,
+        "huber_weight": 1.0,
+        "item_level_identified": false,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0016",
+        "supplier_id": "supplier-1",
+        "month": "2025-04",
+        "item_id": "C-new",
+        "price": 205.04,
+        "log_price": 5.323205082055815,
+        "item_level": 5.390263971292524,
+        "month_effect": -0.05790864949745637,
+        "supplier_level": 0.0,
+        "predicted_log_price": 5.332355321795068,
+        "residual": -0.009150239739252441,
+        "huber_weight": 1.0,
+        "item_level_identified": false,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0017",
+        "supplier_id": "supplier-1",
+        "month": "2025-05",
+        "item_id": "A-new",
+        "price": 127.79,
+        "log_price": 4.850388291620612,
+        "item_level": 4.888051594934585,
+        "month_effect": -0.036668614944200366,
+        "supplier_level": 0.0,
+        "predicted_log_price": 4.851382979990385,
+        "residual": -0.0009946883697731224,
+        "huber_weight": 1.0,
+        "item_level_identified": false,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0018",
+        "supplier_id": "supplier-1",
+        "month": "2025-05",
+        "item_id": "B-new",
+        "price": 173.12,
+        "log_price": 5.153984995658116,
+        "item_level": 5.216486452771997,
+        "month_effect": -0.036668614944200366,
+        "supplier_level": 0.0,
+        "predicted_log_price": 5.179817837827797,
+        "residual": -0.02583284216968096,
+        "huber_weight": 0.5581634069935509,
+        "item_level_identified": false,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0019",
+        "supplier_id": "supplier-1",
+        "month": "2025-05",
+        "item_id": "C-new",
+        "price": 207.4,
+        "log_price": 5.334649295795427,
+        "item_level": 5.390263971292524,
+        "month_effect": -0.036668614944200366,
+        "supplier_level": 0.0,
+        "predicted_log_price": 5.353595356348324,
+        "residual": -0.018946060552896604,
+        "huber_weight": 0.7610525236751544,
+        "item_level_identified": false,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0020",
+        "supplier_id": "supplier-1",
+        "month": "2025-06",
+        "item_id": "A-new",
+        "price": 131.93,
+        "log_price": 4.882271478895685,
+        "item_level": 4.888051594934585,
+        "month_effect": 0.0,
+        "supplier_level": 0.0,
+        "predicted_log_price": 4.888051594934585,
+        "residual": -0.005780116038899941,
+        "huber_weight": 1.0,
+        "item_level_identified": false,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0021",
+        "supplier_id": "supplier-1",
+        "month": "2025-06",
+        "item_id": "B-new",
+        "price": 179.46,
+        "log_price": 5.189952341869912,
+        "item_level": 5.216486452771997,
+        "month_effect": 0.0,
+        "supplier_level": 0.0,
+        "predicted_log_price": 5.216486452771997,
+        "residual": -0.026534110902085573,
+        "huber_weight": 0.5434117333282948,
+        "item_level_identified": false,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0022",
+        "supplier_id": "supplier-1",
+        "month": "2025-06",
+        "item_id": "C-new",
+        "price": 215.91,
+        "log_price": 5.374861654187822,
+        "item_level": 5.390263971292524,
+        "month_effect": 0.0,
+        "supplier_level": 0.0,
+        "predicted_log_price": 5.390263971292524,
+        "residual": -0.015402317104701524,
+        "huber_weight": 0.9361544174923644,
+        "item_level_identified": false,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0023",
+        "supplier_id": "supplier-2",
+        "month": "2025-01",
+        "item_id": "A-old",
+        "price": 98.02,
+        "log_price": 4.585171539481402,
+        "item_level": 4.565935524004575,
+        "month_effect": 0.0,
+        "supplier_level": 0.020231812618100854,
+        "predicted_log_price": 4.586167336622676,
+        "residual": -0.0009957971412744016,
+        "huber_weight": 1.0,
+        "item_level_identified": true,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0024",
+        "supplier_id": "supplier-2",
+        "month": "2025-01",
+        "item_id": "B-old",
+        "price": 152.89,
+        "log_price": 5.029718708572522,
+        "item_level": 5.009497277497146,
+        "month_effect": 0.0,
+        "supplier_level": 0.020231812618100854,
+        "predicted_log_price": 5.0297290901152465,
+        "residual": -1.0381542724147153e-05,
+        "huber_weight": 1.0,
+        "item_level_identified": true,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0025",
+        "supplier_id": "supplier-2",
+        "month": "2025-02",
+        "item_id": "A-old",
+        "price": 99.51,
+        "log_price": 4.600258141627071,
+        "item_level": 4.565935524004575,
+        "month_effect": 0.021079189746039256,
+        "supplier_level": 0.020231812618100854,
+        "predicted_log_price": 4.607246526368716,
+        "residual": -0.006988384741644538,
+        "huber_weight": 1.0,
+        "item_level_identified": true,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0026",
+        "supplier_id": "supplier-2",
+        "month": "2025-02",
+        "item_id": "B-old",
+        "price": 157.98,
+        "log_price": 5.062468442736273,
+        "item_level": 5.009497277497146,
+        "month_effect": 0.021079189746039256,
+        "supplier_level": 0.020231812618100854,
+        "predicted_log_price": 5.050808279861286,
+        "residual": 0.011660162874987279,
+        "huber_weight": 1.0,
+        "item_level_identified": true,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0027",
+        "supplier_id": "supplier-2",
+        "month": "2025-03",
+        "item_id": "A-old",
+        "price": 103.31,
+        "log_price": 4.637734176861354,
+        "item_level": 4.565935524004575,
+        "month_effect": 0.051486677419250726,
+        "supplier_level": 0.020231812618100854,
+        "predicted_log_price": 4.637654014041927,
+        "residual": 8.016281942690995e-05,
+        "huber_weight": 1.0,
+        "item_level_identified": true,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0029",
+        "supplier_id": "supplier-2",
+        "month": "2025-03",
+        "item_id": "B-old",
+        "price": 162.01,
+        "log_price": 5.087658061722327,
+        "item_level": 5.009497277497146,
+        "month_effect": 0.051486677419250726,
+        "supplier_level": 0.020231812618100854,
+        "predicted_log_price": 5.0812157675344976,
+        "residual": 0.006442294187829489,
+        "huber_weight": 1.0,
+        "item_level_identified": true,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0032",
+        "supplier_id": "supplier-2",
+        "month": "2025-04",
+        "item_id": "A-new",
+        "price": 126.9,
+        "log_price": 4.843399374720342,
+        "item_level": 4.888051594934585,
+        "month_effect": -0.05790864949745637,
+        "supplier_level": 0.020231812618100854,
+        "predicted_log_price": 4.85037475805523,
+        "residual": -0.006975383334888008,
+        "huber_weight": 1.0,
+        "item_level_identified": false,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0034",
+        "supplier_id": "supplier-2",
+        "month": "2025-04",
+        "item_id": "B-new",
+        "price": 179.47,
+        "log_price": 5.190008063041185,
+        "item_level": 5.216486452771997,
+        "month_effect": -0.05790864949745637,
+        "supplier_level": 0.020231812618100854,
+        "predicted_log_price": 5.178809615892642,
+        "residual": 0.011198447148543345,
+        "huber_weight": 1.0,
+        "item_level_identified": false,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0035",
+        "supplier_id": "supplier-2",
+        "month": "2025-05",
+        "item_id": "A-new",
+        "price": 129.36,
+        "log_price": 4.862599215268851,
+        "item_level": 4.888051594934585,
+        "month_effect": -0.036668614944200366,
+        "supplier_level": 0.020231812618100854,
+        "predicted_log_price": 4.871614792608486,
+        "residual": -0.00901557733963454,
+        "huber_weight": 1.0,
+        "item_level_identified": false,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0036",
+        "supplier_id": "supplier-2",
+        "month": "2025-05",
+        "item_id": "B-new",
+        "price": 180.13,
+        "log_price": 5.193678812435467,
+        "item_level": 5.216486452771997,
+        "month_effect": -0.036668614944200366,
+        "supplier_level": 0.020231812618100854,
+        "predicted_log_price": 5.200049650445898,
+        "residual": -0.006370838010431257,
+        "huber_weight": 1.0,
+        "item_level_identified": false,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0037",
+        "supplier_id": "supplier-2",
+        "month": "2025-06",
+        "item_id": "A-new",
+        "price": 134.56,
+        "log_price": 4.902010196224638,
+        "item_level": 4.888051594934585,
+        "month_effect": 0.0,
+        "supplier_level": 0.020231812618100854,
+        "predicted_log_price": 4.908283407552686,
+        "residual": -0.006273211328047701,
+        "huber_weight": 1.0,
+        "item_level_identified": false,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0038",
+        "supplier_id": "supplier-2",
+        "month": "2025-06",
+        "item_id": "B-new",
+        "price": 189.42,
+        "log_price": 5.243966771797955,
+        "item_level": 5.216486452771997,
+        "month_effect": 0.0,
+        "supplier_level": 0.020231812618100854,
+        "predicted_log_price": 5.236718265390098,
+        "residual": 0.007248506407856681,
+        "huber_weight": 1.0,
+        "item_level_identified": false,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0039",
+        "supplier_id": "supplier-3",
+        "month": "2025-01",
+        "item_id": "A-old",
+        "price": 99.69,
+        "log_price": 4.602065371034612,
+        "item_level": 4.565935524004575,
+        "month_effect": 0.0,
+        "supplier_level": 0.045194277107002696,
+        "predicted_log_price": 4.611129801111578,
+        "residual": -0.009064430076965557,
+        "huber_weight": 1.0,
+        "item_level_identified": true,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0040",
+        "supplier_id": "supplier-3",
+        "month": "2025-01",
+        "item_id": "B-old",
+        "price": 155.51,
+        "log_price": 5.046710038233246,
+        "item_level": 5.009497277497146,
+        "month_effect": 0.0,
+        "supplier_level": 0.045194277107002696,
+        "predicted_log_price": 5.054691554604148,
+        "residual": -0.007981516370902497,
+        "huber_weight": 1.0,
+        "item_level_identified": true,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0041",
+        "supplier_id": "supplier-3",
+        "month": "2025-01",
+        "item_id": "C-old",
+        "price": 208.62,
+        "log_price": 5.340514415247825,
+        "item_level": 5.306731265743836,
+        "month_effect": 0.0,
+        "supplier_level": 0.045194277107002696,
+        "predicted_log_price": 5.3519255428508385,
+        "residual": -0.011411127603013327,
+        "huber_weight": 1.0,
+        "item_level_identified": true,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0042",
+        "supplier_id": "supplier-3",
+        "month": "2025-02",
+        "item_id": "A-old",
+        "price": 103.01,
+        "log_price": 4.634826070895602,
+        "item_level": 4.565935524004575,
+        "month_effect": 0.021079189746039256,
+        "supplier_level": 0.045194277107002696,
+        "predicted_log_price": 4.632208990857618,
+        "residual": 0.0026170800379841097,
+        "huber_weight": 1.0,
+        "item_level_identified": true,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0043",
+        "supplier_id": "supplier-3",
+        "month": "2025-02",
+        "item_id": "B-old",
+        "price": 157.85,
+        "log_price": 5.061645215004001,
+        "item_level": 5.009497277497146,
+        "month_effect": 0.021079189746039256,
+        "supplier_level": 0.045194277107002696,
+        "predicted_log_price": 5.075770744350188,
+        "residual": -0.014125529346187271,
+        "huber_weight": 1.0,
+        "item_level_identified": true,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0044",
+        "supplier_id": "supplier-3",
+        "month": "2025-02",
+        "item_id": "C-old",
+        "price": 211.62,
+        "log_price": 5.354792213476015,
+        "item_level": 5.306731265743836,
+        "month_effect": 0.021079189746039256,
+        "supplier_level": 0.045194277107002696,
+        "predicted_log_price": 5.373004732596878,
+        "residual": -0.018212519120862858,
+        "huber_weight": 0.7917052606646565,
+        "item_level_identified": true,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0045",
+        "supplier_id": "supplier-3",
+        "month": "2025-03",
+        "item_id": "A-old",
+        "price": 106.12,
+        "log_price": 4.664570529269539,
+        "item_level": 4.565935524004575,
+        "month_effect": 0.051486677419250726,
+        "supplier_level": 0.045194277107002696,
+        "predicted_log_price": 4.662616478530829,
+        "residual": 0.0019540507387096895,
+        "huber_weight": 1.0,
+        "item_level_identified": true,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0047",
+        "supplier_id": "supplier-3",
+        "month": "2025-03",
+        "item_id": "B-old",
+        "price": 163.39,
+        "log_price": 5.096139981042732,
+        "item_level": 5.009497277497146,
+        "month_effect": 0.051486677419250726,
+        "supplier_level": 0.045194277107002696,
+        "predicted_log_price": 5.1061782320233995,
+        "residual": -0.01003825098066713,
+        "huber_weight": 1.0,
+        "item_level_identified": true,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0049",
+        "supplier_id": "supplier-3",
+        "month": "2025-03",
+        "item_id": "C-old",
+        "price": 219.83,
+        "log_price": 5.392854520372025,
+        "item_level": 5.306731265743836,
+        "month_effect": 0.051486677419250726,
+        "supplier_level": 0.045194277107002696,
+        "predicted_log_price": 5.40341222027009,
+        "residual": -0.010557699898064321,
+        "huber_weight": 1.0,
+        "item_level_identified": true,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0051",
+        "supplier_id": "supplier-3",
+        "month": "2025-04",
+        "item_id": "A-new",
+        "price": 132.06,
+        "log_price": 4.883256364766425,
+        "item_level": 4.888051594934585,
+        "month_effect": -0.05790864949745637,
+        "supplier_level": 0.045194277107002696,
+        "predicted_log_price": 4.875337222544132,
+        "residual": 0.007919142222293729,
+        "huber_weight": 1.0,
+        "item_level_identified": false,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0053",
+        "supplier_id": "supplier-3",
+        "month": "2025-04",
+        "item_id": "B-new",
+        "price": 180.62,
+        "log_price": 5.196395376822653,
+        "item_level": 5.216486452771997,
+        "month_effect": -0.05790864949745637,
+        "supplier_level": 0.045194277107002696,
+        "predicted_log_price": 5.203772080381544,
+        "residual": -0.0073767035588909735,
+        "huber_weight": 1.0,
+        "item_level_identified": false,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0054",
+        "supplier_id": "supplier-3",
+        "month": "2025-04",
+        "item_id": "C-new",
+        "price": 218.8,
+        "log_price": 5.388158070547826,
+        "item_level": 5.390263971292524,
+        "month_effect": -0.05790864949745637,
+        "supplier_level": 0.045194277107002696,
+        "predicted_log_price": 5.37754959890207,
+        "residual": 0.010608471645755735,
+        "huber_weight": 1.0,
+        "item_level_identified": false,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0055",
+        "supplier_id": "supplier-3",
+        "month": "2025-05",
+        "item_id": "A-new",
+        "price": 135.21,
+        "log_price": 4.906829125370667,
+        "item_level": 4.888051594934585,
+        "month_effect": -0.036668614944200366,
+        "supplier_level": 0.045194277107002696,
+        "predicted_log_price": 4.896577257097388,
+        "residual": 0.010251868273279285,
+        "huber_weight": 1.0,
+        "item_level_identified": false,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0056",
+        "supplier_id": "supplier-3",
+        "month": "2025-05",
+        "item_id": "B-new",
+        "price": 190.43,
+        "log_price": 5.249284672970726,
+        "item_level": 5.216486452771997,
+        "month_effect": -0.036668614944200366,
+        "supplier_level": 0.045194277107002696,
+        "predicted_log_price": 5.2250121149348,
+        "residual": 0.024272558035925762,
+        "huber_weight": 0.5940431649780481,
+        "item_level_identified": false,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0057",
+        "supplier_id": "supplier-3",
+        "month": "2025-05",
+        "item_id": "C-new",
+        "price": 222.95,
+        "log_price": 5.406947531073485,
+        "item_level": 5.390263971292524,
+        "month_effect": -0.036668614944200366,
+        "supplier_level": 0.045194277107002696,
+        "predicted_log_price": 5.398789633455326,
+        "residual": 0.008157897618159105,
+        "huber_weight": 1.0,
+        "item_level_identified": false,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0058",
+        "supplier_id": "supplier-3",
+        "month": "2025-06",
+        "item_id": "A-new",
+        "price": 140.58,
+        "log_price": 4.94577672174776,
+        "item_level": 4.888051594934585,
+        "month_effect": 0.0,
+        "supplier_level": 0.045194277107002696,
+        "predicted_log_price": 4.933245872041588,
+        "residual": 0.01253084970617202,
+        "huber_weight": 1.0,
+        "item_level_identified": false,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0059",
+        "supplier_id": "supplier-3",
+        "month": "2025-06",
+        "item_id": "B-new",
+        "price": 193.21,
+        "log_price": 5.263777680273292,
+        "item_level": 5.216486452771997,
+        "month_effect": 0.0,
+        "supplier_level": 0.045194277107002696,
+        "predicted_log_price": 5.261680729879,
+        "residual": 0.00209695039429203,
+        "huber_weight": 1.0,
+        "item_level_identified": false,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0060",
+        "supplier_id": "supplier-3",
+        "month": "2025-06",
+        "item_id": "C-new",
+        "price": 233.66,
+        "log_price": 5.453867067289003,
+        "item_level": 5.390263971292524,
+        "month_effect": 0.0,
+        "supplier_level": 0.045194277107002696,
+        "predicted_log_price": 5.435458248399526,
+        "residual": 0.01840881888947621,
+        "huber_weight": 0.7832630265296029,
+        "item_level_identified": false,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0061",
+        "supplier_id": "supplier-4",
+        "month": "2025-01",
+        "item_id": "A-old",
+        "price": 100.12,
+        "log_price": 4.6063694665635735,
+        "item_level": 4.565935524004575,
+        "month_effect": 0.0,
+        "supplier_level": 0.017518215425143664,
+        "predicted_log_price": 4.583453739429719,
+        "residual": 0.022915727133854702,
+        "huber_weight": 0.6292162196688851,
+        "item_level_identified": true,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0062",
+        "supplier_id": "supplier-4",
+        "month": "2025-01",
+        "item_id": "B-old",
+        "price": 155.29,
+        "log_price": 5.045294336581097,
+        "item_level": 5.009497277497146,
+        "month_effect": 0.0,
+        "supplier_level": 0.017518215425143664,
+        "predicted_log_price": 5.027015492922289,
+        "residual": 0.018278843658808164,
+        "huber_weight": 0.7888325688030656,
+        "item_level_identified": true,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0063",
+        "supplier_id": "supplier-4",
+        "month": "2025-02",
+        "item_id": "A-old",
+        "price": 100.3,
+        "log_price": 4.60816569496789,
+        "item_level": 4.565935524004575,
+        "month_effect": 0.021079189746039256,
+        "supplier_level": 0.017518215425143664,
+        "predicted_log_price": 4.604532929175758,
+        "residual": 0.003632765792131565,
+        "huber_weight": 1.0,
+        "item_level_identified": true,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0064",
+        "supplier_id": "supplier-4",
+        "month": "2025-02",
+        "item_id": "B-old",
+        "price": 155.78,
+        "log_price": 5.048444755491802,
+        "item_level": 5.009497277497146,
+        "month_effect": 0.021079189746039256,
+        "supplier_level": 0.017518215425143664,
+        "predicted_log_price": 5.048094682668329,
+        "residual": 0.0003500728234735462,
+        "huber_weight": 1.0,
+        "item_level_identified": true,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0065",
+        "supplier_id": "supplier-4",
+        "month": "2025-03",
+        "item_id": "A-old",
+        "price": 104.2,
+        "log_price": 4.646312129319266,
+        "item_level": 4.565935524004575,
+        "month_effect": 0.051486677419250726,
+        "supplier_level": 0.017518215425143664,
+        "predicted_log_price": 4.63494041684897,
+        "residual": 0.011371712470296558,
+        "huber_weight": 1.0,
+        "item_level_identified": true,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0067",
+        "supplier_id": "supplier-4",
+        "month": "2025-03",
+        "item_id": "B-old",
+        "price": 159.43,
+        "log_price": 5.071604954419274,
+        "item_level": 5.009497277497146,
+        "month_effect": 0.051486677419250726,
+        "supplier_level": 0.017518215425143664,
+        "predicted_log_price": 5.07850217034154,
+        "residual": -0.00689721592226622,
+        "huber_weight": 1.0,
+        "item_level_identified": true,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0070",
+        "supplier_id": "supplier-4",
+        "month": "2025-04",
+        "item_id": "A-new",
+        "price": 126.88,
+        "log_price": 4.843241757886537,
+        "item_level": 4.888051594934585,
+        "month_effect": -0.05790864949745637,
+        "supplier_level": 0.017518215425143664,
+        "predicted_log_price": 4.847661160862272,
+        "residual": -0.004419402975734954,
+        "huber_weight": 1.0,
+        "item_level_identified": false,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0072",
+        "supplier_id": "supplier-4",
+        "month": "2025-04",
+        "item_id": "B-new",
+        "price": 176.35,
+        "log_price": 5.172470656682061,
+        "item_level": 5.216486452771997,
+        "month_effect": -0.05790864949745637,
+        "supplier_level": 0.017518215425143664,
+        "predicted_log_price": 5.176096018699685,
+        "residual": -0.0036253620176234236,
+        "huber_weight": 1.0,
+        "item_level_identified": false,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0073",
+        "supplier_id": "supplier-4",
+        "month": "2025-05",
+        "item_id": "A-new",
+        "price": 129.47,
+        "log_price": 4.863449194070556,
+        "item_level": 4.888051594934585,
+        "month_effect": -0.036668614944200366,
+        "supplier_level": 0.017518215425143664,
+        "predicted_log_price": 4.868901195415528,
+        "residual": -0.005452001344972146,
+        "huber_weight": 1.0,
+        "item_level_identified": false,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0074",
+        "supplier_id": "supplier-4",
+        "month": "2025-05",
+        "item_id": "B-new",
+        "price": 180.5,
+        "log_price": 5.195730777772936,
+        "item_level": 5.216486452771997,
+        "month_effect": -0.036668614944200366,
+        "supplier_level": 0.017518215425143664,
+        "predicted_log_price": 5.197336053252941,
+        "residual": -0.0016052754800046642,
+        "huber_weight": 1.0,
+        "item_level_identified": false,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0075",
+        "supplier_id": "supplier-4",
+        "month": "2025-06",
+        "item_id": "A-new",
+        "price": 132.8,
+        "log_price": 4.888844237042334,
+        "item_level": 4.888051594934585,
+        "month_effect": 0.0,
+        "supplier_level": 0.017518215425143664,
+        "predicted_log_price": 4.9055698103597285,
+        "residual": -0.01672557331739455,
+        "huber_weight": 0.8620898622685056,
+        "item_level_identified": false,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0076",
+        "supplier_id": "supplier-4",
+        "month": "2025-06",
+        "item_id": "B-new",
+        "price": 186.09,
+        "log_price": 5.226230427653136,
+        "item_level": 5.216486452771997,
+        "month_effect": 0.0,
+        "supplier_level": 0.017518215425143664,
+        "predicted_log_price": 5.234004668197141,
+        "residual": -0.0077742405440046625,
+        "huber_weight": 1.0,
+        "item_level_identified": false,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0077",
+        "supplier_id": "supplier-5",
+        "month": "2025-01",
+        "item_id": "A-old",
+        "price": 100.42,
+        "log_price": 4.609361390606559,
+        "item_level": 4.565935524004575,
+        "month_effect": 0.0,
+        "supplier_level": 0.04716540533593418,
+        "predicted_log_price": 4.61310092934051,
+        "residual": -0.003739538733950276,
+        "huber_weight": 1.0,
+        "item_level_identified": true,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0078",
+        "supplier_id": "supplier-5",
+        "month": "2025-01",
+        "item_id": "B-old",
+        "price": 157.29,
+        "log_price": 5.058091235252551,
+        "item_level": 5.009497277497146,
+        "month_effect": 0.0,
+        "supplier_level": 0.04716540533593418,
+        "predicted_log_price": 5.05666268283308,
+        "residual": 0.0014285524194708188,
+        "huber_weight": 1.0,
+        "item_level_identified": true,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0079",
+        "supplier_id": "supplier-5",
+        "month": "2025-01",
+        "item_id": "C-old",
+        "price": 210.29,
+        "log_price": 5.348487530460613,
+        "item_level": 5.306731265743836,
+        "month_effect": 0.0,
+        "supplier_level": 0.04716540533593418,
+        "predicted_log_price": 5.35389667107977,
+        "residual": -0.0054091406191574265,
+        "huber_weight": 1.0,
+        "item_level_identified": true,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0080",
+        "supplier_id": "supplier-5",
+        "month": "2025-02",
+        "item_id": "A-old",
+        "price": 102.72,
+        "log_price": 4.632006839941651,
+        "item_level": 4.565935524004575,
+        "month_effect": 0.021079189746039256,
+        "supplier_level": 0.04716540533593418,
+        "predicted_log_price": 4.634180119086549,
+        "residual": -0.002173279144898288,
+        "huber_weight": 1.0,
+        "item_level_identified": true,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0081",
+        "supplier_id": "supplier-5",
+        "month": "2025-02",
+        "item_id": "B-old",
+        "price": 159.37,
+        "log_price": 5.071228542871542,
+        "item_level": 5.009497277497146,
+        "month_effect": 0.021079189746039256,
+        "supplier_level": 0.04716540533593418,
+        "predicted_log_price": 5.07774187257912,
+        "residual": -0.006513329707577675,
+        "huber_weight": 1.0,
+        "item_level_identified": true,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0082",
+        "supplier_id": "supplier-5",
+        "month": "2025-02",
+        "item_id": "C-old",
+        "price": 215.82,
+        "log_price": 5.374444726935588,
+        "item_level": 5.306731265743836,
+        "month_effect": 0.021079189746039256,
+        "supplier_level": 0.04716540533593418,
+        "predicted_log_price": 5.37497586082581,
+        "residual": -0.0005311338902220797,
+        "huber_weight": 1.0,
+        "item_level_identified": true,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0083",
+        "supplier_id": "supplier-5",
+        "month": "2025-03",
+        "item_id": "A-old",
+        "price": 105.83,
+        "log_price": 4.661834033105633,
+        "item_level": 4.565935524004575,
+        "month_effect": 0.051486677419250726,
+        "supplier_level": 0.04716540533593418,
+        "predicted_log_price": 4.664587606759761,
+        "residual": -0.002753573654127983,
+        "huber_weight": 1.0,
+        "item_level_identified": true,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0085",
+        "supplier_id": "supplier-5",
+        "month": "2025-03",
+        "item_id": "B-old",
+        "price": 162.76,
+        "log_price": 5.092276723133489,
+        "item_level": 5.009497277497146,
+        "month_effect": 0.051486677419250726,
+        "supplier_level": 0.04716540533593418,
+        "predicted_log_price": 5.108149360252331,
+        "residual": -0.015872637118842015,
+        "huber_weight": 0.9084153496304204,
+        "item_level_identified": true,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0087",
+        "supplier_id": "supplier-5",
+        "month": "2025-03",
+        "item_id": "C-old",
+        "price": 224.26,
+        "log_price": 5.412806093032734,
+        "item_level": 5.306731265743836,
+        "month_effect": 0.051486677419250726,
+        "supplier_level": 0.04716540533593418,
+        "predicted_log_price": 5.405383348499021,
+        "residual": 0.007422744533712944,
+        "huber_weight": 1.0,
+        "item_level_identified": true,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0089",
+        "supplier_id": "supplier-5",
+        "month": "2025-04",
+        "item_id": "A-new",
+        "price": 133.58,
+        "log_price": 4.89470054929749,
+        "item_level": 4.888051594934585,
+        "month_effect": -0.05790864949745637,
+        "supplier_level": 0.04716540533593418,
+        "predicted_log_price": 4.877308350773063,
+        "residual": 0.017392198524427194,
+        "huber_weight": 0.8290468382967527,
+        "item_level_identified": false,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0091",
+        "supplier_id": "supplier-5",
+        "month": "2025-04",
+        "item_id": "B-new",
+        "price": 182.71,
+        "log_price": 5.207900196423574,
+        "item_level": 5.216486452771997,
+        "month_effect": -0.05790864949745637,
+        "supplier_level": 0.04716540533593418,
+        "predicted_log_price": 5.205743208610476,
+        "residual": 0.0021569878130982545,
+        "huber_weight": 1.0,
+        "item_level_identified": false,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0092",
+        "supplier_id": "supplier-5",
+        "month": "2025-04",
+        "item_id": "C-new",
+        "price": 216.45,
+        "log_price": 5.37735957388799,
+        "item_level": 5.390263971292524,
+        "month_effect": -0.05790864949745637,
+        "supplier_level": 0.04716540533593418,
+        "predicted_log_price": 5.379520727131002,
+        "residual": -0.002161153243012137,
+        "huber_weight": 1.0,
+        "item_level_identified": false,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0093",
+        "supplier_id": "supplier-5",
+        "month": "2025-05",
+        "item_id": "A-new",
+        "price": 134.0,
+        "log_price": 4.897839799950911,
+        "item_level": 4.888051594934585,
+        "month_effect": -0.036668614944200366,
+        "supplier_level": 0.04716540533593418,
+        "predicted_log_price": 4.898548385326319,
+        "residual": -0.0007085853754080773,
+        "huber_weight": 1.0,
+        "item_level_identified": false,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0094",
+        "supplier_id": "supplier-5",
+        "month": "2025-05",
+        "item_id": "B-new",
+        "price": 185.6,
+        "log_price": 5.2235938203521,
+        "item_level": 5.216486452771997,
+        "month_effect": -0.036668614944200366,
+        "supplier_level": 0.04716540533593418,
+        "predicted_log_price": 5.2269832431637315,
+        "residual": -0.0033894228116313485,
+        "huber_weight": 1.0,
+        "item_level_identified": false,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0095",
+        "supplier_id": "supplier-5",
+        "month": "2025-05",
+        "item_id": "C-new",
+        "price": 221.61,
+        "log_price": 5.400919080208756,
+        "item_level": 5.390263971292524,
+        "month_effect": -0.036668614944200366,
+        "supplier_level": 0.04716540533593418,
+        "predicted_log_price": 5.400760761684258,
+        "residual": 0.00015831852449821326,
+        "huber_weight": 1.0,
+        "item_level_identified": false,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0096",
+        "supplier_id": "supplier-5",
+        "month": "2025-06",
+        "item_id": "A-new",
+        "price": 138.94,
+        "log_price": 4.934042185264735,
+        "item_level": 4.888051594934585,
+        "month_effect": 0.0,
+        "supplier_level": 0.04716540533593418,
+        "predicted_log_price": 4.935217000270519,
+        "residual": -0.0011748150057844242,
+        "huber_weight": 1.0,
+        "item_level_identified": false,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0097",
+        "supplier_id": "supplier-5",
+        "month": "2025-06",
+        "item_id": "B-new",
+        "price": 193.76,
+        "log_price": 5.266620279804782,
+        "item_level": 5.216486452771997,
+        "month_effect": 0.0,
+        "supplier_level": 0.04716540533593418,
+        "predicted_log_price": 5.263651858107932,
+        "residual": 0.0029684216968499655,
+        "huber_weight": 1.0,
+        "item_level_identified": false,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0098",
+        "supplier_id": "supplier-5",
+        "month": "2025-06",
+        "item_id": "C-new",
+        "price": 233.46,
+        "log_price": 5.453010756224518,
+        "item_level": 5.390263971292524,
+        "month_effect": 0.0,
+        "supplier_level": 0.04716540533593418,
+        "predicted_log_price": 5.437429376628458,
+        "residual": 0.015581379596059541,
+        "huber_weight": 0.9253960542707993,
+        "item_level_identified": false,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0099",
+        "supplier_id": "supplier-6",
+        "month": "2025-01",
+        "item_id": "A-old",
+        "price": 101.32,
+        "log_price": 4.618283825133474,
+        "item_level": 4.565935524004575,
+        "month_effect": 0.0,
+        "supplier_level": 0.06765840420469764,
+        "predicted_log_price": 4.633593928209273,
+        "residual": -0.015310103075798942,
+        "huber_weight": 0.9417929537164585,
+        "item_level_identified": true,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0100",
+        "supplier_id": "supplier-6",
+        "month": "2025-01",
+        "item_id": "B-old",
+        "price": 157.35,
+        "log_price": 5.058472623510416,
+        "item_level": 5.009497277497146,
+        "month_effect": 0.0,
+        "supplier_level": 0.06765840420469764,
+        "predicted_log_price": 5.077155681701844,
+        "residual": -0.018683058191427904,
+        "huber_weight": 0.7717658988086837,
+        "item_level_identified": true,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0101",
+        "supplier_id": "supplier-6",
+        "month": "2025-02",
+        "item_id": "A-old",
+        "price": 105.16,
+        "log_price": 4.655482999861681,
+        "item_level": 4.565935524004575,
+        "month_effect": 0.021079189746039256,
+        "supplier_level": 0.06765840420469764,
+        "predicted_log_price": 4.654673117955313,
+        "residual": 0.0008098819063677709,
+        "huber_weight": 1.0,
+        "item_level_identified": true,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0102",
+        "supplier_id": "supplier-6",
+        "month": "2025-02",
+        "item_id": "B-old",
+        "price": 162.03,
+        "log_price": 5.087781503272909,
+        "item_level": 5.009497277497146,
+        "month_effect": 0.021079189746039256,
+        "supplier_level": 0.06765840420469764,
+        "predicted_log_price": 5.098234871447883,
+        "residual": -0.01045336817497411,
+        "huber_weight": 1.0,
+        "item_level_identified": true,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0103",
+        "supplier_id": "supplier-6",
+        "month": "2025-03",
+        "item_id": "A-old",
+        "price": 108.03,
+        "log_price": 4.682408966328894,
+        "item_level": 4.565935524004575,
+        "month_effect": 0.051486677419250726,
+        "supplier_level": 0.06765840420469764,
+        "predicted_log_price": 4.685080605628524,
+        "residual": -0.002671639299630435,
+        "huber_weight": 1.0,
+        "item_level_identified": true,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0105",
+        "supplier_id": "supplier-6",
+        "month": "2025-03",
+        "item_id": "B-old",
+        "price": 166.94,
+        "log_price": 5.117634466422591,
+        "item_level": 5.009497277497146,
+        "month_effect": 0.051486677419250726,
+        "supplier_level": 0.06765840420469764,
+        "predicted_log_price": 5.128642359121095,
+        "residual": -0.011007892698503774,
+        "huber_weight": 1.0,
+        "item_level_identified": true,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0108",
+        "supplier_id": "supplier-6",
+        "month": "2025-04",
+        "item_id": "A-new",
+        "price": 135.35,
+        "log_price": 4.90786401606031,
+        "item_level": 4.888051594934585,
+        "month_effect": -0.05790864949745637,
+        "supplier_level": 0.06765840420469764,
+        "predicted_log_price": 4.897801349641827,
+        "residual": 0.010062666418483524,
+        "huber_weight": 1.0,
+        "item_level_identified": false,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0110",
+        "supplier_id": "supplier-6",
+        "month": "2025-04",
+        "item_id": "B-new",
+        "price": 185.42,
+        "log_price": 5.222623522178837,
+        "item_level": 5.216486452771997,
+        "month_effect": -0.05790864949745637,
+        "supplier_level": 0.06765840420469764,
+        "predicted_log_price": 5.226236207479239,
+        "residual": -0.003612685300402596,
+        "huber_weight": 1.0,
+        "item_level_identified": false,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0111",
+        "supplier_id": "supplier-6",
+        "month": "2025-05",
+        "item_id": "A-new",
+        "price": 138.43,
+        "log_price": 4.930364782699644,
+        "item_level": 4.888051594934585,
+        "month_effect": -0.036668614944200366,
+        "supplier_level": 0.06765840420469764,
+        "predicted_log_price": 4.919041384195083,
+        "residual": 0.011323398504560878,
+        "huber_weight": 1.0,
+        "item_level_identified": false,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0112",
+        "supplier_id": "supplier-6",
+        "month": "2025-05",
+        "item_id": "B-new",
+        "price": 191.51,
+        "log_price": 5.254940026578468,
+        "item_level": 5.216486452771997,
+        "month_effect": -0.036668614944200366,
+        "supplier_level": 0.06765840420469764,
+        "predicted_log_price": 5.247476242032495,
+        "residual": 0.007463784545972629,
+        "huber_weight": 1.0,
+        "item_level_identified": false,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0113",
+        "supplier_id": "supplier-6",
+        "month": "2025-06",
+        "item_id": "A-new",
+        "price": 143.77,
+        "log_price": 4.9682148004345015,
+        "item_level": 4.888051594934585,
+        "month_effect": 0.0,
+        "supplier_level": 0.06765840420469764,
+        "predicted_log_price": 4.955709999139283,
+        "residual": 0.01250480129521847,
+        "huber_weight": 1.0,
+        "item_level_identified": false,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0114",
+        "supplier_id": "supplier-6",
+        "month": "2025-06",
+        "item_id": "B-new",
+        "price": 202.54,
+        "log_price": 5.310937397904139,
+        "item_level": 5.216486452771997,
+        "month_effect": 0.0,
+        "supplier_level": 0.06765840420469764,
+        "predicted_log_price": 5.284144856976695,
+        "residual": 0.026792540927443653,
+        "huber_weight": 0.5381702033042259,
+        "item_level_identified": false,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0115",
+        "supplier_id": "supplier-7",
+        "month": "2025-01",
+        "item_id": "A-old",
+        "price": 101.25,
+        "log_price": 4.617592705986649,
+        "item_level": 4.565935524004575,
+        "month_effect": 0.0,
+        "supplier_level": 0.04496979182546861,
+        "predicted_log_price": 4.610905315830044,
+        "residual": 0.006687390156605133,
+        "huber_weight": 1.0,
+        "item_level_identified": true,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0116",
+        "supplier_id": "supplier-7",
+        "month": "2025-01",
+        "item_id": "B-old",
+        "price": 157.39,
+        "log_price": 5.05872680156351,
+        "item_level": 5.009497277497146,
+        "month_effect": 0.0,
+        "supplier_level": 0.04496979182546861,
+        "predicted_log_price": 5.054467069322614,
+        "residual": 0.004259732240895708,
+        "huber_weight": 1.0,
+        "item_level_identified": true,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0117",
+        "supplier_id": "supplier-7",
+        "month": "2025-01",
+        "item_id": "C-old",
+        "price": 213.13,
+        "log_price": 5.361902308173147,
+        "item_level": 5.306731265743836,
+        "month_effect": 0.0,
+        "supplier_level": 0.04496979182546861,
+        "predicted_log_price": 5.351701057569304,
+        "residual": 0.010201250603842915,
+        "huber_weight": 1.0,
+        "item_level_identified": true,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0118",
+        "supplier_id": "supplier-7",
+        "month": "2025-02",
+        "item_id": "A-old",
+        "price": 102.66,
+        "log_price": 4.631422557132157,
+        "item_level": 4.565935524004575,
+        "month_effect": 0.021079189746039256,
+        "supplier_level": 0.04496979182546861,
+        "predicted_log_price": 4.631984505576083,
+        "residual": -0.0005619484439263189,
+        "huber_weight": 1.0,
+        "item_level_identified": true,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0119",
+        "supplier_id": "supplier-7",
+        "month": "2025-02",
+        "item_id": "B-old",
+        "price": 160.97,
+        "log_price": 5.081218012218138,
+        "item_level": 5.009497277497146,
+        "month_effect": 0.021079189746039256,
+        "supplier_level": 0.04496979182546861,
+        "predicted_log_price": 5.075546259068654,
+        "residual": 0.0056717531494845375,
+        "huber_weight": 1.0,
+        "item_level_identified": true,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0120",
+        "supplier_id": "supplier-7",
+        "month": "2025-02",
+        "item_id": "C-old",
+        "price": 215.61,
+        "log_price": 5.373471220148461,
+        "item_level": 5.306731265743836,
+        "month_effect": 0.021079189746039256,
+        "supplier_level": 0.04496979182546861,
+        "predicted_log_price": 5.372780247315344,
+        "residual": 0.0006909728331168097,
+        "huber_weight": 1.0,
+        "item_level_identified": true,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0121",
+        "supplier_id": "supplier-7",
+        "month": "2025-03",
+        "item_id": "A-old",
+        "price": 106.83,
+        "log_price": 4.671238785957796,
+        "item_level": 4.565935524004575,
+        "month_effect": 0.051486677419250726,
+        "supplier_level": 0.04496979182546861,
+        "predicted_log_price": 4.662391993249295,
+        "residual": 0.008846792708501638,
+        "huber_weight": 1.0,
+        "item_level_identified": true,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0123",
+        "supplier_id": "supplier-7",
+        "month": "2025-03",
+        "item_id": "B-old",
+        "price": 166.61,
+        "log_price": 5.115655751940977,
+        "item_level": 5.009497277497146,
+        "month_effect": 0.051486677419250726,
+        "supplier_level": 0.04496979182546861,
+        "predicted_log_price": 5.105953746741865,
+        "residual": 0.00970200519911213,
+        "huber_weight": 1.0,
+        "item_level_identified": true,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0125",
+        "supplier_id": "supplier-7",
+        "month": "2025-03",
+        "item_id": "C-old",
+        "price": 222.45,
+        "log_price": 5.4047023572520505,
+        "item_level": 5.306731265743836,
+        "month_effect": 0.051486677419250726,
+        "supplier_level": 0.04496979182546861,
+        "predicted_log_price": 5.403187734988555,
+        "residual": 0.0015146222634951911,
+        "huber_weight": 1.0,
+        "item_level_identified": true,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0127",
+        "supplier_id": "supplier-7",
+        "month": "2025-04",
+        "item_id": "A-new",
+        "price": 132.21,
+        "log_price": 4.884391567522005,
+        "item_level": 4.888051594934585,
+        "month_effect": -0.05790864949745637,
+        "supplier_level": 0.04496979182546861,
+        "predicted_log_price": 4.875112737262597,
+        "residual": 0.00927883025940801,
+        "huber_weight": 1.0,
+        "item_level_identified": false,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0129",
+        "supplier_id": "supplier-7",
+        "month": "2025-04",
+        "item_id": "B-new",
+        "price": 180.54,
+        "log_price": 5.195952359870009,
+        "item_level": 5.216486452771997,
+        "month_effect": -0.05790864949745637,
+        "supplier_level": 0.04496979182546861,
+        "predicted_log_price": 5.20354759510001,
+        "residual": -0.007595235230001052,
+        "huber_weight": 1.0,
+        "item_level_identified": false,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0130",
+        "supplier_id": "supplier-7",
+        "month": "2025-04",
+        "item_id": "C-new",
+        "price": 216.56,
+        "log_price": 5.377867645306046,
+        "item_level": 5.390263971292524,
+        "month_effect": -0.05790864949745637,
+        "supplier_level": 0.04496979182546861,
+        "predicted_log_price": 5.377325113620536,
+        "residual": 0.0005425316855101059,
+        "huber_weight": 1.0,
+        "item_level_identified": false,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0131",
+        "supplier_id": "supplier-7",
+        "month": "2025-05",
+        "item_id": "A-new",
+        "price": 131.26,
+        "log_price": 4.877180089045576,
+        "item_level": 4.888051594934585,
+        "month_effect": -0.036668614944200366,
+        "supplier_level": 0.04496979182546861,
+        "predicted_log_price": 4.896352771815853,
+        "residual": -0.01917268277027695,
+        "huber_weight": 0.7520568389295316,
+        "item_level_identified": false,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0132",
+        "supplier_id": "supplier-7",
+        "month": "2025-05",
+        "item_id": "B-new",
+        "price": 183.93,
+        "log_price": 5.214555250442706,
+        "item_level": 5.216486452771997,
+        "month_effect": -0.036668614944200366,
+        "supplier_level": 0.04496979182546861,
+        "predicted_log_price": 5.224787629653266,
+        "residual": -0.010232379210559195,
+        "huber_weight": 1.0,
+        "item_level_identified": false,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0133",
+        "supplier_id": "supplier-7",
+        "month": "2025-05",
+        "item_id": "C-new",
+        "price": 220.84,
+        "log_price": 5.397438457415844,
+        "item_level": 5.390263971292524,
+        "month_effect": -0.036668614944200366,
+        "supplier_level": 0.04496979182546861,
+        "predicted_log_price": 5.398565148173792,
+        "residual": -0.0011266907579479124,
+        "huber_weight": 1.0,
+        "item_level_identified": false,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0134",
+        "supplier_id": "supplier-7",
+        "month": "2025-06",
+        "item_id": "A-new",
+        "price": 138.23,
+        "log_price": 4.928918964476265,
+        "item_level": 4.888051594934585,
+        "month_effect": 0.0,
+        "supplier_level": 0.04496979182546861,
+        "predicted_log_price": 4.933021386760053,
+        "residual": -0.004102422283787988,
+        "huber_weight": 1.0,
+        "item_level_identified": false,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0135",
+        "supplier_id": "supplier-7",
+        "month": "2025-06",
+        "item_id": "B-new",
+        "price": 190.4,
+        "log_price": 5.249127122357265,
+        "item_level": 5.216486452771997,
+        "month_effect": 0.0,
+        "supplier_level": 0.04496979182546861,
+        "predicted_log_price": 5.261456244597466,
+        "residual": -0.01232912224020044,
+        "huber_weight": 1.0,
+        "item_level_identified": false,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0136",
+        "supplier_id": "supplier-7",
+        "month": "2025-06",
+        "item_id": "C-new",
+        "price": 227.74,
+        "log_price": 5.428204627382459,
+        "item_level": 5.390263971292524,
+        "month_effect": 0.0,
+        "supplier_level": 0.04496979182546861,
+        "predicted_log_price": 5.435233763117992,
+        "residual": -0.00702913573553321,
+        "huber_weight": 1.0,
+        "item_level_identified": false,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0137",
+        "supplier_id": "supplier-8",
+        "month": "2025-01",
+        "item_id": "A-old",
+        "price": 101.11,
+        "log_price": 4.616209033103308,
+        "item_level": 4.565935524004575,
+        "month_effect": 0.0,
+        "supplier_level": 0.06424308908340375,
+        "predicted_log_price": 4.630178613087979,
+        "residual": -0.013969579984671299,
+        "huber_weight": 1.0,
+        "item_level_identified": true,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0138",
+        "supplier_id": "supplier-8",
+        "month": "2025-01",
+        "item_id": "B-old",
+        "price": 160.41,
+        "log_price": 5.07773303762875,
+        "item_level": 5.009497277497146,
+        "month_effect": 0.0,
+        "supplier_level": 0.06424308908340375,
+        "predicted_log_price": 5.07374036658055,
+        "residual": 0.003992671048200336,
+        "huber_weight": 1.0,
+        "item_level_identified": true,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0139",
+        "supplier_id": "supplier-8",
+        "month": "2025-02",
+        "item_id": "A-old",
+        "price": 104.41,
+        "log_price": 4.648325456302019,
+        "item_level": 4.565935524004575,
+        "month_effect": 0.021079189746039256,
+        "supplier_level": 0.06424308908340375,
+        "predicted_log_price": 4.651257802834019,
+        "residual": -0.0029323465319999187,
+        "huber_weight": 1.0,
+        "item_level_identified": true,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0140",
+        "supplier_id": "supplier-8",
+        "month": "2025-02",
+        "item_id": "B-old",
+        "price": 163.67,
+        "log_price": 5.097852205517793,
+        "item_level": 5.009497277497146,
+        "month_effect": 0.021079189746039256,
+        "supplier_level": 0.06424308908340375,
+        "predicted_log_price": 5.0948195563265894,
+        "residual": 0.003032649191203163,
+        "huber_weight": 1.0,
+        "item_level_identified": true,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0141",
+        "supplier_id": "supplier-8",
+        "month": "2025-03",
+        "item_id": "A-old",
+        "price": 107.82,
+        "log_price": 4.680463170023523,
+        "item_level": 4.565935524004575,
+        "month_effect": 0.051486677419250726,
+        "supplier_level": 0.06424308908340375,
+        "predicted_log_price": 4.6816652905072305,
+        "residual": -0.0012021204837076027,
+        "huber_weight": 1.0,
+        "item_level_identified": true,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0143",
+        "supplier_id": "supplier-8",
+        "month": "2025-03",
+        "item_id": "B-old",
+        "price": 168.56,
+        "log_price": 5.127291769495933,
+        "item_level": 5.009497277497146,
+        "month_effect": 0.051486677419250726,
+        "supplier_level": 0.06424308908340375,
+        "predicted_log_price": 5.125227043999801,
+        "residual": 0.002064725496132347,
+        "huber_weight": 1.0,
+        "item_level_identified": true,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0146",
+        "supplier_id": "supplier-8",
+        "month": "2025-04",
+        "item_id": "A-new",
+        "price": 133.0,
+        "log_price": 4.890349128221754,
+        "item_level": 4.888051594934585,
+        "month_effect": -0.05790864949745637,
+        "supplier_level": 0.06424308908340375,
+        "predicted_log_price": 4.894386034520533,
+        "residual": -0.004036906298779286,
+        "huber_weight": 1.0,
+        "item_level_identified": false,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0148",
+        "supplier_id": "supplier-8",
+        "month": "2025-04",
+        "item_id": "B-new",
+        "price": 183.38,
+        "log_price": 5.211560502621754,
+        "item_level": 5.216486452771997,
+        "month_effect": -0.05790864949745637,
+        "supplier_level": 0.06424308908340375,
+        "predicted_log_price": 5.222820892357945,
+        "residual": -0.011260389736190923,
+        "huber_weight": 1.0,
+        "item_level_identified": false,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0149",
+        "supplier_id": "supplier-8",
+        "month": "2025-05",
+        "item_id": "A-new",
+        "price": 137.37,
+        "log_price": 4.922678015337114,
+        "item_level": 4.888051594934585,
+        "month_effect": -0.036668614944200366,
+        "supplier_level": 0.06424308908340375,
+        "predicted_log_price": 4.915626069073789,
+        "residual": 0.007051946263325171,
+        "huber_weight": 1.0,
+        "item_level_identified": false,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0150",
+        "supplier_id": "supplier-8",
+        "month": "2025-05",
+        "item_id": "B-new",
+        "price": 192.57,
+        "log_price": 5.260459723991796,
+        "item_level": 5.216486452771997,
+        "month_effect": -0.036668614944200366,
+        "supplier_level": 0.06424308908340375,
+        "predicted_log_price": 5.244060926911201,
+        "residual": 0.016398797080594996,
+        "huber_weight": 0.8792685906718687,
+        "item_level_identified": false,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0151",
+        "supplier_id": "supplier-8",
+        "month": "2025-06",
+        "item_id": "A-new",
+        "price": 141.0,
+        "log_price": 4.948759890378168,
+        "item_level": 4.888051594934585,
+        "month_effect": 0.0,
+        "supplier_level": 0.06424308908340375,
+        "predicted_log_price": 4.952294684017989,
+        "residual": -0.003534793639820677,
+        "huber_weight": 1.0,
+        "item_level_identified": false,
+        "supplier_level_identified": true
+      },
+      {
+        "quote_id": "q0152",
+        "supplier_id": "supplier-8",
+        "month": "2025-06",
+        "item_id": "B-new",
+        "price": 197.77,
+        "log_price": 5.287104739333934,
+        "item_level": 5.216486452771997,
+        "month_effect": 0.0,
+        "supplier_level": 0.06424308908340375,
+        "predicted_log_price": 5.280729541855401,
+        "residual": 0.006375197478532435,
+        "huber_weight": 1.0,
+        "item_level_identified": false,
+        "supplier_level_identified": true
+      }
+    ]
+  },
+  "warnings": [
+    "month 2025-04: month effect is not identifiable relative to 2025-01; see confounding_direction",
+    "month 2025-05: month effect is not identifiable relative to 2025-01; see confounding_direction",
+    "month 2025-06: month effect is not identifiable relative to 2025-01; see confounding_direction",
+    "month 2025-04: index not reported; no observed overlap supports it and no external bridge is used",
+    "month 2025-05: index not reported; no observed overlap supports it and no external bridge is used",
+    "month 2025-06: index not reported; no observed overlap supports it and no external bridge is used"
+  ],
+  "limitations": [
+    "The model is additive on log prices with persistent item and supplier levels; if relative SKU prices drift within the six-month window the month effect is biased toward the average drift.",
+    "Families only record a replacement relationship. Any old/new level difference reported here is a measured persistent level difference from overlap, not a quality or equivalence claim.",
+    "Identification is exact and conditional on the observed quote pattern; absence of overlap is reported as insufficient support rather than bridged with external product prices.",
+    "Supplier-level disturbance dependence is handled only by whole-trajectory resampling; no parametric covariance model is fitted.",
+    "Percentile bootstrap intervals are descriptive and may be optimistic when the bridge rests on a single supplier, which is shown explicitly by the delete-one stability table.",
+    "No forecasting, hedonic regression, rolling analysis or automatic product matching is performed."
+  ]
+}

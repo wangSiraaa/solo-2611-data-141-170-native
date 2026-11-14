@@ -1,0 +1,667 @@
+{
+  "base": {
+    "base_month": "2025-01",
+    "months": [
+      "2025-01",
+      "2025-02",
+      "2025-03",
+      "2025-04",
+      "2025-05",
+      "2025-06"
+    ],
+    "month_index": {
+      "2025-01": {
+        "status": "identified",
+        "index_base100": 100.0,
+        "ci_ratio": [
+          1.0,
+          1.0
+        ],
+        "interval_reportable": true,
+        "valid_fraction": 1.0
+      },
+      "2025-02": {
+        "status": "identified",
+        "index_base100": 102.09031981742464,
+        "ci_ratio": [
+          1.0136174319244426,
+          1.026644077043585
+        ],
+        "interval_reportable": true,
+        "valid_fraction": 1.0
+      },
+      "2025-03": {
+        "status": "identified",
+        "index_base100": 105.30151892256296,
+        "ci_ratio": [
+          1.0466428721006804,
+          1.0588831256813962
+        ],
+        "interval_reportable": true,
+        "valid_fraction": 1.0
+      },
+      "2025-04": {
+        "status": "identified",
+        "index_base100": 106.62989506909798,
+        "ci_ratio": [
+          1.0556771843004553,
+          1.0765708078744853
+        ],
+        "interval_reportable": true,
+        "valid_fraction": 1.0
+      },
+      "2025-05": {
+        "status": "identified",
+        "index_base100": 108.80513695040943,
+        "ci_ratio": [
+          1.0730225471132506,
+          1.10552307753014
+        ],
+        "interval_reportable": true,
+        "valid_fraction": 1.0
+      },
+      "2025-06": {
+        "status": "identified",
+        "index_base100": 112.88358354327937,
+        "ci_ratio": [
+          1.111368596208141,
+          1.148410702647494
+        ],
+        "interval_reportable": true,
+        "valid_fraction": 1.0
+      }
+    },
+    "components": [
+      {
+        "items": [
+          "A-new",
+          "A-old",
+          "B-new",
+          "B-old",
+          "C-new",
+          "C-old"
+        ],
+        "months": [
+          "2025-01",
+          "2025-02",
+          "2025-03",
+          "2025-04",
+          "2025-05",
+          "2025-06"
+        ],
+        "suppliers": [
+          "supplier-1",
+          "supplier-2",
+          "supplier-3",
+          "supplier-4",
+          "supplier-5",
+          "supplier-6",
+          "supplier-7",
+          "supplier-8"
+        ]
+      }
+    ],
+    "critical_bridge_suppliers": {},
+    "item_spreads": [
+      {
+        "family": "family-A",
+        "item_a": "A-old",
+        "item_b": "A-new",
+        "status": "identified",
+        "price_ratio_b_over_a": 1.2219587450626928,
+        "ci_price_ratio": [
+          1.217887987475121,
+          1.2257795528167437
+        ]
+      },
+      {
+        "family": "family-B",
+        "item_a": "B-old",
+        "item_b": "B-new",
+        "status": "identified",
+        "price_ratio_b_over_a": 1.0889883629711494,
+        "ci_price_ratio": [
+          1.0850973937398265,
+          1.0927379337039826
+        ]
+      },
+      {
+        "family": "family-C",
+        "item_a": "C-old",
+        "item_b": "C-new",
+        "status": "identified",
+        "price_ratio_b_over_a": 0.9625516282303259,
+        "ci_price_ratio": [
+          0.9438660776521182,
+          0.9767206658964833
+        ]
+      }
+    ],
+    "warnings": [],
+    "paths": {
+      "json": "outputs/base.result.json",
+      "markdown": "outputs/base.report.md",
+      "html": "outputs/base.report.html",
+      "text": "outputs/base.explain.txt",
+      "quote_trace_csv": "outputs/base.quote_trace.csv"
+    }
+  },
+  "single_bridge": {
+    "base_month": "2025-01",
+    "months": [
+      "2025-01",
+      "2025-02",
+      "2025-03",
+      "2025-04",
+      "2025-05",
+      "2025-06"
+    ],
+    "month_index": {
+      "2025-01": {
+        "status": "identified",
+        "index_base100": 100.0,
+        "ci_ratio": [
+          1.0,
+          1.0
+        ],
+        "interval_reportable": true,
+        "valid_fraction": 1.0
+      },
+      "2025-02": {
+        "status": "identified",
+        "index_base100": 102.13407739440139,
+        "ci_ratio": [
+          1.0127244458219167,
+          1.0271265752288445
+        ],
+        "interval_reportable": true,
+        "valid_fraction": 1.0
+      },
+      "2025-03": {
+        "status": "identified",
+        "index_base100": 105.28255439390917,
+        "ci_ratio": [
+          1.0439674711260296,
+          1.0581683369932888
+        ],
+        "interval_reportable": true,
+        "valid_fraction": 1.0
+      },
+      "2025-04": {
+        "status": "insufficient_replicate_support",
+        "index_base100": 106.81950281325636,
+        "ci_ratio": null,
+        "interval_reportable": false,
+        "valid_fraction": 0.684
+      },
+      "2025-05": {
+        "status": "insufficient_replicate_support",
+        "index_base100": 109.154427161645,
+        "ci_ratio": null,
+        "interval_reportable": false,
+        "valid_fraction": 0.684
+      },
+      "2025-06": {
+        "status": "insufficient_replicate_support",
+        "index_base100": 113.25051554561263,
+        "ci_ratio": null,
+        "interval_reportable": false,
+        "valid_fraction": 0.684
+      }
+    },
+    "components": [
+      {
+        "items": [
+          "A-new",
+          "A-old",
+          "B-new",
+          "B-old",
+          "C-new",
+          "C-old"
+        ],
+        "months": [
+          "2025-01",
+          "2025-02",
+          "2025-03",
+          "2025-04",
+          "2025-05",
+          "2025-06"
+        ],
+        "suppliers": [
+          "supplier-1",
+          "supplier-2",
+          "supplier-3",
+          "supplier-4",
+          "supplier-5",
+          "supplier-6",
+          "supplier-7",
+          "supplier-8"
+        ]
+      }
+    ],
+    "critical_bridge_suppliers": {
+      "2025-04": [
+        "supplier-1"
+      ],
+      "2025-05": [
+        "supplier-1"
+      ],
+      "2025-06": [
+        "supplier-1"
+      ]
+    },
+    "item_spreads": [
+      {
+        "family": "family-A",
+        "item_a": "A-old",
+        "item_b": "A-new",
+        "status": "insufficient_replicate_support",
+        "price_ratio_b_over_a": 1.2194405063037925,
+        "ci_price_ratio": null
+      },
+      {
+        "family": "family-B",
+        "item_a": "B-old",
+        "item_b": "B-new",
+        "status": "insufficient_replicate_support",
+        "price_ratio_b_over_a": 1.086595261516578,
+        "ci_price_ratio": null
+      },
+      {
+        "family": "family-C",
+        "item_a": "C-old",
+        "item_b": "C-new",
+        "status": "insufficient_replicate_support",
+        "price_ratio_b_over_a": 0.9613413597200003,
+        "ci_price_ratio": null
+      }
+    ],
+    "warnings": [
+      "month 2025-04: identified only because supplier(s) ['supplier-1'] bridge otherwise disconnected SKU groups",
+      "month 2025-05: identified only because supplier(s) ['supplier-1'] bridge otherwise disconnected SKU groups",
+      "month 2025-06: identified only because supplier(s) ['supplier-1'] bridge otherwise disconnected SKU groups",
+      "month 2025-04: point index is identified in the full sample but only 68.4% of resampled trajectory sets retain identification; interval withheld (evidence insufficient)",
+      "month 2025-05: point index is identified in the full sample but only 68.4% of resampled trajectory sets retain identification; interval withheld (evidence insufficient)",
+      "month 2025-06: point index is identified in the full sample but only 68.4% of resampled trajectory sets retain identification; interval withheld (evidence insufficient)"
+    ],
+    "paths": {
+      "json": "outputs/single_bridge.result.json",
+      "markdown": "outputs/single_bridge.report.md",
+      "html": "outputs/single_bridge.report.html",
+      "text": "outputs/single_bridge.explain.txt",
+      "quote_trace_csv": "outputs/single_bridge.quote_trace.csv"
+    }
+  },
+  "disconnected": {
+    "base_month": "2025-01",
+    "months": [
+      "2025-01",
+      "2025-02",
+      "2025-03",
+      "2025-04",
+      "2025-05",
+      "2025-06"
+    ],
+    "month_index": {
+      "2025-01": {
+        "status": "identified",
+        "index_base100": 100.0,
+        "ci_ratio": [
+          1.0,
+          1.0
+        ],
+        "interval_reportable": true,
+        "valid_fraction": 1.0
+      },
+      "2025-02": {
+        "status": "identified",
+        "index_base100": 102.1302925154582,
+        "ci_ratio": [
+          1.0127452166007593,
+          1.026881494897368
+        ],
+        "interval_reportable": true,
+        "valid_fraction": 1.0
+      },
+      "2025-03": {
+        "status": "identified",
+        "index_base100": 105.28351597172674,
+        "ci_ratio": [
+          1.0441290414179112,
+          1.0580681874699303
+        ],
+        "interval_reportable": true,
+        "valid_fraction": 1.0
+      },
+      "2025-04": {
+        "status": "insufficient_support",
+        "index_base100": null,
+        "ci_ratio": null,
+        "interval_reportable": false,
+        "valid_fraction": 0.0
+      },
+      "2025-05": {
+        "status": "insufficient_support",
+        "index_base100": null,
+        "ci_ratio": null,
+        "interval_reportable": false,
+        "valid_fraction": 0.0
+      },
+      "2025-06": {
+        "status": "insufficient_support",
+        "index_base100": null,
+        "ci_ratio": null,
+        "interval_reportable": false,
+        "valid_fraction": 0.0
+      }
+    },
+    "components": [
+      {
+        "items": [
+          "A-new",
+          "B-new",
+          "C-new"
+        ],
+        "months": [
+          "2025-04",
+          "2025-05",
+          "2025-06"
+        ],
+        "suppliers": [
+          "supplier-1",
+          "supplier-2",
+          "supplier-3",
+          "supplier-4",
+          "supplier-5",
+          "supplier-6",
+          "supplier-7",
+          "supplier-8"
+        ]
+      },
+      {
+        "items": [
+          "A-old",
+          "B-old",
+          "C-old"
+        ],
+        "months": [
+          "2025-01",
+          "2025-02",
+          "2025-03"
+        ],
+        "suppliers": [
+          "supplier-1",
+          "supplier-2",
+          "supplier-3",
+          "supplier-4",
+          "supplier-5",
+          "supplier-6",
+          "supplier-7",
+          "supplier-8"
+        ]
+      }
+    ],
+    "critical_bridge_suppliers": {},
+    "item_spreads": [
+      {
+        "family": "family-A",
+        "item_a": "A-old",
+        "item_b": "A-new",
+        "status": "insufficient_support",
+        "price_ratio_b_over_a": null,
+        "ci_price_ratio": null
+      },
+      {
+        "family": "family-B",
+        "item_a": "B-old",
+        "item_b": "B-new",
+        "status": "insufficient_support",
+        "price_ratio_b_over_a": null,
+        "ci_price_ratio": null
+      },
+      {
+        "family": "family-C",
+        "item_a": "C-old",
+        "item_b": "C-new",
+        "status": "insufficient_support",
+        "price_ratio_b_over_a": null,
+        "ci_price_ratio": null
+      }
+    ],
+    "warnings": [
+      "month 2025-04: month effect is not identifiable relative to 2025-01; see confounding_direction",
+      "month 2025-05: month effect is not identifiable relative to 2025-01; see confounding_direction",
+      "month 2025-06: month effect is not identifiable relative to 2025-01; see confounding_direction",
+      "month 2025-04: index not reported; no observed overlap supports it and no external bridge is used",
+      "month 2025-05: index not reported; no observed overlap supports it and no external bridge is used",
+      "month 2025-06: index not reported; no observed overlap supports it and no external bridge is used"
+    ],
+    "paths": {
+      "json": "outputs/disconnected.result.json",
+      "markdown": "outputs/disconnected.report.md",
+      "html": "outputs/disconnected.report.html",
+      "text": "outputs/disconnected.explain.txt",
+      "quote_trace_csv": "outputs/disconnected.quote_trace.csv"
+    }
+  },
+  "micro_checks": {
+    "all_checks_passed": true,
+    "checks": {
+      "common_multiplier": {
+        "check": "common_multiplicative_increase_on_fixed_skus",
+        "passed": true,
+        "expected_index": {
+          "m0": 100.0,
+          "m1": 105.0,
+          "m2": 110.00000000000001,
+          "m3": 121.0
+        },
+        "observed_index": {
+          "m0": 100.0,
+          "m1": 104.99999999999999,
+          "m2": 109.99999999999987,
+          "m3": 120.99999999999984
+        },
+        "max_abs_error_index_points": 1.5631940186722204e-13,
+        "tolerance": 1e-06,
+        "note": "SKUs are fixed across all months and every supplier quotes every SKU/month; month contrasts are exactly identified and unconfounded."
+      },
+      "rotation_and_gap": {
+        "check": "known_rotation_and_gap_are_separated_by_overlap",
+        "passed": true,
+        "expected_month_index": {
+          "m0": 100.0,
+          "m1": 104.0,
+          "m2": 110.00000000000001,
+          "m3": 115.99999999999999
+        },
+        "observed_month_index": {
+          "m0": 100.0,
+          "m1": 104.00000000000038,
+          "m2": 110.00000000000007,
+          "m3": 116.00000000000001
+        },
+        "max_abs_month_error_points": 3.836930773104541e-13,
+        "expected_new_over_old_gap": 1.5,
+        "observed_new_over_old_gap": 1.4999999999999876,
+        "abs_gap_error": 1.2434497875801753e-14,
+        "naive_ungrouped_index": {
+          "m0": 100.0,
+          "m1": 104.0,
+          "m2": 165.0,
+          "m3": 174.0
+        },
+        "naive_max_abs_error_points": 58.000000000000014,
+        "note": "Overlap in the boundary month must separate the 1.5x SKU level gap from the common multipliers. The ungrouped month-average index is shown to be badly biased, so passing requires the grouped estimate rather than chance."
+      },
+      "scale_and_order": {
+        "check": "scale_and_row_order_invariance",
+        "passed": true,
+        "max_abs_index_change_points": {
+          "scaled": 1.9984014443252818e-13,
+          "reordered": 1.3322676295501878e-13
+        },
+        "per_month_diffs_points": {
+          "scaled": {
+            "m0": 0.0,
+            "m1": 1.9984014443252818e-13,
+            "m2": 1.5543122344752192e-13,
+            "m3": 1.7763568394002505e-13
+          },
+          "reordered": {
+            "m0": 0.0,
+            "m1": 2.220446049250313e-14,
+            "m2": 6.661338147750939e-14,
+            "m3": 1.3322676295501878e-13
+          }
+        },
+        "tolerance": 1e-06,
+        "note": "A global price constant is absorbed by item levels; row order is not used for parameter ordering, which is fixed from sorted identifiers."
+      },
+      "unique_bridge_deletion": {
+        "check": "unique_bridge_supplier_deletion_exposes_nonidentifiability",
+        "passed": true,
+        "full_sample_status_post_rotation": {
+          "m2": "insufficient_replicate_support",
+          "m3": "insufficient_replicate_support"
+        },
+        "full_sample_critical_bridge_months": {
+          "m2": [
+            "bridge"
+          ],
+          "m3": [
+            "bridge"
+          ]
+        },
+        "deleted_supplier": "bridge",
+        "deleted_status_post_rotation": {
+          "m2": "insufficient_support",
+          "m3": "insufficient_support"
+        },
+        "deleted_graph_components": 2,
+        "note": "Deleting the sole cross-cohort supplier must flip the post-rotation months to insufficient_support; a merely shifted index would fail this check."
+      },
+      "family_labels": {
+        "check": "family_label_rename_preserves_index",
+        "passed": true,
+        "max_abs_index_change_points": 0.0,
+        "note": "Family labels are not used as equivalence keys, so renaming them cannot move the month index."
+      },
+      "case_level": {
+        "check": "case_level_single_bridge_and_disconnected",
+        "cases": {
+          "single_bridge": {
+            "month_status": {
+              "2025-01": "identified",
+              "2025-02": "identified",
+              "2025-03": "identified",
+              "2025-04": "insufficient_replicate_support",
+              "2025-05": "insufficient_replicate_support",
+              "2025-06": "insufficient_replicate_support"
+            },
+            "month_identified_full": {
+              "2025-01": true,
+              "2025-02": true,
+              "2025-03": true,
+              "2025-04": true,
+              "2025-05": true,
+              "2025-06": true
+            },
+            "valid_fraction": {
+              "2025-01": 1.0,
+              "2025-02": 1.0,
+              "2025-03": 1.0,
+              "2025-04": 0.68,
+              "2025-05": 0.68,
+              "2025-06": 0.68
+            },
+            "critical_bridge_suppliers": {
+              "2025-04": [
+                "supplier-1"
+              ],
+              "2025-05": [
+                "supplier-1"
+              ],
+              "2025-06": [
+                "supplier-1"
+              ]
+            },
+            "components": [
+              {
+                "items": [
+                  "A-new",
+                  "A-old",
+                  "B-new",
+                  "B-old",
+                  "C-new",
+                  "C-old"
+                ],
+                "months": [
+                  "2025-01",
+                  "2025-02",
+                  "2025-03",
+                  "2025-04",
+                  "2025-05",
+                  "2025-06"
+                ]
+              }
+            ]
+          },
+          "disconnected": {
+            "month_status": {
+              "2025-01": "identified",
+              "2025-02": "identified",
+              "2025-03": "identified",
+              "2025-04": "insufficient_support",
+              "2025-05": "insufficient_support",
+              "2025-06": "insufficient_support"
+            },
+            "month_identified_full": {
+              "2025-01": true,
+              "2025-02": true,
+              "2025-03": true,
+              "2025-04": false,
+              "2025-05": false,
+              "2025-06": false
+            },
+            "valid_fraction": {
+              "2025-01": 1.0,
+              "2025-02": 1.0,
+              "2025-03": 1.0,
+              "2025-04": 0.0,
+              "2025-05": 0.0,
+              "2025-06": 0.0
+            },
+            "critical_bridge_suppliers": {},
+            "components": [
+              {
+                "items": [
+                  "A-new",
+                  "B-new",
+                  "C-new"
+                ],
+                "months": [
+                  "2025-04",
+                  "2025-05",
+                  "2025-06"
+                ]
+              },
+              {
+                "items": [
+                  "A-old",
+                  "B-old",
+                  "C-old"
+                ],
+                "months": [
+                  "2025-01",
+                  "2025-02",
+                  "2025-03"
+                ]
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

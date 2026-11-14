@@ -1,0 +1,55 @@
+# Comparable-month price index — `base`
+
+Base month **2025-01** (index = 100). Additive log-price model with persistent SKU levels and supplier levels; families are **not** equivalence keys.
+
+## Month index
+
+| month | index (base 100) | status | 95% interval | replicates identified | interval reportable |
+|---|---:|---|---|---:|---|
+| 2025-01 | 100.00 | identified | [100.00, 100.00] | 500/500 (100.0%) | True |
+| 2025-02 | 102.09 | identified | [101.36, 102.66] | 500/500 (100.0%) | True |
+| 2025-03 | 105.30 | identified | [104.66, 105.89] | 500/500 (100.0%) | True |
+| 2025-04 | 106.63 | identified | [105.57, 107.66] | 500/500 (100.0%) | True |
+| 2025-05 | 108.81 | identified | [107.30, 110.55] | 500/500 (100.0%) | True |
+| 2025-06 | 112.88 | identified | [111.14, 114.84] | 500/500 (100.0%) | True |
+
+## Identification evidence
+
+- Design: 18 parameters, 18 exactly independent columns, 0 null direction(s).
+- Normalization: month effect at base = 0; supplier level `supplier-1` = 0. These are the only normalizations.
+- Item–month graph components (edges are real quotes only):
+  - component 0: items ['A-new', 'A-old', 'B-new', 'B-old', 'C-new', 'C-old']; months ['2025-01', '2025-02', '2025-03', '2025-04', '2025-05', '2025-06']; suppliers ['supplier-1', 'supplier-2', 'supplier-3', 'supplier-4', 'supplier-5', 'supplier-6', 'supplier-7', 'supplier-8']
+
+
+## SKU level spreads within families (measured, not equality claims)
+
+| family | pair | ratio B/A | 95% interval | status |
+|---|---|---:|---|---|
+| family-A | A-new / A-old | 1.2220 | [1.2179, 1.2258] | identified |
+| family-B | B-new / B-old | 1.0890 | [1.0851, 1.0927] | identified |
+| family-C | C-new / C-old | 0.9626 | [0.9439, 0.9767] | identified |
+
+## Leave-one-supplier-out stability
+
+| removed | 2025-01 | 2025-02 | 2025-03 | 2025-04 | 2025-05 | 2025-06 |
+|---|---:|---:|---:|---:|---:|---:|
+| supplier-1 | 100.00 | 102.13 | 105.52 | 106.82 | 109.10 | 113.26 |
+| supplier-2 | 100.00 | 102.02 | 105.21 | 106.58 | 108.92 | 112.83 |
+| supplier-3 | 100.00 | 102.01 | 105.22 | 106.41 | 108.41 | 112.44 |
+| supplier-4 | 100.00 | 102.34 | 105.49 | 106.93 | 109.19 | 113.39 |
+| supplier-5 | 100.00 | 102.08 | 105.32 | 106.60 | 108.87 | 112.80 |
+| supplier-6 | 100.00 | 101.88 | 105.18 | 106.24 | 108.24 | 112.24 |
+| supplier-7 | 100.00 | 102.21 | 105.36 | 106.84 | 109.21 | 113.33 |
+| supplier-8 | 100.00 | 101.98 | 105.13 | 106.58 | 108.47 | 112.73 |
+
+## Warnings
+
+
+## Limitations
+
+- The model is additive on log prices with persistent item and supplier levels; if relative SKU prices drift within the six-month window the month effect is biased toward the average drift.
+- Families only record a replacement relationship. Any old/new level difference reported here is a measured persistent level difference from overlap, not a quality or equivalence claim.
+- Identification is exact and conditional on the observed quote pattern; absence of overlap is reported as insufficient support rather than bridged with external product prices.
+- Supplier-level disturbance dependence is handled only by whole-trajectory resampling; no parametric covariance model is fitted.
+- Percentile bootstrap intervals are descriptive and may be optimistic when the bridge rests on a single supplier, which is shown explicitly by the delete-one stability table.
+- No forecasting, hedonic regression, rolling analysis or automatic product matching is performed.
