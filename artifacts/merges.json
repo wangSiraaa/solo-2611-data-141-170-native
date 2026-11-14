@@ -1,0 +1,269 @@
+{
+  "format": "bpe-merges/1",
+  "merges": [
+    {
+      "rank": 0,
+      "left": 97,
+      "right": 110,
+      "new_id": 256,
+      "left_hex": "61",
+      "right_hex": "6e",
+      "new_hex": "616e",
+      "weighted_count": 16,
+      "occurrences_replaced": 4
+    },
+    {
+      "rank": 1,
+      "left": 97,
+      "right": 97,
+      "new_id": 257,
+      "left_hex": "61",
+      "right_hex": "61",
+      "new_hex": "6161",
+      "weighted_count": 12,
+      "occurrences_replaced": 2
+    },
+    {
+      "rank": 2,
+      "left": 256,
+      "right": 97,
+      "new_id": 258,
+      "left_hex": "616e",
+      "right_hex": "61",
+      "new_hex": "616e61",
+      "weighted_count": 8,
+      "occurrences_replaced": 2
+    },
+    {
+      "rank": 3,
+      "left": 98,
+      "right": 256,
+      "new_id": 259,
+      "left_hex": "62",
+      "right_hex": "616e",
+      "new_hex": "62616e",
+      "weighted_count": 8,
+      "occurrences_replaced": 2
+    },
+    {
+      "rank": 4,
+      "left": 97,
+      "right": 98,
+      "new_id": 260,
+      "left_hex": "61",
+      "right_hex": "62",
+      "new_hex": "6162",
+      "weighted_count": 6,
+      "occurrences_replaced": 2
+    },
+    {
+      "rank": 5,
+      "left": 32,
+      "right": 32,
+      "new_id": 261,
+      "left_hex": "20",
+      "right_hex": "20",
+      "new_hex": "2020",
+      "weighted_count": 4,
+      "occurrences_replaced": 1
+    },
+    {
+      "rank": 6,
+      "left": 97,
+      "right": 102,
+      "new_id": 262,
+      "left_hex": "61",
+      "right_hex": "66",
+      "new_hex": "6166",
+      "weighted_count": 4,
+      "occurrences_replaced": 2
+    },
+    {
+      "rank": 7,
+      "left": 259,
+      "right": 258,
+      "new_id": 263,
+      "left_hex": "62616e",
+      "right_hex": "616e61",
+      "new_hex": "62616e616e61",
+      "weighted_count": 4,
+      "occurrences_replaced": 1
+    },
+    {
+      "rank": 8,
+      "left": 259,
+      "right": 100,
+      "new_id": 264,
+      "left_hex": "62616e",
+      "right_hex": "64",
+      "new_hex": "62616e64",
+      "weighted_count": 4,
+      "occurrences_replaced": 1
+    },
+    {
+      "rank": 9,
+      "left": 264,
+      "right": 258,
+      "new_id": 265,
+      "left_hex": "62616e64",
+      "right_hex": "616e61",
+      "new_hex": "62616e64616e61",
+      "weighted_count": 4,
+      "occurrences_replaced": 1
+    },
+    {
+      "rank": 10,
+      "left": 99,
+      "right": 262,
+      "new_id": 266,
+      "left_hex": "63",
+      "right_hex": "6166",
+      "new_hex": "636166",
+      "weighted_count": 4,
+      "occurrences_replaced": 2
+    },
+    {
+      "rank": 11,
+      "left": 141,
+      "right": 174,
+      "new_id": 267,
+      "left_hex": "8d",
+      "right_hex": "ae",
+      "new_hex": "8dae",
+      "weighted_count": 4,
+      "occurrences_replaced": 2
+    },
+    {
+      "rank": 12,
+      "left": 149,
+      "right": 176,
+      "new_id": 268,
+      "left_hex": "95",
+      "right_hex": "b0",
+      "new_hex": "95b0",
+      "weighted_count": 4,
+      "occurrences_replaced": 2
+    },
+    {
+      "rank": 13,
+      "left": 268,
+      "right": 230,
+      "new_id": 269,
+      "left_hex": "95b0",
+      "right_hex": "e6",
+      "new_hex": "95b0e6",
+      "weighted_count": 4,
+      "occurrences_replaced": 2
+    },
+    {
+      "rank": 14,
+      "left": 269,
+      "right": 267,
+      "new_id": 270,
+      "left_hex": "95b0e6",
+      "right_hex": "8dae",
+      "new_hex": "95b0e68dae",
+      "weighted_count": 4,
+      "occurrences_replaced": 2
+    },
+    {
+      "rank": 15,
+      "left": 230,
+      "right": 270,
+      "new_id": 271,
+      "left_hex": "e6",
+      "right_hex": "95b0e68dae",
+      "new_hex": "e695b0e68dae",
+      "weighted_count": 4,
+      "occurrences_replaced": 2
+    },
+    {
+      "rank": 16,
+      "left": 257,
+      "right": 97,
+      "new_id": 272,
+      "left_hex": "6161",
+      "right_hex": "61",
+      "new_hex": "616161",
+      "weighted_count": 3,
+      "occurrences_replaced": 1
+    },
+    {
+      "rank": 17,
+      "left": 257,
+      "right": 272,
+      "new_id": 273,
+      "left_hex": "6161",
+      "right_hex": "616161",
+      "new_hex": "6161616161",
+      "weighted_count": 3,
+      "occurrences_replaced": 1
+    },
+    {
+      "rank": 18,
+      "left": 260,
+      "right": 97,
+      "new_id": 274,
+      "left_hex": "6162",
+      "right_hex": "61",
+      "new_hex": "616261",
+      "weighted_count": 3,
+      "occurrences_replaced": 1
+    },
+    {
+      "rank": 19,
+      "left": 260,
+      "right": 274,
+      "new_id": 275,
+      "left_hex": "6162",
+      "right_hex": "616261",
+      "new_hex": "6162616261",
+      "weighted_count": 3,
+      "occurrences_replaced": 1
+    },
+    {
+      "rank": 20,
+      "left": 266,
+      "right": 101,
+      "new_id": 276,
+      "left_hex": "636166",
+      "right_hex": "65",
+      "new_hex": "63616665",
+      "weighted_count": 2,
+      "occurrences_replaced": 1
+    },
+    {
+      "rank": 21,
+      "left": 266,
+      "right": 195,
+      "new_id": 277,
+      "left_hex": "636166",
+      "right_hex": "c3",
+      "new_hex": "636166c3",
+      "weighted_count": 2,
+      "occurrences_replaced": 1
+    },
+    {
+      "rank": 22,
+      "left": 276,
+      "right": 204,
+      "new_id": 278,
+      "left_hex": "63616665",
+      "right_hex": "cc",
+      "new_hex": "63616665cc",
+      "weighted_count": 2,
+      "occurrences_replaced": 1
+    },
+    {
+      "rank": 23,
+      "left": 278,
+      "right": 129,
+      "new_id": 279,
+      "left_hex": "63616665cc",
+      "right_hex": "81",
+      "new_hex": "63616665cc81",
+      "weighted_count": 2,
+      "occurrences_replaced": 1
+    }
+  ]
+}

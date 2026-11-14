@@ -1,0 +1,402 @@
+{
+  "format": "bpe-summary/1",
+  "stop_reason": "merge_steps_reached",
+  "rounds_completed": 24,
+  "vocab_size": 280,
+  "num_merges": 24,
+  "training_records": 7,
+  "unique_segments": 15,
+  "initial_tokens": 68,
+  "final_tokens": 30,
+  "initial_scan_positions": 53,
+  "positions_checked": 122,
+  "adjacency_updates": 181,
+  "candidates_evicted": 44,
+  "full_rescan_positions_equivalent": 765,
+  "rounds": [
+    {
+      "rank": 0,
+      "left": 97,
+      "right": 110,
+      "new_id": 256,
+      "weighted_count": 16,
+      "occurrences_replaced": 4,
+      "pair_hex": [
+        "61",
+        "6e"
+      ],
+      "new_hex": "616e",
+      "positions_checked": 9,
+      "adjacency_updates": 20,
+      "candidates_evicted": 0
+    },
+    {
+      "rank": 1,
+      "left": 97,
+      "right": 97,
+      "new_id": 257,
+      "weighted_count": 12,
+      "occurrences_replaced": 2,
+      "pair_hex": [
+        "61",
+        "61"
+      ],
+      "new_hex": "6161",
+      "positions_checked": 3,
+      "adjacency_updates": 8,
+      "candidates_evicted": 1
+    },
+    {
+      "rank": 2,
+      "left": 256,
+      "right": 97,
+      "new_id": 258,
+      "weighted_count": 8,
+      "occurrences_replaced": 2,
+      "pair_hex": [
+        "616e",
+        "61"
+      ],
+      "new_hex": "616e61",
+      "positions_checked": 7,
+      "adjacency_updates": 6,
+      "candidates_evicted": 5
+    },
+    {
+      "rank": 3,
+      "left": 98,
+      "right": 256,
+      "new_id": 259,
+      "weighted_count": 8,
+      "occurrences_replaced": 2,
+      "pair_hex": [
+        "62",
+        "616e"
+      ],
+      "new_hex": "62616e",
+      "positions_checked": 5,
+      "adjacency_updates": 6,
+      "candidates_evicted": 1
+    },
+    {
+      "rank": 4,
+      "left": 97,
+      "right": 98,
+      "new_id": 260,
+      "weighted_count": 6,
+      "occurrences_replaced": 2,
+      "pair_hex": [
+        "61",
+        "62"
+      ],
+      "new_hex": "6162",
+      "positions_checked": 3,
+      "adjacency_updates": 8,
+      "candidates_evicted": 2
+    },
+    {
+      "rank": 5,
+      "left": 32,
+      "right": 32,
+      "new_id": 261,
+      "weighted_count": 4,
+      "occurrences_replaced": 1,
+      "pair_hex": [
+        "20",
+        "20"
+      ],
+      "new_hex": "2020",
+      "positions_checked": 1,
+      "adjacency_updates": 1,
+      "candidates_evicted": 1
+    },
+    {
+      "rank": 6,
+      "left": 97,
+      "right": 102,
+      "new_id": 262,
+      "weighted_count": 4,
+      "occurrences_replaced": 2,
+      "pair_hex": [
+        "61",
+        "66"
+      ],
+      "new_hex": "6166",
+      "positions_checked": 9,
+      "adjacency_updates": 10,
+      "candidates_evicted": 0
+    },
+    {
+      "rank": 7,
+      "left": 259,
+      "right": 258,
+      "new_id": 263,
+      "weighted_count": 4,
+      "occurrences_replaced": 1,
+      "pair_hex": [
+        "62616e",
+        "616e61"
+      ],
+      "new_hex": "62616e616e61",
+      "positions_checked": 1,
+      "adjacency_updates": 1,
+      "candidates_evicted": 9
+    },
+    {
+      "rank": 8,
+      "left": 259,
+      "right": 100,
+      "new_id": 264,
+      "weighted_count": 4,
+      "occurrences_replaced": 1,
+      "pair_hex": [
+        "62616e",
+        "64"
+      ],
+      "new_hex": "62616e64",
+      "positions_checked": 2,
+      "adjacency_updates": 3,
+      "candidates_evicted": 0
+    },
+    {
+      "rank": 9,
+      "left": 264,
+      "right": 258,
+      "new_id": 265,
+      "weighted_count": 4,
+      "occurrences_replaced": 1,
+      "pair_hex": [
+        "62616e64",
+        "616e61"
+      ],
+      "new_hex": "62616e64616e61",
+      "positions_checked": 1,
+      "adjacency_updates": 1,
+      "candidates_evicted": 0
+    },
+    {
+      "rank": 10,
+      "left": 99,
+      "right": 262,
+      "new_id": 266,
+      "weighted_count": 4,
+      "occurrences_replaced": 2,
+      "pair_hex": [
+        "63",
+        "6166"
+      ],
+      "new_hex": "636166",
+      "positions_checked": 7,
+      "adjacency_updates": 6,
+      "candidates_evicted": 1
+    },
+    {
+      "rank": 11,
+      "left": 141,
+      "right": 174,
+      "new_id": 267,
+      "weighted_count": 4,
+      "occurrences_replaced": 2,
+      "pair_hex": [
+        "8d",
+        "ae"
+      ],
+      "new_hex": "8dae",
+      "positions_checked": 16,
+      "adjacency_updates": 8,
+      "candidates_evicted": 5
+    },
+    {
+      "rank": 12,
+      "left": 149,
+      "right": 176,
+      "new_id": 268,
+      "weighted_count": 4,
+      "occurrences_replaced": 2,
+      "pair_hex": [
+        "95",
+        "b0"
+      ],
+      "new_hex": "95b0",
+      "positions_checked": 14,
+      "adjacency_updates": 10,
+      "candidates_evicted": 0
+    },
+    {
+      "rank": 13,
+      "left": 268,
+      "right": 230,
+      "new_id": 269,
+      "weighted_count": 4,
+      "occurrences_replaced": 2,
+      "pair_hex": [
+        "95b0",
+        "e6"
+      ],
+      "new_hex": "95b0e6",
+      "positions_checked": 12,
+      "adjacency_updates": 10,
+      "candidates_evicted": 0
+    },
+    {
+      "rank": 14,
+      "left": 269,
+      "right": 267,
+      "new_id": 270,
+      "weighted_count": 4,
+      "occurrences_replaced": 2,
+      "pair_hex": [
+        "95b0e6",
+        "8dae"
+      ],
+      "new_hex": "95b0e68dae",
+      "positions_checked": 10,
+      "adjacency_updates": 8,
+      "candidates_evicted": 0
+    },
+    {
+      "rank": 15,
+      "left": 230,
+      "right": 270,
+      "new_id": 271,
+      "weighted_count": 4,
+      "occurrences_replaced": 2,
+      "pair_hex": [
+        "e6",
+        "95b0e68dae"
+      ],
+      "new_hex": "e695b0e68dae",
+      "positions_checked": 8,
+      "adjacency_updates": 4,
+      "candidates_evicted": 6
+    },
+    {
+      "rank": 16,
+      "left": 257,
+      "right": 97,
+      "new_id": 272,
+      "weighted_count": 3,
+      "occurrences_replaced": 1,
+      "pair_hex": [
+        "6161",
+        "61"
+      ],
+      "new_hex": "616161",
+      "positions_checked": 2,
+      "adjacency_updates": 3,
+      "candidates_evicted": 2
+    },
+    {
+      "rank": 17,
+      "left": 257,
+      "right": 272,
+      "new_id": 273,
+      "weighted_count": 3,
+      "occurrences_replaced": 1,
+      "pair_hex": [
+        "6161",
+        "616161"
+      ],
+      "new_hex": "6161616161",
+      "positions_checked": 1,
+      "adjacency_updates": 1,
+      "candidates_evicted": 2
+    },
+    {
+      "rank": 18,
+      "left": 260,
+      "right": 97,
+      "new_id": 274,
+      "weighted_count": 3,
+      "occurrences_replaced": 1,
+      "pair_hex": [
+        "6162",
+        "61"
+      ],
+      "new_hex": "616261",
+      "positions_checked": 2,
+      "adjacency_updates": 3,
+      "candidates_evicted": 0
+    },
+    {
+      "rank": 19,
+      "left": 260,
+      "right": 274,
+      "new_id": 275,
+      "weighted_count": 3,
+      "occurrences_replaced": 1,
+      "pair_hex": [
+        "6162",
+        "616261"
+      ],
+      "new_hex": "6162616261",
+      "positions_checked": 1,
+      "adjacency_updates": 1,
+      "candidates_evicted": 2
+    },
+    {
+      "rank": 20,
+      "left": 266,
+      "right": 101,
+      "new_id": 276,
+      "weighted_count": 2,
+      "occurrences_replaced": 1,
+      "pair_hex": [
+        "636166",
+        "65"
+      ],
+      "new_hex": "63616665",
+      "positions_checked": 3,
+      "adjacency_updates": 3,
+      "candidates_evicted": 7
+    },
+    {
+      "rank": 21,
+      "left": 266,
+      "right": 195,
+      "new_id": 277,
+      "weighted_count": 2,
+      "occurrences_replaced": 1,
+      "pair_hex": [
+        "636166",
+        "c3"
+      ],
+      "new_hex": "636166c3",
+      "positions_checked": 2,
+      "adjacency_updates": 3,
+      "candidates_evicted": 0
+    },
+    {
+      "rank": 22,
+      "left": 276,
+      "right": 204,
+      "new_id": 278,
+      "weighted_count": 2,
+      "occurrences_replaced": 1,
+      "pair_hex": [
+        "63616665",
+        "cc"
+      ],
+      "new_hex": "63616665cc",
+      "positions_checked": 2,
+      "adjacency_updates": 3,
+      "candidates_evicted": 0
+    },
+    {
+      "rank": 23,
+      "left": 278,
+      "right": 129,
+      "new_id": 279,
+      "weighted_count": 2,
+      "occurrences_replaced": 1,
+      "pair_hex": [
+        "63616665cc",
+        "81"
+      ],
+      "new_hex": "63616665cc81",
+      "positions_checked": 1,
+      "adjacency_updates": 1,
+      "candidates_evicted": 0
+    }
+  ]
+}
