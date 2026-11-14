@@ -1,0 +1,23 @@
+{
+  "command": "analyze",
+  "results": [
+    {
+      "case": "spread",
+      "status": "ok",
+      "n_candidates": 12,
+      "best_period_day": 2.7306368383304522
+    },
+    {
+      "case": "daily_alias",
+      "status": "ok",
+      "n_candidates": 12,
+      "best_period_day": 2.728891609565812
+    },
+    {
+      "case": "half_period",
+      "status": "ok",
+      "n_candidates": 12,
+      "best_period_day": 2.8015292929683207
+    }
+  ]
+}

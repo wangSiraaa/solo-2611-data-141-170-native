@@ -1,0 +1,2755 @@
+{
+  "case": "half_period",
+  "source_csv": "half_period.csv",
+  "period_bounds_day": [
+    0.35,
+    5.8
+  ],
+  "max_harmonics": 2,
+  "data_issues": [],
+  "data_clean": true,
+  "grid_meta": {
+    "time_span_day": 11.528163452600001,
+    "rayleigh_resolution_per_day": 0.0867440858304681,
+    "coarse_grid_step_per_day": 0.0086744085830468,
+    "grid_oversample": 10,
+    "n_grid": 310,
+    "f_min_per_day": 0.1724137931034483,
+    "f_max_per_day": 2.857142857142857,
+    "dedup_tolerance_per_day": 0.0867440858304681
+  },
+  "constant_model": {
+    "chi2": 3861.863141615398,
+    "dof": 143,
+    "reduced_chi2": 27.006035955352434,
+    "constant": 12.021087520705919,
+    "holdout": {
+      "scheme": "leave-one-whole-night-out",
+      "model": "constant",
+      "total_holdout_chi2": 4221.450377989467,
+      "holdout_reduced_chi2": 29.31562762492685
+    }
+  },
+  "candidates": [
+    {
+      "freq_per_day": 0.35694790074476224,
+      "period_day": 2.8015292929683207,
+      "preferred_harmonics": 2,
+      "chi2": 148.48985542635987,
+      "dof": 139,
+      "reduced_chi2": 1.0682723411968336,
+      "bic": 29.270347847553406,
+      "delta_chi2_vs_constant": 3713.373286189038,
+      "explained_score": 0.9615496847036772,
+      "freq_1sigma_halfwidth": 0.000403931390157819,
+      "period_1sigma": 0.0031702823283606342,
+      "constant": 12.00263576102073,
+      "harmonics": [
+        {
+          "order": 1,
+          "amplitude": 0.01619443503818713,
+          "amplitude_err": 0.004906789153969004,
+          "phase_rad": -0.7689922525788293,
+          "phase_err_rad": 0.30344707064134496,
+          "cos_coef": 0.011637512654396151,
+          "sin_coef": 0.01126179494684717
+        },
+        {
+          "order": 2,
+          "amplitude": 0.2936293598472122,
+          "amplitude_err": 0.004896909518004405,
+          "phase_rad": 1.6725261703302485,
+          "phase_err_rad": 0.015653565898576596,
+          "cos_coef": -0.029819373411644208,
+          "sin_coef": -0.292111290322063
+        }
+      ],
+      "labels": [
+        "standalone",
+        "half_period_long_2P"
+      ],
+      "alias_family_id": 1,
+      "half_period_pair_candidate_id": "candidate_1",
+      "holdout": {
+        "scheme": "leave-one-whole-night-out",
+        "n_folds": 12,
+        "harmonics_used": 2,
+        "total_holdout_chi2": 160.88692830973955,
+        "total_holdout_points": 144,
+        "holdout_reduced_chi2": 1.1172703354843023,
+        "per_night": [
+          {
+            "night_id": "n00",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 11.21687849812247,
+            "holdout_reduced_chi2": 0.9347398748435393,
+            "mean_weighted_residual": -0.0006309123314041893
+          },
+          {
+            "night_id": "n01",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 7.11714850896338,
+            "holdout_reduced_chi2": 0.5930957090802816,
+            "mean_weighted_residual": 9.278315441004352e-05
+          },
+          {
+            "night_id": "n02",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 14.657225335367995,
+            "holdout_reduced_chi2": 1.2214354446139997,
+            "mean_weighted_residual": 0.00033583310613690586
+          },
+          {
+            "night_id": "n03",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 10.667255339004402,
+            "holdout_reduced_chi2": 0.8889379449170335,
+            "mean_weighted_residual": 0.00758102289368211
+          },
+          {
+            "night_id": "n04",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 11.013246649161891,
+            "holdout_reduced_chi2": 0.9177705540968243,
+            "mean_weighted_residual": -0.0034979362436450318
+          },
+          {
+            "night_id": "n05",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 6.208782873493047,
+            "holdout_reduced_chi2": 0.5173985727910873,
+            "mean_weighted_residual": -0.010412092490167158
+          },
+          {
+            "night_id": "n06",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 24.094727208236144,
+            "holdout_reduced_chi2": 2.0078939340196786,
+            "mean_weighted_residual": -0.028116591698345697
+          },
+          {
+            "night_id": "n07",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 13.3164703005811,
+            "holdout_reduced_chi2": 1.1097058583817583,
+            "mean_weighted_residual": -0.01913052486953293
+          },
+          {
+            "night_id": "n08",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 22.829689020363826,
+            "holdout_reduced_chi2": 1.9024740850303188,
+            "mean_weighted_residual": 0.006668491862088862
+          },
+          {
+            "night_id": "n09",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 10.7319036545043,
+            "holdout_reduced_chi2": 0.8943253045420251,
+            "mean_weighted_residual": 0.023994959591250267
+          },
+          {
+            "night_id": "n10",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 13.179888382060483,
+            "holdout_reduced_chi2": 1.0983240318383736,
+            "mean_weighted_residual": 0.025400214455948825
+          },
+          {
+            "night_id": "n11",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 15.8537125398805,
+            "holdout_reduced_chi2": 1.3211427116567083,
+            "mean_weighted_residual": 0.0035442623042421977
+          }
+        ]
+      },
+      "fit_by_harmonics": {
+        "1": {
+          "chi2": 3795.644285254356,
+          "dof": 141,
+          "reduced_chi2": 26.91946301598834,
+          "bic": 486.04808520779136,
+          "coefs": [
+            12.018102326570979,
+            0.02067539331734755,
+            -0.0317074849933721
+          ]
+        },
+        "2": {
+          "chi2": 148.48985542635987,
+          "dof": 139,
+          "reduced_chi2": 1.0682723411968336,
+          "bic": 29.270347847553406,
+          "coefs": [
+            12.00263576102073,
+            0.011637512654396151,
+            0.01126179494684717,
+            -0.029819373411644208,
+            -0.292111290322063
+          ]
+        }
+      }
+    },
+    {
+      "freq_per_day": 0.7145507757804629,
+      "period_day": 1.399480672185622,
+      "preferred_harmonics": 1,
+      "chi2": 158.7560154123857,
+      "dof": 141,
+      "reduced_chi2": 1.1259291873218844,
+      "bic": 28.957392995743824,
+      "delta_chi2_vs_constant": 3703.1071262030123,
+      "explained_score": 0.9588913408914903,
+      "freq_1sigma_halfwidth": 0.0008007183197128454,
+      "period_1sigma": 0.0015682437837662671,
+      "constant": 12.00355317077616,
+      "harmonics": [
+        {
+          "order": 1,
+          "amplitude": 0.29228614984129475,
+          "amplitude_err": 0.004838599591497585,
+          "phase_rad": 1.6714840348477427,
+          "phase_err_rad": 0.015726524174646827,
+          "cos_coef": -0.029379921399765738,
+          "sin_coef": -0.2908058005054084
+        }
+      ],
+      "labels": [
+        "primary_daily_family",
+        "half_period_short_P"
+      ],
+      "alias_family_id": 2,
+      "half_period_pair_candidate_id": "candidate_0",
+      "holdout": {
+        "scheme": "leave-one-whole-night-out",
+        "n_folds": 12,
+        "harmonics_used": 1,
+        "total_holdout_chi2": 168.8433006317361,
+        "total_holdout_points": 144,
+        "holdout_reduced_chi2": 1.172522921053723,
+        "per_night": [
+          {
+            "night_id": "n00",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 12.778635909088132,
+            "holdout_reduced_chi2": 1.0648863257573444,
+            "mean_weighted_residual": 0.008395603618990432
+          },
+          {
+            "night_id": "n01",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 7.361238385383272,
+            "holdout_reduced_chi2": 0.6134365321152727,
+            "mean_weighted_residual": 0.0024185209227181375
+          },
+          {
+            "night_id": "n02",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 16.249008446966798,
+            "holdout_reduced_chi2": 1.3540840372472331,
+            "mean_weighted_residual": -0.009371406839344463
+          },
+          {
+            "night_id": "n03",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 13.605247606585296,
+            "holdout_reduced_chi2": 1.133770633882108,
+            "mean_weighted_residual": 0.022304386372563892
+          },
+          {
+            "night_id": "n04",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 11.150847668560997,
+            "holdout_reduced_chi2": 0.9292373057134165,
+            "mean_weighted_residual": -0.01678845534915648
+          },
+          {
+            "night_id": "n05",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 9.624052942784301,
+            "holdout_reduced_chi2": 0.8020044118986918,
+            "mean_weighted_residual": -0.015825576157160084
+          },
+          {
+            "night_id": "n06",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 18.72646968617656,
+            "holdout_reduced_chi2": 1.5605391405147133,
+            "mean_weighted_residual": -0.008334835062709788
+          },
+          {
+            "night_id": "n07",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 17.77839746225756,
+            "holdout_reduced_chi2": 1.4815331218547965,
+            "mean_weighted_residual": -0.031173216855747053
+          },
+          {
+            "night_id": "n08",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 21.759291857872647,
+            "holdout_reduced_chi2": 1.8132743214893872,
+            "mean_weighted_residual": 0.010265674659123933
+          },
+          {
+            "night_id": "n09",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 10.71006938880472,
+            "holdout_reduced_chi2": 0.8925057824003934,
+            "mean_weighted_residual": 0.024286482025805817
+          },
+          {
+            "night_id": "n10",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 9.520451099756777,
+            "holdout_reduced_chi2": 0.7933709249797314,
+            "mean_weighted_residual": 0.003975885123401359
+          },
+          {
+            "night_id": "n11",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 19.579590177499043,
+            "holdout_reduced_chi2": 1.6316325147915869,
+            "mean_weighted_residual": 0.017313986885892085
+          }
+        ]
+      },
+      "fit_by_harmonics": {
+        "1": {
+          "chi2": 158.7560154123857,
+          "dof": 141,
+          "reduced_chi2": 1.1259291873218844,
+          "bic": 28.957392995743824,
+          "coefs": [
+            12.00355317077616,
+            -0.029379921399765738,
+            -0.2908058005054084
+          ]
+        },
+        "2": {
+          "chi2": 154.35683744665968,
+          "dof": 139,
+          "reduced_chi2": 1.1104808449399977,
+          "bic": 34.850406313170524,
+          "coefs": [
+            12.00312818046202,
+            -0.029267548789386866,
+            -0.29054750152848546,
+            -0.007415940625974217,
+            0.007578292821905993
+          ]
+        }
+      }
+    },
+    {
+      "freq_per_day": 0.8568021395296814,
+      "period_day": 1.1671306056132438,
+      "preferred_harmonics": 2,
+      "chi2": 2455.284998161396,
+      "dof": 139,
+      "reduced_chi2": 17.663920850081983,
+      "bic": 433.25968097804764,
+      "delta_chi2_vs_constant": 1406.5781434540022,
+      "explained_score": 0.36422268005738745,
+      "freq_1sigma_halfwidth": 0.0006178210584314447,
+      "period_1sigma": 0.0008415920465412513,
+      "constant": 11.997364525177499,
+      "harmonics": [
+        {
+          "order": 1,
+          "amplitude": 0.03585474186853941,
+          "amplitude_err": 0.004540946409197079,
+          "phase_rad": -0.6668981070602218,
+          "phase_err_rad": 0.12695438664890213,
+          "cos_coef": 0.02817265274001558,
+          "sin_coef": 0.02217801055212315
+        },
+        {
+          "order": 2,
+          "amplitude": 0.16714390178968194,
+          "amplitude_err": 0.004648385962160443,
+          "phase_rad": -1.4017088272352793,
+          "phase_err_rad": 0.02958065867772583,
+          "cos_coef": 0.02812746589628246,
+          "sin_coef": 0.16476021840156777
+        }
+      ],
+      "labels": [
+        "daily_alias"
+      ],
+      "alias_family_id": 2,
+      "half_period_pair_candidate_id": null,
+      "holdout": {
+        "scheme": "leave-one-whole-night-out",
+        "n_folds": 12,
+        "harmonics_used": 2,
+        "total_holdout_chi2": 3337.0213923479887,
+        "total_holdout_points": 144,
+        "holdout_reduced_chi2": 23.173759669083253,
+        "per_night": [
+          {
+            "night_id": "n00",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 332.66992878675194,
+            "holdout_reduced_chi2": 27.72249406556266,
+            "mean_weighted_residual": -0.15080836879442513
+          },
+          {
+            "night_id": "n01",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 264.3183726868583,
+            "holdout_reduced_chi2": 22.02653105723819,
+            "mean_weighted_residual": 0.19066003712204976
+          },
+          {
+            "night_id": "n02",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 77.29692323712098,
+            "holdout_reduced_chi2": 6.441410269760081,
+            "mean_weighted_residual": -0.014287621943072381
+          },
+          {
+            "night_id": "n03",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 255.68379975779848,
+            "holdout_reduced_chi2": 21.306983313149875,
+            "mean_weighted_residual": -0.19637856316532004
+          },
+          {
+            "night_id": "n04",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 99.37154388886694,
+            "holdout_reduced_chi2": 8.280961990738911,
+            "mean_weighted_residual": 0.06061578920924631
+          },
+          {
+            "night_id": "n05",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 594.1198383244969,
+            "holdout_reduced_chi2": 49.509986527041406,
+            "mean_weighted_residual": 0.22356156308205602
+          },
+          {
+            "night_id": "n06",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 380.1005597723078,
+            "holdout_reduced_chi2": 31.675046647692316,
+            "mean_weighted_residual": -0.18110253037466445
+          },
+          {
+            "night_id": "n07",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 216.29787486660928,
+            "holdout_reduced_chi2": 18.024822905550774,
+            "mean_weighted_residual": -0.16966539907039957
+          },
+          {
+            "night_id": "n08",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 402.65209091426806,
+            "holdout_reduced_chi2": 33.55434090952234,
+            "mean_weighted_residual": 0.20808164108997906
+          },
+          {
+            "night_id": "n09",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 86.19332177821397,
+            "holdout_reduced_chi2": 7.182776814851164,
+            "mean_weighted_residual": 0.06353737466763555
+          },
+          {
+            "night_id": "n10",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 377.8328327901643,
+            "holdout_reduced_chi2": 31.486069399180355,
+            "mean_weighted_residual": -0.23717430417467525
+          },
+          {
+            "night_id": "n11",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 250.48430554453182,
+            "holdout_reduced_chi2": 20.873692128710985,
+            "mean_weighted_residual": 0.12440212668507832
+          }
+        ]
+      },
+      "fit_by_harmonics": {
+        "1": {
+          "chi2": 3749.7288174217992,
+          "dof": 141,
+          "reduced_chi2": 26.593821400154603,
+          "bic": 484.2955121031198,
+          "coefs": [
+            12.017087512446356,
+            0.015212737374000801,
+            0.04617982051765405
+          ]
+        },
+        "2": {
+          "chi2": 2455.284998161396,
+          "dof": 139,
+          "reduced_chi2": 17.663920850081983,
+          "bic": 433.25968097804764,
+          "coefs": [
+            11.997364525177499,
+            0.02817265274001558,
+            0.02217801055212315,
+            0.02812746589628246,
+            0.16476021840156777
+          ]
+        }
+      }
+    },
+    {
+      "freq_per_day": 1.7174140612062567,
+      "period_day": 0.5822707654423371,
+      "preferred_harmonics": 1,
+      "chi2": 2521.31715477289,
+      "dof": 141,
+      "reduced_chi2": 17.8816819487439,
+      "bic": 427.1416130764146,
+      "delta_chi2_vs_constant": 1340.5459868425082,
+      "explained_score": 0.3471241568342488,
+      "freq_1sigma_halfwidth": 0.005509632490246386,
+      "period_1sigma": 0.0018679816358021827,
+      "constant": 12.002404186257062,
+      "harmonics": [
+        {
+          "order": 1,
+          "amplitude": 0.1687664353713579,
+          "amplitude_err": 0.0046094344361211435,
+          "phase_rad": -1.4048151559088924,
+          "phase_err_rad": 0.028879167040313094,
+          "cos_coef": 0.027883606779250936,
+          "sin_coef": 0.16644703115686635
+        }
+      ],
+      "labels": [
+        "daily_alias"
+      ],
+      "alias_family_id": 2,
+      "half_period_pair_candidate_id": null,
+      "holdout": {
+        "scheme": "leave-one-whole-night-out",
+        "n_folds": 12,
+        "harmonics_used": 1,
+        "total_holdout_chi2": 2975.762997105478,
+        "total_holdout_points": 144,
+        "holdout_reduced_chi2": 20.665020813232488,
+        "per_night": [
+          {
+            "night_id": "n00",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 287.8782901352683,
+            "holdout_reduced_chi2": 23.98985751127236,
+            "mean_weighted_residual": -0.13156434716199744
+          },
+          {
+            "night_id": "n01",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 314.3459317640302,
+            "holdout_reduced_chi2": 26.195494313669183,
+            "mean_weighted_residual": 0.21192562022833972
+          },
+          {
+            "night_id": "n02",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 79.3669349361746,
+            "holdout_reduced_chi2": 6.6139112446812165,
+            "mean_weighted_residual": 0.007389910861467886
+          },
+          {
+            "night_id": "n03",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 235.94178125666525,
+            "holdout_reduced_chi2": 19.661815104722105,
+            "mean_weighted_residual": -0.18665872876623305
+          },
+          {
+            "night_id": "n04",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 53.399243529740644,
+            "holdout_reduced_chi2": 4.44993696081172,
+            "mean_weighted_residual": 0.03473220092389386
+          },
+          {
+            "night_id": "n05",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 378.9328433094974,
+            "holdout_reduced_chi2": 31.577736942458117,
+            "mean_weighted_residual": 0.17024387524509693
+          },
+          {
+            "night_id": "n06",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 393.27916377806883,
+            "holdout_reduced_chi2": 32.7732636481724,
+            "mean_weighted_residual": -0.19489643280578603
+          },
+          {
+            "night_id": "n07",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 155.28939229748337,
+            "holdout_reduced_chi2": 12.940782691456947,
+            "mean_weighted_residual": -0.13698322653294367
+          },
+          {
+            "night_id": "n08",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 449.30818763201734,
+            "holdout_reduced_chi2": 37.44234896933478,
+            "mean_weighted_residual": 0.22313971250085712
+          },
+          {
+            "night_id": "n09",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 119.22159420110924,
+            "holdout_reduced_chi2": 9.935132850092437,
+            "mean_weighted_residual": 0.08796898288863973
+          },
+          {
+            "night_id": "n10",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 370.0808423176182,
+            "holdout_reduced_chi2": 30.84007019313485,
+            "mean_weighted_residual": -0.2339288476946247
+          },
+          {
+            "night_id": "n11",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 138.71879194780473,
+            "holdout_reduced_chi2": 11.559899328983727,
+            "mean_weighted_residual": 0.09202954555706397
+          }
+        ]
+      },
+      "fit_by_harmonics": {
+        "1": {
+          "chi2": 2521.31715477289,
+          "dof": 141,
+          "reduced_chi2": 17.8816819487439,
+          "bic": 427.1416130764146,
+          "coefs": [
+            12.002404186257062,
+            0.027883606779250936,
+            0.16644703115686635
+          ]
+        },
+        "2": {
+          "chi2": 2477.4016391565983,
+          "dof": 139,
+          "reduced_chi2": 17.823033375227325,
+          "bic": 434.5509925409204,
+          "coefs": [
+            12.000495502071985,
+            0.022795330749370332,
+            0.16527585240724632,
+            -0.020503875762698784,
+            0.02584732922542215
+          ]
+        }
+      }
+    },
+    {
+      "freq_per_day": 2.644848413702151,
+      "period_day": 0.3780935023796849,
+      "preferred_harmonics": 2,
+      "chi2": 3437.0976069265107,
+      "dof": 139,
+      "reduced_chi2": 24.727320913140364,
+      "bic": 481.6990566049578,
+      "delta_chi2_vs_constant": 424.7655346888873,
+      "explained_score": 0.10998979485099258,
+      "freq_1sigma_halfwidth": 0.00140990962023535,
+      "period_1sigma": 0.0002015532019120198,
+      "constant": 12.013807902264121,
+      "harmonics": [
+        {
+          "order": 1,
+          "amplitude": 0.057173829952320135,
+          "amplitude_err": 0.004825811121534942,
+          "phase_rad": 1.4724346484087418,
+          "phase_err_rad": 0.0827801819263297,
+          "cos_coef": 0.005614650002486393,
+          "sin_coef": -0.05689747390496698
+        },
+        {
+          "order": 2,
+          "amplitude": 0.07648332772509633,
+          "amplitude_err": 0.004718796797848051,
+          "phase_rad": 0.3510978156072424,
+          "phase_err_rad": 0.06045891506420974,
+          "cos_coef": 0.07181751648981399,
+          "sin_coef": -0.026304823609744756
+        }
+      ],
+      "labels": [
+        "daily_alias"
+      ],
+      "alias_family_id": 2,
+      "half_period_pair_candidate_id": null,
+      "holdout": {
+        "scheme": "leave-one-whole-night-out",
+        "n_folds": 12,
+        "harmonics_used": 2,
+        "total_holdout_chi2": 3910.575290470989,
+        "total_holdout_points": 144,
+        "holdout_reduced_chi2": 27.156772850492978,
+        "per_night": [
+          {
+            "night_id": "n00",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 377.60985614027413,
+            "holdout_reduced_chi2": 31.46748801168951,
+            "mean_weighted_residual": -0.060252803521249815
+          },
+          {
+            "night_id": "n01",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 298.1166653117023,
+            "holdout_reduced_chi2": 24.84305544264186,
+            "mean_weighted_residual": 0.2201482067194603
+          },
+          {
+            "night_id": "n02",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 372.11626106700436,
+            "holdout_reduced_chi2": 31.009688422250363,
+            "mean_weighted_residual": 0.04902983225434313
+          },
+          {
+            "night_id": "n03",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 429.16652123117547,
+            "holdout_reduced_chi2": 35.76387676926462,
+            "mean_weighted_residual": -0.2597144332351333
+          },
+          {
+            "night_id": "n04",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 188.12093073693688,
+            "holdout_reduced_chi2": 15.676744228078073,
+            "mean_weighted_residual": -0.012640195953066665
+          },
+          {
+            "night_id": "n05",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 448.6465558952104,
+            "holdout_reduced_chi2": 37.38721299126753,
+            "mean_weighted_residual": 0.09996604422445503
+          },
+          {
+            "night_id": "n06",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 346.18887483123314,
+            "holdout_reduced_chi2": 28.84907290260276,
+            "mean_weighted_residual": -0.15383424621897465
+          },
+          {
+            "night_id": "n07",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 329.1415949405218,
+            "holdout_reduced_chi2": 27.428466245043484,
+            "mean_weighted_residual": -0.17143727540229114
+          },
+          {
+            "night_id": "n08",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 380.5782389668404,
+            "holdout_reduced_chi2": 31.7148532472367,
+            "mean_weighted_residual": 0.2015164135701208
+          },
+          {
+            "night_id": "n09",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 236.4686295150807,
+            "holdout_reduced_chi2": 19.705719126256724,
+            "mean_weighted_residual": 0.15837080860085626
+          },
+          {
+            "night_id": "n10",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 300.23258746207586,
+            "holdout_reduced_chi2": 25.01938228850632,
+            "mean_weighted_residual": -0.14640401696256475
+          },
+          {
+            "night_id": "n11",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 204.18857437293323,
+            "holdout_reduced_chi2": 17.01571453107777,
+            "mean_weighted_residual": 0.02907475016178969
+          }
+        ]
+      },
+      "fit_by_harmonics": {
+        "1": {
+          "chi2": 3700.9765704398533,
+          "dof": 141,
+          "reduced_chi2": 26.24806078326137,
+          "bic": 482.4110130137334,
+          "coefs": [
+            12.01589320408987,
+            0.013951233883885644,
+            -0.05905677163112944
+          ]
+        },
+        "2": {
+          "chi2": 3437.0976069265107,
+          "dof": 139,
+          "reduced_chi2": 24.727320913140364,
+          "bic": 481.6990566049578,
+          "coefs": [
+            12.013807902264121,
+            0.005614650002486393,
+            -0.05689747390496698,
+            0.07181751648981399,
+            -0.026304823609744756
+          ]
+        }
+      }
+    },
+    {
+      "freq_per_day": 1.267288389776538,
+      "period_day": 0.7890863737624322,
+      "preferred_harmonics": 2,
+      "chi2": 3542.022000783253,
+      "dof": 139,
+      "reduced_chi2": 25.482172667505417,
+      "bic": 486.02918763929927,
+      "delta_chi2_vs_constant": 319.8411408321449,
+      "explained_score": 0.08282042348563312,
+      "freq_1sigma_halfwidth": 0.0012904136303648617,
+      "period_1sigma": 0.0008034854737505902,
+      "constant": 12.022108714458248,
+      "harmonics": [
+        {
+          "order": 1,
+          "amplitude": 0.040211347925853826,
+          "amplitude_err": 0.004600947949911697,
+          "phase_rad": 1.5204385630203536,
+          "phase_err_rad": 0.12259559325619215,
+          "cos_coef": 0.0020240978203192677,
+          "sin_coef": -0.04016037263308008
+        },
+        {
+          "order": 2,
+          "amplitude": 0.0776726831389629,
+          "amplitude_err": 0.004865068689247687,
+          "phase_rad": -2.374117407216823,
+          "phase_err_rad": 0.06254742801115043,
+          "cos_coef": -0.05589838526883431,
+          "sin_coef": 0.053929734194993945
+        }
+      ],
+      "labels": [
+        "primary_daily_family"
+      ],
+      "alias_family_id": 3,
+      "half_period_pair_candidate_id": null,
+      "holdout": {
+        "scheme": "leave-one-whole-night-out",
+        "n_folds": 12,
+        "harmonics_used": 2,
+        "total_holdout_chi2": 4660.10026351031,
+        "total_holdout_points": 144,
+        "holdout_reduced_chi2": 32.36180738548826,
+        "per_night": [
+          {
+            "night_id": "n00",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 283.5656503802558,
+            "holdout_reduced_chi2": 23.63047086502132,
+            "mean_weighted_residual": -0.11059142434922554
+          },
+          {
+            "night_id": "n01",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 495.42983409479814,
+            "holdout_reduced_chi2": 41.285819507899845,
+            "mean_weighted_residual": 0.2862121431023265
+          },
+          {
+            "night_id": "n02",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 264.43106443958334,
+            "holdout_reduced_chi2": 22.035922036631945,
+            "mean_weighted_residual": -0.013329465953281284
+          },
+          {
+            "night_id": "n03",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 501.0993106410479,
+            "holdout_reduced_chi2": 41.75827588675399,
+            "mean_weighted_residual": -0.27784676511960443
+          },
+          {
+            "night_id": "n04",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 246.1874665574461,
+            "holdout_reduced_chi2": 20.51562221312051,
+            "mean_weighted_residual": 0.03735069993857331
+          },
+          {
+            "night_id": "n05",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 684.1478972614386,
+            "holdout_reduced_chi2": 57.01232477178655,
+            "mean_weighted_residual": 0.15079624360565458
+          },
+          {
+            "night_id": "n06",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 316.61229481001186,
+            "holdout_reduced_chi2": 26.38435790083432,
+            "mean_weighted_residual": -0.11064605523629578
+          },
+          {
+            "night_id": "n07",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 366.33419873842706,
+            "holdout_reduced_chi2": 30.527849894868922,
+            "mean_weighted_residual": -0.20988288088805798
+          },
+          {
+            "night_id": "n08",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 635.521814821518,
+            "holdout_reduced_chi2": 52.960151235126496,
+            "mean_weighted_residual": 0.27642165894809184
+          },
+          {
+            "night_id": "n09",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 236.41470071708113,
+            "holdout_reduced_chi2": 19.701225059756762,
+            "mean_weighted_residual": 0.15997031512877521
+          },
+          {
+            "night_id": "n10",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 394.04060179407185,
+            "holdout_reduced_chi2": 32.836716816172654,
+            "mean_weighted_residual": -0.18931669769060724
+          },
+          {
+            "night_id": "n11",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 236.31542925462952,
+            "holdout_reduced_chi2": 19.692952437885793,
+            "mean_weighted_residual": -0.005053954197653208
+          }
+        ]
+      },
+      "fit_by_harmonics": {
+        "1": {
+          "chi2": 3797.28303505507,
+          "dof": 141,
+          "reduced_chi2": 26.931085355000494,
+          "bic": 486.1102430462671,
+          "coefs": [
+            12.021947234162374,
+            -0.008012783132036315,
+            -0.03656437472811642
+          ]
+        },
+        "2": {
+          "chi2": 3542.022000783253,
+          "dof": 139,
+          "reduced_chi2": 25.482172667505417,
+          "bic": 486.02918763929927,
+          "coefs": [
+            12.022108714458248,
+            0.0020240978203192677,
+            -0.04016037263308008,
+            -0.05589838526883431,
+            0.053929734194993945
+          ]
+        }
+      }
+    },
+    {
+      "freq_per_day": 2.797672417072322,
+      "period_day": 0.3574399897206226,
+      "preferred_harmonics": 2,
+      "chi2": 3552.1887649292566,
+      "dof": 139,
+      "reduced_chi2": 25.555314855606163,
+      "bic": 486.44192278000406,
+      "delta_chi2_vs_constant": 309.6743766861414,
+      "explained_score": 0.08018781746797121,
+      "freq_1sigma_halfwidth": 0.001411286562118086,
+      "period_1sigma": 0.0001803106936959521,
+      "constant": 12.010373380332275,
+      "harmonics": [
+        {
+          "order": 1,
+          "amplitude": 0.009315374305156778,
+          "amplitude_err": 0.0044809741256042,
+          "phase_rad": 0.664769947829502,
+          "phase_err_rad": 0.4787917627737327,
+          "cos_coef": 0.007331746577837391,
+          "sin_coef": -0.0057464502576412176
+        },
+        {
+          "order": 2,
+          "amplitude": 0.08188551800463546,
+          "amplitude_err": 0.004663815244178597,
+          "phase_rad": 2.489091569287048,
+          "phase_err_rad": 0.05653198485104183,
+          "cos_coef": -0.06506358672068076,
+          "sin_coef": -0.049718887175075964
+        }
+      ],
+      "labels": [
+        "daily_alias"
+      ],
+      "alias_family_id": 2,
+      "half_period_pair_candidate_id": null,
+      "holdout": {
+        "scheme": "leave-one-whole-night-out",
+        "n_folds": 12,
+        "harmonics_used": 2,
+        "total_holdout_chi2": 4123.133552938696,
+        "total_holdout_points": 144,
+        "holdout_reduced_chi2": 28.63287189540761,
+        "per_night": [
+          {
+            "night_id": "n00",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 419.4539299189885,
+            "holdout_reduced_chi2": 34.954494159915704,
+            "mean_weighted_residual": -0.14538491218216673
+          },
+          {
+            "night_id": "n01",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 374.5729603781159,
+            "holdout_reduced_chi2": 31.214413364842994,
+            "mean_weighted_residual": 0.24384309103805415
+          },
+          {
+            "night_id": "n02",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 260.91697706673494,
+            "holdout_reduced_chi2": 21.743081422227913,
+            "mean_weighted_residual": 0.012812796094617435
+          },
+          {
+            "night_id": "n03",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 354.1335239110561,
+            "holdout_reduced_chi2": 29.511126992588007,
+            "mean_weighted_residual": -0.23179413413183345
+          },
+          {
+            "night_id": "n04",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 163.653263764984,
+            "holdout_reduced_chi2": 13.637771980415332,
+            "mean_weighted_residual": 0.004646903728141737
+          },
+          {
+            "night_id": "n05",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 442.3954616319401,
+            "holdout_reduced_chi2": 36.866288469328346,
+            "mean_weighted_residual": 0.12415502836080682
+          },
+          {
+            "night_id": "n06",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 390.43526648258694,
+            "holdout_reduced_chi2": 32.536272206882245,
+            "mean_weighted_residual": -0.13318820383316937
+          },
+          {
+            "night_id": "n07",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 250.9227033160691,
+            "holdout_reduced_chi2": 20.91022527633909,
+            "mean_weighted_residual": -0.15347338310848752
+          },
+          {
+            "night_id": "n08",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 472.96933217794316,
+            "holdout_reduced_chi2": 39.4141110148286,
+            "mean_weighted_residual": 0.22737761829808897
+          },
+          {
+            "night_id": "n09",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 397.7045353998017,
+            "holdout_reduced_chi2": 33.142044616650146,
+            "mean_weighted_residual": 0.19306265572612127
+          },
+          {
+            "night_id": "n10",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 354.7021784294298,
+            "holdout_reduced_chi2": 29.55851486911915,
+            "mean_weighted_residual": -0.21830724813743532
+          },
+          {
+            "night_id": "n11",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 241.2734204610457,
+            "holdout_reduced_chi2": 20.10611837175381,
+            "mean_weighted_residual": 0.040265966545378055
+          }
+        ]
+      },
+      "fit_by_harmonics": {
+        "1": {
+          "chi2": 3861.2430836927397,
+          "dof": 141,
+          "reduced_chi2": 27.384702721225104,
+          "bic": 488.5155259949226,
+          "coefs": [
+            12.020924260906071,
+            0.002568133860595474,
+            -0.0022862308334517154
+          ]
+        },
+        "2": {
+          "chi2": 3552.1887649292566,
+          "dof": 139,
+          "reduced_chi2": 25.555314855606163,
+          "bic": 486.44192278000406,
+          "coefs": [
+            12.010373380332275,
+            0.007331746577837391,
+            -0.0057464502576412176,
+            -0.06506358672068076,
+            -0.049718887175075964
+          ]
+        }
+      }
+    },
+    {
+      "freq_per_day": 2.534970293276713,
+      "period_day": 0.3944819403415556,
+      "preferred_harmonics": 1,
+      "chi2": 3619.169283377626,
+      "dof": 141,
+      "reduced_chi2": 25.667867257997347,
+      "bic": 479.1922957805582,
+      "delta_chi2_vs_constant": 242.69385823777202,
+      "explained_score": 0.06284372318182518,
+      "freq_1sigma_halfwidth": 0.009937163466851917,
+      "period_1sigma": 0.0015463816425351142,
+      "constant": 12.021880499573973,
+      "harmonics": [
+        {
+          "order": 1,
+          "amplitude": 0.07480703329383072,
+          "amplitude_err": 0.004804882031458177,
+          "phase_rad": -2.3155476558805996,
+          "phase_err_rad": 0.06439967367686522,
+          "cos_coef": -0.05070338387886651,
+          "sin_coef": 0.055002355344626795
+        }
+      ],
+      "labels": [
+        "daily_alias"
+      ],
+      "alias_family_id": 2,
+      "half_period_pair_candidate_id": null,
+      "holdout": {
+        "scheme": "leave-one-whole-night-out",
+        "n_folds": 12,
+        "harmonics_used": 1,
+        "total_holdout_chi2": 4003.2626871912153,
+        "total_holdout_points": 144,
+        "holdout_reduced_chi2": 27.800435327716773,
+        "per_night": [
+          {
+            "night_id": "n00",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 324.49921095110636,
+            "holdout_reduced_chi2": 27.041600912592198,
+            "mean_weighted_residual": -0.11010295307800345
+          },
+          {
+            "night_id": "n01",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 337.1452850350338,
+            "holdout_reduced_chi2": 28.09544041958615,
+            "mean_weighted_residual": 0.23729409136557825
+          },
+          {
+            "night_id": "n02",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 297.64535322750146,
+            "holdout_reduced_chi2": 24.80377943562512,
+            "mean_weighted_residual": -0.004389365445007129
+          },
+          {
+            "night_id": "n03",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 383.9814842750322,
+            "holdout_reduced_chi2": 31.99845702291935,
+            "mean_weighted_residual": -0.24745698991065632
+          },
+          {
+            "night_id": "n04",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 258.17374741674024,
+            "holdout_reduced_chi2": 21.51447895139502,
+            "mean_weighted_residual": 0.0284061067937915
+          },
+          {
+            "night_id": "n05",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 483.23071972877466,
+            "holdout_reduced_chi2": 40.26922664406455,
+            "mean_weighted_residual": 0.13207280863476226
+          },
+          {
+            "night_id": "n06",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 316.2044634571593,
+            "holdout_reduced_chi2": 26.350371954763276,
+            "mean_weighted_residual": -0.10308424792934659
+          },
+          {
+            "night_id": "n07",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 307.8198443451109,
+            "holdout_reduced_chi2": 25.651653695425907,
+            "mean_weighted_residual": -0.17407338585962306
+          },
+          {
+            "night_id": "n08",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 459.61482220147184,
+            "holdout_reduced_chi2": 38.30123518345599,
+            "mean_weighted_residual": 0.23249082770537335
+          },
+          {
+            "night_id": "n09",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 236.74914851339136,
+            "holdout_reduced_chi2": 19.72909570944928,
+            "mean_weighted_residual": 0.1561728168814936
+          },
+          {
+            "night_id": "n10",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 325.0893087144843,
+            "holdout_reduced_chi2": 27.090775726207024,
+            "mean_weighted_residual": -0.18282030983317407
+          },
+          {
+            "night_id": "n11",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 273.10929932540853,
+            "holdout_reduced_chi2": 22.759108277117377,
+            "mean_weighted_residual": -0.004468826151353615
+          }
+        ]
+      },
+      "fit_by_harmonics": {
+        "1": {
+          "chi2": 3619.169283377626,
+          "dof": 141,
+          "reduced_chi2": 25.667867257997347,
+          "bic": 479.1922957805582,
+          "coefs": [
+            12.021880499573973,
+            -0.05070338387886651,
+            0.055002355344626795
+          ]
+        },
+        "2": {
+          "chi2": 3564.798397325117,
+          "dof": 139,
+          "reduced_chi2": 25.646031635432497,
+          "bic": 486.95219178109176,
+          "coefs": [
+            12.023150993652795,
+            -0.046997982869964997,
+            0.05307976921555813,
+            -0.0026801109568204695,
+            -0.03542991596349702
+          ]
+        }
+      }
+    },
+    {
+      "freq_per_day": 0.5944508781954977,
+      "period_day": 1.6822247837122868,
+      "preferred_harmonics": 1,
+      "chi2": 3630.8320826000804,
+      "dof": 141,
+      "reduced_chi2": 25.750582146099863,
+      "bic": 479.65559073788063,
+      "delta_chi2_vs_constant": 231.03105901531762,
+      "explained_score": 0.059823730293735444,
+      "freq_1sigma_halfwidth": 0.0867440858304681,
+      "period_1sigma": 0.24547537294829153,
+      "constant": 12.021754514956097,
+      "harmonics": [
+        {
+          "order": 1,
+          "amplitude": 0.07170399714937564,
+          "amplitude_err": 0.004718617884561879,
+          "phase_rad": -1.4112590309964952,
+          "phase_err_rad": 0.06587739987199123,
+          "cos_coef": 0.011390997040323602,
+          "sin_coef": 0.07079342055321955
+        }
+      ],
+      "labels": [
+        "daily_alias"
+      ],
+      "alias_family_id": 2,
+      "half_period_pair_candidate_id": null,
+      "holdout": {
+        "scheme": "leave-one-whole-night-out",
+        "n_folds": 12,
+        "harmonics_used": 1,
+        "total_holdout_chi2": 4861.0764140398405,
+        "total_holdout_points": 144,
+        "holdout_reduced_chi2": 33.75747509749889,
+        "per_night": [
+          {
+            "night_id": "n00",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 342.1057089217904,
+            "holdout_reduced_chi2": 28.508809076815865,
+            "mean_weighted_residual": -0.07543553382769487
+          },
+          {
+            "night_id": "n01",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 296.9972644816517,
+            "holdout_reduced_chi2": 24.749772040137643,
+            "mean_weighted_residual": 0.21889635454860248
+          },
+          {
+            "night_id": "n02",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 240.2059256122136,
+            "holdout_reduced_chi2": 20.017160467684466,
+            "mean_weighted_residual": 0.03361686261581775
+          },
+          {
+            "night_id": "n03",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 430.43567200799714,
+            "holdout_reduced_chi2": 35.869639333999764,
+            "mean_weighted_residual": -0.26079291966203993
+          },
+          {
+            "night_id": "n04",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 333.628031681319,
+            "holdout_reduced_chi2": 27.80233597344325,
+            "mean_weighted_residual": -0.06335405490517972
+          },
+          {
+            "night_id": "n05",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 869.1248582502252,
+            "holdout_reduced_chi2": 72.4270715208521,
+            "mean_weighted_residual": 0.22303732139789656
+          },
+          {
+            "night_id": "n06",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 607.9469017901474,
+            "holdout_reduced_chi2": 50.66224181584562,
+            "mean_weighted_residual": -0.21122675017113174
+          },
+          {
+            "night_id": "n07",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 319.2780120857089,
+            "holdout_reduced_chi2": 26.60650100714241,
+            "mean_weighted_residual": -0.14344299600772867
+          },
+          {
+            "night_id": "n08",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 719.3387732383252,
+            "holdout_reduced_chi2": 59.94489776986043,
+            "mean_weighted_residual": 0.29277316722670643
+          },
+          {
+            "night_id": "n09",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 171.096847949366,
+            "holdout_reduced_chi2": 14.258070662447167,
+            "mean_weighted_residual": 0.12370433681990646
+          },
+          {
+            "night_id": "n10",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 260.1911104940692,
+            "holdout_reduced_chi2": 21.682592541172436,
+            "mean_weighted_residual": -0.18402737360818985
+          },
+          {
+            "night_id": "n11",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 270.7273075270266,
+            "holdout_reduced_chi2": 22.56060896058555,
+            "mean_weighted_residual": -0.01850013455642059
+          }
+        ]
+      },
+      "fit_by_harmonics": {
+        "1": {
+          "chi2": 3630.8320826000804,
+          "dof": 141,
+          "reduced_chi2": 25.750582146099863,
+          "bic": 479.65559073788063,
+          "coefs": [
+            12.021754514956097,
+            0.011390997040323602,
+            0.07079342055321955
+          ]
+        },
+        "2": {
+          "chi2": 3549.9481809487447,
+          "dof": 139,
+          "reduced_chi2": 25.539195546393845,
+          "bic": 486.3510644633153,
+          "coefs": [
+            12.02095431065206,
+            0.0136608654486851,
+            0.06844723422845217,
+            0.0007303289945617219,
+            0.042825372303514575
+          ]
+        }
+      }
+    },
+    {
+      "freq_per_day": 1.0901526674263897,
+      "period_day": 0.9173027135371596,
+      "preferred_harmonics": 1,
+      "chi2": 3670.0915982168617,
+      "dof": 141,
+      "reduced_chi2": 26.029018427069943,
+      "bic": 481.20427827041044,
+      "delta_chi2_vs_constant": 191.77154339853632,
+      "explained_score": 0.049657778219017734,
+      "freq_1sigma_halfwidth": 0.01406415861490995,
+      "period_1sigma": 0.011834205654452555,
+      "constant": 12.018897513838766,
+      "harmonics": [
+        {
+          "order": 1,
+          "amplitude": 0.06293390151543807,
+          "amplitude_err": 0.0045511548383410025,
+          "phase_rad": 1.3651828919243176,
+          "phase_err_rad": 0.07903334736389216,
+          "cos_coef": 0.012849070661643763,
+          "sin_coef": -0.06160825710151962
+        }
+      ],
+      "labels": [
+        "standalone"
+      ],
+      "alias_family_id": 4,
+      "half_period_pair_candidate_id": null,
+      "holdout": {
+        "scheme": "leave-one-whole-night-out",
+        "n_folds": 12,
+        "harmonics_used": 1,
+        "total_holdout_chi2": 4732.406045983543,
+        "total_holdout_points": 144,
+        "holdout_reduced_chi2": 32.86393087488571,
+        "per_night": [
+          {
+            "night_id": "n00",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 320.76683183703295,
+            "holdout_reduced_chi2": 26.730569319752746,
+            "mean_weighted_residual": -0.13005323045825282
+          },
+          {
+            "night_id": "n01",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 473.68193798623645,
+            "holdout_reduced_chi2": 39.47349483218637,
+            "mean_weighted_residual": 0.2751000029977794
+          },
+          {
+            "night_id": "n02",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 541.918141586402,
+            "holdout_reduced_chi2": 45.15984513220017,
+            "mean_weighted_residual": 0.04822318974462058
+          },
+          {
+            "night_id": "n03",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 310.42441523823186,
+            "holdout_reduced_chi2": 25.868701269852654,
+            "mean_weighted_residual": -0.22356296283376773
+          },
+          {
+            "night_id": "n04",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 386.56322406609115,
+            "holdout_reduced_chi2": 32.213602005507596,
+            "mean_weighted_residual": 0.019632072777488536
+          },
+          {
+            "night_id": "n05",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 533.0953924852417,
+            "holdout_reduced_chi2": 44.42461604043681,
+            "mean_weighted_residual": 0.1668105459467016
+          },
+          {
+            "night_id": "n06",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 285.93412419158506,
+            "holdout_reduced_chi2": 23.82784368263209,
+            "mean_weighted_residual": -0.15600941937499826
+          },
+          {
+            "night_id": "n07",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 455.6984783898785,
+            "holdout_reduced_chi2": 37.97487319915654,
+            "mean_weighted_residual": -0.19266894150337063
+          },
+          {
+            "night_id": "n08",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 431.57534797466275,
+            "holdout_reduced_chi2": 35.96461233122189,
+            "mean_weighted_residual": 0.21878161181197975
+          },
+          {
+            "night_id": "n09",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 314.1384558163676,
+            "holdout_reduced_chi2": 26.178204651363966,
+            "mean_weighted_residual": 0.16434929814627652
+          },
+          {
+            "night_id": "n10",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 488.5257566421039,
+            "holdout_reduced_chi2": 40.71047972017532,
+            "mean_weighted_residual": -0.25517709389682963
+          },
+          {
+            "night_id": "n11",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 190.08393976970882,
+            "holdout_reduced_chi2": 15.840328314142402,
+            "mean_weighted_residual": 0.043201522335113283
+          }
+        ]
+      },
+      "fit_by_harmonics": {
+        "1": {
+          "chi2": 3670.0915982168617,
+          "dof": 141,
+          "reduced_chi2": 26.029018427069943,
+          "bic": 481.20427827041044,
+          "coefs": [
+            12.018897513838766,
+            0.012849070661643763,
+            -0.06160825710151962
+          ]
+        },
+        "2": {
+          "chi2": 3630.3895522510247,
+          "dof": 139,
+          "reduced_chi2": 26.1179104478491,
+          "bic": 489.57766536753013,
+          "coefs": [
+            12.021637163249933,
+            0.01230021685023723,
+            -0.06104530282983633,
+            0.026877313009463572,
+            -0.00983859580791024
+          ]
+        }
+      }
+    },
+    {
+      "freq_per_day": 1.921066133338397,
+      "period_day": 0.5205442866572305,
+      "preferred_harmonics": 1,
+      "chi2": 3767.0090457300967,
+      "dof": 141,
+      "reduced_chi2": 26.71637621085175,
+      "bic": 484.957596455484,
+      "delta_chi2_vs_constant": 94.85409588530138,
+      "explained_score": 0.02456174452770077,
+      "freq_1sigma_halfwidth": 0.0867440858304681,
+      "period_1sigma": 0.023504728700769133,
+      "constant": 12.017027205748056,
+      "harmonics": [
+        {
+          "order": 1,
+          "amplitude": 0.048089015952359905,
+          "amplitude_err": 0.004937946939920829,
+          "phase_rad": -0.5534732649705526,
+          "phase_err_rad": 0.10161265695024606,
+          "cos_coef": 0.040909515929405546,
+          "sin_coef": 0.025277756262928865
+        }
+      ],
+      "labels": [
+        "daily_alias"
+      ],
+      "alias_family_id": 2,
+      "half_period_pair_candidate_id": null,
+      "holdout": {
+        "scheme": "leave-one-whole-night-out",
+        "n_folds": 12,
+        "harmonics_used": 1,
+        "total_holdout_chi2": 4357.2529571549485,
+        "total_holdout_points": 144,
+        "holdout_reduced_chi2": 30.25870109135381,
+        "per_night": [
+          {
+            "night_id": "n00",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 378.45071909854386,
+            "holdout_reduced_chi2": 31.537559924878654,
+            "mean_weighted_residual": -0.1307192960464721
+          },
+          {
+            "night_id": "n01",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 391.16614773955905,
+            "holdout_reduced_chi2": 32.59717897829659,
+            "mean_weighted_residual": 0.25307321829374085
+          },
+          {
+            "night_id": "n02",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 453.14038528432354,
+            "holdout_reduced_chi2": 37.76169877369363,
+            "mean_weighted_residual": 0.01974083448108374
+          },
+          {
+            "night_id": "n03",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 438.99706537536457,
+            "holdout_reduced_chi2": 36.58308878128038,
+            "mean_weighted_residual": -0.25630295056273206
+          },
+          {
+            "night_id": "n04",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 204.09906316785714,
+            "holdout_reduced_chi2": 17.008255263988094,
+            "mean_weighted_residual": 0.013705561497457273
+          },
+          {
+            "night_id": "n05",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 386.3501672131516,
+            "holdout_reduced_chi2": 32.19584726776264,
+            "mean_weighted_residual": 0.13862643267146438
+          },
+          {
+            "night_id": "n06",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 292.6711785666147,
+            "holdout_reduced_chi2": 24.389264880551224,
+            "mean_weighted_residual": -0.128591184032201
+          },
+          {
+            "night_id": "n07",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 355.6178768289876,
+            "holdout_reduced_chi2": 29.6348230690823,
+            "mean_weighted_residual": -0.14623336148752214
+          },
+          {
+            "night_id": "n08",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 563.7806807455551,
+            "holdout_reduced_chi2": 46.98172339546292,
+            "mean_weighted_residual": 0.24642833750235393
+          },
+          {
+            "night_id": "n09",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 235.53023262206221,
+            "holdout_reduced_chi2": 19.62751938517185,
+            "mean_weighted_residual": 0.1599210549362336
+          },
+          {
+            "night_id": "n10",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 366.37103535016576,
+            "holdout_reduced_chi2": 30.530919612513813,
+            "mean_weighted_residual": -0.2279508040416962
+          },
+          {
+            "night_id": "n11",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 291.0784051627638,
+            "holdout_reduced_chi2": 24.25653376356365,
+            "mean_weighted_residual": 0.019482802020534276
+          }
+        ]
+      },
+      "fit_by_harmonics": {
+        "1": {
+          "chi2": 3767.0090457300967,
+          "dof": 141,
+          "reduced_chi2": 26.71637621085175,
+          "bic": 484.957596455484,
+          "coefs": [
+            12.017027205748056,
+            0.040909515929405546,
+            0.025277756262928865
+          ]
+        },
+        "2": {
+          "chi2": 3670.818239803176,
+          "dof": 139,
+          "reduced_chi2": 26.40876431513076,
+          "bic": 491.172412613447,
+          "coefs": [
+            12.018102040662347,
+            0.045960591508222015,
+            0.018081962199235118,
+            -0.03755691211092375,
+            0.028106475244758893
+          ]
+        }
+      }
+    },
+    {
+      "freq_per_day": 0.2121534274245315,
+      "period_day": 4.713569854325008,
+      "preferred_harmonics": 1,
+      "chi2": 3786.445100962204,
+      "dof": 141,
+      "reduced_chi2": 26.854220574200028,
+      "bic": 485.6986608946263,
+      "delta_chi2_vs_constant": 75.41804065319411,
+      "explained_score": 0.019528926294795412,
+      "freq_1sigma_halfwidth": 0.0867440858304681,
+      "period_1sigma": 1.9272576124508884,
+      "constant": 12.021673524021129,
+      "harmonics": [
+        {
+          "order": 1,
+          "amplitude": 0.04027348170395064,
+          "amplitude_err": 0.004670892943015984,
+          "phase_rad": 1.8256953086066174,
+          "phase_err_rad": 0.12772656594988313,
+          "cos_coef": -0.010154864000723244,
+          "sin_coef": -0.038972196059309544
+        }
+      ],
+      "labels": [
+        "daily_alias"
+      ],
+      "alias_family_id": 3,
+      "half_period_pair_candidate_id": null,
+      "holdout": {
+        "scheme": "leave-one-whole-night-out",
+        "n_folds": 12,
+        "harmonics_used": 1,
+        "total_holdout_chi2": 5314.059532213973,
+        "total_holdout_points": 144,
+        "holdout_reduced_chi2": 36.90319119593037,
+        "per_night": [
+          {
+            "night_id": "n00",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 522.8758038990694,
+            "holdout_reduced_chi2": 43.57298365825579,
+            "mean_weighted_residual": -0.18093627071429114
+          },
+          {
+            "night_id": "n01",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 594.5484849385825,
+            "holdout_reduced_chi2": 49.54570707821521,
+            "mean_weighted_residual": 0.3145525018231045
+          },
+          {
+            "night_id": "n02",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 338.34602333180044,
+            "holdout_reduced_chi2": 28.195501944316703,
+            "mean_weighted_residual": 0.05988875076783594
+          },
+          {
+            "night_id": "n03",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 639.6389221889814,
+            "holdout_reduced_chi2": 53.30324351574845,
+            "mean_weighted_residual": -0.3235141864714459
+          },
+          {
+            "night_id": "n04",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 240.96773582083125,
+            "holdout_reduced_chi2": 20.080644651735938,
+            "mean_weighted_residual": -0.05167114720883544
+          },
+          {
+            "night_id": "n05",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 453.5910524516663,
+            "holdout_reduced_chi2": 37.79925437097219,
+            "mean_weighted_residual": 0.12793565102768092
+          },
+          {
+            "night_id": "n06",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 318.53413444749447,
+            "holdout_reduced_chi2": 26.54451120395787,
+            "mean_weighted_residual": -0.12678468946433885
+          },
+          {
+            "night_id": "n07",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 297.01575583783733,
+            "holdout_reduced_chi2": 24.751312986486443,
+            "mean_weighted_residual": -0.15551720811514208
+          },
+          {
+            "night_id": "n08",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 877.7532500671572,
+            "holdout_reduced_chi2": 73.1461041722631,
+            "mean_weighted_residual": 0.32345660505957663
+          },
+          {
+            "night_id": "n09",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 234.21981518001658,
+            "holdout_reduced_chi2": 19.518317931668047,
+            "mean_weighted_residual": 0.14797553811389158
+          },
+          {
+            "night_id": "n10",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 458.2736658624483,
+            "holdout_reduced_chi2": 38.18947215520402,
+            "mean_weighted_residual": -0.2512573214348541
+          },
+          {
+            "night_id": "n11",
+            "n_points": 12,
+            "n_train_points": 132,
+            "holdout_chi2": 338.2948881880881,
+            "holdout_reduced_chi2": 28.191240682340677,
+            "mean_weighted_residual": 0.09597614420240105
+          }
+        ]
+      },
+      "fit_by_harmonics": {
+        "1": {
+          "chi2": 3786.445100962204,
+          "dof": 141,
+          "reduced_chi2": 26.854220574200028,
+          "bic": 485.6986608946263,
+          "coefs": [
+            12.021673524021129,
+            -0.010154864000723244,
+            -0.038972196059309544
+          ]
+        },
+        "2": {
+          "chi2": 3552.497521058758,
+          "dof": 139,
+          "reduced_chi2": 25.55753612272488,
+          "bic": 486.4544387112884,
+          "coefs": [
+            12.027816311967605,
+            -0.0049753645707095485,
+            -0.05957741088356784,
+            0.016016994503782012,
+            0.07719076260877182
+          ]
+        }
+      }
+    }
+  ],
+  "candidate_id_note": "candidate_N 编号按全数据 chi2 升序，与 CSV 文件名一致",
+  "scoring_note": "explained_score = 1 - chi2/chi2_constant 仅为描述性拟合分数；它不是后验概率，候选间分数差不得解释为真实概率或后验胜算。",
+  "sampling_window": {
+    "sampling_summary": {
+      "n_observations": 144,
+      "n_nights": 12,
+      "time_span_day": 11.528163452600001,
+      "night_gap_day": {
+        "min": 0.9068184832999995,
+        "max": 1.0933229091000003,
+        "mean": 1.0017660978818184,
+        "near_one_day_fraction": 1.0
+      },
+      "nightly_local_time_mod1": {
+        "mean": 0.3797457922013885,
+        "min": 0.28730564175833173,
+        "max": 0.47070228646666656,
+        "circular_std_day": 0.05357117481650357
+      },
+      "adjacent_sample_gap_day": {
+        "min": 0.00015020970000012568,
+        "median": 0.03479540010000015,
+        "max": 0.647546995399999
+      }
+    },
+    "window_peaks": [
+      {
+        "freq_per_day": 0.0013453697341159199,
+        "power": 0.9991466751598455,
+        "harmonic_of_daily": null
+      },
+      {
+        "freq_per_day": -0.9962116173162405,
+        "power": 0.31610714017931785,
+        "harmonic_of_daily": 1
+      },
+      {
+        "freq_per_day": 0.9945651524929491,
+        "power": 0.3159885518179107,
+        "harmonic_of_daily": 1
+      },
+      {
+        "freq_per_day": -0.12009635042853617,
+        "power": 0.05051620873993812,
+        "harmonic_of_daily": null
+      },
+      {
+        "freq_per_day": 0.11844988560524472,
+        "power": 0.05045088037858503,
+        "harmonic_of_daily": null
+      }
+    ],
+    "alias_evidence": [
+      {
+        "freq_per_day": 0.35694790074476224,
+        "daily_aliases": [
+          {
+            "k_per_day": -3,
+            "alias_freq_per_day": -2.6430520992552378,
+            "window_power_at_offset_k": 0.01999947830441757,
+            "nearest_candidate_freq_per_day": 0.2121534274245315,
+            "nearest_candidate_match": false
+          },
+          {
+            "k_per_day": -2,
+            "alias_freq_per_day": -1.6430520992552378,
+            "window_power_at_offset_k": 0.01007718230185055,
+            "nearest_candidate_freq_per_day": 0.2121534274245315,
+            "nearest_candidate_match": false
+          },
+          {
+            "k_per_day": -1,
+            "alias_freq_per_day": -0.6430520992552378,
+            "window_power_at_offset_k": 0.3127065655136154,
+            "nearest_candidate_freq_per_day": 0.2121534274245315,
+            "nearest_candidate_match": false
+          },
+          {
+            "k_per_day": 1,
+            "alias_freq_per_day": 1.3569479007447622,
+            "window_power_at_offset_k": 0.31462674309568633,
+            "nearest_candidate_freq_per_day": 1.267288389776538,
+            "nearest_candidate_match": false
+          },
+          {
+            "k_per_day": 2,
+            "alias_freq_per_day": 2.3569479007447622,
+            "window_power_at_offset_k": 0.010988989706292267,
+            "nearest_candidate_freq_per_day": 2.534970293276713,
+            "nearest_candidate_match": false
+          },
+          {
+            "k_per_day": 3,
+            "alias_freq_per_day": 3.3569479007447622,
+            "window_power_at_offset_k": 0.019025897288643425,
+            "nearest_candidate_freq_per_day": 2.797672417072322,
+            "nearest_candidate_match": false
+          }
+        ]
+      },
+      {
+        "freq_per_day": 0.7145507757804629,
+        "daily_aliases": [
+          {
+            "k_per_day": -3,
+            "alias_freq_per_day": -2.285449224219537,
+            "window_power_at_offset_k": 0.01999947830441757,
+            "nearest_candidate_freq_per_day": 0.2121534274245315,
+            "nearest_candidate_match": false
+          },
+          {
+            "k_per_day": -2,
+            "alias_freq_per_day": -1.285449224219537,
+            "window_power_at_offset_k": 0.01007718230185055,
+            "nearest_candidate_freq_per_day": 0.2121534274245315,
+            "nearest_candidate_match": false
+          },
+          {
+            "k_per_day": -1,
+            "alias_freq_per_day": -0.2854492242195371,
+            "window_power_at_offset_k": 0.3127065655136154,
+            "nearest_candidate_freq_per_day": 0.2121534274245315,
+            "nearest_candidate_match": false
+          },
+          {
+            "k_per_day": 1,
+            "alias_freq_per_day": 1.714550775780463,
+            "window_power_at_offset_k": 0.31462674309568633,
+            "nearest_candidate_freq_per_day": 1.7174140612062567,
+            "nearest_candidate_match": true
+          },
+          {
+            "k_per_day": 2,
+            "alias_freq_per_day": 2.714550775780463,
+            "window_power_at_offset_k": 0.010988989706292267,
+            "nearest_candidate_freq_per_day": 2.644848413702151,
+            "nearest_candidate_match": true
+          },
+          {
+            "k_per_day": 3,
+            "alias_freq_per_day": 3.714550775780463,
+            "window_power_at_offset_k": 0.019025897288643425,
+            "nearest_candidate_freq_per_day": 2.797672417072322,
+            "nearest_candidate_match": false
+          }
+        ]
+      },
+      {
+        "freq_per_day": 0.8568021395296814,
+        "daily_aliases": [
+          {
+            "k_per_day": -3,
+            "alias_freq_per_day": -2.143197860470319,
+            "window_power_at_offset_k": 0.01999947830441757,
+            "nearest_candidate_freq_per_day": 0.2121534274245315,
+            "nearest_candidate_match": false
+          },
+          {
+            "k_per_day": -2,
+            "alias_freq_per_day": -1.1431978604703186,
+            "window_power_at_offset_k": 0.01007718230185055,
+            "nearest_candidate_freq_per_day": 0.2121534274245315,
+            "nearest_candidate_match": false
+          },
+          {
+            "k_per_day": -1,
+            "alias_freq_per_day": -0.14319786047031857,
+            "window_power_at_offset_k": 0.3127065655136154,
+            "nearest_candidate_freq_per_day": 0.2121534274245315,
+            "nearest_candidate_match": false
+          },
+          {
+            "k_per_day": 1,
+            "alias_freq_per_day": 1.8568021395296814,
+            "window_power_at_offset_k": 0.31462674309568633,
+            "nearest_candidate_freq_per_day": 1.921066133338397,
+            "nearest_candidate_match": true
+          },
+          {
+            "k_per_day": 2,
+            "alias_freq_per_day": 2.856802139529681,
+            "window_power_at_offset_k": 0.010988989706292267,
+            "nearest_candidate_freq_per_day": 2.797672417072322,
+            "nearest_candidate_match": true
+          },
+          {
+            "k_per_day": 3,
+            "alias_freq_per_day": 3.856802139529681,
+            "window_power_at_offset_k": 0.019025897288643425,
+            "nearest_candidate_freq_per_day": 2.797672417072322,
+            "nearest_candidate_match": false
+          }
+        ]
+      },
+      {
+        "freq_per_day": 1.7174140612062567,
+        "daily_aliases": [
+          {
+            "k_per_day": -3,
+            "alias_freq_per_day": -1.2825859387937433,
+            "window_power_at_offset_k": 0.01999947830441757,
+            "nearest_candidate_freq_per_day": 0.2121534274245315,
+            "nearest_candidate_match": false
+          },
+          {
+            "k_per_day": -2,
+            "alias_freq_per_day": -0.2825859387937433,
+            "window_power_at_offset_k": 0.01007718230185055,
+            "nearest_candidate_freq_per_day": 0.2121534274245315,
+            "nearest_candidate_match": false
+          },
+          {
+            "k_per_day": -1,
+            "alias_freq_per_day": 0.7174140612062567,
+            "window_power_at_offset_k": 0.3127065655136154,
+            "nearest_candidate_freq_per_day": 0.7145507757804629,
+            "nearest_candidate_match": true
+          },
+          {
+            "k_per_day": 1,
+            "alias_freq_per_day": 2.7174140612062567,
+            "window_power_at_offset_k": 0.31462674309568633,
+            "nearest_candidate_freq_per_day": 2.644848413702151,
+            "nearest_candidate_match": true
+          },
+          {
+            "k_per_day": 2,
+            "alias_freq_per_day": 3.7174140612062567,
+            "window_power_at_offset_k": 0.010988989706292267,
+            "nearest_candidate_freq_per_day": 2.797672417072322,
+            "nearest_candidate_match": false
+          },
+          {
+            "k_per_day": 3,
+            "alias_freq_per_day": 4.717414061206257,
+            "window_power_at_offset_k": 0.019025897288643425,
+            "nearest_candidate_freq_per_day": 2.797672417072322,
+            "nearest_candidate_match": false
+          }
+        ]
+      },
+      {
+        "freq_per_day": 2.644848413702151,
+        "daily_aliases": [
+          {
+            "k_per_day": -3,
+            "alias_freq_per_day": -0.35515158629784915,
+            "window_power_at_offset_k": 0.01999947830441757,
+            "nearest_candidate_freq_per_day": 0.2121534274245315,
+            "nearest_candidate_match": false
+          },
+          {
+            "k_per_day": -2,
+            "alias_freq_per_day": 0.6448484137021508,
+            "window_power_at_offset_k": 0.01007718230185055,
+            "nearest_candidate_freq_per_day": 0.5944508781954977,
+            "nearest_candidate_match": true
+          },
+          {
+            "k_per_day": -1,
+            "alias_freq_per_day": 1.6448484137021508,
+            "window_power_at_offset_k": 0.3127065655136154,
+            "nearest_candidate_freq_per_day": 1.7174140612062567,
+            "nearest_candidate_match": true
+          },
+          {
+            "k_per_day": 1,
+            "alias_freq_per_day": 3.644848413702151,
+            "window_power_at_offset_k": 0.31462674309568633,
+            "nearest_candidate_freq_per_day": 2.797672417072322,
+            "nearest_candidate_match": false
+          },
+          {
+            "k_per_day": 2,
+            "alias_freq_per_day": 4.644848413702151,
+            "window_power_at_offset_k": 0.010988989706292267,
+            "nearest_candidate_freq_per_day": 2.797672417072322,
+            "nearest_candidate_match": false
+          },
+          {
+            "k_per_day": 3,
+            "alias_freq_per_day": 5.644848413702151,
+            "window_power_at_offset_k": 0.019025897288643425,
+            "nearest_candidate_freq_per_day": 2.797672417072322,
+            "nearest_candidate_match": false
+          }
+        ]
+      },
+      {
+        "freq_per_day": 1.267288389776538,
+        "daily_aliases": [
+          {
+            "k_per_day": -3,
+            "alias_freq_per_day": -1.732711610223462,
+            "window_power_at_offset_k": 0.01999947830441757,
+            "nearest_candidate_freq_per_day": 0.2121534274245315,
+            "nearest_candidate_match": false
+          },
+          {
+            "k_per_day": -2,
+            "alias_freq_per_day": -0.7327116102234621,
+            "window_power_at_offset_k": 0.01007718230185055,
+            "nearest_candidate_freq_per_day": 0.2121534274245315,
+            "nearest_candidate_match": false
+          },
+          {
+            "k_per_day": -1,
+            "alias_freq_per_day": 0.2672883897765379,
+            "window_power_at_offset_k": 0.3127065655136154,
+            "nearest_candidate_freq_per_day": 0.2121534274245315,
+            "nearest_candidate_match": true
+          },
+          {
+            "k_per_day": 1,
+            "alias_freq_per_day": 2.267288389776538,
+            "window_power_at_offset_k": 0.31462674309568633,
+            "nearest_candidate_freq_per_day": 2.534970293276713,
+            "nearest_candidate_match": false
+          },
+          {
+            "k_per_day": 2,
+            "alias_freq_per_day": 3.267288389776538,
+            "window_power_at_offset_k": 0.010988989706292267,
+            "nearest_candidate_freq_per_day": 2.797672417072322,
+            "nearest_candidate_match": false
+          },
+          {
+            "k_per_day": 3,
+            "alias_freq_per_day": 4.267288389776538,
+            "window_power_at_offset_k": 0.019025897288643425,
+            "nearest_candidate_freq_per_day": 2.797672417072322,
+            "nearest_candidate_match": false
+          }
+        ]
+      },
+      {
+        "freq_per_day": 2.797672417072322,
+        "daily_aliases": [
+          {
+            "k_per_day": -3,
+            "alias_freq_per_day": -0.20232758292767805,
+            "window_power_at_offset_k": 0.01999947830441757,
+            "nearest_candidate_freq_per_day": 0.2121534274245315,
+            "nearest_candidate_match": false
+          },
+          {
+            "k_per_day": -2,
+            "alias_freq_per_day": 0.797672417072322,
+            "window_power_at_offset_k": 0.01007718230185055,
+            "nearest_candidate_freq_per_day": 0.8568021395296814,
+            "nearest_candidate_match": true
+          },
+          {
+            "k_per_day": -1,
+            "alias_freq_per_day": 1.797672417072322,
+            "window_power_at_offset_k": 0.3127065655136154,
+            "nearest_candidate_freq_per_day": 1.7174140612062567,
+            "nearest_candidate_match": true
+          },
+          {
+            "k_per_day": 1,
+            "alias_freq_per_day": 3.797672417072322,
+            "window_power_at_offset_k": 0.31462674309568633,
+            "nearest_candidate_freq_per_day": 2.797672417072322,
+            "nearest_candidate_match": false
+          },
+          {
+            "k_per_day": 2,
+            "alias_freq_per_day": 4.797672417072322,
+            "window_power_at_offset_k": 0.010988989706292267,
+            "nearest_candidate_freq_per_day": 2.797672417072322,
+            "nearest_candidate_match": false
+          },
+          {
+            "k_per_day": 3,
+            "alias_freq_per_day": 5.797672417072322,
+            "window_power_at_offset_k": 0.019025897288643425,
+            "nearest_candidate_freq_per_day": 2.797672417072322,
+            "nearest_candidate_match": false
+          }
+        ]
+      },
+      {
+        "freq_per_day": 2.534970293276713,
+        "daily_aliases": [
+          {
+            "k_per_day": -3,
+            "alias_freq_per_day": -0.4650297067232869,
+            "window_power_at_offset_k": 0.01999947830441757,
+            "nearest_candidate_freq_per_day": 0.2121534274245315,
+            "nearest_candidate_match": false
+          },
+          {
+            "k_per_day": -2,
+            "alias_freq_per_day": 0.5349702932767131,
+            "window_power_at_offset_k": 0.01007718230185055,
+            "nearest_candidate_freq_per_day": 0.5944508781954977,
+            "nearest_candidate_match": true
+          },
+          {
+            "k_per_day": -1,
+            "alias_freq_per_day": 1.534970293276713,
+            "window_power_at_offset_k": 0.3127065655136154,
+            "nearest_candidate_freq_per_day": 1.7174140612062567,
+            "nearest_candidate_match": false
+          },
+          {
+            "k_per_day": 1,
+            "alias_freq_per_day": 3.534970293276713,
+            "window_power_at_offset_k": 0.31462674309568633,
+            "nearest_candidate_freq_per_day": 2.797672417072322,
+            "nearest_candidate_match": false
+          },
+          {
+            "k_per_day": 2,
+            "alias_freq_per_day": 4.534970293276713,
+            "window_power_at_offset_k": 0.010988989706292267,
+            "nearest_candidate_freq_per_day": 2.797672417072322,
+            "nearest_candidate_match": false
+          },
+          {
+            "k_per_day": 3,
+            "alias_freq_per_day": 5.534970293276713,
+            "window_power_at_offset_k": 0.019025897288643425,
+            "nearest_candidate_freq_per_day": 2.797672417072322,
+            "nearest_candidate_match": false
+          }
+        ]
+      },
+      {
+        "freq_per_day": 0.5944508781954977,
+        "daily_aliases": [
+          {
+            "k_per_day": -3,
+            "alias_freq_per_day": -2.405549121804502,
+            "window_power_at_offset_k": 0.01999947830441757,
+            "nearest_candidate_freq_per_day": 0.2121534274245315,
+            "nearest_candidate_match": false
+          },
+          {
+            "k_per_day": -2,
+            "alias_freq_per_day": -1.4055491218045022,
+            "window_power_at_offset_k": 0.01007718230185055,
+            "nearest_candidate_freq_per_day": 0.2121534274245315,
+            "nearest_candidate_match": false
+          },
+          {
+            "k_per_day": -1,
+            "alias_freq_per_day": -0.4055491218045023,
+            "window_power_at_offset_k": 0.3127065655136154,
+            "nearest_candidate_freq_per_day": 0.2121534274245315,
+            "nearest_candidate_match": false
+          },
+          {
+            "k_per_day": 1,
+            "alias_freq_per_day": 1.5944508781954978,
+            "window_power_at_offset_k": 0.31462674309568633,
+            "nearest_candidate_freq_per_day": 1.7174140612062567,
+            "nearest_candidate_match": false
+          },
+          {
+            "k_per_day": 2,
+            "alias_freq_per_day": 2.594450878195498,
+            "window_power_at_offset_k": 0.010988989706292267,
+            "nearest_candidate_freq_per_day": 2.644848413702151,
+            "nearest_candidate_match": true
+          },
+          {
+            "k_per_day": 3,
+            "alias_freq_per_day": 3.594450878195498,
+            "window_power_at_offset_k": 0.019025897288643425,
+            "nearest_candidate_freq_per_day": 2.797672417072322,
+            "nearest_candidate_match": false
+          }
+        ]
+      },
+      {
+        "freq_per_day": 1.0901526674263897,
+        "daily_aliases": [
+          {
+            "k_per_day": -3,
+            "alias_freq_per_day": -1.9098473325736103,
+            "window_power_at_offset_k": 0.01999947830441757,
+            "nearest_candidate_freq_per_day": 0.2121534274245315,
+            "nearest_candidate_match": false
+          },
+          {
+            "k_per_day": -2,
+            "alias_freq_per_day": -0.9098473325736103,
+            "window_power_at_offset_k": 0.01007718230185055,
+            "nearest_candidate_freq_per_day": 0.2121534274245315,
+            "nearest_candidate_match": false
+          },
+          {
+            "k_per_day": -1,
+            "alias_freq_per_day": 0.09015266742638972,
+            "window_power_at_offset_k": 0.3127065655136154,
+            "nearest_candidate_freq_per_day": 0.2121534274245315,
+            "nearest_candidate_match": false
+          },
+          {
+            "k_per_day": 1,
+            "alias_freq_per_day": 2.0901526674263895,
+            "window_power_at_offset_k": 0.31462674309568633,
+            "nearest_candidate_freq_per_day": 1.921066133338397,
+            "nearest_candidate_match": false
+          },
+          {
+            "k_per_day": 2,
+            "alias_freq_per_day": 3.0901526674263895,
+            "window_power_at_offset_k": 0.010988989706292267,
+            "nearest_candidate_freq_per_day": 2.797672417072322,
+            "nearest_candidate_match": false
+          },
+          {
+            "k_per_day": 3,
+            "alias_freq_per_day": 4.0901526674263895,
+            "window_power_at_offset_k": 0.019025897288643425,
+            "nearest_candidate_freq_per_day": 2.797672417072322,
+            "nearest_candidate_match": false
+          }
+        ]
+      },
+      {
+        "freq_per_day": 1.921066133338397,
+        "daily_aliases": [
+          {
+            "k_per_day": -3,
+            "alias_freq_per_day": -1.078933866661603,
+            "window_power_at_offset_k": 0.01999947830441757,
+            "nearest_candidate_freq_per_day": 0.2121534274245315,
+            "nearest_candidate_match": false
+          },
+          {
+            "k_per_day": -2,
+            "alias_freq_per_day": -0.07893386666160307,
+            "window_power_at_offset_k": 0.01007718230185055,
+            "nearest_candidate_freq_per_day": 0.2121534274245315,
+            "nearest_candidate_match": false
+          },
+          {
+            "k_per_day": -1,
+            "alias_freq_per_day": 0.9210661333383969,
+            "window_power_at_offset_k": 0.3127065655136154,
+            "nearest_candidate_freq_per_day": 0.8568021395296814,
+            "nearest_candidate_match": true
+          },
+          {
+            "k_per_day": 1,
+            "alias_freq_per_day": 2.921066133338397,
+            "window_power_at_offset_k": 0.31462674309568633,
+            "nearest_candidate_freq_per_day": 2.797672417072322,
+            "nearest_candidate_match": false
+          },
+          {
+            "k_per_day": 2,
+            "alias_freq_per_day": 3.921066133338397,
+            "window_power_at_offset_k": 0.010988989706292267,
+            "nearest_candidate_freq_per_day": 2.797672417072322,
+            "nearest_candidate_match": false
+          },
+          {
+            "k_per_day": 3,
+            "alias_freq_per_day": 4.921066133338397,
+            "window_power_at_offset_k": 0.019025897288643425,
+            "nearest_candidate_freq_per_day": 2.797672417072322,
+            "nearest_candidate_match": false
+          }
+        ]
+      },
+      {
+        "freq_per_day": 0.2121534274245315,
+        "daily_aliases": [
+          {
+            "k_per_day": -3,
+            "alias_freq_per_day": -2.7878465725754684,
+            "window_power_at_offset_k": 0.01999947830441757,
+            "nearest_candidate_freq_per_day": 0.2121534274245315,
+            "nearest_candidate_match": false
+          },
+          {
+            "k_per_day": -2,
+            "alias_freq_per_day": -1.7878465725754684,
+            "window_power_at_offset_k": 0.01007718230185055,
+            "nearest_candidate_freq_per_day": 0.2121534274245315,
+            "nearest_candidate_match": false
+          },
+          {
+            "k_per_day": -1,
+            "alias_freq_per_day": -0.7878465725754685,
+            "window_power_at_offset_k": 0.3127065655136154,
+            "nearest_candidate_freq_per_day": 0.2121534274245315,
+            "nearest_candidate_match": false
+          },
+          {
+            "k_per_day": 1,
+            "alias_freq_per_day": 1.2121534274245316,
+            "window_power_at_offset_k": 0.31462674309568633,
+            "nearest_candidate_freq_per_day": 1.267288389776538,
+            "nearest_candidate_match": true
+          },
+          {
+            "k_per_day": 2,
+            "alias_freq_per_day": 2.2121534274245316,
+            "window_power_at_offset_k": 0.010988989706292267,
+            "nearest_candidate_freq_per_day": 1.921066133338397,
+            "nearest_candidate_match": false
+          },
+          {
+            "k_per_day": 3,
+            "alias_freq_per_day": 3.2121534274245316,
+            "window_power_at_offset_k": 0.019025897288643425,
+            "nearest_candidate_freq_per_day": 2.797672417072322,
+            "nearest_candidate_match": false
+          }
+        ]
+      }
+    ],
+    "alias_families": {
+      "links": [
+        {
+          "candidate_i": 1,
+          "candidate_j": 3,
+          "freq_i": 0.7145507757804629,
+          "freq_j": 1.7174140612062567,
+          "offset_per_day": -1.0028632854257937,
+          "daily_order": -1
+        },
+        {
+          "candidate_i": 1,
+          "candidate_j": 4,
+          "freq_i": 0.7145507757804629,
+          "freq_j": 2.644848413702151,
+          "offset_per_day": -1.9302976379216878,
+          "daily_order": -2
+        },
+        {
+          "candidate_i": 1,
+          "candidate_j": 6,
+          "freq_i": 0.7145507757804629,
+          "freq_j": 2.797672417072322,
+          "offset_per_day": -2.083121641291859,
+          "daily_order": -2
+        },
+        {
+          "candidate_i": 2,
+          "candidate_j": 6,
+          "freq_i": 0.8568021395296814,
+          "freq_j": 2.797672417072322,
+          "offset_per_day": -1.9408702775426405,
+          "daily_order": -2
+        },
+        {
+          "candidate_i": 2,
+          "candidate_j": 10,
+          "freq_i": 0.8568021395296814,
+          "freq_j": 1.921066133338397,
+          "offset_per_day": -1.0642639938087155,
+          "daily_order": -1
+        },
+        {
+          "candidate_i": 3,
+          "candidate_j": 4,
+          "freq_i": 1.7174140612062567,
+          "freq_j": 2.644848413702151,
+          "offset_per_day": -0.9274343524958941,
+          "daily_order": -1
+        },
+        {
+          "candidate_i": 3,
+          "candidate_j": 6,
+          "freq_i": 1.7174140612062567,
+          "freq_j": 2.797672417072322,
+          "offset_per_day": -1.0802583558660652,
+          "daily_order": -1
+        },
+        {
+          "candidate_i": 4,
+          "candidate_j": 8,
+          "freq_i": 2.644848413702151,
+          "freq_j": 0.5944508781954977,
+          "offset_per_day": 2.050397535506653,
+          "daily_order": 2
+        },
+        {
+          "candidate_i": 5,
+          "candidate_j": 11,
+          "freq_i": 1.267288389776538,
+          "freq_j": 0.2121534274245315,
+          "offset_per_day": 1.0551349623520063,
+          "daily_order": 1
+        },
+        {
+          "candidate_i": 7,
+          "candidate_j": 8,
+          "freq_i": 2.534970293276713,
+          "freq_j": 0.5944508781954977,
+          "offset_per_day": 1.9405194150812153,
+          "daily_order": 2
+        }
+      ],
+      "n_families": 4,
+      "rayleigh_tolerance_per_day": 0.0867440858304681
+    }
+  },
+  "half_period_pairs": [
+    {
+      "low_freq_candidate_id": 0,
+      "high_freq_candidate_id": 1,
+      "period_long_day": 2.8015292929683207,
+      "period_short_day": 1.399480672185622,
+      "freq_mismatch_per_day": 0.0006549742909384149,
+      "chi2_long_period": 148.48985542635987,
+      "chi2_short_period": 158.7560154123857,
+      "rel_chi2_diff": 0.06466627396359363,
+      "bic_long_period": 29.270347847553406,
+      "bic_short_period": 28.957392995743824,
+      "holdout_chi2_long": 160.88692830973955,
+      "holdout_chi2_short": 168.8433006317361,
+      "fundamental_to_second_amplitude_ratio_long_model": 0.05515264225148936,
+      "near_equivalent": true,
+      "criteria": {
+        "rel_chi2_diff_le_0.10": true,
+        "abs_bic_diff_le_10": true,
+        "rel_holdout_diff_le_0.20": true,
+        "amplitude_ratio_lt_0.25": true
+      }
+    }
+  ]
+}
