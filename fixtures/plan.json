@@ -1,0 +1,14 @@
+{
+  "length_unit": "m",
+  "field_unit": "unit per square metre per second",
+  "field": "flux",
+  "cell_type": "linear tetra",
+  "material_field": "material_id",
+  "numeric_tolerance": 1e-10,
+  "negative_signed_volume": "vertex ordering is arbitrary; derive outward normals from opposite vertex, do not reject sign alone",
+  "invalid_cases": [
+    "duplicate.vtu",
+    "degenerate.vtu",
+    "nonmanifold.vtu"
+  ]
+}
