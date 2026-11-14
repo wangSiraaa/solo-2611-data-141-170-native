@@ -1,0 +1,70 @@
+{
+  "ok": true,
+  "checks": [
+    {
+      "name": "extract:all_charts",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "roundtrip:chart.svg",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "hand_two_point:chart.svg",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "log_decade:chart.svg:y",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "geometry:chart.svg",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "rigid_invariance:chart.svg",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "overlay:chart.svg",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "roundtrip:linear.svg",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "hand_two_point:linear.svg",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "geometry:linear.svg",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "rigid_invariance:linear.svg",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "overlay:linear.svg",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "negative:inconsistent_ticks",
+      "ok": true,
+      "detail": "轴 x: 3/3 个刻度与联合拟合不一致（容差 0.0003 绘图单位）: x0(值=0.0, 位置=0, 残差=20 绘图单位); x1(值=7.0, 位置=150, 残差=-40 绘图单位); x2(值=10.0, 位置=300, 残差"
+    }
+  ]
+}

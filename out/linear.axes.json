@@ -1,0 +1,189 @@
+{
+  "chart": "linear.svg",
+  "plot_space": {
+    "kind": "shared_tick_ancestor",
+    "element": "<g>"
+  },
+  "axes": {
+    "x": {
+      "scale": "linear",
+      "coordinate": "x",
+      "fit": {
+        "form": "value = a*plot_x + b",
+        "a": 0.03333333333333333,
+        "b": 1.1842378929335002e-15,
+        "n_ticks": 3,
+        "plot_span": 299.99999999999994,
+        "tolerance_plot": 0.0002999999999999999,
+        "max_abs_residual_plot": 3.552713678800501e-14,
+        "max_abs_residual_value": 1.1842378929335002e-15,
+        "warning": null,
+        "status": "ok"
+      },
+      "ticks": [
+        {
+          "id": "x0",
+          "raw_text": "0",
+          "value": 0.0,
+          "attr_xy": [
+            "0",
+            "220"
+          ],
+          "transform_chain": [
+            {
+              "element": "<g>",
+              "transform": "translate(70 40) scale(1.2 .9)"
+            }
+          ],
+          "plot_xy": [
+            0.0,
+            219.99999999999997
+          ],
+          "axis_coord_used": "x",
+          "note": "垂直于本轴的标签偏移不参与拟合",
+          "residual_plot": 3.552713678800501e-14,
+          "residual_value": 1.1842378929335002e-15
+        },
+        {
+          "id": "x1",
+          "raw_text": "5",
+          "value": 5.0,
+          "attr_xy": [
+            "150",
+            "220"
+          ],
+          "transform_chain": [
+            {
+              "element": "<g>",
+              "transform": "translate(70 40) scale(1.2 .9)"
+            }
+          ],
+          "plot_xy": [
+            149.99999999999997,
+            219.99999999999997
+          ],
+          "axis_coord_used": "x",
+          "note": "垂直于本轴的标签偏移不参与拟合",
+          "residual_plot": 0.0,
+          "residual_value": 0.0
+        },
+        {
+          "id": "x2",
+          "raw_text": "10",
+          "value": 10.0,
+          "attr_xy": [
+            "300",
+            "220"
+          ],
+          "transform_chain": [
+            {
+              "element": "<g>",
+              "transform": "translate(70 40) scale(1.2 .9)"
+            }
+          ],
+          "plot_xy": [
+            299.99999999999994,
+            219.99999999999997
+          ],
+          "axis_coord_used": "x",
+          "note": "垂直于本轴的标签偏移不参与拟合",
+          "residual_plot": 0.0,
+          "residual_value": 0.0
+        }
+      ]
+    },
+    "y": {
+      "scale": "linear",
+      "coordinate": "y",
+      "fit": {
+        "form": "value = a*plot_y + b",
+        "a": -0.20000000000000007,
+        "b": 20.000000000000004,
+        "n_ticks": 3,
+        "plot_span": 199.99999999999997,
+        "tolerance_plot": 0.00019999999999999996,
+        "max_abs_residual_plot": 1.7763568394002498e-14,
+        "max_abs_residual_value": 3.552713678800501e-15,
+        "warning": null,
+        "status": "ok"
+      },
+      "ticks": [
+        {
+          "id": "y0",
+          "raw_text": "-20",
+          "value": -20.0,
+          "attr_xy": [
+            "-10",
+            "200"
+          ],
+          "transform_chain": [
+            {
+              "element": "<g>",
+              "transform": "translate(70 40) scale(1.2 .9)"
+            }
+          ],
+          "plot_xy": [
+            -9.999999999999998,
+            199.99999999999997
+          ],
+          "axis_coord_used": "y",
+          "note": "垂直于本轴的标签偏移不参与拟合",
+          "residual_plot": 1.7763568394002498e-14,
+          "residual_value": -3.552713678800501e-15
+        },
+        {
+          "id": "y1",
+          "raw_text": "0",
+          "value": 0.0,
+          "attr_xy": [
+            "-10",
+            "100"
+          ],
+          "transform_chain": [
+            {
+              "element": "<g>",
+              "transform": "translate(70 40) scale(1.2 .9)"
+            }
+          ],
+          "plot_xy": [
+            -9.999999999999998,
+            99.99999999999997
+          ],
+          "axis_coord_used": "y",
+          "note": "垂直于本轴的标签偏移不参与拟合",
+          "residual_plot": -1.7763568394002498e-14,
+          "residual_value": 3.552713678800501e-15
+        },
+        {
+          "id": "y2",
+          "raw_text": "20",
+          "value": 20.0,
+          "attr_xy": [
+            "-10",
+            "0"
+          ],
+          "transform_chain": [
+            {
+              "element": "<g>",
+              "transform": "translate(70 40) scale(1.2 .9)"
+            }
+          ],
+          "plot_xy": [
+            -9.999999999999998,
+            -7.105427357601002e-15
+          ],
+          "axis_coord_used": "y",
+          "note": "垂直于本轴的标签偏移不参与拟合",
+          "residual_plot": -1.7763568394002498e-14,
+          "residual_value": 3.552713678800501e-15
+        }
+      ]
+    }
+  },
+  "precision": {
+    "svg_numbers": "SVG 数字按 IEEE-754 双精度解析；源文件坐标若保留 k 位小数，其量化误差 ≤ 0.5×10^-k（元素局部单位），经变换链缩放后进入绘图区坐标。",
+    "tick_fit": "轴标定使用全部刻度联合最小二乘拟合；残差（绘图区单位）反映刻度标注与轴几何的一致程度，超过声明容差即整图拒绝，不任选两个刻度掩盖矛盾。",
+    "value_error": "恢复值误差 ≈ |拟合斜率| × 绘图区坐标误差（线性轴）；log10 轴的相对误差 ≈ ln(10) × |斜率| × 坐标误差。刻度拟合残差以同样方式传播到恢复值。",
+    "no_inference": "不从文件推断原始数据未知的绘图/采样精度；恢复值仅描述图形的绘制几何。裁剪交点仅为图形截断位置，不是额外采样观测。"
+  }
+}

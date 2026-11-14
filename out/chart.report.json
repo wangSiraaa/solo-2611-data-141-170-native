@@ -1,0 +1,64 @@
+{
+  "chart": "chart.svg",
+  "status": "ok",
+  "visible_interval": {
+    "seriesA": {
+      "x_value": [
+        1.4210854715202005e-15,
+        19.999999999999996
+      ],
+      "y_value": [
+        1.5117750715082248,
+        100.0
+      ],
+      "plot_x": [
+        0.0,
+        420.0
+      ]
+    },
+    "seriesB": {
+      "x_value": [
+        1.4210854715202005e-15,
+        19.999999999999996
+      ],
+      "y_value": [
+        2.6489692876105284,
+        57.63466334193125
+      ],
+      "plot_x": [
+        0.0,
+        420.0
+      ]
+    }
+  },
+  "series_summary": {
+    "seriesA": {
+      "n_vertices": 9,
+      "n_visible_vertices": 6,
+      "n_fragments": 2,
+      "coordinate_quantization": {
+        "printed_decimals": 6,
+        "delta_local": 5e-07,
+        "delta_plot_bound": 5.499999999999999e-07,
+        "note": "源文件打印位数的事实性量化上界，非原始采样精度推断"
+      }
+    },
+    "seriesB": {
+      "n_vertices": 7,
+      "n_visible_vertices": 5,
+      "n_fragments": 1,
+      "coordinate_quantization": {
+        "printed_decimals": 0,
+        "delta_local": 0.0,
+        "delta_plot_bound": 0.0,
+        "note": "源文件打印位数的事实性量化上界，非原始采样精度推断"
+      }
+    }
+  },
+  "precision": {
+    "svg_numbers": "SVG 数字按 IEEE-754 双精度解析；源文件坐标若保留 k 位小数，其量化误差 ≤ 0.5×10^-k（元素局部单位），经变换链缩放后进入绘图区坐标。",
+    "tick_fit": "轴标定使用全部刻度联合最小二乘拟合；残差（绘图区单位）反映刻度标注与轴几何的一致程度，超过声明容差即整图拒绝，不任选两个刻度掩盖矛盾。",
+    "value_error": "恢复值误差 ≈ |拟合斜率| × 绘图区坐标误差（线性轴）；log10 轴的相对误差 ≈ ln(10) × |斜率| × 坐标误差。刻度拟合残差以同样方式传播到恢复值。",
+    "no_inference": "不从文件推断原始数据未知的绘图/采样精度；恢复值仅描述图形的绘制几何。裁剪交点仅为图形截断位置，不是额外采样观测。"
+  }
+}
