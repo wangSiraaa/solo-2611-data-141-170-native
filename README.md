@@ -1,5 +1,5 @@
-# Data engineering task inputs: 141-170
+# 题 149 输入材料
 
-Each question has its own branch and frozen initial commit. Task-specific README and input fixtures are supplied in that branch. The full task prompt is provided separately for each independent session.
+catalog.json 是唯一schema来源。cases.json 的 cursor 为 SQL 字符串从0开始的Unicode码点边界，可位于标识符中间；输入包括光标右侧内容。无需启动数据库。普通SQL解析库可安装，但不允许把当前完整SQL可解析作为补全前提。
 
-The base contains environment documentation only. Use Python 3.11 and any dependencies explicitly needed by the question; PostgreSQL 16 and SQLite are available. See environment/README.md for native local database setup.
+这些文件是输入与必要环境，不含题目核心实现、参考输出或独立答案。相对路径以题目仓库根为准。所有数据为合成数据。

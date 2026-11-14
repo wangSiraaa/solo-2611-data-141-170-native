@@ -1,0 +1,82 @@
+[
+  {
+    "case_id": "prefix",
+    "sql": "SELECT o.am FROM orders o",
+    "cursor": 11
+  },
+  {
+    "case_id": "middle",
+    "sql": "SELECT o.aount_cents FROM orders o",
+    "cursor": 10
+  },
+  {
+    "case_id": "scope",
+    "sql": "SELECT  FROM orders o JOIN customers c ON o.customer_id=c.customer_id",
+    "cursor": 7
+  },
+  {
+    "case_id": "table",
+    "sql": "SELECT * FROM ord",
+    "cursor": 17
+  },
+  {
+    "case_id": "cte",
+    "sql": "WITH paid AS (SELECT order_id, amount_cents AS amount FROM payments) SELECT p. FROM paid p",
+    "cursor": 78
+  },
+  {
+    "case_id": "ordered_ctes",
+    "sql": "WITH a AS (SELECT order_id FROM orders), b AS (SELECT a.order_id AS key FROM a) SELECT b. FROM b",
+    "cursor": 89
+  },
+  {
+    "case_id": "shadow_table",
+    "sql": "WITH orders AS (SELECT order_id AS owner FROM payments) SELECT orders. FROM orders",
+    "cursor": 70
+  },
+  {
+    "case_id": "correlated",
+    "sql": "SELECT o.order_id FROM orders o WHERE EXISTS (SELECT 1 FROM payments p WHERE p.order_id=o.)",
+    "cursor": 90
+  },
+  {
+    "case_id": "shadow_alias",
+    "sql": "SELECT o.order_id FROM orders o WHERE EXISTS (SELECT 1 FROM customers o WHERE o.)",
+    "cursor": 80
+  },
+  {
+    "case_id": "derived",
+    "sql": "SELECT s. FROM (SELECT customer_id AS owner, amount_cents AS amount FROM orders) s",
+    "cursor": 9
+  },
+  {
+    "case_id": "broken",
+    "sql": "SELECT o. FROM orders o WHERE (",
+    "cursor": 9
+  },
+  {
+    "case_id": "literal",
+    "sql": "SELECT 'customername' FROM orders",
+    "cursor": 16
+  },
+  {
+    "case_id": "comment",
+    "sql": "SELECT o.order_id /* 名称字段 */ FROM orders o",
+    "cursor": 23
+  },
+  {
+    "case_id": "unclosed_comment",
+    "sql": "SELECT o.order_id /* 尚未闭合",
+    "cursor": 25
+  },
+  {
+    "case_id": "missing",
+    "sql": "SELECT ",
+    "cursor": 7
+  },
+  {
+    "case_id": "unclosed_subquery",
+    "sql": "SELECT o.order_id FROM orders o WHERE EXISTS (SELECT p. FROM payments p",
+    "cursor": 55
+  }
+]

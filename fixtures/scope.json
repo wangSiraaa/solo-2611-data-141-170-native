@@ -1,0 +1,7 @@
+{
+  "supported": "SELECT/FROM/INNER or LEFT JOIN/ON/WHERE, ordered nonrecursive CTEs, one nesting level of derived table or EXISTS subquery; explicit projection aliases may name output columns; no GROUP BY or aggregate syntax required",
+  "identifiers": "unquoted ASCII identifiers, case-insensitive",
+  "comments": "-- line and /* block */; string literals use SQL single-quote escaping",
+  "scope_rules": "derived table is not LATERAL and cannot see outer aliases; EXISTS may correlate; inner aliases shadow outer aliases; CTEs only expose resolvable output names",
+  "output": "suggestions include label, kind, insertion text, origin and replacement [start,end) Unicode codepoint range; state unknown when scope cannot be recovered"
+}
