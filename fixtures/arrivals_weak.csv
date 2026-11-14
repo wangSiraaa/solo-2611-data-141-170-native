@@ -1,0 +1,9 @@
+pick_id,station_id,phase,time_seconds,sigma_seconds
+weak-0-P,s0,P,4.765837185,0.015
+weak-1-P,s1,P,3.837362449,0.015
+weak-2-P,s2,P,2.990051085,0.015
+weak-3-P,s3,P,2.416666667,0.015
+weak-4-P,s4,P,2.551708279,0.015
+weak-5-P,s5,P,3.256932430,0.015
+weak-6-P,s6,P,4.141558595,0.015
+weak-7-P,s7,P,5.083333333,0.015

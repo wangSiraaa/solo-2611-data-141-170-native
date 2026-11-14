@@ -1,0 +1,33 @@
+{
+  "cases": [
+    "good",
+    "weak",
+    "outlier"
+  ],
+  "velocity_km_s": {
+    "P": 6,
+    "S": 3.5
+  },
+  "position_bounds_km": {
+    "x": [
+      -10,
+      10
+    ],
+    "y": [
+      -10,
+      10
+    ],
+    "depth": [
+      0,
+      15
+    ]
+  },
+  "origin_time_bounds_seconds": [
+    -5,
+    5
+  ],
+  "model": "arrival = origin_time + Euclidean_distance(source, station)/velocity[phase]",
+  "profile_grid_step_km": 1.0,
+  "profile_score_delta": 4.0,
+  "report": "profile score regions are numerical support regions, not calibrated confidence probabilities"
+}

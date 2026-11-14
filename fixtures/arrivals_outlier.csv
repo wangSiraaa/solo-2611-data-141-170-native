@@ -1,0 +1,17 @@
+pick_id,station_id,phase,time_seconds,sigma_seconds
+outlier-0-P,s0,P,3.688182377,0.015
+outlier-0-S,s0,S,5.434037678,0.025
+outlier-1-P,s1,P,3.396112111,0.015
+outlier-1-S,s1,S,4.941978447,0.025
+outlier-2-P,s2,P,4.325212064,0.015
+outlier-2-S,s2,S,5.113456882,0.025
+outlier-3-P,s3,P,3.881832169,0.015
+outlier-3-S,s3,S,5.756992435,0.025
+outlier-4-P,s4,P,4.313808821,0.015
+outlier-4-S,s4,S,6.446494023,0.025
+outlier-5-P,s5,P,4.486438564,0.015
+outlier-5-S,s5,S,6.762248666,0.025
+outlier-6-P,s6,P,4.452469812,0.015
+outlier-6-S,s6,S,6.716480132,0.025
+outlier-7-P,s7,P,4.118778163,0.015
+outlier-7-S,s7,S,6.140051802,0.025
