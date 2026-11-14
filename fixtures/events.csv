@@ -1,0 +1,9 @@
+event_id,fixed_probability,unknown_parameter
+local_p1,1/50,
+local_p2,1/40,
+local_c1,1/25,
+local_c2,1/30,
+local_c3,1/20,
+controller,1/100,
+surge,,p_surge
+heat,,p_heat

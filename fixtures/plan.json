@@ -1,0 +1,31 @@
+{
+  "parameters": {
+    "p_surge": [
+      0.0,
+      0.3
+    ],
+    "p_heat": [
+      0.0,
+      0.3
+    ]
+  },
+  "primitive_independence": "within each cycle all primitive events are mutually independent; cycles are independent; the same two unknown probabilities apply to all cycles",
+  "missingness": "the deterministic mask schedule was fixed before simulation and is independent of all health states; NA means unobserved",
+  "support_loglik_drop": 2.0,
+  "support_semantics": "joint two-parameter set whose log-likelihood is within 2 of its maximum, not a calibrated confidence region",
+  "one_repair": {
+    "node": "c1",
+    "forced_failure_state": false,
+    "semantics": "clamp c1 healthy and cut its input effects only; heat still acts on c2 and surge still acts on other nodes; do not condition on c1 having been observed healthy"
+  },
+  "input_cases": [
+    "snapshots.csv",
+    "weak_snapshots.csv"
+  ],
+  "outputs": [
+    "joint fit and parameter support",
+    "baseline system risk range over joint support",
+    "repaired system risk and absolute benefit ranges over the same support with parameter witnesses"
+  ],
+  "scope": "only two unknown probabilities and one fixed repair; no cutset enumeration or repair-combination optimization"
+}

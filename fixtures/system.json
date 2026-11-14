@@ -1,0 +1,89 @@
+{
+  "root": "system",
+  "observables": [
+    "p1",
+    "p2",
+    "c1",
+    "c2",
+    "c3",
+    "control_lost",
+    "system"
+  ],
+  "nodes": [
+    {
+      "id": "p1",
+      "op": "or",
+      "inputs": [
+        "local_p1",
+        "surge"
+      ]
+    },
+    {
+      "id": "p2",
+      "op": "or",
+      "inputs": [
+        "local_p2",
+        "surge"
+      ]
+    },
+    {
+      "id": "power_lost",
+      "op": "and",
+      "inputs": [
+        "p1",
+        "p2"
+      ]
+    },
+    {
+      "id": "c1",
+      "op": "or",
+      "inputs": [
+        "local_c1",
+        "heat"
+      ]
+    },
+    {
+      "id": "c2",
+      "op": "or",
+      "inputs": [
+        "local_c2",
+        "heat"
+      ]
+    },
+    {
+      "id": "c3",
+      "op": "or",
+      "inputs": [
+        "local_c3",
+        "surge"
+      ]
+    },
+    {
+      "id": "cooling_lost",
+      "op": "kofn",
+      "k": 2,
+      "inputs": [
+        "c1",
+        "c2",
+        "c3"
+      ]
+    },
+    {
+      "id": "control_lost",
+      "op": "or",
+      "inputs": [
+        "controller",
+        "surge"
+      ]
+    },
+    {
+      "id": "system",
+      "op": "or",
+      "inputs": [
+        "power_lost",
+        "cooling_lost",
+        "control_lost"
+      ]
+    }
+  ]
+}
