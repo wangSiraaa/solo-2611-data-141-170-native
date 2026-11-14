@@ -1,0 +1,290 @@
+{
+  "tool_version": "1.0.0",
+  "case": "tiny",
+  "inputs": {
+    "rays_csv": "fixtures/tiny/rays.csv",
+    "grid_json": "fixtures/tiny/grid.json"
+  },
+  "grid": {
+    "nx": 2,
+    "ny": 2,
+    "dx_m": 1.0,
+    "dy_m": 1.0,
+    "x_min_m": 0.0,
+    "y_min_m": 0.0,
+    "mass_attenuation_m2_per_kg": 1.0,
+    "n_cells": 4,
+    "array_axes": "rows increase y, columns increase x",
+    "cell_convention": "half-open [lo,hi); internal grid-line rays assigned to higher-coordinate side"
+  },
+  "rays": {
+    "n_total": 5,
+    "n_valid_in_fit": 5,
+    "n_disjoint_excluded": 0,
+    "input_diagnostics": [],
+    "geometry_diagnostics": []
+  },
+  "operator": {
+    "shape": [
+      5,
+      4
+    ],
+    "nnz": 10,
+    "density_fraction": 0.5,
+    "nnz_per_valid_row_min": 2,
+    "nnz_per_valid_row_max": 2,
+    "npz_file": "operator_tiny.npz",
+    "manifest_csv": "operator_manifest_tiny.csv"
+  },
+  "support": {
+    "ray_count_per_cell_2d": [
+      [
+        3,
+        2
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "path_length_per_cell_2d": [
+      [
+        3.414213562373095,
+        2.0
+      ],
+      [
+        2.0,
+        3.414213562373095
+      ]
+    ],
+    "supported_cells": 4,
+    "unsupported_cells": 0
+  },
+  "rank_and_nullspace": {
+    "weighted_operator_shape": [
+      5,
+      4
+    ],
+    "rank": 4,
+    "numeric_rank_tol": 2.9011525734565254e-13,
+    "near_null_threshold_rel_1e-8": 2.6131259297527526e-06,
+    "near_null_singular_value_count": 0,
+    "nullity_n_cols_minus_rank": 0,
+    "singular_values": [
+      261.31259297527527,
+      141.42135623730954,
+      141.4213562373094,
+      108.23922002923935
+    ],
+    "relative_nullspace_energy_2d": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0
+      ]
+    ],
+    "note": "success=True 仅表示最小二乘收敛；秩亏时解不唯一，正则只是在零空间中挑了一个平滑解，不是数据证明的真值"
+  },
+  "angle_coverage": {
+    "angles_deg_mod180": [
+      0.0,
+      0.0,
+      90.0,
+      90.0,
+      45.0
+    ],
+    "histogram_10deg": [
+      2,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "occupied_sectors": 3,
+    "max_empty_sector_run_deg": 80,
+    "finite_angle_suspect": true
+  },
+  "finite_angle_probes": [
+    {
+      "pattern": "row_checker",
+      "l2_norm": 2.0,
+      "visibility_ratio": 141.4213562373095,
+      "invisible": false
+    },
+    {
+      "pattern": "col_checker",
+      "l2_norm": 2.0,
+      "visibility_ratio": 141.4213562373095,
+      "invisible": false
+    }
+  ],
+  "regularization": {
+    "form": "min J_data + lambda*||D x||^2 + ||w_p P(x-x0)||^2, x>=0; D = nearest-neighbor unit differences",
+    "strengths_run": [
+      0.01,
+      1.0
+    ],
+    "prior_weight": 0.0,
+    "prior_value": 0.0,
+    "prior_selector_rows": 0,
+    "sweep_lambdas": [
+      0.01,
+      0.03162277660168379,
+      0.1,
+      0.31622776601683794,
+      1.0
+    ],
+    "sweep_relative_spread_2d": [
+      [
+        0.0001484785097097314,
+        2.474732012402114e-05
+      ],
+      [
+        1.649841383490233e-05,
+        3.712165660283331e-05
+      ]
+    ]
+  },
+  "solutions": {
+    "0.01": {
+      "success": true,
+      "status": 3,
+      "message": "The unconstrained solution is optimal.",
+      "iterations": 0,
+      "objective": {
+        "J_data_chi2": 9.999980015238387e-08,
+        "J_smooth_unit_diff2": 9.999980000029986,
+        "J_prior": 0.0,
+        "J_total": 0.0999999000001,
+        "lambda_raw": 0.01,
+        "lambda_eff_per_data_edge": 0.0125,
+        "n_data_rays": 5,
+        "n_smooth_edges": 4,
+        "reduced_chi2": 1.9999960030476776e-08,
+        "rms_weighted_residual": 0.00014142121492363434,
+        "rms_residual_attenuation": 1.4142121492363434e-06,
+        "data_norm_weighted": 1264.9110640673518,
+        "regularization_to_data_ratio": 999999.9984791568
+      },
+      "density_min": 1.000001499998501,
+      "density_max": 3.999998500001499,
+      "density_sum": 10.0,
+      "mean_density_unsupported_cells": null,
+      "mass_fraction_in_unsupported_cells": 0.0
+    },
+    "1.0": {
+      "success": true,
+      "status": 3,
+      "message": "The unconstrained solution is optimal.",
+      "iterations": 0,
+      "objective": {
+        "J_data_chi2": 0.0009998000300087658,
+        "J_smooth_unit_diff2": 9.998000299959994,
+        "J_prior": 0.0,
+        "J_total": 9.999000099990003,
+        "lambda_raw": 1.0,
+        "lambda_eff_per_data_edge": 1.25,
+        "n_data_rays": 5,
+        "n_smooth_edges": 4,
+        "reduced_chi2": 0.00019996000600175316,
+        "rms_weighted_residual": 0.014140721551666065,
+        "rms_residual_attenuation": 0.00014140721551666067,
+        "data_norm_weighted": 1264.9110640673518,
+        "regularization_to_data_ratio": 9999.99999987231
+      },
+      "density_min": 1.0001499850015,
+      "density_max": 3.999850014998499,
+      "density_sum": 9.999999999999996,
+      "mean_density_unsupported_cells": null,
+      "mass_fraction_in_unsupported_cells": 0.0
+    }
+  },
+  "data_only_lambda0_check": {
+    "J_data_chi2": 3.072021580156925e-23,
+    "reduced_chi2": 6.1440431603138504e-24,
+    "note": "正则解的 J_data 必须不小于该值（正则以拟合换平滑）"
+  },
+  "cell_confidence_labels_2d": [
+    [
+      "data_determined",
+      "data_determined"
+    ],
+    [
+      "data_determined",
+      "data_determined"
+    ]
+  ],
+  "verification": {
+    "segment_sum_vs_clipped": {
+      "max_abs_diff_m": 0.0,
+      "max_rel_diff": 0.0
+    },
+    "independent_sampled_integration": {
+      "max_rel_diff_ray_total": 5.473399511402022e-14,
+      "max_prediction_rel_diff": 0.00010606317839015247,
+      "per_ray": [
+        {
+          "ray_id": "T1",
+          "status": "ok",
+          "predicted_event_m2_per_kg": 3.000001999998001,
+          "predicted_sampled_m2_per_kg": 3.0000019999978367,
+          "abs_diff": 1.6431300764452317e-13,
+          "rel_diff": 5.477096603423353e-14
+        },
+        {
+          "ray_id": "T2",
+          "status": "ok",
+          "predicted_event_m2_per_kg": 6.999998000001998,
+          "predicted_sampled_m2_per_kg": 6.999998000001615,
+          "abs_diff": 3.82804898890754e-13,
+          "rel_diff": 5.4686429751929174e-14
+        },
+        {
+          "ray_id": "T3",
+          "status": "ok",
+          "predicted_event_m2_per_kg": 4.000000999999001,
+          "predicted_sampled_m2_per_kg": 4.000000999998782,
+          "abs_diff": 2.1938006966593093e-13,
+          "rel_diff": 5.4845003705245503e-14
+        },
+        {
+          "ray_id": "T4",
+          "status": "ok",
+          "predicted_event_m2_per_kg": 5.999999000000999,
+          "predicted_sampled_m2_per_kg": 5.99999900000067,
+          "abs_diff": 3.2862601528904634e-13,
+          "rel_diff": 5.477101167666722e-14
+        },
+        {
+          "ray_id": "T5",
+          "status": "ok",
+          "predicted_event_m2_per_kg": 7.0710678118654755,
+          "predicted_sampled_m2_per_kg": 7.071817791792214,
+          "abs_diff": 0.000749979926738753,
+          "rel_diff": 0.00010606317839015247
+        }
+      ]
+    }
+  },
+  "outputs": {
+    "results_npz": "results_tiny.npz",
+    "predictions_csv": "predictions_tiny.csv",
+    "diagnostics_json": "diagnostics_tiny.json"
+  }
+}

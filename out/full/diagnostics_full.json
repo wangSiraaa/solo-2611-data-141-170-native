@@ -1,0 +1,887 @@
+{
+  "tool_version": "1.0.0",
+  "case": "full",
+  "inputs": {
+    "rays_csv": "fixtures/rays.csv",
+    "grid_json": "fixtures/grid.json"
+  },
+  "grid": {
+    "nx": 6,
+    "ny": 6,
+    "dx_m": 1.0,
+    "dy_m": 1.0,
+    "x_min_m": 0.0,
+    "y_min_m": 0.0,
+    "mass_attenuation_m2_per_kg": 0.02,
+    "n_cells": 36,
+    "array_axes": "rows increase y, columns increase x",
+    "cell_convention": "half-open [lo,hi); internal grid-line rays assigned to higher-coordinate side"
+  },
+  "rays": {
+    "n_total": 45,
+    "n_valid_in_fit": 44,
+    "n_disjoint_excluded": 1,
+    "input_diagnostics": [],
+    "geometry_diagnostics": [
+      {
+        "ray_id": "R045",
+        "issue": "射线与重建区域完全不相交（零内部长度），不纳入拟合；其观测不会被当作穿区有效观测"
+      }
+    ]
+  },
+  "operator": {
+    "shape": [
+      45,
+      36
+    ],
+    "nnz": 312,
+    "density_fraction": 0.1925925925925926,
+    "nnz_per_valid_row_min": 5,
+    "nnz_per_valid_row_max": 10,
+    "npz_file": "operator_full.npz",
+    "manifest_csv": "operator_manifest_full.csv"
+  },
+  "support": {
+    "ray_count_per_cell_2d": [
+      [
+        7,
+        8,
+        7,
+        9,
+        8,
+        6
+      ],
+      [
+        7,
+        12,
+        8,
+        9,
+        10,
+        8
+      ],
+      [
+        8,
+        9,
+        9,
+        9,
+        9,
+        10
+      ],
+      [
+        11,
+        10,
+        10,
+        10,
+        10,
+        9
+      ],
+      [
+        8,
+        10,
+        9,
+        8,
+        12,
+        7
+      ],
+      [
+        6,
+        8,
+        9,
+        7,
+        8,
+        7
+      ]
+    ],
+    "path_length_per_cell_2d": [
+      [
+        6.3588310456226775,
+        6.482984239273671,
+        7.649017086781212,
+        6.764664687319387,
+        6.659656278157918,
+        3.6876064762781877
+      ],
+      [
+        7.277750452295932,
+        7.930413036961073,
+        6.924730084963517,
+        7.226448557548872,
+        6.884949760762996,
+        6.625713348365915
+      ],
+      [
+        7.015774847285234,
+        7.025438219430094,
+        8.55596080891461,
+        6.888985084483765,
+        7.132874594575329,
+        6.704419352289823
+      ],
+      [
+        7.704419352289819,
+        8.132874594575327,
+        7.888985084483764,
+        9.555960808914607,
+        8.025438219430097,
+        8.01577484728523
+      ],
+      [
+        6.625713348365913,
+        6.8849497607630035,
+        7.226448557548871,
+        6.924730084963517,
+        7.930413036961081,
+        7.277750452295933
+      ],
+      [
+        3.687606476278189,
+        6.6596562781579145,
+        6.764664687319388,
+        7.649017086781207,
+        6.482984239273674,
+        6.358831045622679
+      ]
+    ],
+    "supported_cells": 36,
+    "unsupported_cells": 0
+  },
+  "rank_and_nullspace": {
+    "weighted_operator_shape": [
+      44,
+      36
+    ],
+    "rank": 36,
+    "numeric_rank_tol": 1.303530342530772e-12,
+    "near_null_threshold_rel_1e-8": 1.3342224465653909e-06,
+    "near_null_singular_value_count": 0,
+    "nullity_n_cols_minus_rank": 0,
+    "singular_values": [
+      133.42224465653908,
+      85.90866329088696,
+      78.6266778524193,
+      77.69703341571118,
+      70.97413077275321,
+      64.66484572468063,
+      62.36063813471543,
+      59.77962629618138,
+      59.69878402986742,
+      58.37946398359654,
+      57.9533049845292,
+      57.74303623554262,
+      52.5293772695659,
+      51.79932543934419,
+      50.65970116533785,
+      50.019344808387565,
+      49.46678288506956,
+      48.642598486095835,
+      48.25629660537851,
+      45.35119977035094,
+      43.906430358560385,
+      38.84730659208322,
+      36.794885243253184,
+      36.483533156681,
+      34.533294715297856,
+      29.52832038949392,
+      23.23288509978628,
+      20.81269336667155,
+      19.252470550364126,
+      16.550206353884537,
+      15.300809673323464,
+      10.045960923484143,
+      8.96786461861657,
+      7.342206344677303,
+      5.080784735031661,
+      1.8425093536828558
+    ],
+    "relative_nullspace_energy_2d": [
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "note": "success=True 仅表示最小二乘收敛；秩亏时解不唯一，正则只是在零空间中挑了一个平滑解，不是数据证明的真值"
+  },
+  "angle_coverage": {
+    "angles_deg_mod180": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      90.0,
+      90.0,
+      90.0,
+      90.0,
+      90.0,
+      90.0,
+      20.053522829578814,
+      20.053522829578814,
+      20.053522829578814,
+      20.053522829578814,
+      20.053522829578814,
+      20.053522829578814,
+      40.10704565915762,
+      40.10704565915762,
+      40.10704565915762,
+      40.10704565915762,
+      40.10704565915762,
+      40.10704565915762,
+      63.02535746439056,
+      63.02535746439056,
+      63.02535746439056,
+      63.02535746439056,
+      63.02535746439056,
+      63.02535746439056,
+      120.32113697747289,
+      120.32113697747289,
+      120.32113697747289,
+      120.32113697747289,
+      120.32113697747289,
+      120.32113697747289,
+      148.96902673401405,
+      148.96902673401405,
+      148.96902673401405,
+      148.96902673401405,
+      148.96902673401405,
+      148.96902673401405,
+      45.0,
+      0.0,
+      90.0
+    ],
+    "histogram_10deg": [
+      7,
+      0,
+      6,
+      0,
+      7,
+      0,
+      6,
+      0,
+      0,
+      7,
+      0,
+      0,
+      6,
+      0,
+      6,
+      0,
+      0,
+      0
+    ],
+    "occupied_sectors": 7,
+    "max_empty_sector_run_deg": 30,
+    "finite_angle_suspect": false
+  },
+  "finite_angle_probes": [
+    {
+      "pattern": "row_checker",
+      "l2_norm": 6.0,
+      "visibility_ratio": 52.396924674535505,
+      "invisible": false
+    },
+    {
+      "pattern": "col_checker",
+      "l2_norm": 6.0,
+      "visibility_ratio": 55.4444931787109,
+      "invisible": false
+    }
+  ],
+  "regularization": {
+    "form": "min J_data + lambda*||D x||^2 + ||w_p P(x-x0)||^2, x>=0; D = nearest-neighbor unit differences",
+    "strengths_run": [
+      0.01,
+      1.0
+    ],
+    "prior_weight": 0.0,
+    "prior_value": 0.0,
+    "prior_selector_rows": 0,
+    "sweep_lambdas": [
+      0.01,
+      0.03162277660168379,
+      0.1,
+      0.31622776601683794,
+      1.0
+    ],
+    "sweep_relative_spread_2d": [
+      [
+        0.044589535281191896,
+        0.08538197521361136,
+        0.0450713863610412,
+        0.01280425583567,
+        0.03669988250494569,
+        0.0025923041174871304
+      ],
+      [
+        0.017262717740458938,
+        0.002778054867182832,
+        0.007494648489789043,
+        0.10144851153566588,
+        0.08753398710516165,
+        0.06837049479784073
+      ],
+      [
+        0.05282501322008286,
+        0.00527789173890121,
+        0.010019742012210576,
+        0.008978176854505426,
+        0.0014267852622281301,
+        0.006957801130497927
+      ],
+      [
+        0.03346941001357375,
+        0.0011550217973413165,
+        0.0077662432476081535,
+        0.016178026249320205,
+        0.00506694649425726,
+        0.04323779226273475
+      ],
+      [
+        0.04838107291413605,
+        0.0837005475878325,
+        0.10057070194579824,
+        0.013891930054209288,
+        0.0038267909082556817,
+        0.01991751178005955
+      ],
+      [
+        0.019238500368106506,
+        0.02591544127362408,
+        0.001724166323899447,
+        0.038421476818711844,
+        0.0531073922415361,
+        0.039937513302497424
+      ]
+    ]
+  },
+  "solutions": {
+    "0.01": {
+      "success": true,
+      "status": 3,
+      "message": "The unconstrained solution is optimal.",
+      "iterations": 0,
+      "objective": {
+        "J_data_chi2": 0.09296528057197241,
+        "J_smooth_unit_diff2": 6.62840811201622,
+        "J_prior": 0.0,
+        "J_total": 0.1592493616921346,
+        "lambda_raw": 0.01,
+        "lambda_eff_per_data_edge": 0.007333333333333333,
+        "n_data_rays": 44,
+        "n_smooth_edges": 60,
+        "reduced_chi2": 0.0021128472857266456,
+        "rms_weighted_residual": 0.04596571859251899,
+        "rms_residual_attenuation": 4.596571859251899e-05,
+        "data_norm_weighted": 359.80122766139704,
+        "regularization_to_data_ratio": 0.7129982366787566
+      },
+      "density_min": 0.16474218253858305,
+      "density_max": 1.0103204392629155,
+      "density_sum": 14.391144699089116,
+      "mean_density_unsupported_cells": null,
+      "mass_fraction_in_unsupported_cells": 0.0
+    },
+    "1.0": {
+      "success": true,
+      "status": 3,
+      "message": "The unconstrained solution is optimal.",
+      "iterations": 0,
+      "objective": {
+        "J_data_chi2": 0.11416805624026237,
+        "J_smooth_unit_diff2": 6.480548924823816,
+        "J_prior": 0.0,
+        "J_total": 6.594716981064079,
+        "lambda_raw": 1.0,
+        "lambda_eff_per_data_edge": 0.7333333333333333,
+        "n_data_rays": 44,
+        "n_smooth_edges": 60,
+        "reduced_chi2": 0.0025947285509150537,
+        "rms_weighted_residual": 0.050938478097750955,
+        "rms_residual_attenuation": 5.0938478097750956e-05,
+        "data_norm_weighted": 359.80122766139704,
+        "regularization_to_data_ratio": 56.763241297423384
+      },
+      "density_min": 0.1818241824799411,
+      "density_max": 1.0156608224717345,
+      "density_sum": 14.390632960611534,
+      "mean_density_unsupported_cells": null,
+      "mass_fraction_in_unsupported_cells": 0.0
+    }
+  },
+  "data_only_lambda0_check": {
+    "J_data_chi2": 0.09319770434478564,
+    "reduced_chi2": 0.0021181296441996735,
+    "note": "正则解的 J_data 必须不小于该值（正则以拟合换平滑）"
+  },
+  "cell_confidence_labels_2d": [
+    [
+      "data_determined",
+      "data_determined",
+      "data_determined",
+      "data_determined",
+      "data_determined",
+      "data_determined"
+    ],
+    [
+      "data_determined",
+      "data_determined",
+      "data_determined",
+      "data_determined",
+      "data_determined",
+      "data_determined"
+    ],
+    [
+      "data_determined",
+      "data_determined",
+      "data_determined",
+      "data_determined",
+      "data_determined",
+      "data_determined"
+    ],
+    [
+      "data_determined",
+      "data_determined",
+      "data_determined",
+      "data_determined",
+      "data_determined",
+      "data_determined"
+    ],
+    [
+      "data_determined",
+      "data_determined",
+      "data_determined",
+      "data_determined",
+      "data_determined",
+      "data_determined"
+    ],
+    [
+      "data_determined",
+      "data_determined",
+      "data_determined",
+      "data_determined",
+      "data_determined",
+      "data_determined"
+    ]
+  ],
+  "verification": {
+    "segment_sum_vs_clipped": {
+      "max_abs_diff_m": 0.0,
+      "max_rel_diff": 0.0
+    },
+    "independent_sampled_integration": {
+      "max_rel_diff_ray_total": 5.477100254817439e-14,
+      "max_prediction_rel_diff": 0.00018344066300621725,
+      "per_ray": [
+        {
+          "ray_id": "R001",
+          "status": "ok",
+          "predicted_event_m2_per_kg": 0.02396374745360116,
+          "predicted_sampled_m2_per_kg": 0.023963747453599846,
+          "abs_diff": 1.3149203947904198e-15,
+          "rel_diff": 5.487123403117068e-14
+        },
+        {
+          "ray_id": "R002",
+          "status": "ok",
+          "predicted_event_m2_per_kg": 0.05595594648548289,
+          "predicted_sampled_m2_per_kg": 0.05595594648547983,
+          "abs_diff": 3.0600522116230877e-15,
+          "rel_diff": 5.4686809960706894e-14
+        },
+        {
+          "ray_id": "R003",
+          "status": "ok",
+          "predicted_event_m2_per_kg": 0.07199055679767949,
+          "predicted_sampled_m2_per_kg": 0.07199055679767553,
+          "abs_diff": 3.95516952522712e-15,
+          "rel_diff": 5.494011577577643e-14
+        },
+        {
+          "ray_id": "R004",
+          "status": "ok",
+          "predicted_event_m2_per_kg": 0.07199521976639797,
+          "predicted_sampled_m2_per_kg": 0.071995219766394,
+          "abs_diff": 3.969047313034935e-15,
+          "rel_diff": 5.512931727847008e-14
+        },
+        {
+          "ray_id": "R005",
+          "status": "ok",
+          "predicted_event_m2_per_kg": 0.03995359019219926,
+          "predicted_sampled_m2_per_kg": 0.03995359019219707,
+          "abs_diff": 2.192690473634684e-15,
+          "rel_diff": 5.488093718453357e-14
+        },
+        {
+          "ray_id": "R006",
+          "status": "ok",
+          "predicted_event_m2_per_kg": 0.023963833286421644,
+          "predicted_sampled_m2_per_kg": 0.023963833286420325,
+          "abs_diff": 1.3183898417423734e-15,
+          "rel_diff": 5.5015815958350774e-14
+        },
+        {
+          "ray_id": "R007",
+          "status": "ok",
+          "predicted_event_m2_per_kg": 0.024014617715518438,
+          "predicted_sampled_m2_per_kg": 0.024014617715517123,
+          "abs_diff": 1.3149203947904198e-15,
+          "rel_diff": 5.4755000074005246e-14
+        },
+        {
+          "ray_id": "R008",
+          "status": "ok",
+          "predicted_event_m2_per_kg": 0.04797653224597588,
+          "predicted_sampled_m2_per_kg": 0.04797653224597325,
+          "abs_diff": 2.6298407895808396e-15,
+          "rel_diff": 5.481514954223108e-14
+        },
+        {
+          "ray_id": "R009",
+          "status": "ok",
+          "predicted_event_m2_per_kg": 0.047917913362577454,
+          "predicted_sampled_m2_per_kg": 0.04791791336257482,
+          "abs_diff": 2.6367796834847468e-15,
+          "rel_diff": 5.5027013875441363e-14
+        },
+        {
+          "ray_id": "R010",
+          "status": "ok",
+          "predicted_event_m2_per_kg": 0.07191866274659069,
+          "predicted_sampled_m2_per_kg": 0.07191866274658676,
+          "abs_diff": 3.927413949611491e-15,
+          "rel_diff": 5.460910700536727e-14
+        },
+        {
+          "ray_id": "R011",
+          "status": "ok",
+          "predicted_event_m2_per_kg": 0.07197889430899565,
+          "predicted_sampled_m2_per_kg": 0.07197889430899171,
+          "abs_diff": 3.941291737419306e-15,
+          "rel_diff": 5.475621396044059e-14
+        },
+        {
+          "ray_id": "R012",
+          "status": "ok",
+          "predicted_event_m2_per_kg": 0.02401627360212428,
+          "predicted_sampled_m2_per_kg": 0.024016273602122957,
+          "abs_diff": 1.321859288694327e-15,
+          "rel_diff": 5.504014946671021e-14
+        },
+        {
+          "ray_id": "R013",
+          "status": "ok",
+          "predicted_event_m2_per_kg": 0.016743445700114767,
+          "predicted_sampled_m2_per_kg": 0.016743620856322753,
+          "abs_diff": 1.751562079856106e-07,
+          "rel_diff": 1.0461180519396315e-05
+        },
+        {
+          "ray_id": "R014",
+          "status": "ok",
+          "predicted_event_m2_per_kg": 0.04752854115748697,
+          "predicted_sampled_m2_per_kg": 0.04752143029522018,
+          "abs_diff": 7.110862266790363e-06,
+          "rel_diff": 0.00014961246639631437
+        },
+        {
+          "ray_id": "R015",
+          "status": "ok",
+          "predicted_event_m2_per_kg": 0.07669341778589282,
+          "predicted_sampled_m2_per_kg": 0.07669749473777629,
+          "abs_diff": 4.076951883466573e-06,
+          "rel_diff": 5.315908458856684e-05
+        },
+        {
+          "ray_id": "R016",
+          "status": "ok",
+          "predicted_event_m2_per_kg": 0.07669278310382857,
+          "predicted_sampled_m2_per_kg": 0.0766928627905725,
+          "abs_diff": 7.968674392566655e-08,
+          "rel_diff": 1.0390383645066665e-06
+        },
+        {
+          "ray_id": "R017",
+          "status": "ok",
+          "predicted_event_m2_per_kg": 0.041233906920509926,
+          "predicted_sampled_m2_per_kg": 0.04122897093153462,
+          "abs_diff": 4.935988975308947e-06,
+          "rel_diff": 0.0001197070407328723
+        },
+        {
+          "ray_id": "R018",
+          "status": "ok",
+          "predicted_event_m2_per_kg": 0.01673898014513583,
+          "predicted_sampled_m2_per_kg": 0.016739160467551913,
+          "abs_diff": 1.8032241608234578e-07,
+          "rel_diff": 1.077260469388546e-05
+        },
+        {
+          "ray_id": "R019",
+          "status": "ok",
+          "predicted_event_m2_per_kg": 0.014114871209211044,
+          "predicted_sampled_m2_per_kg": 0.014114586782184113,
+          "abs_diff": 2.8442702693087796e-07,
+          "rel_diff": 2.015087652696876e-05
+        },
+        {
+          "ray_id": "R020",
+          "status": "ok",
+          "predicted_event_m2_per_kg": 0.0321134734361571,
+          "predicted_sampled_m2_per_kg": 0.03211010477998336,
+          "abs_diff": 3.3686561737369947e-06,
+          "rel_diff": 0.00010489853053217743
+        },
+        {
+          "ray_id": "R021",
+          "status": "ok",
+          "predicted_event_m2_per_kg": 0.08460894183815004,
+          "predicted_sampled_m2_per_kg": 0.08460450983148496,
+          "abs_diff": 4.43200666508381e-06,
+          "rel_diff": 5.2382249071993764e-05
+        },
+        {
+          "ray_id": "R022",
+          "status": "ok",
+          "predicted_event_m2_per_kg": 0.08880814329105281,
+          "predicted_sampled_m2_per_kg": 0.0888065205555849,
+          "abs_diff": 1.6227354679154704e-06,
+          "rel_diff": 1.827237241743975e-05
+        },
+        {
+          "ray_id": "R023",
+          "status": "ok",
+          "predicted_event_m2_per_kg": 0.04060972006995114,
+          "predicted_sampled_m2_per_kg": 0.04060900434932074,
+          "abs_diff": 7.1572063039399e-07,
+          "rel_diff": 1.7624367495297813e-05
+        },
+        {
+          "ray_id": "R024",
+          "status": "ok",
+          "predicted_event_m2_per_kg": 0.01411652367570861,
+          "predicted_sampled_m2_per_kg": 0.014116242036729601,
+          "abs_diff": 2.8163897900813917e-07,
+          "rel_diff": 1.995101524129323e-05
+        },
+        {
+          "ray_id": "R025",
+          "status": "ok",
+          "predicted_event_m2_per_kg": 0.015090780983919866,
+          "predicted_sampled_m2_per_kg": 0.015090583543606644,
+          "abs_diff": 1.974403132220387e-07,
+          "rel_diff": 1.30835053157569e-05
+        },
+        {
+          "ray_id": "R026",
+          "status": "ok",
+          "predicted_event_m2_per_kg": 0.03959949825112062,
+          "predicted_sampled_m2_per_kg": 0.039600733960516325,
+          "abs_diff": 1.2357093957041099e-06,
+          "rel_diff": 3.120517810270843e-05
+        },
+        {
+          "ray_id": "R027",
+          "status": "ok",
+          "predicted_event_m2_per_kg": 0.06999894166267563,
+          "predicted_sampled_m2_per_kg": 0.07000463798569133,
+          "abs_diff": 5.696323015697002e-06,
+          "rel_diff": 8.13772734328976e-05
+        },
+        {
+          "ray_id": "R028",
+          "status": "ok",
+          "predicted_event_m2_per_kg": 0.08887086573022003,
+          "predicted_sampled_m2_per_kg": 0.08887697270757525,
+          "abs_diff": 6.10697735521637e-06,
+          "rel_diff": 6.87174284287379e-05
+        },
+        {
+          "ray_id": "R029",
+          "status": "ok",
+          "predicted_event_m2_per_kg": 0.05416908163819905,
+          "predicted_sampled_m2_per_kg": 0.05417265195819726,
+          "abs_diff": 3.5703199982098366e-06,
+          "rel_diff": 6.59106614001023e-05
+        },
+        {
+          "ray_id": "R030",
+          "status": "ok",
+          "predicted_event_m2_per_kg": 0.015093164009336905,
+          "predicted_sampled_m2_per_kg": 0.015092960680144357,
+          "abs_diff": 2.0332919254892334e-07,
+          "rel_diff": 1.3471608234240363e-05
+        },
+        {
+          "ray_id": "R031",
+          "status": "ok",
+          "predicted_event_m2_per_kg": 0.019003369080549667,
+          "predicted_sampled_m2_per_kg": 0.01900483388906377,
+          "abs_diff": 1.4648085141025224e-06,
+          "rel_diff": 7.708151685596549e-05
+        },
+        {
+          "ray_id": "R032",
+          "status": "ok",
+          "predicted_event_m2_per_kg": 0.04658223087274012,
+          "predicted_sampled_m2_per_kg": 0.046581141113093166,
+          "abs_diff": 1.0897596469522375e-06,
+          "rel_diff": 2.339432067840194e-05
+        },
+        {
+          "ray_id": "R033",
+          "status": "ok",
+          "predicted_event_m2_per_kg": 0.04645695837760406,
+          "predicted_sampled_m2_per_kg": 0.0464558730124954,
+          "abs_diff": 1.0853651086564775e-06,
+          "rel_diff": 2.3362810363833668e-05
+        },
+        {
+          "ray_id": "R034",
+          "status": "ok",
+          "predicted_event_m2_per_kg": 0.06481321911039849,
+          "predicted_sampled_m2_per_kg": 0.06481406509260684,
+          "abs_diff": 8.459822083556334e-07,
+          "rel_diff": 1.305261827706234e-05
+        },
+        {
+          "ray_id": "R035",
+          "status": "ok",
+          "predicted_event_m2_per_kg": 0.06927183979240271,
+          "predicted_sampled_m2_per_kg": 0.06926988678057269,
+          "abs_diff": 1.9530118300220556e-06,
+          "rel_diff": 2.819344535780973e-05
+        },
+        {
+          "ray_id": "R036",
+          "status": "ok",
+          "predicted_event_m2_per_kg": 0.023338065264157604,
+          "predicted_sampled_m2_per_kg": 0.023340601341712466,
+          "abs_diff": 2.5360775548627368e-06,
+          "rel_diff": 0.0001086670007199621
+        },
+        {
+          "ray_id": "R037",
+          "status": "ok",
+          "predicted_event_m2_per_kg": 0.019137704142107005,
+          "predicted_sampled_m2_per_kg": 0.019139761219420317,
+          "abs_diff": 2.057077313311756e-06,
+          "rel_diff": 0.00010748819701866692
+        },
+        {
+          "ray_id": "R038",
+          "status": "ok",
+          "predicted_event_m2_per_kg": 0.042417992272550366,
+          "predicted_sampled_m2_per_kg": 0.04241694920913892,
+          "abs_diff": 1.0430634114488857e-06,
+          "rel_diff": 2.4590117437592054e-05
+        },
+        {
+          "ray_id": "R039",
+          "status": "ok",
+          "predicted_event_m2_per_kg": 0.05960638975900404,
+          "predicted_sampled_m2_per_kg": 0.059600947295175385,
+          "abs_diff": 5.4424638286573734e-06,
+          "rel_diff": 9.130671813310491e-05
+        },
+        {
+          "ray_id": "R040",
+          "status": "ok",
+          "predicted_event_m2_per_kg": 0.07181357230624316,
+          "predicted_sampled_m2_per_kg": 0.07181076657237546,
+          "abs_diff": 2.8057338676973353e-06,
+          "rel_diff": 3.9069688049112925e-05
+        },
+        {
+          "ray_id": "R041",
+          "status": "ok",
+          "predicted_event_m2_per_kg": 0.06109235185177054,
+          "predicted_sampled_m2_per_kg": 0.061090651989077066,
+          "abs_diff": 1.6998626934730532e-06,
+          "rel_diff": 2.7824476255185923e-05
+        },
+        {
+          "ray_id": "R042",
+          "status": "ok",
+          "predicted_event_m2_per_kg": 0.02356509063873156,
+          "predicted_sampled_m2_per_kg": 0.02356941343458213,
+          "abs_diff": 4.322795850570521e-06,
+          "rel_diff": 0.00018344066300621725
+        },
+        {
+          "ray_id": "R043",
+          "status": "ok",
+          "predicted_event_m2_per_kg": 0.10181674627090542,
+          "predicted_sampled_m2_per_kg": 0.1018167446173027,
+          "abs_diff": 1.653602726969794e-09,
+          "rel_diff": 1.62409700519208e-08
+        },
+        {
+          "ray_id": "R044",
+          "status": "ok",
+          "predicted_event_m2_per_kg": 0.07199521976639794,
+          "predicted_sampled_m2_per_kg": 0.071995219766394,
+          "abs_diff": 3.941291737419306e-15,
+          "rel_diff": 5.4743797577222064e-14
+        },
+        {
+          "ray_id": "R045",
+          "status": "disjoint",
+          "predicted_event_m2_per_kg": 0.0,
+          "predicted_sampled_m2_per_kg": 0.0,
+          "abs_diff": 0.0,
+          "rel_diff": 0.0
+        }
+      ]
+    }
+  },
+  "outputs": {
+    "results_npz": "results_full.npz",
+    "predictions_csv": "predictions_full.csv",
+    "diagnostics_json": "diagnostics_full.json"
+  }
+}

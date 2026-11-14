@@ -1,0 +1,522 @@
+{
+  "tool_version": "1.0.0",
+  "case": "limited",
+  "inputs": {
+    "rays_csv": "fixtures/limited-rays.csv",
+    "grid_json": "fixtures/grid.json"
+  },
+  "grid": {
+    "nx": 6,
+    "ny": 6,
+    "dx_m": 1.0,
+    "dy_m": 1.0,
+    "x_min_m": 0.0,
+    "y_min_m": 0.0,
+    "mass_attenuation_m2_per_kg": 0.02,
+    "n_cells": 36,
+    "array_axes": "rows increase y, columns increase x",
+    "cell_convention": "half-open [lo,hi); internal grid-line rays assigned to higher-coordinate side"
+  },
+  "rays": {
+    "n_total": 5,
+    "n_valid_in_fit": 5,
+    "n_disjoint_excluded": 0,
+    "input_diagnostics": [],
+    "geometry_diagnostics": []
+  },
+  "operator": {
+    "shape": [
+      5,
+      36
+    ],
+    "nnz": 30,
+    "density_fraction": 0.16666666666666666,
+    "nnz_per_valid_row_min": 6,
+    "nnz_per_valid_row_max": 6,
+    "npz_file": "operator_limited.npz",
+    "manifest_csv": "operator_manifest_limited.csv"
+  },
+  "support": {
+    "ray_count_per_cell_2d": [
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "path_length_per_cell_2d": [
+      [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    ],
+    "supported_cells": 30,
+    "unsupported_cells": 6
+  },
+  "rank_and_nullspace": {
+    "weighted_operator_shape": [
+      5,
+      36
+    ],
+    "rank": 5,
+    "numeric_rank_tol": 3.9160510718702927e-13,
+    "near_null_threshold_rel_1e-8": 4.898979485566356e-07,
+    "near_null_singular_value_count": 31,
+    "nullity_n_cols_minus_rank": 31,
+    "singular_values": [
+      48.98979485566356,
+      48.98979485566356,
+      48.98979485566356,
+      48.98979485566356,
+      48.98979485566356,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "relative_nullspace_energy_2d": [
+      [
+        0.8333333333333333,
+        0.8333333333333333,
+        0.8333333333333333,
+        0.8333333333333331,
+        0.8333333333333333,
+        0.8333333333333331
+      ],
+      [
+        0.8333333333333335,
+        0.8333333333333335,
+        0.8333333333333335,
+        0.8333333333333335,
+        0.8333333333333334,
+        0.8333333333333335
+      ],
+      [
+        0.8333333333333335,
+        0.8333333333333335,
+        0.8333333333333335,
+        0.8333333333333335,
+        0.8333333333333334,
+        0.8333333333333335
+      ],
+      [
+        0.8333333333333335,
+        0.8333333333333335,
+        0.8333333333333335,
+        0.8333333333333335,
+        0.8333333333333334,
+        0.8333333333333335
+      ],
+      [
+        0.8333333333333335,
+        0.8333333333333335,
+        0.8333333333333335,
+        0.8333333333333335,
+        0.8333333333333334,
+        0.8333333333333335
+      ],
+      [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    ],
+    "note": "success=True 仅表示最小二乘收敛；秩亏时解不唯一，正则只是在零空间中挑了一个平滑解，不是数据证明的真值"
+  },
+  "angle_coverage": {
+    "angles_deg_mod180": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "histogram_10deg": [
+      5,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "occupied_sectors": 1,
+    "max_empty_sector_run_deg": 170,
+    "finite_angle_suspect": true
+  },
+  "finite_angle_probes": [
+    {
+      "pattern": "row_checker",
+      "l2_norm": 6.0,
+      "visibility_ratio": 0.0,
+      "invisible": true
+    },
+    {
+      "pattern": "col_checker",
+      "l2_norm": 6.0,
+      "visibility_ratio": 44.72135954999579,
+      "invisible": false
+    }
+  ],
+  "regularization": {
+    "form": "min J_data + lambda*||D x||^2 + ||w_p P(x-x0)||^2, x>=0; D = nearest-neighbor unit differences",
+    "strengths_run": [
+      0.01,
+      1.0
+    ],
+    "prior_weight": 0.0,
+    "prior_value": 0.0,
+    "prior_selector_rows": 6,
+    "sweep_lambdas": [
+      0.01,
+      0.03162277660168379,
+      0.1,
+      0.31622776601683794,
+      1.0
+    ],
+    "sweep_relative_spread_2d": [
+      [
+        0.0005495641236402477,
+        0.0005495641236402477,
+        0.0005495641236402477,
+        0.0005495641236402477,
+        0.0005495641236402477,
+        0.0005495641236402477
+      ],
+      [
+        0.00011771263658762785,
+        0.00011771263658762785,
+        0.00011771263658762785,
+        0.00011771263658762785,
+        0.00011771263658762785,
+        0.00011771263658786577
+      ],
+      [
+        9.170755923858068e-05,
+        9.170755923858068e-05,
+        9.170755923858068e-05,
+        9.170755923858068e-05,
+        9.170755923858068e-05,
+        9.170755923858068e-05
+      ],
+      [
+        0.00018315057346228298,
+        0.00018315057346228298,
+        0.00018315057346228298,
+        0.00018315057346228298,
+        0.00018315057346228298,
+        0.000183150573462468
+      ],
+      [
+        0.0003296904878306597,
+        0.0003296904878306597,
+        0.0003296904878306597,
+        0.0003296904878306597,
+        0.0003296904878306597,
+        0.0003296904878306597
+      ],
+      [
+        0.0003296904878306597,
+        0.0003296904878306597,
+        0.0003296904878306597,
+        0.0003296904878306597,
+        0.0003296904878306597,
+        0.0003296904878306597
+      ]
+    ]
+  },
+  "solutions": {
+    "0.01": {
+      "success": true,
+      "status": 3,
+      "message": "The unconstrained solution is optimal.",
+      "iterations": 0,
+      "objective": {
+        "J_data_chi2": 6.222125927602262e-08,
+        "J_smooth_unit_diff2": 0.9599875556999983,
+        "J_prior": 0.0,
+        "J_total": 0.00959993777825926,
+        "lambda_raw": 0.01,
+        "lambda_eff_per_data_edge": 0.0008333333333333334,
+        "n_data_rays": 5,
+        "n_smooth_edges": 60,
+        "reduced_chi2": 1.2444251855204525e-08,
+        "rms_weighted_residual": 0.0001115538069955684,
+        "rms_residual_attenuation": 1.115538069955684e-07,
+        "data_norm_weighted": 125.21980673998823,
+        "regularization_to_data_ratio": 154286.10202846472
+      },
+      "density_min": 0.20000111110416674,
+      "density_max": 0.5999994444421297,
+      "density_sum": 15.20000666661111,
+      "mean_density_unsupported_cells": 0.3333344444351853,
+      "mass_fraction_in_unsupported_cells": 0.1315793282515066
+    },
+    "1.0": {
+      "success": true,
+      "status": 3,
+      "message": "The unconstrained solution is optimal.",
+      "iterations": 0,
+      "objective": {
+        "J_data_chi2": 0.0006212606459769005,
+        "J_smooth_unit_diff2": 0.9587569981508617,
+        "J_prior": 0.0,
+        "J_total": 0.9593782587968386,
+        "lambda_raw": 1.0,
+        "lambda_eff_per_data_edge": 0.08333333333333333,
+        "n_data_rays": 5,
+        "n_smooth_edges": 60,
+        "reduced_chi2": 0.0001242521291953801,
+        "rms_weighted_residual": 0.011146843911860438,
+        "rms_residual_attenuation": 1.1146843911860438e-05,
+        "data_norm_weighted": 125.21980673998823,
+        "regularization_to_data_ratio": 1543.2443763491012
+      },
+      "density_min": 0.20011104172447286,
+      "density_max": 0.5999444213925667,
+      "density_sum": 15.200666111631376,
+      "mean_density_unsupported_cells": 0.3334443519385611,
+      "mass_fraction_in_unsupported_cells": 0.1316170026325675
+    }
+  },
+  "data_only_lambda0_check": {
+    "J_data_chi2": 4.200934691194658e-27,
+    "reduced_chi2": 8.401869382389316e-28,
+    "note": "正则解的 J_data 必须不小于该值（正则以拟合换平滑）"
+  },
+  "cell_confidence_labels_2d": [
+    [
+      "ray_supported_but_near_nullspace",
+      "ray_supported_but_near_nullspace",
+      "ray_supported_but_near_nullspace",
+      "ray_supported_but_near_nullspace",
+      "ray_supported_but_near_nullspace",
+      "ray_supported_but_near_nullspace"
+    ],
+    [
+      "ray_supported_but_near_nullspace",
+      "ray_supported_but_near_nullspace",
+      "ray_supported_but_near_nullspace",
+      "ray_supported_but_near_nullspace",
+      "ray_supported_but_near_nullspace",
+      "ray_supported_but_near_nullspace"
+    ],
+    [
+      "ray_supported_but_near_nullspace",
+      "ray_supported_but_near_nullspace",
+      "ray_supported_but_near_nullspace",
+      "ray_supported_but_near_nullspace",
+      "ray_supported_but_near_nullspace",
+      "ray_supported_but_near_nullspace"
+    ],
+    [
+      "ray_supported_but_near_nullspace",
+      "ray_supported_but_near_nullspace",
+      "ray_supported_but_near_nullspace",
+      "ray_supported_but_near_nullspace",
+      "ray_supported_but_near_nullspace",
+      "ray_supported_but_near_nullspace"
+    ],
+    [
+      "ray_supported_but_near_nullspace",
+      "ray_supported_but_near_nullspace",
+      "ray_supported_but_near_nullspace",
+      "ray_supported_but_near_nullspace",
+      "ray_supported_but_near_nullspace",
+      "ray_supported_but_near_nullspace"
+    ],
+    [
+      "no_ray_support_prior_only",
+      "no_ray_support_prior_only",
+      "no_ray_support_prior_only",
+      "no_ray_support_prior_only",
+      "no_ray_support_prior_only",
+      "no_ray_support_prior_only"
+    ]
+  ],
+  "verification": {
+    "segment_sum_vs_clipped": {
+      "max_abs_diff_m": 0.0,
+      "max_rel_diff": 0.0
+    },
+    "independent_sampled_integration": {
+      "max_rel_diff_ray_total": 5.477100254817439e-14,
+      "max_prediction_rel_diff": 5.4990550888155985e-14,
+      "per_ray": [
+        {
+          "ray_id": "L1",
+          "status": "ok",
+          "predicted_event_m2_per_kg": 0.024000133332500007,
+          "predicted_sampled_m2_per_kg": 0.024000133332498695,
+          "abs_diff": 1.3114509478384662e-15,
+          "rel_diff": 5.4643485920244974e-14
+        },
+        {
+          "ray_id": "L2",
+          "status": "ok",
+          "predicted_event_m2_per_kg": 0.05599993333416666,
+          "predicted_sampled_m2_per_kg": 0.0559999333341636,
+          "abs_diff": 3.0600522116230877e-15,
+          "rel_diff": 5.4643854544664066e-14
+        },
+        {
+          "ray_id": "L3",
+          "status": "ok",
+          "predicted_event_m2_per_kg": 0.07199993333305557,
+          "predicted_sampled_m2_per_kg": 0.07199993333305163,
+          "abs_diff": 3.941291737419306e-15,
+          "rel_diff": 5.474021370530682e-14
+        },
+        {
+          "ray_id": "L4",
+          "status": "ok",
+          "predicted_event_m2_per_kg": 0.07199986666805554,
+          "predicted_sampled_m2_per_kg": 0.0719998666680516,
+          "abs_diff": 3.941291737419306e-15,
+          "rel_diff": 5.474026438951663e-14
+        },
+        {
+          "ray_id": "L5",
+          "status": "ok",
+          "predicted_event_m2_per_kg": 0.040000133332222236,
+          "predicted_sampled_m2_per_kg": 0.040000133332220036,
+          "abs_diff": 2.1996293675385914e-15,
+          "rel_diff": 5.4990550888155985e-14
+        }
+      ]
+    }
+  },
+  "outputs": {
+    "results_npz": "results_limited.npz",
+    "predictions_csv": "predictions_limited.csv",
+    "diagnostics_json": "diagnostics_limited.json"
+  }
+}

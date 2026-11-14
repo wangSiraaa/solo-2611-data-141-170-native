@@ -1,0 +1,6 @@
+ray_id,attenuation_observed,sigma,attenuation_predicted,residual,weighted_residual,clipped_path_length_m,full_ray_length_m,status
+T1,3,0.01,3.000002,-1.99999800099e-06,-0.0002,2,4,valid
+T2,7,0.01,6.999998,1.99999800188e-06,0.0002,2,4,valid
+T3,4,0.01,4.000001,-9.99999000939e-07,-9.99999e-05,2,4,valid
+T4,6,0.01,5.999999,9.99999000939e-07,9.99999e-05,2,4,valid
+T5,7.07106781187,0.01,7.07106781187,0,0,2.82842712475,5.65685424949,valid
