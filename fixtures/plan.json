@@ -1,0 +1,20 @@
+{
+  "reference_name": "chrS",
+  "annotation_coordinates": "zero-based half-open",
+  "exon_index": "transcript 5prime to 3prime order",
+  "library": "read1_matches_transcript_strand",
+  "exclude_flagged_duplicate": true,
+  "exclude_secondary_supplementary": true,
+  "accepted_cigar": [
+    "M",
+    "=",
+    "X",
+    "I",
+    "D",
+    "N",
+    "S"
+  ],
+  "fragment_identity": "query_name",
+  "mate_gap": "unobserved; do not treat the insert between mates as sequenced",
+  "compatibility": "all aligned bases/deletions must lie on transcript exons; each N must exactly equal a consecutive annotated intron; both mates must fit one transcript and declared strand"
+}
