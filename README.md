@@ -1,5 +1,5 @@
-# Data engineering task inputs: 141-170
+# 题 145 输入材料
 
-Each question has its own branch and frozen initial commit. Task-specific README and input fixtures are supplied in that branch. The full task prompt is provided separately for each independent session.
+observations.csv 是带已知标靶身份的局部坐标。anchor.json 只固定 A 站为世界基准；它不提供其他站位姿。holdout=true 的观测不得用于拟合，只供变换后的跨站一致性检查。cases/ 是独立坏几何场景。
 
-The base contains environment documentation only. Use Python 3.11 and any dependencies explicitly needed by the question; PostgreSQL 16 and SQLite are available. See environment/README.md for native local database setup.
+这些文件是输入与必要环境，不含题目核心实现、参考输出或独立答案。相对路径以题目仓库根为准。所有数据为合成数据。

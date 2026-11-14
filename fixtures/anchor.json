@@ -1,0 +1,7 @@
+{
+  "anchor_station": "A",
+  "transform_convention": "world_point = R @ local_point + t; R orthonormal and det(R)=+1",
+  "units": "metres",
+  "identity_correspondences": "target_id exact; no nearest-neighbor matching",
+  "degeneracy_policy": "report graph connection and geometric identifiability separately"
+}
