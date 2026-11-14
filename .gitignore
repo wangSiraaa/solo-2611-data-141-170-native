@@ -11,3 +11,9 @@ venv/
 htmlcov/
 .DS_Store
 *.log
+
+# generated solver artifacts
+out/
+
+# editable-install metadata
+*.egg-info/
