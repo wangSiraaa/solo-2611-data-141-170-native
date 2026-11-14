@@ -1,0 +1,11 @@
+{
+  "max_rules": 1,
+  "rule_penalty": 1,
+  "allow_default": [
+    "general",
+    "specialist"
+  ],
+  "objective": "sum(case weight * misroute cost) + rule_penalty * number of rules",
+  "rule": "one supplied predicate and one assigned queue; first matching rule wins; remaining cases use default",
+  "tie_output": "one stable canonical optimum plus ambiguity of optimal predictions on probes"
+}

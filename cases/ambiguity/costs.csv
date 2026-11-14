@@ -1,0 +1,5 @@
+true_queue,assigned_queue,cost
+general,general,0
+general,specialist,1
+specialist,general,1
+specialist,specialist,0

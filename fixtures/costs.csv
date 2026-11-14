@@ -1,0 +1,10 @@
+true_queue,assigned_queue,cost
+general,general,0
+general,billing,2
+general,specialist,3
+billing,general,7
+billing,billing,0
+billing,specialist,4
+specialist,general,12
+specialist,billing,10
+specialist,specialist,0

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "urgent",
+    "field": "urgent",
+    "op": "eq",
+    "value": 1
+  },
+  {
+    "id": "technical",
+    "field": "technical",
+    "op": "eq",
+    "value": 1
+  },
+  {
+    "id": "vip",
+    "field": "vip",
+    "op": "eq",
+    "value": 1
+  },
+  {
+    "id": "refund",
+    "field": "refund",
+    "op": "eq",
+    "value": 1
+  },
+  {
+    "id": "not_technical",
+    "field": "technical",
+    "op": "eq",
+    "value": 0
+  },
+  {
+    "id": "not_refund",
+    "field": "refund",
+    "op": "eq",
+    "value": 0
+  },
+  {
+    "id": "old",
+    "field": "age_days",
+    "op": "ge",
+    "value": 4
+  },
+  {
+    "id": "fresh",
+    "field": "age_days",
+    "op": "le",
+    "value": 1
+  },
+  {
+    "id": "has_attachment",
+    "field": "attachments",
+    "op": "ge",
+    "value": 1
+  },
+  {
+    "id": "many_attachments",
+    "field": "attachments",
+    "op": "ge",
+    "value": 2
+  }
+]

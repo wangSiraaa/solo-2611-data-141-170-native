@@ -1,0 +1,6 @@
+case_id,urgent,technical,vip,refund,age_days,attachments
+probe-1,1,1,0,1,0,0
+probe-2,0,1,1,0,7,2
+probe-3,0,0,0,1,2,2
+probe-4,1,0,1,0,7,0
+probe-5,0,1,0,0,0,0
