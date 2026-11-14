@@ -1,0 +1,39 @@
+{
+  "states": {
+    "bearing": "1/2",
+    "power": "3/10",
+    "healthy": "1/5"
+  },
+  "test_order": [
+    "vibration",
+    "current",
+    "thermal",
+    "bench"
+  ],
+  "tests": [
+    {
+      "id": "vibration",
+      "cost": 2,
+      "requires": []
+    },
+    {
+      "id": "current",
+      "cost": 1,
+      "requires": []
+    },
+    {
+      "id": "thermal",
+      "cost": 2,
+      "requires": []
+    },
+    {
+      "id": "bench",
+      "cost": 3,
+      "requires": [
+        "current"
+      ]
+    }
+  ],
+  "joint_file": "joint.csv",
+  "joint_semantics": "每行 probability 是给定state时四项检测结果的完整联合概率；原始检测结果一次抽定，重复读取不产生新结果。"
+}

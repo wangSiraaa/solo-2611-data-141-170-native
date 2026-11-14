@@ -1,0 +1,4 @@
+action,bearing,power,healthy
+replace_bearing,8,100,25
+replace_power,95,12,32
+release,130,150,0
