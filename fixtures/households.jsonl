@@ -1,0 +1,3 @@
+{"household_id": "H1", "consent": {"status": "answered", "value": "yes"}}
+{"household_id": "H2", "consent": {"status": "refused"}}
+{"household_id": "H3", "consent": {"status": "answered", "value": "no"}}

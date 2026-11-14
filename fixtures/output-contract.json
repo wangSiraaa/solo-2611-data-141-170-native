@@ -1,0 +1,22 @@
+{
+  "key": [
+    "household_id",
+    "member_id",
+    "question"
+  ],
+  "eligibility": [
+    "MUST",
+    "MAY",
+    "NEVER"
+  ],
+  "answer_states": [
+    "valid_answer",
+    "asked_missing",
+    "asked_refused",
+    "conditional_answer",
+    "structurally_not_asked",
+    "stray_answer"
+  ],
+  "denominators": "per question report MUST/MAY/NEVER instance counts separately; response rate denominator must be explicit; do not silently treat MAY as either eligible or not eligible",
+  "errors": "unknown roster member, wrong question, out-of-domain values and conflicting duplicate answers are isolated with source references"
+}

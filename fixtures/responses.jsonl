@@ -1,0 +1,15 @@
+{"household_id": "H1", "member_id": "M1", "question": "age", "status": "answered", "value": 35}
+{"household_id": "H1", "member_id": "M1", "question": "employment", "status": "answered", "value": "working"}
+{"household_id": "H1", "member_id": "M1", "question": "hours", "status": "answered", "value": 0}
+{"household_id": "H1", "member_id": "M1", "question": "health", "status": "answered", "value": "good"}
+{"household_id": "H1", "member_id": "M2", "question": "age", "status": "refused"}
+{"household_id": "H1", "member_id": "M2", "question": "employment", "status": "answered", "value": "retired"}
+{"household_id": "H1", "member_id": "M2", "question": "health", "status": "answered", "value": "fair"}
+{"household_id": "H1", "member_id": "M3", "question": "age", "status": "answered", "value": 12}
+{"household_id": "H1", "member_id": "M3", "question": "schooling", "status": "answered", "value": "yes"}
+{"household_id": "H1", "member_id": "M3", "question": "pension", "status": "answered", "value": "yes"}
+{"household_id": "H2", "member_id": "M1", "question": "age", "status": "answered", "value": 70}
+{"household_id": "H2", "member_id": "M1", "question": "pension", "status": "answered", "value": "yes"}
+{"household_id": "H3", "member_id": "M1", "question": "age", "status": "answered", "value": 40}
+{"household_id": "H3", "member_id": "M1", "question": "employment", "status": "answered", "value": "working"}
+{"household_id": "H1", "member_id": "M9", "question": "age", "status": "answered", "value": 20}

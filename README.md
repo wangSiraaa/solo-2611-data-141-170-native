@@ -1,5 +1,5 @@
-# Data engineering task inputs: 141-170
+# 题 150 输入材料
 
-Each question has its own branch and frozen initial commit. Task-specific README and input fixtures are supplied in that branch. The full task prompt is provided separately for each independent session.
+问卷只用于把已有回答变为资格数据，不采集新回答。未知或refused答案表示该题声明域中的值均可能；只在实际路径访问到题目时使用其回答。一个缺失问题在同一路径的后续条件中必须保持同一潜在值。回答存在本身不能证明该问题可达。
 
-The base contains environment documentation only. Use Python 3.11 and any dependencies explicitly needed by the question; PostgreSQL 16 and SQLite are available. See environment/README.md for native local database setup.
+这些文件是输入与必要环境，不含题目核心实现、参考输出或独立答案。相对路径以题目仓库根为准。所有数据为合成数据。

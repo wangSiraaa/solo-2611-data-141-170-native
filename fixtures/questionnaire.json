@@ -1,0 +1,137 @@
+{
+  "version": "survey-demo-1",
+  "household_fields": {
+    "consent": {
+      "type": "enum",
+      "values": [
+        "yes",
+        "no"
+      ]
+    }
+  },
+  "member_questions": {
+    "age": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "employment": {
+      "type": "enum",
+      "values": [
+        "working",
+        "not_working",
+        "retired"
+      ]
+    },
+    "schooling": {
+      "type": "enum",
+      "values": [
+        "yes",
+        "no"
+      ]
+    },
+    "hours": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 80
+    },
+    "pension": {
+      "type": "enum",
+      "values": [
+        "yes",
+        "no"
+      ]
+    },
+    "health": {
+      "type": "enum",
+      "values": [
+        "good",
+        "fair",
+        "poor"
+      ]
+    }
+  },
+  "start": "consent_gate",
+  "nodes": {
+    "consent_gate": {
+      "kind": "branch",
+      "test": {
+        "ref": "household.consent",
+        "op": "eq",
+        "value": "yes"
+      },
+      "true": "q_age",
+      "false": "end"
+    },
+    "q_age": {
+      "kind": "ask",
+      "question": "age",
+      "next": "adult_gate"
+    },
+    "adult_gate": {
+      "kind": "branch",
+      "test": {
+        "ref": "member.age",
+        "op": "ge",
+        "value": 18
+      },
+      "true": "q_employment",
+      "false": "q_schooling"
+    },
+    "q_employment": {
+      "kind": "ask",
+      "question": "employment",
+      "next": "work_gate"
+    },
+    "work_gate": {
+      "kind": "branch",
+      "test": {
+        "ref": "member.employment",
+        "op": "eq",
+        "value": "working"
+      },
+      "true": "q_hours",
+      "false": "old_gate"
+    },
+    "q_hours": {
+      "kind": "ask",
+      "question": "hours",
+      "next": "old_gate"
+    },
+    "q_schooling": {
+      "kind": "ask",
+      "question": "schooling",
+      "next": "old_gate"
+    },
+    "old_gate": {
+      "kind": "branch",
+      "test": {
+        "ref": "member.age",
+        "op": "ge",
+        "value": 65
+      },
+      "true": "q_pension",
+      "false": "q_health"
+    },
+    "q_pension": {
+      "kind": "ask",
+      "question": "pension",
+      "next": "q_health"
+    },
+    "q_health": {
+      "kind": "ask",
+      "question": "health",
+      "next": "end"
+    },
+    "end": {
+      "kind": "end"
+    }
+  },
+  "semantics": {
+    "missing_or_refused": "all domain values remain possible; do not impute an answer",
+    "observed_answer": "constrains value only on paths that visit that question",
+    "eligibility": "MUST if visited by all admissible complete paths; MAY if some; NEVER if none",
+    "repeated_question_value": "one consistent value per (household_id,member_id,question) throughout a path",
+    "member_instances": "roster defines instances; same member_id across different households is distinct"
+  }
+}
