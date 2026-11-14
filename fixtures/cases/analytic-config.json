@@ -1,0 +1,9 @@
+{
+  "lever_arm_body_m": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "max_interpolation_gap_ms": 1500,
+  "note": "常速小例用零杆臂配置，配合 identity-navigation 与 zero-tide 做解析核对"
+}
