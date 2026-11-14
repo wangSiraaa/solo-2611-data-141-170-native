@@ -1,0 +1,7 @@
+{"household_id": "E1", "member_id": "M1", "question": "age", "status": "refused"}
+{"household_id": "E1", "member_id": "M1", "question": "employment", "status": "answered", "value": "retired"}
+{"household_id": "E1", "member_id": "M1", "question": "health", "status": "answered", "value": "fair"}
+{"household_id": "E4", "member_id": "M1", "question": "age", "status": "answered", "value": 70}
+{"household_id": "E4", "member_id": "M1", "question": "pension", "status": "answered", "value": "yes"}
+{"household_id": "E4", "member_id": "M2", "question": "age", "status": "answered", "value": 12}
+{"household_id": "E4", "member_id": "M2", "question": "pension", "status": "answered", "value": "yes"}

@@ -1,0 +1,4 @@
+{"household_id": "E1", "consent": {"status": "answered", "value": "yes"}}
+{"household_id": "E2", "consent": {"status": "refused"}}
+{"household_id": "E3", "consent": {"status": "missing"}}
+{"household_id": "E4", "consent": {"status": "answered", "value": "yes"}}

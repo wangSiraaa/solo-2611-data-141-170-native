@@ -1,0 +1,36 @@
+{
+  "version": "tiny-1",
+  "household_fields": {
+    "consent": {"type": "enum", "values": ["yes", "no"]}
+  },
+  "member_questions": {
+    "age": {"type": "integer", "minimum": 0, "maximum": 3},
+    "schooling": {"type": "enum", "values": ["yes", "no"]},
+    "pension": {"type": "enum", "values": ["yes", "no"]}
+  },
+  "start": "gate",
+  "nodes": {
+    "gate": {
+      "kind": "branch",
+      "test": {"ref": "household.consent", "op": "eq", "value": "yes"},
+      "true": "q_age",
+      "false": "end"
+    },
+    "q_age": {"kind": "ask", "question": "age", "next": "adult"},
+    "adult": {
+      "kind": "branch",
+      "test": {"ref": "member.age", "op": "ge", "value": 2},
+      "true": "old",
+      "false": "q_school"
+    },
+    "q_school": {"kind": "ask", "question": "schooling", "next": "old"},
+    "old": {
+      "kind": "branch",
+      "test": {"ref": "member.age", "op": "ge", "value": 3},
+      "true": "q_pension",
+      "false": "end"
+    },
+    "q_pension": {"kind": "ask", "question": "pension", "next": "end"},
+    "end": {"kind": "end"}
+  }
+}
