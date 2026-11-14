@@ -1,0 +1,14 @@
+{
+  "x_min_m": 0,
+  "y_min_m": 0,
+  "dx_m": 1,
+  "dy_m": 1,
+  "nx": 2,
+  "ny": 2,
+  "mass_attenuation_m2_per_kg": 1,
+  "array_axes": "rows increase y, columns increase x",
+  "regularization_strengths": [
+    0.01,
+    1.0
+  ]
+}

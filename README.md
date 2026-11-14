@@ -1,5 +1,5 @@
-# Data engineering task inputs: 141-170
+# 题 147 输入材料
 
-Each question has its own branch and frozen initial commit. Task-specific README and input fixtures are supplied in that branch. The full task prompt is provided separately for each independent session.
+rays.csv 提供真实端点和无量纲对数衰减观测，grid.json 声明规则网格与质量衰减常数。limited-rays.csv 是有限角度替换输入；tiny/ 提供微型独立场景。未知是网格密度，未提供前向矩阵或密度答案。
 
-The base contains environment documentation only. Use Python 3.11 and any dependencies explicitly needed by the question; PostgreSQL 16 and SQLite are available. See environment/README.md for native local database setup.
+这些文件是输入与必要环境，不含题目核心实现、参考输出或独立答案。相对路径以题目仓库根为准。所有数据为合成数据。

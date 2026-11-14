@@ -1,0 +1,17 @@
+{
+  "x_min_m": 0,
+  "y_min_m": 0,
+  "dx_m": 1,
+  "dy_m": 1,
+  "nx": 6,
+  "ny": 6,
+  "density_units": "kg/m^3",
+  "mass_attenuation_m2_per_kg": 0.02,
+  "array_axes": "rows increase y, columns increase x",
+  "cells": "left/bottom inclusive and right/top exclusive, except outer maximum; internal grid-line rays belong to higher-coordinate side",
+  "regularization_strengths": [
+    0.01,
+    1.0
+  ],
+  "measurement": "attenuation = mass_attenuation * sum(path_length_m * cell_density); ignore scatter"
+}
