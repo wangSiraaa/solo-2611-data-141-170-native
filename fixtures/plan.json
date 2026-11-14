@@ -1,0 +1,33 @@
+{
+  "sample_rate": 16000,
+  "sweep": {
+    "kind": "exponential_sine",
+    "duration_seconds": 2.0,
+    "start_hz": 80.0,
+    "end_hz": 6000.0,
+    "fade_seconds": 0.02,
+    "amplitude": 0.42
+  },
+  "recording": "single-channel PCM16; one sweep, unknown start delay, stationary added background noise; mild memoryless quadratic/cubic distortion before room response",
+  "bands_hz": [
+    [
+      250,
+      500
+    ],
+    [
+      500,
+      1000
+    ],
+    [
+      1000,
+      2000
+    ]
+  ],
+  "requested": [
+    "linear impulse response",
+    "band decay curve",
+    "T20 if -5 to -25 dB interval has credible noise clearance; otherwise unavailable or qualified shorter-range estimate"
+  ],
+  "reference_delay": "0.050 seconds delay and 0.7 scaling applied to emitted sweep; no room tail",
+  "limits": "not an acoustic certification; no live audio or unknown excitation"
+}
