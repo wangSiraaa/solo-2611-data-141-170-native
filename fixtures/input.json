@@ -1,0 +1,15 @@
+{
+  "base": "fixtures/base.sqlite",
+  "left": "fixtures/left.sqlite",
+  "right": "fixtures/right.sqlite",
+  "immutable_keys": [
+    "customers.customer_id",
+    "orders.order_id"
+  ],
+  "constraints": [
+    "customer code unique",
+    "order customer exists",
+    "nonnegative integer amount"
+  ],
+  "input_order_is_not_identity": true
+}
