@@ -1,0 +1,11 @@
+{
+  "merge_steps": 24,
+  "min_weighted_pair_count": 2,
+  "pretokenization": "maximal Unicode whitespace runs or non-whitespace runs; never merge across runs",
+  "pair_tie_break": "lexicographic tuple (left raw bytes, right raw bytes), unsigned byte order",
+  "base_ids": "0..255 correspond to single raw bytes",
+  "merged_symbol_identity": "identical raw byte sequence reuses a token ID; new IDs assigned in first-creation order",
+  "training_occurrences": "count all adjacent pairs in the current sequence, then replace selected pair non-overlapping left-to-right",
+  "input_encoding": "strict UTF-8, no normalization",
+  "training_maintenance": "after one initial scan, update occurrence positions and weighted pair counts only around actual replacements; invalidated candidate/occurrence entries must not affect later decisions"
+}
