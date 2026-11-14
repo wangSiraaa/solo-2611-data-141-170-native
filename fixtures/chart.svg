@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="430" viewBox="0 0 680 430">
+<title>Synthetic acquisition curve</title>
+<defs><clipPath id="plotClip" clipPathUnits="userSpaceOnUse"><rect x="0" y="0" width="420" height="260"/></clipPath></defs>
+<g id="chart" transform="translate(110 65) rotate(7) scale(1.08 .94)">
+ <g id="plotFrame"><path d="M 0 0 L 0 260 L 420 260" fill="none" stroke="black"/></g>
+ <g id="xTicks" font-size="12"><g transform="translate(0 260)"><path d="M 0 0 L 0 5" stroke="black"/><text id="xt0" x="0" y="22" text-anchor="middle"><tspan>0</tspan></text></g><g transform="translate(105 260)"><path d="M 0 0 L 0 5" stroke="black"/><text id="xt1" x="0" y="22" text-anchor="middle"><tspan>5</tspan></text></g><g transform="translate(210 260)"><path d="M 0 0 L 0 5" stroke="black"/><text id="xt2" x="0" y="22" text-anchor="middle"><tspan>10</tspan></text></g><g transform="translate(315 260)"><path d="M 0 0 L 0 5" stroke="black"/><text id="xt3" x="0" y="22" text-anchor="middle"><tspan>15</tspan></text></g><g transform="translate(420 260)"><path d="M 0 0 L 0 5" stroke="black"/><text id="xt4" x="0" y="22" text-anchor="middle"><tspan>20</tspan></text></g></g>
+ <g id="yTicks" font-size="12"><g transform="translate(0 260)"><path d="M -5 0 L 0 0" stroke="black"/><text id="yt0" x="-10" y="0" text-anchor="end"><tspan>1</tspan></text></g><g transform="translate(0 130)"><path d="M -5 0 L 0 0" stroke="black"/><text id="yt1" x="-10" y="0" text-anchor="end"><tspan>10</tspan></text></g><g transform="translate(0 0)"><path d="M -5 0 L 0 0" stroke="black"/><text id="yt2" x="-10" y="0" text-anchor="end"><tspan>100</tspan></text></g></g>
+ <g clip-path="url(#plotClip)"><g transform="translate(20 -5) scale(.8 1.1)">
+  <polyline id="seriesA" fill="none" stroke="#1460aa" points="-43.750000,227.272727 12.500000,204.545455 68.750000,159.090909 150.000000,136.363636 237.500000,90.909091 318.750000,122.727273 393.750000,31.818182 468.750000,-4.545455 537.500000,50.000000"/>
+ </g><path id="seriesB" fill="none" stroke="#b1452e" d="M -20 200 L 60 180 L 135 205 L 205 125 L 280 80 L 355 60 L 445 20"/></g>
+ <text x="150" y="310">elapsed minutes</text><text x="-90" y="-20">response (log)</text>
+</g></svg>

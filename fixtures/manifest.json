@@ -1,0 +1,64 @@
+{
+  "charts": [
+    {
+      "file": "chart.svg",
+      "axes": {
+        "x": {
+          "ticks": [
+            "xt0",
+            "xt1",
+            "xt2",
+            "xt3",
+            "xt4"
+          ],
+          "scale": "linear",
+          "coordinate": "x"
+        },
+        "y": {
+          "ticks": [
+            "yt0",
+            "yt1",
+            "yt2"
+          ],
+          "scale": "log10",
+          "coordinate": "y"
+        }
+      },
+      "plot_frame": "chart",
+      "series": [
+        "seriesA",
+        "seriesB"
+      ]
+    },
+    {
+      "file": "linear.svg",
+      "axes": {
+        "x": {
+          "ticks": [
+            "x0",
+            "x1",
+            "x2"
+          ],
+          "scale": "linear",
+          "coordinate": "x"
+        },
+        "y": {
+          "ticks": [
+            "y0",
+            "y1",
+            "y2"
+          ],
+          "scale": "linear",
+          "coordinate": "y"
+        }
+      },
+      "plot_frame": null,
+      "series": [
+        "line"
+      ]
+    }
+  ],
+  "anchor_semantics": "tick数值由text/tspan文本读取；text的(x,y)是刻度锚点，垂直于本轴的标签偏移不参与该轴数值拟合。plot_frame若为空，使用ticks共享祖先的局部坐标。",
+  "supported": "single SVG namespace; translate/scale/rotate transforms; text/tspan; polyline; absolute M/L path; rectangular userSpaceOnUse clips; nested groups",
+  "fit_tolerance": "report both fit residual in plot units and its value-unit consequence; reject incompatible ticks beyond declared numerical tolerance"
+}
