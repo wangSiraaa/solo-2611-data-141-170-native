@@ -1,5 +1,5 @@
-# Data engineering task inputs: 141-170
+# 题 142 输入材料
 
-Each question has its own branch and frozen initial commit. Task-specific README and input fixtures are supplied in that branch. The full task prompt is provided separately for each independent session.
+先运行 `python3 fixtures/prepare.py work-input` 创建独立 report.sqlite，再按 query.sql 和 plan.json 分析。allowed_changes.json 声明允许修改的条件与参数，不是建议答案。不得修改输入库。
 
-The base contains environment documentation only. Use Python 3.11 and any dependencies explicitly needed by the question; PostgreSQL 16 and SQLite are available. See environment/README.md for native local database setup.
+这些文件是输入与必要环境，不含题目核心实现、参考输出或独立答案。相对路径以题目仓库根为准。所有数据为合成数据。

@@ -1,0 +1,20 @@
+{
+  "parameter_alternatives": {
+    "min_amount": [
+      1000,
+      2000
+    ]
+  },
+  "removable_predicates": [
+    {
+      "id": "customer_active",
+      "sql": "c.active = 1"
+    },
+    {
+      "id": "payment_status",
+      "sql": "p.status = :paid_status"
+    }
+  ],
+  "cost": "each changed parameter or removed predicate costs one",
+  "operation": "remove an atomic predicate by replacing that AST occurrence with TRUE, preserve surrounding boolean structure"
+}

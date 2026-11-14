@@ -1,0 +1,15 @@
+{
+  "parameters": {
+    "min_amount": 3000,
+    "paid_status": "paid"
+  },
+  "target_table": "orders",
+  "target_pk": "order_id",
+  "targets": [
+    "O2",
+    "O3",
+    "O4",
+    "O5"
+  ],
+  "result_identity_column": "order_id"
+}
