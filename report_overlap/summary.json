@@ -1,0 +1,461 @@
+{
+  "chain_recovery": {
+    "parameters": [
+      "location",
+      "sticky",
+      "separated_modes",
+      "heavy_tail",
+      "constant"
+    ],
+    "valid_chain_ids": [
+      "c1",
+      "c2",
+      "c3",
+      "c4"
+    ],
+    "common_length": 540,
+    "decision_limits": {
+      "rhat": 1.01,
+      "bulk_ess": 400.0,
+      "tail_ess": 400.0
+    },
+    "notes": [
+      "共同保留长度 L=540；各链丢弃尾部样本数: {'c1': 60, 'c2': 40, 'c3': 20, 'c4': 0}。"
+    ],
+    "chains": [
+      {
+        "chain_id": "c1",
+        "status": "valid",
+        "problems": [],
+        "warmup_end": 120,
+        "thin": 1,
+        "fragments": [
+          {
+            "chain_id": "c1",
+            "path": "chains/c1-part1.csv",
+            "declared_start_iteration": 1,
+            "declared_end_iteration": 240,
+            "warmup_end": 120,
+            "thin": 1,
+            "n_rows": 240,
+            "first_iteration": 1,
+            "last_iteration": 240,
+            "duplicates_removed": 0,
+            "status": "ok",
+            "problems": []
+          },
+          {
+            "chain_id": "c1",
+            "path": "../cases/c1-overlap.csv",
+            "declared_start_iteration": 241,
+            "declared_end_iteration": 244,
+            "warmup_end": 120,
+            "thin": 1,
+            "n_rows": 4,
+            "first_iteration": 241,
+            "last_iteration": 244,
+            "duplicates_removed": 0,
+            "status": "ok",
+            "problems": []
+          },
+          {
+            "chain_id": "c1",
+            "path": "chains/c1-part2.csv",
+            "declared_start_iteration": 241,
+            "declared_end_iteration": 480,
+            "warmup_end": 120,
+            "thin": 1,
+            "n_rows": 240,
+            "first_iteration": 241,
+            "last_iteration": 480,
+            "duplicates_removed": 4,
+            "status": "ok",
+            "problems": [
+              "与其他片段完全重复 4 行，已去重（仅计一次）"
+            ]
+          },
+          {
+            "chain_id": "c1",
+            "path": "chains/c1-part3.csv",
+            "declared_start_iteration": 481,
+            "declared_end_iteration": 720,
+            "warmup_end": 120,
+            "thin": 1,
+            "n_rows": 240,
+            "first_iteration": 481,
+            "last_iteration": 720,
+            "duplicates_removed": 0,
+            "status": "ok",
+            "problems": []
+          }
+        ],
+        "n_rows_loaded": 724,
+        "n_duplicates_removed": 4,
+        "n_warmup_removed": 120,
+        "n_retained_after_warmup": 600,
+        "retained_first_iteration": 121,
+        "retained_last_iteration": 720,
+        "common_length_used": 540,
+        "n_discarded_tail": 60
+      },
+      {
+        "chain_id": "c2",
+        "status": "valid",
+        "problems": [],
+        "warmup_end": 140,
+        "thin": 1,
+        "fragments": [
+          {
+            "chain_id": "c2",
+            "path": "chains/c2-part1.csv",
+            "declared_start_iteration": 1,
+            "declared_end_iteration": 240,
+            "warmup_end": 140,
+            "thin": 1,
+            "n_rows": 240,
+            "first_iteration": 1,
+            "last_iteration": 240,
+            "duplicates_removed": 0,
+            "status": "ok",
+            "problems": []
+          },
+          {
+            "chain_id": "c2",
+            "path": "chains/c2-part2.csv",
+            "declared_start_iteration": 241,
+            "declared_end_iteration": 480,
+            "warmup_end": 140,
+            "thin": 1,
+            "n_rows": 240,
+            "first_iteration": 241,
+            "last_iteration": 480,
+            "duplicates_removed": 0,
+            "status": "ok",
+            "problems": []
+          },
+          {
+            "chain_id": "c2",
+            "path": "chains/c2-part3.csv",
+            "declared_start_iteration": 481,
+            "declared_end_iteration": 720,
+            "warmup_end": 140,
+            "thin": 1,
+            "n_rows": 240,
+            "first_iteration": 481,
+            "last_iteration": 720,
+            "duplicates_removed": 0,
+            "status": "ok",
+            "problems": []
+          }
+        ],
+        "n_rows_loaded": 720,
+        "n_duplicates_removed": 0,
+        "n_warmup_removed": 140,
+        "n_retained_after_warmup": 580,
+        "retained_first_iteration": 141,
+        "retained_last_iteration": 720,
+        "common_length_used": 540,
+        "n_discarded_tail": 40
+      },
+      {
+        "chain_id": "c3",
+        "status": "valid",
+        "problems": [],
+        "warmup_end": 160,
+        "thin": 1,
+        "fragments": [
+          {
+            "chain_id": "c3",
+            "path": "chains/c3-part1.csv",
+            "declared_start_iteration": 1,
+            "declared_end_iteration": 240,
+            "warmup_end": 160,
+            "thin": 1,
+            "n_rows": 240,
+            "first_iteration": 1,
+            "last_iteration": 240,
+            "duplicates_removed": 0,
+            "status": "ok",
+            "problems": []
+          },
+          {
+            "chain_id": "c3",
+            "path": "chains/c3-part2.csv",
+            "declared_start_iteration": 241,
+            "declared_end_iteration": 480,
+            "warmup_end": 160,
+            "thin": 1,
+            "n_rows": 240,
+            "first_iteration": 241,
+            "last_iteration": 480,
+            "duplicates_removed": 0,
+            "status": "ok",
+            "problems": []
+          },
+          {
+            "chain_id": "c3",
+            "path": "chains/c3-part3.csv",
+            "declared_start_iteration": 481,
+            "declared_end_iteration": 720,
+            "warmup_end": 160,
+            "thin": 1,
+            "n_rows": 240,
+            "first_iteration": 481,
+            "last_iteration": 720,
+            "duplicates_removed": 0,
+            "status": "ok",
+            "problems": []
+          }
+        ],
+        "n_rows_loaded": 720,
+        "n_duplicates_removed": 0,
+        "n_warmup_removed": 160,
+        "n_retained_after_warmup": 560,
+        "retained_first_iteration": 161,
+        "retained_last_iteration": 720,
+        "common_length_used": 540,
+        "n_discarded_tail": 20
+      },
+      {
+        "chain_id": "c4",
+        "status": "valid",
+        "problems": [],
+        "warmup_end": 180,
+        "thin": 1,
+        "fragments": [
+          {
+            "chain_id": "c4",
+            "path": "chains/c4-part1.csv",
+            "declared_start_iteration": 1,
+            "declared_end_iteration": 240,
+            "warmup_end": 180,
+            "thin": 1,
+            "n_rows": 240,
+            "first_iteration": 1,
+            "last_iteration": 240,
+            "duplicates_removed": 0,
+            "status": "ok",
+            "problems": []
+          },
+          {
+            "chain_id": "c4",
+            "path": "chains/c4-part2.csv",
+            "declared_start_iteration": 241,
+            "declared_end_iteration": 480,
+            "warmup_end": 180,
+            "thin": 1,
+            "n_rows": 240,
+            "first_iteration": 241,
+            "last_iteration": 480,
+            "duplicates_removed": 0,
+            "status": "ok",
+            "problems": []
+          },
+          {
+            "chain_id": "c4",
+            "path": "chains/c4-part3.csv",
+            "declared_start_iteration": 481,
+            "declared_end_iteration": 720,
+            "warmup_end": 180,
+            "thin": 1,
+            "n_rows": 240,
+            "first_iteration": 481,
+            "last_iteration": 720,
+            "duplicates_removed": 0,
+            "status": "ok",
+            "problems": []
+          }
+        ],
+        "n_rows_loaded": 720,
+        "n_duplicates_removed": 0,
+        "n_warmup_removed": 180,
+        "n_retained_after_warmup": 540,
+        "retained_first_iteration": 181,
+        "retained_last_iteration": 720,
+        "common_length_used": 540,
+        "n_discarded_tail": 0
+      }
+    ]
+  },
+  "parameters": {
+    "location": {
+      "metrics": {
+        "n_chains": 4,
+        "n_draws_per_chain": 540,
+        "mean": -0.034232728359076106,
+        "sd": 0.9388837358054882,
+        "q05": -1.55684863535,
+        "q25": -0.6510817049000001,
+        "q50": -0.059285030615,
+        "q75": 0.587637781025,
+        "q95": 1.4840444532999997,
+        "rhat_rank": 1.0013909350643857,
+        "rhat_folded": 1.0010180164354245,
+        "rhat_max": 1.0013909350643857,
+        "ess_bulk": 635.7612752662674,
+        "ess_tail": 1161.021878052349,
+        "ess_mean": 636.5122406453916,
+        "mcse_mean": 0.03721417845821315,
+        "nonfinite": false,
+        "all_constant": false,
+        "chain_constant_differs": false
+      },
+      "verdict": {
+        "status": "OK_NO_ISSUE_DETECTED",
+        "pattern": "ok",
+        "failed_checks": [],
+        "explanation": "R-hat 与 bulk/tail ESS 均通过复核阈值：这些有限诊断未发现问题（不证明收敛或后验模型正确）。",
+        "limits": {
+          "rhat": 1.01,
+          "bulk_ess": 400.0,
+          "tail_ess": 400.0
+        }
+      }
+    },
+    "sticky": {
+      "metrics": {
+        "n_chains": 4,
+        "n_draws_per_chain": 540,
+        "mean": -0.3299679172176226,
+        "sd": 0.8780998975744259,
+        "q05": -1.75682707715,
+        "q25": -0.8655880137249999,
+        "q50": -0.33833282215,
+        "q75": 0.26240899595,
+        "q95": 1.1077239025999994,
+        "rhat_rank": 1.193252299035992,
+        "rhat_folded": 1.0672002620067873,
+        "rhat_max": 1.193252299035992,
+        "ess_bulk": 22.243599916282015,
+        "ess_tail": 83.35712400243852,
+        "ess_mean": 22.273720178506316,
+        "mcse_mean": 0.18605765664172216,
+        "nonfinite": false,
+        "all_constant": false,
+        "chain_constant_differs": false
+      },
+      "verdict": {
+        "status": "CHAINS_DISAGREE",
+        "pattern": "chains_disagree_and_low_ess",
+        "failed_checks": [
+          "rhat",
+          "bulk_ess",
+          "tail_ess"
+        ],
+        "explanation": "链间不一致：rhat_max 超过阈值，各链可能卡在不同模式或尚未平稳，链间合并估计尚不可信。同时 bulk/tail ESS 低于阈值：有效信息量不足；强自相关也会抬高 R-hat，需延长抽样后复查才能区分“混合慢”与“多模式”。",
+        "limits": {
+          "rhat": 1.01,
+          "bulk_ess": 400.0,
+          "tail_ess": 400.0
+        }
+      }
+    },
+    "separated_modes": {
+      "metrics": {
+        "n_chains": 4,
+        "n_draws_per_chain": 540,
+        "mean": 0.0059013378013888645,
+        "sd": 3.0084303865151347,
+        "q05": -3.25133393225,
+        "q25": -2.9986832665,
+        "q50": 0.03247104849999971,
+        "q75": 3.014413216,
+        "q95": 3.2575084506999996,
+        "rhat_rank": 1.7329155676746881,
+        "rhat_folded": 1.0089710309802713,
+        "rhat_max": 1.7329155676746881,
+        "ess_bulk": 2.8993183220718866,
+        "ess_tail": 53.9019026675591,
+        "ess_mean": 2.009051338253362,
+        "mcse_mean": 2.1224841183531247,
+        "nonfinite": false,
+        "all_constant": false,
+        "chain_constant_differs": false
+      },
+      "verdict": {
+        "status": "CHAINS_DISAGREE",
+        "pattern": "chains_disagree_and_low_ess",
+        "failed_checks": [
+          "rhat",
+          "bulk_ess",
+          "tail_ess"
+        ],
+        "explanation": "链间不一致：rhat_max 超过阈值，各链可能卡在不同模式或尚未平稳，链间合并估计尚不可信。rank R-hat 明显高于 folded R-hat，呈链间位置/模式漂移特征（各链各自平稳却卡在不同位置，而非尺度差异）。同时 bulk/tail ESS 低于阈值：有效信息量不足；强自相关也会抬高 R-hat，需延长抽样后复查才能区分“混合慢”与“多模式”。",
+        "limits": {
+          "rhat": 1.01,
+          "bulk_ess": 400.0,
+          "tail_ess": 400.0
+        }
+      }
+    },
+    "heavy_tail": {
+      "metrics": {
+        "n_chains": 4,
+        "n_draws_per_chain": 540,
+        "mean": -0.07083596879908816,
+        "sd": 1.6592708846019597,
+        "q05": -2.4110005006999997,
+        "q25": -0.805362537825,
+        "q50": -0.011929629439999999,
+        "q75": 0.700053319475,
+        "q95": 2.235995633999999,
+        "rhat_rank": 0.9989911051590835,
+        "rhat_folded": 1.0012289985525373,
+        "rhat_max": 1.0012289985525373,
+        "ess_bulk": 2259.564651703884,
+        "ess_tail": 2179.795309217039,
+        "ess_mean": 2335.4941783289514,
+        "mcse_mean": 0.034334276329538255,
+        "nonfinite": false,
+        "all_constant": false,
+        "chain_constant_differs": false
+      },
+      "verdict": {
+        "status": "OK_NO_ISSUE_DETECTED",
+        "pattern": "ok",
+        "failed_checks": [],
+        "explanation": "R-hat 与 bulk/tail ESS 均通过复核阈值：这些有限诊断未发现问题（不证明收敛或后验模型正确）。",
+        "limits": {
+          "rhat": 1.01,
+          "bulk_ess": 400.0,
+          "tail_ess": 400.0
+        }
+      }
+    },
+    "constant": {
+      "metrics": {
+        "n_chains": 4,
+        "n_draws_per_chain": 540,
+        "mean": 5.0,
+        "sd": 0.0,
+        "q05": 5.0,
+        "q25": 5.0,
+        "q50": 5.0,
+        "q75": 5.0,
+        "q95": 5.0,
+        "rhat_rank": NaN,
+        "rhat_folded": NaN,
+        "rhat_max": NaN,
+        "ess_bulk": NaN,
+        "ess_tail": NaN,
+        "ess_mean": NaN,
+        "mcse_mean": 0.0,
+        "nonfinite": false,
+        "all_constant": true,
+        "chain_constant_differs": false
+      },
+      "verdict": {
+        "status": "CONSTANT_ALL_CHAINS",
+        "pattern": "degenerate",
+        "failed_checks": [],
+        "explanation": "参数在全部链中为同一常量：R-hat/ESS 无定义（非“通过”），均值即常量、MCSE 为 0。",
+        "limits": {
+          "rhat": 1.01,
+          "bulk_ess": 400.0,
+          "tail_ess": 400.0
+        }
+      }
+    }
+  },
+  "disclaimer": "decision_limits 仅为复核辅助；全部通过只说明这些有限诊断未发现问题，不能证明收敛或后验模型正确。"
+}
