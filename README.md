@@ -1,5 +1,7 @@
-# Data engineering task inputs: 141-170
+# 有限候选基因树
 
-Each question has its own branch and frozen initial commit. Task-specific README and input fixtures are supplied in that branch. The full task prompt is provided separately for each independent session.
+本目录仅含题目输入，不含待实现程序。全部材料为本地合成，无真实个人或仪器数据。Python 3.11；若使用列出的库，可执行 `python -m pip install -r requirements.txt`。无需 Docker、账号或网络数据下载。
 
-The base contains environment documentation only. Use Python 3.11 and any dependencies explicitly needed by the question; PostgreSQL 16 and SQLite are available. See environment/README.md for native local database setup.
+aligned FASTA 的五条序列已对齐且等长，N 视为该位点未知，不视为第五种碱基。Newick 每行一棵候选，无根二叉树用三叉根序列化；所有叶名恰好为 FASTA 的同一集合。输入枝长只作初始化，应在声明界内重新拟合。
+
+JC69 的同态转移概率为 1/4+3/4 exp(-4t/3)，异态为 1/4-1/4 exp(-4t/3)，根状态均匀。比较同一 bootstrap 位点样本的全部候选，不做拓扑搜索、序列对齐或贝叶斯后验推断。

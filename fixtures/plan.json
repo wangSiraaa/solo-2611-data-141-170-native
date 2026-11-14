@@ -1,0 +1,19 @@
+{
+  "model": "JC69",
+  "cases": [
+    "resolved.fasta",
+    "weak.fasta"
+  ],
+  "candidate_file": "candidates.nwk",
+  "tree_type": "unrooted binary; Newick serialization root has three children",
+  "branch_bounds": [
+    1e-05,
+    1.5
+  ],
+  "bootstrap_replicates": 24,
+  "bootstrap_seed": 271828,
+  "alphabet": "ACGTN; N has emission likelihood 1 for every latent base",
+  "site_independence": true,
+  "candidate_branch_lengths": "initial values; refit for each dataset and each shared bootstrap sample",
+  "posterior_probability_claim": false
+}
