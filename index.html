@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:,">
+  <title>只读宽表浏览器（800 × 64）</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#grid">跳到数据表</a>
+
+  <header class="page-header">
+    <h1>只读宽表浏览器</h1>
+    <p class="subtitle">
+      800 行 × 64 列 · 前两列固定 · 行与列均虚拟化 ·
+      <span id="hint">方向键移动，Home/End，Ctrl+Home/End，PageUp/PageDown，Tab 离开表格</span>
+    </p>
+  </header>
+
+  <main>
+    <div class="table-shell">
+      <div id="grid"
+           role="grid"
+           tabindex="0"
+           aria-readonly="true"
+           aria-label="只读数据表"
+           aria-rowcount="0"
+           aria-colcount="0">
+        <div class="loading" id="loading">正在加载 fixtures/columns.json 与 fixtures/rows.json…</div>
+      </div>
+    </div>
+
+    <div class="status-bar" id="status" role="note">尚未载入数据</div>
+
+    <section class="inspector" aria-label="当前单元格完整信息">
+      <div class="inspector-line">
+        <span class="inspector-key">当前单元格</span>
+        <span id="active-meta" class="inspector-meta">—</span>
+      </div>
+      <div class="inspector-line">
+        <span class="inspector-key">完整值</span>
+        <code id="active-value" class="inspector-value">—</code>
+      </div>
+      <div class="inspector-line">
+        <span class="inspector-key">虚拟化</span>
+        <span id="dom-stats" class="inspector-meta">—</span>
+      </div>
+    </section>
+
+    <section class="notes" id="notes" aria-label="使用说明">
+      <p>
+        本页只读：无编辑、筛选、排序或图表。固定列为前两列，表头固定。
+        焦点停留在表格容器上，通过 <code>aria-activedescendant</code> 指向当前单元格；
+        移动到尚未挂载的单元格时会先横向/纵向滚动并挂载，再更新活动单元格。
+      </p>
+      <p>
+        <a href="fixtures/columns.json">columns.json</a> ·
+        <a href="fixtures/rows.json">rows.json</a>
+      </p>
+    </section>
+  </main>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

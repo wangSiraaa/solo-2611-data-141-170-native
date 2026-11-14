@@ -1,0 +1,13 @@
+{
+  "name": "virtualized-wide-table",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Read-only, row+column virtualized 800x64 table with pinned columns and header",
+  "scripts": {
+    "start": "python3 fixtures/serve.py --port 8148",
+    "test": "node tests/verify.js && node tests/sweep.js && node tests/mount-peak.js"
+  },
+  "dependencies": {
+    "playwright": "^1.65.1"
+  }
+}
