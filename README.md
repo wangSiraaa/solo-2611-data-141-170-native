@@ -1,5 +1,7 @@
-# Data engineering task inputs: 141-170
+# 配对 FASTQ 输入
 
-Each question has its own branch and frozen initial commit. Task-specific README and input fixtures are supplied in that branch. The full task prompt is provided separately for each independent session.
+本目录仅含题目输入，不含待实现程序。全部材料为本地合成，无真实个人或仪器数据。Python 3.11；若使用列出的库，可执行 `python -m pip install -r requirements.txt`。无需 Docker、账号或网络数据下载。
 
-The base contains environment documentation only. Use Python 3.11 and any dependencies explicitly needed by the question; PostgreSQL 16 and SQLite are available. See environment/README.md for native local database setup.
+`fixtures/reads_R1.fastq` 与 R2 按去掉 `/1`、`/2` 后的完整名字配对，行序不同。不存在的 mate 应作为孤儿保留。
+
+plan 给出支持边界，序列是 A/C/G/T/N，质量字符是 Phred+33。R2 是第二端实际测到的方向，需同时反向互补碱基并反转质量。输入有重叠冲突、重复序列和无重叠片段。位置证据与碱基质量是不同层次，无法识别位置时不能发布确定共识。

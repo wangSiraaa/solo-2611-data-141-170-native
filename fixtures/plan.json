@@ -1,0 +1,13 @@
+{
+  "encoding": "Phred+33",
+  "mate_name_suffixes": [
+    "/1",
+    "/2"
+  ],
+  "min_overlap": 20,
+  "max_overlap": 95,
+  "consensus_quality_cap": 60,
+  "input_order": "not_paired_by_row",
+  "model": "each observed non-N base has error probability 10**(-Q/10), wrong alternatives equiprobable; N is uninformative",
+  "no_indels": true
+}
