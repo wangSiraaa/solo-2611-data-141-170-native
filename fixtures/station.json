@@ -1,0 +1,7 @@
+{
+  "station_id": "synthetic_site",
+  "latitude_deg": 35.0,
+  "longitude_deg_east": 105.0,
+  "ellipsoid_height_m": 300.0,
+  "datum": "WGS84"
+}

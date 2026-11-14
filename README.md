@@ -1,5 +1,11 @@
-# Data engineering task inputs: 141-170
+# 卫星通信窗口输入
 
-Each question has its own branch and frozen initial commit. Task-specific README and input fixtures are supplied in that branch. The full task prompt is provided separately for each independent session.
+本目录仅含合成题目材料，不含窗口求解器。TLE 是本地构造的教学近地轨道，不对应真实卫星；站点也是测试配置，不用于实际通信决策。Python 3.11，可用 requirements.txt 的原生 pip 库。无需 Docker 或下载星历、时标、EOP。
 
-The base contains environment documentation only. Use Python 3.11 and any dependencies explicitly needed by the question; PostgreSQL 16 and SQLite are available. See environment/README.md for native local database setup.
+SGP4 返回 TEME 位置（km）。本题明确使用简化链：UTC 当 UT1、极移=0，用 GMST 将 TEME 旋转到地固，再减 WGS84 椭球站点坐标并转 ENU，不加折射。它是本题统一数值模型，不要求高精度天文坐标全标准。
+
+设 J 为 UTC Julian day，D=J−2451545.0，T=D/36525。GMST（度）为 `(280.46061837 + 360.98564736629*D + 0.000387933*T*T - T*T*T/38710000) mod 360`。地固 x=cos(theta)*xTEME+sin(theta)*yTEME，y=−sin(theta)*xTEME+cos(theta)*yTEME，z不变。WGS84 a=6378.137 km，f=1/298.257223563；站点 height 为椭球高（m），不是海拔。
+
+horizon.csv 的方位度从真北顺时针，遮挡高度度为几何仰角；按方位循环分段线性插值，最后节点连接第一节点跨过360°。该遮挡曲线包括窄高障碍，可能把一次过境切成多个可见子区间。不要把方位的359°到1°当成倒退358°。时间范围半开，边界求解容差0.2秒，切点本身不构成正长度窗口。
+
+仅发布轨道传播及遮挡模型支持的可见子区间，记录边界时刻的仰角、方位、遮挡阈值及切断原因。不要做天线调度、链路预算或轨道拟合。
