@@ -1,0 +1,83 @@
+{
+  "atoms": [
+    {
+      "atom_id": "m0a0",
+      "molecule_id": "m0",
+      "mass": 12
+    },
+    {
+      "atom_id": "m0a1",
+      "molecule_id": "m0",
+      "mass": 1
+    },
+    {
+      "atom_id": "m1a0",
+      "molecule_id": "m1",
+      "mass": 12
+    },
+    {
+      "atom_id": "m1a1",
+      "molecule_id": "m1",
+      "mass": 1
+    },
+    {
+      "atom_id": "m1a2",
+      "molecule_id": "m1",
+      "mass": 1
+    },
+    {
+      "atom_id": "m2a0",
+      "molecule_id": "m2",
+      "mass": 12
+    },
+    {
+      "atom_id": "m2a1",
+      "molecule_id": "m2",
+      "mass": 1
+    },
+    {
+      "atom_id": "m2a2",
+      "molecule_id": "m2",
+      "mass": 1
+    },
+    {
+      "atom_id": "m2a3",
+      "molecule_id": "m2",
+      "mass": 1
+    }
+  ],
+  "bonds_zero_based": [
+    [
+      0,
+      1
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      4,
+      2
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      6,
+      7
+    ],
+    [
+      7,
+      8
+    ],
+    [
+      8,
+      5
+    ]
+  ]
+}

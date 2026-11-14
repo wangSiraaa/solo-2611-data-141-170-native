@@ -1,0 +1,14 @@
+{
+  "cell_vectors": "columns",
+  "max_bond_nm": 1.2,
+  "max_com_speed_nm_per_ps": 2.8,
+  "max_gap_ps": 3,
+  "mass_unit": "relative atomic mass",
+  "lag_times_ps": [
+    1,
+    2,
+    3
+  ],
+  "lag_tolerance_ps": 1e-08,
+  "continuity": "unique lattice translation within displacement radius; otherwise break"
+}

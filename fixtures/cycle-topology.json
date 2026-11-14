@@ -1,0 +1,34 @@
+{
+  "atoms": [
+    {
+      "atom_id": "c0",
+      "molecule_id": "cycle",
+      "mass": 1
+    },
+    {
+      "atom_id": "c1",
+      "molecule_id": "cycle",
+      "mass": 1
+    },
+    {
+      "atom_id": "c2",
+      "molecule_id": "cycle",
+      "mass": 1
+    }
+  ],
+  "bonds_zero_based": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      0
+    ]
+  ],
+  "max_bond_nm": 3.6
+}
