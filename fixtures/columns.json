@@ -1,0 +1,456 @@
+{
+  "row_height_px": 32,
+  "columns": [
+    {
+      "id": "c00",
+      "label": "记录号",
+      "type": "text",
+      "width_px": 120,
+      "pinned": true
+    },
+    {
+      "id": "c01",
+      "label": "名称",
+      "type": "text",
+      "width_px": 210,
+      "pinned": true
+    },
+    {
+      "id": "c02",
+      "label": "字段 02",
+      "type": "date",
+      "width_px": 105,
+      "pinned": false
+    },
+    {
+      "id": "c03",
+      "label": "字段 03",
+      "type": "boolean",
+      "width_px": 90,
+      "pinned": false
+    },
+    {
+      "id": "c04",
+      "label": "字段 04",
+      "type": "text",
+      "width_px": 180,
+      "pinned": false
+    },
+    {
+      "id": "c05",
+      "label": "字段 05",
+      "type": "integer",
+      "width_px": 110,
+      "pinned": false
+    },
+    {
+      "id": "c06",
+      "label": "字段 06",
+      "type": "text",
+      "width_px": 120,
+      "pinned": false
+    },
+    {
+      "id": "c07",
+      "label": "字段 07",
+      "type": "decimal",
+      "width_px": 210,
+      "pinned": false
+    },
+    {
+      "id": "c08",
+      "label": "字段 08",
+      "type": "date",
+      "width_px": 105,
+      "pinned": false
+    },
+    {
+      "id": "c09",
+      "label": "字段 09",
+      "type": "boolean",
+      "width_px": 90,
+      "pinned": false
+    },
+    {
+      "id": "c10",
+      "label": "字段 10",
+      "type": "text",
+      "width_px": 180,
+      "pinned": false
+    },
+    {
+      "id": "c11",
+      "label": "字段 11",
+      "type": "integer",
+      "width_px": 110,
+      "pinned": false
+    },
+    {
+      "id": "c12",
+      "label": "字段 12",
+      "type": "text",
+      "width_px": 120,
+      "pinned": false
+    },
+    {
+      "id": "c13",
+      "label": "字段 13",
+      "type": "decimal",
+      "width_px": 210,
+      "pinned": false
+    },
+    {
+      "id": "c14",
+      "label": "字段 14",
+      "type": "date",
+      "width_px": 105,
+      "pinned": false
+    },
+    {
+      "id": "c15",
+      "label": "字段 15",
+      "type": "boolean",
+      "width_px": 90,
+      "pinned": false
+    },
+    {
+      "id": "c16",
+      "label": "字段 16",
+      "type": "text",
+      "width_px": 180,
+      "pinned": false
+    },
+    {
+      "id": "c17",
+      "label": "字段 17",
+      "type": "integer",
+      "width_px": 110,
+      "pinned": false
+    },
+    {
+      "id": "c18",
+      "label": "字段 18",
+      "type": "text",
+      "width_px": 120,
+      "pinned": false
+    },
+    {
+      "id": "c19",
+      "label": "字段 19",
+      "type": "decimal",
+      "width_px": 210,
+      "pinned": false
+    },
+    {
+      "id": "c20",
+      "label": "字段 20",
+      "type": "date",
+      "width_px": 105,
+      "pinned": false
+    },
+    {
+      "id": "c21",
+      "label": "字段 21",
+      "type": "boolean",
+      "width_px": 90,
+      "pinned": false
+    },
+    {
+      "id": "c22",
+      "label": "字段 22",
+      "type": "text",
+      "width_px": 180,
+      "pinned": false
+    },
+    {
+      "id": "c23",
+      "label": "字段 23",
+      "type": "integer",
+      "width_px": 110,
+      "pinned": false
+    },
+    {
+      "id": "c24",
+      "label": "字段 24",
+      "type": "text",
+      "width_px": 120,
+      "pinned": false
+    },
+    {
+      "id": "c25",
+      "label": "字段 25",
+      "type": "decimal",
+      "width_px": 210,
+      "pinned": false
+    },
+    {
+      "id": "c26",
+      "label": "字段 26",
+      "type": "date",
+      "width_px": 105,
+      "pinned": false
+    },
+    {
+      "id": "c27",
+      "label": "字段 27",
+      "type": "boolean",
+      "width_px": 90,
+      "pinned": false
+    },
+    {
+      "id": "c28",
+      "label": "字段 28",
+      "type": "text",
+      "width_px": 180,
+      "pinned": false
+    },
+    {
+      "id": "c29",
+      "label": "字段 29",
+      "type": "integer",
+      "width_px": 110,
+      "pinned": false
+    },
+    {
+      "id": "c30",
+      "label": "字段 30",
+      "type": "text",
+      "width_px": 120,
+      "pinned": false
+    },
+    {
+      "id": "c31",
+      "label": "字段 31",
+      "type": "decimal",
+      "width_px": 210,
+      "pinned": false
+    },
+    {
+      "id": "c32",
+      "label": "字段 32",
+      "type": "date",
+      "width_px": 105,
+      "pinned": false
+    },
+    {
+      "id": "c33",
+      "label": "字段 33",
+      "type": "boolean",
+      "width_px": 90,
+      "pinned": false
+    },
+    {
+      "id": "c34",
+      "label": "字段 34",
+      "type": "text",
+      "width_px": 180,
+      "pinned": false
+    },
+    {
+      "id": "c35",
+      "label": "字段 35",
+      "type": "integer",
+      "width_px": 110,
+      "pinned": false
+    },
+    {
+      "id": "c36",
+      "label": "字段 36",
+      "type": "text",
+      "width_px": 120,
+      "pinned": false
+    },
+    {
+      "id": "c37",
+      "label": "字段 37",
+      "type": "decimal",
+      "width_px": 210,
+      "pinned": false
+    },
+    {
+      "id": "c38",
+      "label": "字段 38",
+      "type": "date",
+      "width_px": 105,
+      "pinned": false
+    },
+    {
+      "id": "c39",
+      "label": "字段 39",
+      "type": "boolean",
+      "width_px": 90,
+      "pinned": false
+    },
+    {
+      "id": "c40",
+      "label": "字段 40",
+      "type": "text",
+      "width_px": 180,
+      "pinned": false
+    },
+    {
+      "id": "c41",
+      "label": "字段 41",
+      "type": "integer",
+      "width_px": 110,
+      "pinned": false
+    },
+    {
+      "id": "c42",
+      "label": "字段 42",
+      "type": "text",
+      "width_px": 120,
+      "pinned": false
+    },
+    {
+      "id": "c43",
+      "label": "字段 43",
+      "type": "decimal",
+      "width_px": 210,
+      "pinned": false
+    },
+    {
+      "id": "c44",
+      "label": "字段 44",
+      "type": "date",
+      "width_px": 105,
+      "pinned": false
+    },
+    {
+      "id": "c45",
+      "label": "字段 45",
+      "type": "boolean",
+      "width_px": 90,
+      "pinned": false
+    },
+    {
+      "id": "c46",
+      "label": "字段 46",
+      "type": "text",
+      "width_px": 180,
+      "pinned": false
+    },
+    {
+      "id": "c47",
+      "label": "字段 47",
+      "type": "integer",
+      "width_px": 110,
+      "pinned": false
+    },
+    {
+      "id": "c48",
+      "label": "字段 48",
+      "type": "text",
+      "width_px": 120,
+      "pinned": false
+    },
+    {
+      "id": "c49",
+      "label": "字段 49",
+      "type": "decimal",
+      "width_px": 210,
+      "pinned": false
+    },
+    {
+      "id": "c50",
+      "label": "字段 50",
+      "type": "date",
+      "width_px": 105,
+      "pinned": false
+    },
+    {
+      "id": "c51",
+      "label": "字段 51",
+      "type": "boolean",
+      "width_px": 90,
+      "pinned": false
+    },
+    {
+      "id": "c52",
+      "label": "字段 52",
+      "type": "text",
+      "width_px": 180,
+      "pinned": false
+    },
+    {
+      "id": "c53",
+      "label": "字段 53",
+      "type": "integer",
+      "width_px": 110,
+      "pinned": false
+    },
+    {
+      "id": "c54",
+      "label": "字段 54",
+      "type": "text",
+      "width_px": 120,
+      "pinned": false
+    },
+    {
+      "id": "c55",
+      "label": "字段 55",
+      "type": "decimal",
+      "width_px": 210,
+      "pinned": false
+    },
+    {
+      "id": "c56",
+      "label": "字段 56",
+      "type": "date",
+      "width_px": 105,
+      "pinned": false
+    },
+    {
+      "id": "c57",
+      "label": "字段 57",
+      "type": "boolean",
+      "width_px": 90,
+      "pinned": false
+    },
+    {
+      "id": "c58",
+      "label": "字段 58",
+      "type": "text",
+      "width_px": 180,
+      "pinned": false
+    },
+    {
+      "id": "c59",
+      "label": "字段 59",
+      "type": "integer",
+      "width_px": 110,
+      "pinned": false
+    },
+    {
+      "id": "c60",
+      "label": "字段 60",
+      "type": "text",
+      "width_px": 120,
+      "pinned": false
+    },
+    {
+      "id": "c61",
+      "label": "字段 61",
+      "type": "decimal",
+      "width_px": 210,
+      "pinned": false
+    },
+    {
+      "id": "c62",
+      "label": "字段 62",
+      "type": "date",
+      "width_px": 105,
+      "pinned": false
+    },
+    {
+      "id": "c63",
+      "label": "字段 63",
+      "type": "boolean",
+      "width_px": 90,
+      "pinned": false
+    }
+  ],
+  "aria_contract": "header has rowindex 1; data rows have rowindex ordinal+2; colindex is 1-based including pinned columns",
+  "null_label": "(空值)",
+  "empty_string_label": "(空字符串)"
+}
