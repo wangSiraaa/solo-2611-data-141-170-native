@@ -1,0 +1,15 @@
+{
+  "blocks": [
+    {
+      "id": "day1",
+      "runs": 6
+    },
+    {
+      "id": "day2",
+      "runs": 6
+    }
+  ],
+  "locked_runs": "fixtures/locked_runs.csv",
+  "criterion": "choose and disclose an information-based criterion for the declared model; compare against a feasible baseline",
+  "seed": 1441
+}

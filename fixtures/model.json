@@ -1,0 +1,30 @@
+{
+  "terms": [
+    {
+      "kind": "intercept"
+    },
+    {
+      "factor": "temperature",
+      "power": 1
+    },
+    {
+      "factor": "concentration",
+      "power": 1
+    },
+    {
+      "factor": "catalyst"
+    },
+    {
+      "factor": "temperature",
+      "power": 2
+    },
+    {
+      "interaction": [
+        "temperature",
+        "concentration"
+      ]
+    }
+  ],
+  "include_block_effect": true,
+  "target_terms": "all declared treatment terms; block coefficient is nuisance"
+}

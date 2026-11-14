@@ -1,0 +1,3 @@
+run_id,block,temperature,concentration,catalyst
+L1,day1,20,0.2,A
+L2,day2,20,0.8,B

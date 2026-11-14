@@ -1,0 +1,9 @@
+{
+  "forbidden_all": [
+    {
+      "temperature": 60,
+      "catalyst": "B"
+    }
+  ],
+  "replicates": "at least one identical factor combination repeated within each block; repetitions consume run slots"
+}

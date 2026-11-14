@@ -1,0 +1,14 @@
+{
+  "blocks": [
+    {
+      "id": "day1",
+      "runs": 2
+    },
+    {
+      "id": "day2",
+      "runs": 2
+    }
+  ],
+  "locked_runs": "fixtures/locked_runs.csv",
+  "seed": 1441
+}
