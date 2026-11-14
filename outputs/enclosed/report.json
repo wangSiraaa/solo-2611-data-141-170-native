@@ -1,0 +1,42 @@
+{
+  "input": {
+    "dem": "/workspace/cases/enclosed.asc",
+    "outlets": null,
+    "nrows": 5,
+    "ncols": 5,
+    "cellsize_m": 10.0,
+    "cell_area_m2": 100.0,
+    "xllcorner": 500000.0,
+    "yllcorner": 3300000.0,
+    "nodata_value": -9999.0
+  },
+  "counts": {
+    "total_cells": 25,
+    "void_cells": 16,
+    "valid_cells": 9,
+    "resolved_cells": 0,
+    "unresolved_cells": 9,
+    "platter_cells": 0,
+    "spill_cells": 0,
+    "depression_modified_cells": 0,
+    "boundary_exit_cells": 0
+  },
+  "fill": {
+    "max_depth_m": 0.0,
+    "total_fill_volume_m3": 0.0,
+    "elevation_only_raised": true
+  },
+  "unresolved_components": [
+    0
+  ],
+  "unresolved_note": "封闭组件：被 nodata 完全包围、无有效外边界出口，未开洞、未指定内部终点，不参与流向与累计。",
+  "conservation": {
+    "unit_contribution_per_valid_resolved_cell": 1,
+    "resolved_unit_total": 0,
+    "boundary_exit_count_values": [],
+    "total_outflow_units": 0,
+    "conserved": true,
+    "check": "总出流 = 各边界出口累计值之和；绝不把内部累计值相加。"
+  },
+  "basins": []
+}

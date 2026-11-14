@@ -1,0 +1,57 @@
+{
+  "dem": "fixtures/dem.asc",
+  "outdir": "outputs/dem",
+  "all_passed": true,
+  "n_checks": 9,
+  "checks": [
+    {
+      "check": "V1.header_and_nodata",
+      "passed": true,
+      "detail": "14 个栅格头与 nodata 语义一致，形状 12x14"
+    },
+    {
+      "check": "V1.zero_is_valid",
+      "passed": true,
+      "detail": "零高程单元（若存在）按有效处理"
+    },
+    {
+      "check": "V2.fill_and_closed_components",
+      "passed": true,
+      "detail": "填洼逐格一致；封闭组件 [] 标记未解决且未被改动/开洞"
+    },
+    {
+      "check": "V3a.d8_slope",
+      "passed": true,
+      "detail": "严格下坡接收格按最大坡度/最小方向码独立复算一致"
+    },
+    {
+      "check": "V3b.flat_bfs_evidence",
+      "passed": true,
+      "detail": "平坦区 dist_lower/dist_higher 独立 BFS 一致"
+    },
+    {
+      "check": "V3c.receiver_chains",
+      "passed": true,
+      "detail": "165 条链全部终止于合法边界出流，无环、不穿 nodata；未解决单元无接收格"
+    },
+    {
+      "check": "V4.accumulation_by_source_tracing",
+      "passed": true,
+      "detail": "逐源走链独立累加与 accum_count/accum_area_m2 一致（含自身贡献）"
+    },
+    {
+      "check": "V5.conservation",
+      "passed": true,
+      "detail": "总出流 165 = 可解决贡献 165；内部累计之和 1784 仅作反例，未当作总流量"
+    },
+    {
+      "check": "V6.outlets_and_basins",
+      "passed": true,
+      "detail": "出口合法、流域成员独立复算一致；嵌套重叠：无重叠"
+    }
+  ],
+  "resolved_cells": 165,
+  "unresolved_cells": 0,
+  "boundary_exit_cells": 1,
+  "outflow_units": 165
+}

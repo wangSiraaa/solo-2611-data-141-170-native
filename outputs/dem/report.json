@@ -1,0 +1,57 @@
+{
+  "input": {
+    "dem": "/workspace/fixtures/dem.asc",
+    "outlets": "/workspace/fixtures/outlets.csv",
+    "nrows": 12,
+    "ncols": 14,
+    "cellsize_m": 10.0,
+    "cell_area_m2": 100.0,
+    "xllcorner": 500000.0,
+    "yllcorner": 3300000.0,
+    "nodata_value": -9999.0
+  },
+  "counts": {
+    "total_cells": 168,
+    "void_cells": 3,
+    "valid_cells": 165,
+    "resolved_cells": 165,
+    "unresolved_cells": 0,
+    "platter_cells": 14,
+    "spill_cells": 12,
+    "depression_modified_cells": 1,
+    "boundary_exit_cells": 1
+  },
+  "fill": {
+    "max_depth_m": 14.0,
+    "total_fill_volume_m3": 1400.0,
+    "elevation_only_raised": true
+  },
+  "unresolved_components": [],
+  "unresolved_note": "无",
+  "conservation": {
+    "unit_contribution_per_valid_resolved_cell": 1,
+    "resolved_unit_total": 165,
+    "boundary_exit_count_values": [
+      165
+    ],
+    "total_outflow_units": 165,
+    "conserved": true,
+    "check": "总出流 = 各边界出口累计值之和；绝不把内部累计值相加。"
+  },
+  "basins": [
+    {
+      "outlet_id": "east_lower",
+      "outlet_row": 9,
+      "outlet_col": 13,
+      "cell_count": 36,
+      "area_m2": 3600.0
+    },
+    {
+      "outlet_id": "south_mid",
+      "outlet_row": 11,
+      "outlet_col": 8,
+      "cell_count": 98,
+      "area_m2": 9800.0
+    }
+  ]
+}
