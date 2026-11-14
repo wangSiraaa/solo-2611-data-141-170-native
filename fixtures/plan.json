@@ -1,0 +1,10 @@
+{
+  "row_col": "zero based, row 0 is northmost; xllcorner/yllcorner describe southwest outside corner",
+  "nodata": "closed void; never a receiving cell or automatic drain",
+  "boundary": "valid outermost raster cells are allowed exits; no inflow from outside",
+  "depression": "fill to least elevation permitting drainage to a valid outer boundary; preserve fill depth and original elevations",
+  "flow": "single D8 receiver per valid non-exit cell; maximal downward slope by center distance where strict descent exists; choose and document deterministic tie and flat routing without cycles",
+  "accumulation": "one unit per valid cell including itself; also report square-meter contributing area",
+  "outlets": "specified cells must be valid; basin is set of cells whose receiver chain visits it; nested basin overlap is allowed and must be explained",
+  "closed_components": "a valid component disconnected from any valid outer boundary by nodata is unresolved, not silently drained through nodata"
+}
