@@ -1,0 +1,16 @@
+{
+  "cases": [
+    "spread.csv",
+    "daily_alias.csv",
+    "half_period.csv"
+  ],
+  "period_bounds_day": [
+    0.35,
+    5.8
+  ],
+  "max_harmonics": 2,
+  "time_origin": "arbitrary fixed epoch; time_day is a continuous relative day count",
+  "brightness_unit": "arbitrary linear measurement; do not convert magnitude/flux",
+  "comparison": "same fixed observations; whole-night holdout",
+  "unique_period_required": false
+}

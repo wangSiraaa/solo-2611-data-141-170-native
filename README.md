@@ -1,5 +1,7 @@
-# Data engineering task inputs: 141-170
+# 不规则光变输入
 
-Each question has its own branch and frozen initial commit. Task-specific README and input fixtures are supplied in that branch. The full task prompt is provided separately for each independent session.
+本目录仅含题目输入，不含待实现程序。全部材料为本地合成，无真实个人或仪器数据。Python 3.11；若使用列出的库，可执行 `python -m pip install -r requirements.txt`。无需 Docker、账号或网络数据下载。
 
-The base contains environment documentation only. Use Python 3.11 and any dependencies explicitly needed by the question; PostgreSQL 16 and SQLite are available. See environment/README.md for native local database setup.
+三份 CSV 分别为分散夜内采样、近每日同一时刻和近半周期对称信号。它们是三次独立分析，不拼成一个系列。时间是相对日，不涉及历法/时标转换；误差 sigma 是各点独立标准差。
+
+允许有限谐波加常数的加权模型；不先插补成规则时间轴。请保留候选周期、采样窗别名依据和每候选的相位/残差数据。近似对称或采样本身不可分辨时允许候选集，不能把最高峰自动称唯一真周期。
