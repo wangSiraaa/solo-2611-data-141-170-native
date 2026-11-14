@@ -1,0 +1,2975 @@
+{
+  "input": {
+    "fasta": "fixtures/weak.fasta",
+    "candidate_newick": "fixtures/candidates.nwk"
+  },
+  "run_parameters": {
+    "model": "JC69",
+    "root_prior": "uniform over ACGT",
+    "unknown_character": "N; emission likelihood 1 for every latent base",
+    "branch_bounds": [
+      1e-05,
+      1.5
+    ],
+    "multi_start": [
+      "newick_initial_clipped",
+      "uniform_0.02",
+      "uniform_0.2",
+      "uniform_0.6"
+    ],
+    "optimizer": "scipy.optimize.minimize L-BFGS-B",
+    "convergence": {
+      "gtol": 1e-08,
+      "ftol": 1e-11,
+      "maxiter": 200
+    },
+    "boundary_tolerance": 1e-06,
+    "bootstrap_replicates": 24,
+    "bootstrap_seed": 271828,
+    "near_tie_loglik_threshold": 0.5,
+    "likelihood_engine": "log-space Felsenstein pruning with logsumexp (no underflow scaling)",
+    "support_frequency_note": "bootstrap 支持频率是重采样下的经验最优频率，不是贝叶斯后验概率，不做后验概率声明",
+    "numpy_version": "1.26.4"
+  },
+  "site_patterns": {
+    "n_sites": 240,
+    "n_taxa": 5,
+    "taxa": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "distinct_patterns": 50,
+    "sites_with_unknown_N": 17,
+    "variable_sites_ignoring_N": 47,
+    "constant_sites_ignoring_N": 193,
+    "pattern_count_top10": [
+      {
+        "pattern": "GGGGG",
+        "count": 59
+      },
+      {
+        "pattern": "TTTTT",
+        "count": 46
+      },
+      {
+        "pattern": "AAAAA",
+        "count": 39
+      },
+      {
+        "pattern": "CCCCC",
+        "count": 36
+      },
+      {
+        "pattern": "CCCCA",
+        "count": 3
+      },
+      {
+        "pattern": "AAAAT",
+        "count": 2
+      },
+      {
+        "pattern": "CCCCG",
+        "count": 2
+      },
+      {
+        "pattern": "CCCCT",
+        "count": 2
+      },
+      {
+        "pattern": "CCCGC",
+        "count": 2
+      },
+      {
+        "pattern": "CNCCC",
+        "count": 2
+      }
+    ]
+  },
+  "bootstrap_resample_fingerprint": "54f6fb8342546ba7",
+  "candidates": [
+    {
+      "topology": [
+        [
+          "A"
+        ],
+        [
+          "A",
+          "B"
+        ],
+        [
+          "B"
+        ],
+        [
+          "C"
+        ],
+        [
+          "C",
+          "D"
+        ],
+        [
+          "D"
+        ],
+        [
+          "E"
+        ]
+      ],
+      "optimization_ok": true,
+      "log_likelihood": -582.5719280195505,
+      "fitted_branch_lengths": {
+        "A": 0.04785424183954405,
+        "A|B": 1e-05,
+        "B": 0.0391978486611677,
+        "C": 0.021737887312063508,
+        "C|D": 1e-05,
+        "D": 0.029948588962403877,
+        "E": 0.07050399295228359
+      },
+      "boundary_parameters": [
+        {
+          "edge_key": [
+            "A",
+            "B"
+          ],
+          "side": "lower",
+          "value": 1e-05
+        },
+        {
+          "edge_key": [
+            "C",
+            "D"
+          ],
+          "side": "lower",
+          "value": 1e-05
+        }
+      ],
+      "failure_reason": null,
+      "multi_start_evidence": [
+        {
+          "label": "newick_initial_clipped",
+          "initial": [
+            0.04,
+            0.15,
+            0.04,
+            0.04,
+            0.12,
+            0.04,
+            0.06
+          ],
+          "success": true,
+          "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+          "iterations": 22,
+          "evaluations": 248,
+          "final_loglik": -582.5719280195505
+        },
+        {
+          "label": "uniform_0.02",
+          "initial": [
+            0.02,
+            0.02,
+            0.02,
+            0.02,
+            0.02,
+            0.02,
+            0.02
+          ],
+          "success": true,
+          "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+          "iterations": 11,
+          "evaluations": 120,
+          "final_loglik": -582.5719280195549
+        },
+        {
+          "label": "uniform_0.2",
+          "initial": [
+            0.2,
+            0.2,
+            0.2,
+            0.2,
+            0.2,
+            0.2,
+            0.2
+          ],
+          "success": true,
+          "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+          "iterations": 13,
+          "evaluations": 152,
+          "final_loglik": -582.5719280196299
+        },
+        {
+          "label": "uniform_0.6",
+          "initial": [
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6
+          ],
+          "success": true,
+          "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+          "iterations": 12,
+          "evaluations": 152,
+          "final_loglik": -582.5719280195564
+        }
+      ],
+      "candidate_id": "C1",
+      "delta_loglik_vs_best": -1.3791487515761673,
+      "near_tied_best_full_data": false
+    },
+    {
+      "topology": [
+        [
+          "A"
+        ],
+        [
+          "A",
+          "C"
+        ],
+        [
+          "B"
+        ],
+        [
+          "B",
+          "D"
+        ],
+        [
+          "C"
+        ],
+        [
+          "D"
+        ],
+        [
+          "E"
+        ]
+      ],
+      "optimization_ok": true,
+      "log_likelihood": -582.57218826276,
+      "fitted_branch_lengths": {
+        "A": 0.047854310459720745,
+        "A|C": 1e-05,
+        "B": 0.03919901807364103,
+        "B|D": 1e-05,
+        "C": 0.021737799100063845,
+        "D": 0.02994851553207344,
+        "E": 0.0705039866629612
+      },
+      "boundary_parameters": [
+        {
+          "edge_key": [
+            "A",
+            "C"
+          ],
+          "side": "lower",
+          "value": 1e-05
+        },
+        {
+          "edge_key": [
+            "B",
+            "D"
+          ],
+          "side": "lower",
+          "value": 1e-05
+        }
+      ],
+      "failure_reason": null,
+      "multi_start_evidence": [
+        {
+          "label": "newick_initial_clipped",
+          "initial": [
+            0.04,
+            0.15,
+            0.04,
+            0.12,
+            0.04,
+            0.04,
+            0.06
+          ],
+          "success": true,
+          "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+          "iterations": 20,
+          "evaluations": 224,
+          "final_loglik": -582.5721882627603
+        },
+        {
+          "label": "uniform_0.02",
+          "initial": [
+            0.02,
+            0.02,
+            0.02,
+            0.02,
+            0.02,
+            0.02,
+            0.02
+          ],
+          "success": true,
+          "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+          "iterations": 11,
+          "evaluations": 120,
+          "final_loglik": -582.5721882627695
+        },
+        {
+          "label": "uniform_0.2",
+          "initial": [
+            0.2,
+            0.2,
+            0.2,
+            0.2,
+            0.2,
+            0.2,
+            0.2
+          ],
+          "success": true,
+          "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+          "iterations": 13,
+          "evaluations": 152,
+          "final_loglik": -582.572188262772
+        },
+        {
+          "label": "uniform_0.6",
+          "initial": [
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6
+          ],
+          "success": true,
+          "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+          "iterations": 13,
+          "evaluations": 160,
+          "final_loglik": -582.57218826276
+        }
+      ],
+      "candidate_id": "C2",
+      "delta_loglik_vs_best": -1.3794089947857628,
+      "near_tied_best_full_data": false
+    },
+    {
+      "topology": [
+        [
+          "A"
+        ],
+        [
+          "A",
+          "D"
+        ],
+        [
+          "B"
+        ],
+        [
+          "B",
+          "C"
+        ],
+        [
+          "C"
+        ],
+        [
+          "D"
+        ],
+        [
+          "E"
+        ]
+      ],
+      "optimization_ok": true,
+      "log_likelihood": -581.1927792679743,
+      "fitted_branch_lengths": {
+        "A": 0.04386202227422757,
+        "A|D": 0.003926788643161663,
+        "B": 0.039121612460340696,
+        "B|C": 1e-05,
+        "C": 0.02166261579818155,
+        "D": 0.02601788141917987,
+        "E": 0.07048969141486883
+      },
+      "boundary_parameters": [
+        {
+          "edge_key": [
+            "B",
+            "C"
+          ],
+          "side": "lower",
+          "value": 1e-05
+        }
+      ],
+      "failure_reason": null,
+      "multi_start_evidence": [
+        {
+          "label": "newick_initial_clipped",
+          "initial": [
+            0.04,
+            0.15,
+            0.04,
+            0.12,
+            0.04,
+            0.04,
+            0.06
+          ],
+          "success": true,
+          "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+          "iterations": 20,
+          "evaluations": 256,
+          "final_loglik": -581.1927792680025
+        },
+        {
+          "label": "uniform_0.02",
+          "initial": [
+            0.02,
+            0.02,
+            0.02,
+            0.02,
+            0.02,
+            0.02,
+            0.02
+          ],
+          "success": true,
+          "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+          "iterations": 15,
+          "evaluations": 160,
+          "final_loglik": -581.1927792679822
+        },
+        {
+          "label": "uniform_0.2",
+          "initial": [
+            0.2,
+            0.2,
+            0.2,
+            0.2,
+            0.2,
+            0.2,
+            0.2
+          ],
+          "success": true,
+          "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+          "iterations": 16,
+          "evaluations": 224,
+          "final_loglik": -581.1927792679743
+        },
+        {
+          "label": "uniform_0.6",
+          "initial": [
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6,
+            0.6
+          ],
+          "success": true,
+          "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+          "iterations": 15,
+          "evaluations": 224,
+          "final_loglik": -581.1927792681881
+        }
+      ],
+      "candidate_id": "C3",
+      "delta_loglik_vs_best": 0.0,
+      "near_tied_best_full_data": true
+    }
+  ],
+  "full_data_ranking": [
+    "C3",
+    "C1",
+    "C2"
+  ],
+  "pairwise_bootstrap": [
+    {
+      "pair": [
+        "C1",
+        "C2"
+      ],
+      "delta_mean": 0.00023288376793573207,
+      "delta_sd": 0.0002134739992695028,
+      "n_evaluated": 24,
+      "wins": {
+        "C1": 20,
+        "C2": 4
+      }
+    },
+    {
+      "pair": [
+        "C1",
+        "C3"
+      ],
+      "delta_mean": -1.8541966833246495,
+      "delta_sd": 2.44213130380016,
+      "n_evaluated": 24,
+      "wins": {
+        "C1": 0,
+        "C3": 24
+      }
+    },
+    {
+      "pair": [
+        "C2",
+        "C3"
+      ],
+      "delta_mean": -1.8544295670925852,
+      "delta_sd": 2.4420960372683806,
+      "n_evaluated": 24,
+      "wins": {
+        "C2": 0,
+        "C3": 24
+      }
+    }
+  ],
+  "bootstrap_support_frequencies": {
+    "C1": {
+      "strict_win_frequency": 0.0,
+      "best_or_near_tied_frequency": 0.4166666666666667,
+      "fit_failures": 0
+    },
+    "C2": {
+      "strict_win_frequency": 0.0,
+      "best_or_near_tied_frequency": 0.4166666666666667,
+      "fit_failures": 0
+    },
+    "C3": {
+      "strict_win_frequency": 1.0,
+      "best_or_near_tied_frequency": 1.0,
+      "fit_failures": 0
+    }
+  },
+  "bootstrap_replicates": [
+    {
+      "replicate": 0,
+      "resample_columns_sha256_prefix": "aea54e1d01b158bd",
+      "distinct_patterns": 37,
+      "candidates": {
+        "C1": {
+          "optimization_ok": true,
+          "log_likelihood": -587.5748581696187,
+          "fitted_branch_lengths": {
+            "A": 0.07539975821010557,
+            "A|B": 1e-05,
+            "B": 0.03423813247351918,
+            "C": 0.012876155448805009,
+            "C|D": 1e-05,
+            "D": 0.017001532714070348,
+            "E": 0.08441272269844406
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "A",
+                "B"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            },
+            {
+              "edge_key": [
+                "C",
+                "D"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        },
+        "C2": {
+          "optimization_ok": true,
+          "log_likelihood": -587.5751541390246,
+          "fitted_branch_lengths": {
+            "A": 0.07539985383849271,
+            "A|C": 1e-05,
+            "B": 0.03423961592675414,
+            "B|D": 1e-05,
+            "C": 0.012875953651042453,
+            "D": 0.01700146293329349,
+            "E": 0.08441267812680935
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "A",
+                "C"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            },
+            {
+              "edge_key": [
+                "B",
+                "D"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        },
+        "C3": {
+          "optimization_ok": true,
+          "log_likelihood": -587.5745493248137,
+          "fitted_branch_lengths": {
+            "A": 0.07539983992955504,
+            "A|D": 1e-05,
+            "B": 0.034237024607757724,
+            "B|C": 1e-05,
+            "C": 0.01287608542680827,
+            "D": 0.017001306560558538,
+            "E": 0.08441276551264996
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "A",
+                "D"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            },
+            {
+              "edge_key": [
+                "B",
+                "C"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        }
+      },
+      "strict_winners": [
+        "C3"
+      ],
+      "near_tied_leaders": [
+        "C1",
+        "C2",
+        "C3"
+      ]
+    },
+    {
+      "replicate": 1,
+      "resample_columns_sha256_prefix": "a869af4f3861d708",
+      "distinct_patterns": 36,
+      "candidates": {
+        "C1": {
+          "optimization_ok": true,
+          "log_likelihood": -591.2838619838351,
+          "fitted_branch_lengths": {
+            "A": 0.062050562236274275,
+            "A|B": 1e-05,
+            "B": 0.03882332577983024,
+            "C": 0.017172578582049406,
+            "C|D": 1e-05,
+            "D": 0.05217293610654953,
+            "E": 0.048158591361246346
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "A",
+                "B"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            },
+            {
+              "edge_key": [
+                "C",
+                "D"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        },
+        "C2": {
+          "optimization_ok": true,
+          "log_likelihood": -591.2841214136574,
+          "fitted_branch_lengths": {
+            "A": 0.06205066144650009,
+            "A|C": 1e-05,
+            "B": 0.038824482129817296,
+            "B|D": 1e-05,
+            "C": 0.017172543102402165,
+            "D": 0.05217286016485596,
+            "E": 0.04815857585260454
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "A",
+                "C"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            },
+            {
+              "edge_key": [
+                "B",
+                "D"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        },
+        "C3": {
+          "optimization_ok": true,
+          "log_likelihood": -588.6599493865477,
+          "fitted_branch_lengths": {
+            "A": 0.053785080107594016,
+            "A|D": 0.007892919985153934,
+            "B": 0.038755974194482366,
+            "B|C": 1e-05,
+            "C": 0.017147150750309485,
+            "D": 0.04406133287320681,
+            "E": 0.04817826020174116
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "B",
+                "C"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        }
+      },
+      "strict_winners": [
+        "C3"
+      ],
+      "near_tied_leaders": [
+        "C3"
+      ]
+    },
+    {
+      "replicate": 2,
+      "resample_columns_sha256_prefix": "1dba9dc6dce7dcd6",
+      "distinct_patterns": 38,
+      "candidates": {
+        "C1": {
+          "optimization_ok": true,
+          "log_likelihood": -632.5075444950701,
+          "fitted_branch_lengths": {
+            "A": 0.047956257154202306,
+            "A|B": 1e-05,
+            "B": 0.0619728073959241,
+            "C": 0.025917015332630647,
+            "C|D": 1e-05,
+            "D": 0.029973806122679855,
+            "E": 0.1031875422123983
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "A",
+                "B"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            },
+            {
+              "edge_key": [
+                "C",
+                "D"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        },
+        "C2": {
+          "optimization_ok": true,
+          "log_likelihood": -632.5078797790417,
+          "fitted_branch_lengths": {
+            "A": 0.04795639563130446,
+            "A|C": 1e-05,
+            "B": 0.061974359281877923,
+            "B|D": 1e-05,
+            "C": 0.025916950370521087,
+            "D": 0.02997367366345306,
+            "E": 0.10318748875919281
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "A",
+                "C"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            },
+            {
+              "edge_key": [
+                "B",
+                "D"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        },
+        "C3": {
+          "optimization_ok": true,
+          "log_likelihood": -631.1538727023872,
+          "fitted_branch_lengths": {
+            "A": 0.044057469305901036,
+            "A|D": 0.003932154183679518,
+            "B": 0.06180963674704094,
+            "B|C": 1e-05,
+            "C": 0.02571973373607362,
+            "D": 0.026133841467818126,
+            "E": 0.10308954276294413
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "B",
+                "C"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        }
+      },
+      "strict_winners": [
+        "C3"
+      ],
+      "near_tied_leaders": [
+        "C3"
+      ]
+    },
+    {
+      "replicate": 3,
+      "resample_columns_sha256_prefix": "c564780320aebdae",
+      "distinct_patterns": 34,
+      "candidates": {
+        "C1": {
+          "optimization_ok": true,
+          "log_likelihood": -525.322573270378,
+          "fitted_branch_lengths": {
+            "A": 0.0386369863827836,
+            "A|B": 1e-05,
+            "B": 0.02553078119274907,
+            "C": 0.012876123827585871,
+            "C|D": 1e-05,
+            "D": 0.021219872641678395,
+            "E": 0.052655383258690756
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "A",
+                "B"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            },
+            {
+              "edge_key": [
+                "C",
+                "D"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        },
+        "C2": {
+          "optimization_ok": true,
+          "log_likelihood": -525.3229699294437,
+          "fitted_branch_lengths": {
+            "A": 0.038637043105630396,
+            "A|C": 1e-05,
+            "B": 0.025532529993474388,
+            "B|D": 1e-05,
+            "C": 0.012876061913276856,
+            "D": 0.021219828643795912,
+            "E": 0.05265535668696703
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "A",
+                "C"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            },
+            {
+              "edge_key": [
+                "B",
+                "D"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        },
+        "C3": {
+          "optimization_ok": true,
+          "log_likelihood": -525.3221696705472,
+          "fitted_branch_lengths": {
+            "A": 0.03863697817936971,
+            "A|D": 1e-05,
+            "B": 0.025529166736741316,
+            "B|C": 1e-05,
+            "C": 0.012876089236611538,
+            "D": 0.02121978605638891,
+            "E": 0.05265543238831456
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "A",
+                "D"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            },
+            {
+              "edge_key": [
+                "B",
+                "C"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        }
+      },
+      "strict_winners": [
+        "C3"
+      ],
+      "near_tied_leaders": [
+        "C1",
+        "C2",
+        "C3"
+      ]
+    },
+    {
+      "replicate": 4,
+      "resample_columns_sha256_prefix": "e9f6b77274cab840",
+      "distinct_patterns": 32,
+      "candidates": {
+        "C1": {
+          "optimization_ok": true,
+          "log_likelihood": -592.0455384572865,
+          "fitted_branch_lengths": {
+            "A": 0.051929926447604496,
+            "A|B": 1e-05,
+            "B": 0.057001951634649946,
+            "C": 0.004269352007747798,
+            "C|D": 1e-05,
+            "D": 0.0298382211769612,
+            "E": 0.08482997832557944
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "A",
+                "B"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            },
+            {
+              "edge_key": [
+                "C",
+                "D"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        },
+        "C2": {
+          "optimization_ok": true,
+          "log_likelihood": -592.0455385917207,
+          "fitted_branch_lengths": {
+            "A": 0.05193009122435445,
+            "A|C": 1e-05,
+            "B": 0.057002025494577474,
+            "B|D": 1e-05,
+            "C": 0.004269281890822758,
+            "D": 0.029838109864262444,
+            "E": 0.08482997884740875
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "A",
+                "C"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            },
+            {
+              "edge_key": [
+                "B",
+                "D"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        },
+        "C3": {
+          "optimization_ok": true,
+          "log_likelihood": -587.9043666740744,
+          "fitted_branch_lengths": {
+            "A": 0.04345044322153644,
+            "A|D": 0.008269845299456175,
+            "B": 0.056949297985252785,
+            "B|C": 1e-05,
+            "C": 0.004229263835745738,
+            "D": 0.021478711148310996,
+            "E": 0.08481521596386599
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "B",
+                "C"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        }
+      },
+      "strict_winners": [
+        "C3"
+      ],
+      "near_tied_leaders": [
+        "C3"
+      ]
+    },
+    {
+      "replicate": 5,
+      "resample_columns_sha256_prefix": "9cf43cf52e810006",
+      "distinct_patterns": 35,
+      "candidates": {
+        "C1": {
+          "optimization_ok": true,
+          "log_likelihood": -557.5576181924338,
+          "fitted_branch_lengths": {
+            "A": 0.0436242187746943,
+            "A|B": 1e-05,
+            "B": 0.021484447654263526,
+            "C": 0.01721565451230076,
+            "C|D": 1e-05,
+            "D": 0.0255421814409473,
+            "E": 0.08008453803601999
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "A",
+                "B"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            },
+            {
+              "edge_key": [
+                "C",
+                "D"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        },
+        "C2": {
+          "optimization_ok": true,
+          "log_likelihood": -557.5580924507663,
+          "fitted_branch_lengths": {
+            "A": 0.04362428070323956,
+            "A|C": 1e-05,
+            "B": 0.021486545125859475,
+            "B|D": 1e-05,
+            "C": 0.01721558699880268,
+            "D": 0.025542160794138985,
+            "E": 0.08008447420726825
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "A",
+                "C"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            },
+            {
+              "edge_key": [
+                "B",
+                "D"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        },
+        "C3": {
+          "optimization_ok": true,
+          "log_likelihood": -557.5565401871137,
+          "fitted_branch_lengths": {
+            "A": 0.0436242799925719,
+            "A|D": 1e-05,
+            "B": 0.021482457812205764,
+            "B|C": 1e-05,
+            "C": 0.01721308101964817,
+            "D": 0.025542085639042988,
+            "E": 0.08008471043965044
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "A",
+                "D"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            },
+            {
+              "edge_key": [
+                "B",
+                "C"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        }
+      },
+      "strict_winners": [
+        "C3"
+      ],
+      "near_tied_leaders": [
+        "C1",
+        "C2",
+        "C3"
+      ]
+    },
+    {
+      "replicate": 6,
+      "resample_columns_sha256_prefix": "092abe41f66ad114",
+      "distinct_patterns": 34,
+      "candidates": {
+        "C1": {
+          "optimization_ok": true,
+          "log_likelihood": -540.9629672716602,
+          "fitted_branch_lengths": {
+            "A": 0.03498672585352425,
+            "A|B": 1e-05,
+            "B": 0.03439386607288063,
+            "C": 0.004330066217226083,
+            "C|D": 1e-05,
+            "D": 0.043422709042347685,
+            "E": 0.05175489575791607
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "A",
+                "B"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            },
+            {
+              "edge_key": [
+                "C",
+                "D"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        },
+        "C2": {
+          "optimization_ok": true,
+          "log_likelihood": -540.9632628522944,
+          "fitted_branch_lengths": {
+            "A": 0.03498682671164076,
+            "A|C": 1e-05,
+            "B": 0.03439510139173683,
+            "B|D": 1e-05,
+            "C": 0.004330094375095596,
+            "D": 0.043422612605902175,
+            "E": 0.05175490348152865
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "A",
+                "C"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            },
+            {
+              "edge_key": [
+                "B",
+                "D"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        },
+        "C3": {
+          "optimization_ok": true,
+          "log_likelihood": -539.6328790065811,
+          "fitted_branch_lengths": {
+            "A": 0.03095243646342422,
+            "A|D": 0.0038808075432020354,
+            "B": 0.03437020171018166,
+            "B|C": 1e-05,
+            "C": 0.0043229896033501036,
+            "D": 0.039416803980421126,
+            "E": 0.0517666336718775
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "B",
+                "C"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        }
+      },
+      "strict_winners": [
+        "C3"
+      ],
+      "near_tied_leaders": [
+        "C3"
+      ]
+    },
+    {
+      "replicate": 7,
+      "resample_columns_sha256_prefix": "6b591bafc2cedf73",
+      "distinct_patterns": 41,
+      "candidates": {
+        "C1": {
+          "optimization_ok": true,
+          "log_likelihood": -590.2259574863504,
+          "fitted_branch_lengths": {
+            "A": 0.06067609135688778,
+            "A|B": 1e-05,
+            "B": 0.0388524488125605,
+            "C": 0.013334126806384645,
+            "C|D": 1e-05,
+            "D": 0.04807078482275035,
+            "E": 0.05653628962965923
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "A",
+                "B"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            },
+            {
+              "edge_key": [
+                "C",
+                "D"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        },
+        "C2": {
+          "optimization_ok": true,
+          "log_likelihood": -590.2259575128332,
+          "fitted_branch_lengths": {
+            "A": 0.060676170573568444,
+            "A|C": 1e-05,
+            "B": 0.03885249814357221,
+            "B|D": 1e-05,
+            "C": 0.013334087146738942,
+            "D": 0.04807069559375866,
+            "E": 0.056536317006653486
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "A",
+                "C"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            },
+            {
+              "edge_key": [
+                "B",
+                "D"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        },
+        "C3": {
+          "optimization_ok": true,
+          "log_likelihood": -581.2043360736399,
+          "fitted_branch_lengths": {
+            "A": 0.043419898569174074,
+            "A|D": 0.016987151099887424,
+            "B": 0.038654552108020435,
+            "B|C": 1e-05,
+            "C": 0.013275655105794806,
+            "D": 0.03066601667008716,
+            "E": 0.05663300113682985
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "B",
+                "C"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        }
+      },
+      "strict_winners": [
+        "C3"
+      ],
+      "near_tied_leaders": [
+        "C3"
+      ]
+    },
+    {
+      "replicate": 8,
+      "resample_columns_sha256_prefix": "7c0656b383553b0c",
+      "distinct_patterns": 30,
+      "candidates": {
+        "C1": {
+          "optimization_ok": true,
+          "log_likelihood": -563.8510841644136,
+          "fitted_branch_lengths": {
+            "A": 0.05250357606944076,
+            "A|B": 1e-05,
+            "B": 0.02623524847184819,
+            "C": 0.01759125059168621,
+            "C|D": 1e-05,
+            "D": 0.008276342026179162,
+            "E": 0.09794214374926911
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "A",
+                "B"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            },
+            {
+              "edge_key": [
+                "C",
+                "D"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        },
+        "C2": {
+          "optimization_ok": true,
+          "log_likelihood": -563.8518646688876,
+          "fitted_branch_lengths": {
+            "A": 0.0525036424216962,
+            "A|C": 1e-05,
+            "B": 0.026238817355953275,
+            "B|D": 1e-05,
+            "C": 0.017591115384357196,
+            "D": 0.008276293289444266,
+            "E": 0.09794204727070974
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "A",
+                "C"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            },
+            {
+              "edge_key": [
+                "B",
+                "D"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        },
+        "C3": {
+          "optimization_ok": true,
+          "log_likelihood": -560.7985774696612,
+          "fitted_branch_lengths": {
+            "A": 0.04826420830079653,
+            "A|D": 0.003966331654827687,
+            "B": 0.0215911642163757,
+            "B|C": 0.011155630540543754,
+            "C": 0.010695297605169827,
+            "D": 0.004200259082645213,
+            "E": 0.09832461628979561
+          },
+          "boundary_parameters": []
+        }
+      },
+      "strict_winners": [
+        "C3"
+      ],
+      "near_tied_leaders": [
+        "C3"
+      ]
+    },
+    {
+      "replicate": 9,
+      "resample_columns_sha256_prefix": "1a549b65a6e32904",
+      "distinct_patterns": 35,
+      "candidates": {
+        "C1": {
+          "optimization_ok": true,
+          "log_likelihood": -551.742718590907,
+          "fitted_branch_lengths": {
+            "A": 0.03897561337254331,
+            "A|B": 1e-05,
+            "B": 0.012873092604097448,
+            "C": 0.026086979191622398,
+            "C|D": 1e-05,
+            "D": 0.0214049854556332,
+            "E": 0.08367039744466637
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "A",
+                "B"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            },
+            {
+              "edge_key": [
+                "C",
+                "D"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        },
+        "C2": {
+          "optimization_ok": true,
+          "log_likelihood": -551.7427185932991,
+          "fitted_branch_lengths": {
+            "A": 0.038975546904664767,
+            "A|C": 1e-05,
+            "B": 0.012873146283924771,
+            "B|D": 1e-05,
+            "C": 0.026086927804588694,
+            "D": 0.02140503083962544,
+            "E": 0.08367038575260563
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "A",
+                "C"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            },
+            {
+              "edge_key": [
+                "B",
+                "D"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        },
+        "C3": {
+          "optimization_ok": true,
+          "log_likelihood": -551.7411322585743,
+          "fitted_branch_lengths": {
+            "A": 0.03897558522905583,
+            "A|D": 1e-05,
+            "B": 0.012869721660395652,
+            "B|C": 1e-05,
+            "C": 0.02608353039356767,
+            "D": 0.021404932117535545,
+            "E": 0.08367059403775509
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "A",
+                "D"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            },
+            {
+              "edge_key": [
+                "B",
+                "C"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        }
+      },
+      "strict_winners": [
+        "C3"
+      ],
+      "near_tied_leaders": [
+        "C1",
+        "C2",
+        "C3"
+      ]
+    },
+    {
+      "replicate": 10,
+      "resample_columns_sha256_prefix": "ee7e7eb38ba57c42",
+      "distinct_patterns": 37,
+      "candidates": {
+        "C1": {
+          "optimization_ok": true,
+          "log_likelihood": -604.1727619483104,
+          "fitted_branch_lengths": {
+            "A": 0.052667634330122705,
+            "A|B": 1e-05,
+            "B": 0.0528757651883087,
+            "C": 0.013038557555373266,
+            "C|D": 1e-05,
+            "D": 0.03425740170101112,
+            "E": 0.08442438166552396
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "A",
+                "B"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            },
+            {
+              "edge_key": [
+                "C",
+                "D"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        },
+        "C2": {
+          "optimization_ok": true,
+          "log_likelihood": -604.1731506327345,
+          "fitted_branch_lengths": {
+            "A": 0.05266781032337673,
+            "A|C": 1e-05,
+            "B": 0.052877551838447646,
+            "B|D": 1e-05,
+            "C": 0.013038495442451925,
+            "D": 0.03425726711429043,
+            "E": 0.08442433439021262
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "A",
+                "C"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            },
+            {
+              "edge_key": [
+                "B",
+                "D"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        },
+        "C3": {
+          "optimization_ok": true,
+          "log_likelihood": -604.1713887363067,
+          "fitted_branch_lengths": {
+            "A": 0.052667705754036495,
+            "A|D": 1e-05,
+            "B": 0.052873198755475734,
+            "B|C": 1e-05,
+            "C": 0.013035102724146302,
+            "D": 0.034257260494305185,
+            "E": 0.08442455587258658
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "A",
+                "D"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            },
+            {
+              "edge_key": [
+                "B",
+                "C"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        }
+      },
+      "strict_winners": [
+        "C3"
+      ],
+      "near_tied_leaders": [
+        "C1",
+        "C2",
+        "C3"
+      ]
+    },
+    {
+      "replicate": 11,
+      "resample_columns_sha256_prefix": "1486241c7c14b533",
+      "distinct_patterns": 36,
+      "candidates": {
+        "C1": {
+          "optimization_ok": true,
+          "log_likelihood": -579.318733001866,
+          "fitted_branch_lengths": {
+            "A": 0.061768972872255044,
+            "A|B": 1e-05,
+            "B": 0.02133824431245257,
+            "C": 0.03055937256644554,
+            "C|D": 1e-05,
+            "D": 0.043025295050510046,
+            "E": 0.04753853253087534
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "A",
+                "B"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            },
+            {
+              "edge_key": [
+                "C",
+                "D"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        },
+        "C2": {
+          "optimization_ok": true,
+          "log_likelihood": -579.3192021577478,
+          "fitted_branch_lengths": {
+            "A": 0.061768982617246324,
+            "A|C": 1e-05,
+            "B": 0.0213403106104691,
+            "B|D": 1e-05,
+            "C": 0.030559302463705508,
+            "D": 0.04302533491865045,
+            "E": 0.04753851373469527
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "A",
+                "C"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            },
+            {
+              "edge_key": [
+                "B",
+                "D"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        },
+        "C3": {
+          "optimization_ok": true,
+          "log_likelihood": -576.3058877656414,
+          "fitted_branch_lengths": {
+            "A": 0.053388334270253204,
+            "A|D": 0.008033863676168682,
+            "B": 0.02131064537590898,
+            "B|C": 1e-05,
+            "C": 0.03049081385402662,
+            "D": 0.034847064055070154,
+            "E": 0.04754577825324727
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "B",
+                "C"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        }
+      },
+      "strict_winners": [
+        "C3"
+      ],
+      "near_tied_leaders": [
+        "C3"
+      ]
+    },
+    {
+      "replicate": 12,
+      "resample_columns_sha256_prefix": "5541068d0fb9c8aa",
+      "distinct_patterns": 35,
+      "candidates": {
+        "C1": {
+          "optimization_ok": true,
+          "log_likelihood": -592.5306201934509,
+          "fitted_branch_lengths": {
+            "A": 0.07041171403548256,
+            "A|B": 1e-05,
+            "B": 0.052452402002339665,
+            "C": 0.008580970282711629,
+            "C|D": 1e-05,
+            "D": 0.04321935417548766,
+            "E": 0.04733516493456944
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "A",
+                "B"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            },
+            {
+              "edge_key": [
+                "C",
+                "D"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        },
+        "C2": {
+          "optimization_ok": true,
+          "log_likelihood": -592.530812481877,
+          "fitted_branch_lengths": {
+            "A": 0.07041186883628618,
+            "A|C": 1e-05,
+            "B": 0.052453291708230224,
+            "B|D": 1e-05,
+            "C": 0.008580889207969584,
+            "D": 0.043219181474796,
+            "E": 0.047335275375835754
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "A",
+                "C"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            },
+            {
+              "edge_key": [
+                "B",
+                "D"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        },
+        "C3": {
+          "optimization_ok": true,
+          "log_likelihood": -586.9966283991923,
+          "fitted_branch_lengths": {
+            "A": 0.05747645445558812,
+            "A|D": 0.012510995968425566,
+            "B": 0.05240915333702716,
+            "B|C": 1e-05,
+            "C": 0.008451550787271719,
+            "D": 0.030506015454086974,
+            "E": 0.04742500577726279
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "B",
+                "C"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        }
+      },
+      "strict_winners": [
+        "C3"
+      ],
+      "near_tied_leaders": [
+        "C3"
+      ]
+    },
+    {
+      "replicate": 13,
+      "resample_columns_sha256_prefix": "a479616e70e5b93e",
+      "distinct_patterns": 38,
+      "candidates": {
+        "C1": {
+          "optimization_ok": true,
+          "log_likelihood": -600.7255001008122,
+          "fitted_branch_lengths": {
+            "A": 0.04825316072309834,
+            "A|B": 1e-05,
+            "B": 0.05319870343652966,
+            "C": 0.017447878290055275,
+            "C|D": 1e-05,
+            "D": 0.02992794121705146,
+            "E": 0.08449831989423158
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "A",
+                "B"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            },
+            {
+              "edge_key": [
+                "C",
+                "D"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        },
+        "C2": {
+          "optimization_ok": true,
+          "log_likelihood": -600.7258871099313,
+          "fitted_branch_lengths": {
+            "A": 0.048253314896406614,
+            "A|C": 1e-05,
+            "B": 0.05320048194287673,
+            "B|D": 1e-05,
+            "C": 0.017447815857887367,
+            "D": 0.029927817480659626,
+            "E": 0.08449827289137468
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "A",
+                "C"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            },
+            {
+              "edge_key": [
+                "B",
+                "D"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        },
+        "C3": {
+          "optimization_ok": true,
+          "log_likelihood": -599.3632506194132,
+          "fitted_branch_lengths": {
+            "A": 0.04425090281458025,
+            "A|D": 0.003899507360345755,
+            "B": 0.053108475015661766,
+            "B|C": 1e-05,
+            "C": 0.017375904945996515,
+            "D": 0.026021315866151966,
+            "E": 0.08444488101052462
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "B",
+                "C"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        }
+      },
+      "strict_winners": [
+        "C3"
+      ],
+      "near_tied_leaders": [
+        "C3"
+      ]
+    },
+    {
+      "replicate": 14,
+      "resample_columns_sha256_prefix": "86e01f5f5c97ebcb",
+      "distinct_patterns": 37,
+      "candidates": {
+        "C1": {
+          "optimization_ok": true,
+          "log_likelihood": -614.1657850743031,
+          "fitted_branch_lengths": {
+            "A": 0.04361895946071958,
+            "A|B": 1e-05,
+            "B": 0.04380521816544785,
+            "C": 0.026204765959024157,
+            "C|D": 1e-05,
+            "D": 0.025646190384181047,
+            "E": 0.11215222779519443
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "A",
+                "B"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            },
+            {
+              "edge_key": [
+                "C",
+                "D"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        },
+        "C2": {
+          "optimization_ok": true,
+          "log_likelihood": -614.1660219500096,
+          "fitted_branch_lengths": {
+            "A": 0.04361904802548989,
+            "A|C": 1e-05,
+            "B": 0.043806307795011226,
+            "B|D": 1e-05,
+            "C": 0.02620470092957121,
+            "D": 0.02564612832033253,
+            "E": 0.1121521807905
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "A",
+                "C"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            },
+            {
+              "edge_key": [
+                "B",
+                "D"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        },
+        "C3": {
+          "optimization_ok": true,
+          "log_likelihood": -614.1657836740378,
+          "fitted_branch_lengths": {
+            "A": 0.043619039826520274,
+            "A|D": 1e-05,
+            "B": 0.0438052726288175,
+            "B|C": 1e-05,
+            "C": 0.026204692429298515,
+            "D": 0.02564612933621139,
+            "E": 0.11215222889047093
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "A",
+                "D"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            },
+            {
+              "edge_key": [
+                "B",
+                "C"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        }
+      },
+      "strict_winners": [
+        "C3"
+      ],
+      "near_tied_leaders": [
+        "C1",
+        "C2",
+        "C3"
+      ]
+    },
+    {
+      "replicate": 15,
+      "resample_columns_sha256_prefix": "ac3f9170af3c3a1b",
+      "distinct_patterns": 37,
+      "candidates": {
+        "C1": {
+          "optimization_ok": true,
+          "log_likelihood": -598.5349527359765,
+          "fitted_branch_lengths": {
+            "A": 0.05206613098173692,
+            "A|B": 1e-05,
+            "B": 0.021341637572473482,
+            "C": 0.03482005169812421,
+            "C|D": 1e-05,
+            "D": 0.03884255925805455,
+            "E": 0.08021981243985138
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "A",
+                "B"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            },
+            {
+              "edge_key": [
+                "C",
+                "D"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        },
+        "C2": {
+          "optimization_ok": true,
+          "log_likelihood": -598.5349527133747,
+          "fitted_branch_lengths": {
+            "A": 0.05206610418689849,
+            "A|C": 1e-05,
+            "B": 0.021341668000080454,
+            "B|D": 1e-05,
+            "C": 0.0348199945564966,
+            "D": 0.03884260142636349,
+            "E": 0.08021981552281686
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "A",
+                "C"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            },
+            {
+              "edge_key": [
+                "B",
+                "D"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        },
+        "C3": {
+          "optimization_ok": true,
+          "log_likelihood": -591.706428014416,
+          "fitted_branch_lengths": {
+            "A": 0.03922603234742067,
+            "A|D": 0.012611803403988264,
+            "B": 0.021152224556970408,
+            "B|C": 1e-05,
+            "C": 0.034697620205347196,
+            "D": 0.026057496745899415,
+            "E": 0.08016778567752547
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "B",
+                "C"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        }
+      },
+      "strict_winners": [
+        "C3"
+      ],
+      "near_tied_leaders": [
+        "C3"
+      ]
+    },
+    {
+      "replicate": 16,
+      "resample_columns_sha256_prefix": "ab4671b266ee8bca",
+      "distinct_patterns": 38,
+      "candidates": {
+        "C1": {
+          "optimization_ok": true,
+          "log_likelihood": -556.3385272803254,
+          "fitted_branch_lengths": {
+            "A": 0.03893123641104583,
+            "A|B": 1e-05,
+            "B": 0.030173963029886515,
+            "C": 0.017332682928824915,
+            "C|D": 1e-05,
+            "D": 0.03022518028493285,
+            "E": 0.06617288889123352
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "A",
+                "B"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            },
+            {
+              "edge_key": [
+                "C",
+                "D"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        },
+        "C2": {
+          "optimization_ok": true,
+          "log_likelihood": -556.3385272866514,
+          "fitted_branch_lengths": {
+            "A": 0.03893127898645932,
+            "A|C": 1e-05,
+            "B": 0.030173991565376975,
+            "B|D": 1e-05,
+            "C": 0.017332650185978488,
+            "D": 0.03022512767168408,
+            "E": 0.06617288339188154
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "A",
+                "C"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            },
+            {
+              "edge_key": [
+                "B",
+                "D"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        },
+        "C3": {
+          "optimization_ok": true,
+          "log_likelihood": -554.7627505461629,
+          "fitted_branch_lengths": {
+            "A": 0.03487460701538395,
+            "A|D": 0.0040034459151275775,
+            "B": 0.030107069781739014,
+            "B|C": 1e-05,
+            "C": 0.017268974276141182,
+            "D": 0.02617421490591194,
+            "E": 0.0661836582540529
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "B",
+                "C"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        }
+      },
+      "strict_winners": [
+        "C3"
+      ],
+      "near_tied_leaders": [
+        "C3"
+      ]
+    },
+    {
+      "replicate": 17,
+      "resample_columns_sha256_prefix": "ed27e5b07c28c127",
+      "distinct_patterns": 40,
+      "candidates": {
+        "C1": {
+          "optimization_ok": true,
+          "log_likelihood": -607.9950266911155,
+          "fitted_branch_lengths": {
+            "A": 0.06586120190139177,
+            "A|B": 1e-05,
+            "B": 0.021753971920189803,
+            "C": 0.017597500041100108,
+            "C|D": 1e-05,
+            "D": 0.061287807496141475,
+            "E": 0.07478363746447393
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "A",
+                "B"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            },
+            {
+              "edge_key": [
+                "C",
+                "D"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        },
+        "C2": {
+          "optimization_ok": true,
+          "log_likelihood": -607.9950266914041,
+          "fitted_branch_lengths": {
+            "A": 0.06586122244961427,
+            "A|C": 1e-05,
+            "B": 0.021753970501481475,
+            "B|D": 1e-05,
+            "C": 0.0175974747295575,
+            "D": 0.06128779439928162,
+            "E": 0.0747836479383084
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "A",
+                "C"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            },
+            {
+              "edge_key": [
+                "B",
+                "D"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        },
+        "C3": {
+          "optimization_ok": true,
+          "log_likelihood": -607.470655497403,
+          "fitted_branch_lengths": {
+            "A": 0.0625902239554213,
+            "A|D": 0.0031467869740056816,
+            "B": 0.019788229065347808,
+            "B|C": 0.0024313967879437096,
+            "C": 0.017014370989706918,
+            "D": 0.05802619861059939,
+            "E": 0.07492088750806215
+          },
+          "boundary_parameters": []
+        }
+      },
+      "strict_winners": [
+        "C3"
+      ],
+      "near_tied_leaders": [
+        "C3"
+      ]
+    },
+    {
+      "replicate": 18,
+      "resample_columns_sha256_prefix": "046f8d7e3c126dca",
+      "distinct_patterns": 34,
+      "candidates": {
+        "C1": {
+          "optimization_ok": true,
+          "log_likelihood": -561.1952795218458,
+          "fitted_branch_lengths": {
+            "A": 0.0517458045381345,
+            "A|B": 1e-05,
+            "B": 0.04361628264472637,
+            "C": 0.013158209475487119,
+            "C|D": 1e-05,
+            "D": 0.029750026776175685,
+            "E": 0.04770506423456011
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "A",
+                "B"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            },
+            {
+              "edge_key": [
+                "C",
+                "D"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        },
+        "C2": {
+          "optimization_ok": true,
+          "log_likelihood": -561.1952795162837,
+          "fitted_branch_lengths": {
+            "A": 0.05174590891207213,
+            "A|C": 1e-05,
+            "B": 0.04361636650166362,
+            "B|D": 1e-05,
+            "C": 0.013158133921644019,
+            "D": 0.029749928105455157,
+            "E": 0.04770505191849432
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "A",
+                "C"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            },
+            {
+              "edge_key": [
+                "B",
+                "D"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        },
+        "C3": {
+          "optimization_ok": true,
+          "log_likelihood": -561.1950443518638,
+          "fitted_branch_lengths": {
+            "A": 0.051745859021415624,
+            "A|D": 1e-05,
+            "B": 0.04361538933954776,
+            "B|C": 1e-05,
+            "C": 0.013158158720898944,
+            "D": 0.029749899130273004,
+            "E": 0.047705070618658425
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "A",
+                "D"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            },
+            {
+              "edge_key": [
+                "B",
+                "C"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        }
+      },
+      "strict_winners": [
+        "C3"
+      ],
+      "near_tied_leaders": [
+        "C1",
+        "C2",
+        "C3"
+      ]
+    },
+    {
+      "replicate": 19,
+      "resample_columns_sha256_prefix": "9d889bfe49bc3b72",
+      "distinct_patterns": 38,
+      "candidates": {
+        "C1": {
+          "optimization_ok": true,
+          "log_likelihood": -628.4342503113987,
+          "fitted_branch_lengths": {
+            "A": 0.06144395534378597,
+            "A|B": 1e-05,
+            "B": 0.030347737379623534,
+            "C": 0.025952896461923586,
+            "C|D": 1e-05,
+            "D": 0.04278980845968871,
+            "E": 0.10357197115869517
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "A",
+                "B"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            },
+            {
+              "edge_key": [
+                "C",
+                "D"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        },
+        "C2": {
+          "optimization_ok": true,
+          "log_likelihood": -628.4345875684841,
+          "fitted_branch_lengths": {
+            "A": 0.06144390840460462,
+            "A|C": 1e-05,
+            "B": 0.030349303356799362,
+            "B|D": 1e-05,
+            "C": 0.025952847706841798,
+            "D": 0.04278976353655828,
+            "E": 0.10357192342290263
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "A",
+                "C"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            },
+            {
+              "edge_key": [
+                "B",
+                "D"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        },
+        "C3": {
+          "optimization_ok": true,
+          "log_likelihood": -625.4044588791376,
+          "fitted_branch_lengths": {
+            "A": 0.05314864406024307,
+            "A|D": 0.008092588402864333,
+            "B": 0.030226922419255238,
+            "B|C": 1e-05,
+            "C": 0.02582294759963715,
+            "D": 0.03469226316254446,
+            "E": 0.10358290101177528
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "B",
+                "C"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        }
+      },
+      "strict_winners": [
+        "C3"
+      ],
+      "near_tied_leaders": [
+        "C3"
+      ]
+    },
+    {
+      "replicate": 20,
+      "resample_columns_sha256_prefix": "8388aa7b5a5e4d44",
+      "distinct_patterns": 37,
+      "candidates": {
+        "C1": {
+          "optimization_ok": true,
+          "log_likelihood": -563.6125636009967,
+          "fitted_branch_lengths": {
+            "A": 0.05242916492949394,
+            "A|B": 1e-05,
+            "B": 0.030128884370388048,
+            "C": 0.012873217333063978,
+            "C|D": 1e-05,
+            "D": 0.01714960969478074,
+            "E": 0.08517276477380083
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "A",
+                "B"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            },
+            {
+              "edge_key": [
+                "C",
+                "D"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        },
+        "C2": {
+          "optimization_ok": true,
+          "log_likelihood": -563.6129023379957,
+          "fitted_branch_lengths": {
+            "A": 0.05242926849664497,
+            "A|C": 1e-05,
+            "B": 0.03013046730510541,
+            "B|D": 1e-05,
+            "C": 0.012873090328101962,
+            "D": 0.01714956638008978,
+            "E": 0.08517271128369958
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "A",
+                "C"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            },
+            {
+              "edge_key": [
+                "B",
+                "D"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        },
+        "C3": {
+          "optimization_ok": true,
+          "log_likelihood": -563.6114217334297,
+          "fitted_branch_lengths": {
+            "A": 0.05242924005085454,
+            "A|D": 1e-05,
+            "B": 0.030127494672024382,
+            "B|C": 1e-05,
+            "C": 0.012869760802210738,
+            "D": 0.01714947144492379,
+            "E": 0.08517291188913156
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "A",
+                "D"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            },
+            {
+              "edge_key": [
+                "B",
+                "C"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        }
+      },
+      "strict_winners": [
+        "C3"
+      ],
+      "near_tied_leaders": [
+        "C1",
+        "C2",
+        "C3"
+      ]
+    },
+    {
+      "replicate": 21,
+      "resample_columns_sha256_prefix": "73fa019bdc20eea6",
+      "distinct_patterns": 39,
+      "candidates": {
+        "C1": {
+          "optimization_ok": true,
+          "log_likelihood": -602.6809763666602,
+          "fitted_branch_lengths": {
+            "A": 0.07603544988552231,
+            "A|B": 1e-05,
+            "B": 0.0757665437729817,
+            "C": 0.01331191127727526,
+            "C|D": 1e-05,
+            "D": 0.02561080342105293,
+            "E": 0.04774441618718865
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "A",
+                "B"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            },
+            {
+              "edge_key": [
+                "C",
+                "D"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        },
+        "C2": {
+          "optimization_ok": true,
+          "log_likelihood": -602.6813777545923,
+          "fitted_branch_lengths": {
+            "A": 0.07603571477974841,
+            "A|C": 1e-05,
+            "B": 0.07576852679918114,
+            "B|D": 1e-05,
+            "C": 0.013311753735626592,
+            "D": 0.02561059295639637,
+            "E": 0.04774440603156544
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "A",
+                "C"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            },
+            {
+              "edge_key": [
+                "B",
+                "D"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        },
+        "C3": {
+          "optimization_ok": true,
+          "log_likelihood": -601.5775630828,
+          "fitted_branch_lengths": {
+            "A": 0.07203659811340231,
+            "A|D": 0.003786105156657439,
+            "B": 0.07572114696069251,
+            "B|C": 1e-05,
+            "C": 0.013279639625968181,
+            "D": 0.021787060305304945,
+            "E": 0.0477289549569798
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "B",
+                "C"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        }
+      },
+      "strict_winners": [
+        "C3"
+      ],
+      "near_tied_leaders": [
+        "C3"
+      ]
+    },
+    {
+      "replicate": 22,
+      "resample_columns_sha256_prefix": "cbf3657afec63079",
+      "distinct_patterns": 35,
+      "candidates": {
+        "C1": {
+          "optimization_ok": true,
+          "log_likelihood": -578.625776576833,
+          "fitted_branch_lengths": {
+            "A": 0.03880283883933592,
+            "A|B": 1e-05,
+            "B": 0.06641458461136888,
+            "C": 0.012820839982691026,
+            "C|D": 1e-05,
+            "D": 0.021129229573637723,
+            "E": 0.07043422766819997
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "A",
+                "B"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            },
+            {
+              "edge_key": [
+                "C",
+                "D"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        },
+        "C2": {
+          "optimization_ok": true,
+          "log_likelihood": -578.6257765653091,
+          "fitted_branch_lengths": {
+            "A": 0.0388030257207745,
+            "A|C": 1e-05,
+            "B": 0.06641464330173516,
+            "B|D": 1e-05,
+            "C": 0.012820776771810174,
+            "D": 0.021129042181024786,
+            "E": 0.07043422441619542
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "A",
+                "C"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            },
+            {
+              "edge_key": [
+                "B",
+                "D"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        },
+        "C3": {
+          "optimization_ok": true,
+          "log_likelihood": -578.6254630281552,
+          "fitted_branch_lengths": {
+            "A": 0.038803002461429655,
+            "A|D": 1e-05,
+            "B": 0.06641326685524569,
+            "B|C": 1e-05,
+            "C": 0.012820669964109965,
+            "D": 0.021129131607704302,
+            "E": 0.0704342678604659
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "A",
+                "D"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            },
+            {
+              "edge_key": [
+                "B",
+                "C"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        }
+      },
+      "strict_winners": [
+        "C3"
+      ],
+      "near_tied_leaders": [
+        "C1",
+        "C2",
+        "C3"
+      ]
+    },
+    {
+      "replicate": 23,
+      "resample_columns_sha256_prefix": "75579e2c83411d30",
+      "distinct_patterns": 33,
+      "candidates": {
+        "C1": {
+          "optimization_ok": true,
+          "log_likelihood": -530.4089400381188,
+          "fitted_branch_lengths": {
+            "A": 0.030004586346143624,
+            "A|B": 1e-05,
+            "B": 0.02987553674751781,
+            "C": 0.021217899444271143,
+            "C|D": 1e-05,
+            "D": 0.017070958316786025,
+            "E": 0.05696229442362383
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "A",
+                "B"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            },
+            {
+              "edge_key": [
+                "C",
+                "D"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        },
+        "C2": {
+          "optimization_ok": true,
+          "log_likelihood": -530.4089400370331,
+          "fitted_branch_lengths": {
+            "A": 0.030004616440387294,
+            "A|C": 1e-05,
+            "B": 0.029875583417576623,
+            "B|D": 1e-05,
+            "C": 0.02121785556580116,
+            "D": 0.017070930055523043,
+            "E": 0.0569623027297399
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "A",
+                "C"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            },
+            {
+              "edge_key": [
+                "B",
+                "D"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        },
+        "C3": {
+          "optimization_ok": true,
+          "log_likelihood": -530.4085980422751,
+          "fitted_branch_lengths": {
+            "A": 0.030004629724889653,
+            "A|D": 1e-05,
+            "B": 0.02987410744782286,
+            "B|C": 1e-05,
+            "C": 0.02121784687491186,
+            "D": 0.017070929516337006,
+            "E": 0.056962334486360254
+          },
+          "boundary_parameters": [
+            {
+              "edge_key": [
+                "A",
+                "D"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            },
+            {
+              "edge_key": [
+                "B",
+                "C"
+              ],
+              "side": "lower",
+              "value": 1e-05
+            }
+          ]
+        }
+      },
+      "strict_winners": [
+        "C3"
+      ],
+      "near_tied_leaders": [
+        "C1",
+        "C2",
+        "C3"
+      ]
+    }
+  ]
+}
