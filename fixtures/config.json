@@ -1,0 +1,13 @@
+{
+  "lever_arm_body_m": [
+    0.3,
+    0.1,
+    1.0
+  ],
+  "max_interpolation_gap_ms": 1500,
+  "beam_direction_body": "[0, sin(angle), cos(angle)] with angle in radians",
+  "one_way_time": "two_way_time_s / 2; assume stationary transducer and reciprocal path during each ping",
+  "layers": "horizontal piecewise-constant sound speed; no gradient within a layer",
+  "interpolation": "linear position/tide and shortest-arc unit quaternion interpolation; bracket required except exact sample",
+  "output_coordinates": "world-NED and depth relative to instantaneous surface"
+}

@@ -1,5 +1,5 @@
-# Data engineering task inputs: 141-170
+# 题 146 输入材料
 
-Each question has its own branch and frozen initial commit. Task-specific README and input fixtures are supplied in that branch. The full task prompt is provided separately for each independent session.
+时间统一整数毫秒；姿态为 body-FRD 到 world-NED 的单位四元数(w,x,y,z)。N/E 位置、向下为正 z 相对固定基准面；tide_m 向上为正，水面 NED z=-tide_m。声速层深度由瞬时水面向下计。README中的坐标约定是输入协议，未提供射线算法。
 
-The base contains environment documentation only. Use Python 3.11 and any dependencies explicitly needed by the question; PostgreSQL 16 and SQLite are available. See environment/README.md for native local database setup.
+这些文件是输入与必要环境，不含题目核心实现、参考输出或独立答案。相对路径以题目仓库根为准。所有数据为合成数据。
