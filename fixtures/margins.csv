@@ -1,0 +1,9 @@
+constraint_id,field,value,population_total
+total,*,all,10047/100
+age:young,age,young,669/25
+age:middle,age,middle,135/4
+age:older,age,older,999/25
+region:north,region,north,5001/100
+region:south,region,south,2523/50
+employment:employed,employment,employed,5091/100
+employment:other,employment,other,1239/25

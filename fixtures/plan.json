@@ -1,0 +1,24 @@
+{
+  "relative_lower": 0.4,
+  "relative_upper": 2.5,
+  "criterion": "sum_i [w_i log(w_i/d_i) - w_i + d_i] with linear margins; base d_i=0 forces w_i=0",
+  "replicate_variance": "(1/8) * sum_r (estimate_r - full_estimate)^2; this coefficient is supplied by the synthetic sampling design",
+  "domains": [
+    {
+      "id": "all",
+      "field": "*",
+      "value": "all"
+    },
+    {
+      "id": "north",
+      "field": "region",
+      "value": "north"
+    },
+    {
+      "id": "older",
+      "field": "age",
+      "value": "older"
+    }
+  ],
+  "nonresponse_assumption": "after conditioning on supplied groups, response selection does not further depend on score; this cannot be established from these response-only data"
+}
