@@ -1,0 +1,11 @@
+{
+  "add_to_manifest": {
+    "chain_id": "c1",
+    "path": "../cases/c1-overlap.csv",
+    "start_iteration": 241,
+    "end_iteration": 244,
+    "warmup_end": 120,
+    "thin": 1
+  },
+  "conflict_variant": "change only path to ../cases/c1-conflict.csv"
+}
