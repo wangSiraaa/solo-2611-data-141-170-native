@@ -1,0 +1,10 @@
+{
+  "base_month": "2025-01",
+  "price_unit": "one fixed physical unit in one currency",
+  "analysis_target": "retrospective common month price movement after allowing product-specific persistent price levels and supplier-specific quote levels",
+  "model_assumption": "a product keeps its persistent price level over this six-month window; common month movement is shared; disturbances may depend within each supplier trajectory; all suppliers are observed in all six months",
+  "replacement_semantics": "same family indicates replacement relationship only, not equal quality or equal price; observed overlap is evidence used to separate product level from month movement",
+  "uncertainty": "resample or delete entire supplier trajectories; record disconnected/unidentified replicates and effective support; do not impute a bridge or silently discard failures",
+  "output": "index normalized to 100 in base month; interval or explicit insufficient-support status; bridge sensitivity and observational identification limits",
+  "scope": "one interpretable estimation approach; no forecasting, hedonic covariate model or automatic product matching"
+}
