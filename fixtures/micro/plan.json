@@ -1,0 +1,8 @@
+{
+  "blocks": [
+    {"id": "b1", "runs": 4},
+    {"id": "b2", "runs": 4}
+  ],
+  "locked_runs": "fixtures/micro/locked_runs.csv",
+  "seed": 7
+}

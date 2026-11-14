@@ -1,0 +1,6 @@
+{
+  "factors": [
+    {"name": "x1", "type": "numeric", "levels": [-1, 1], "center": 0, "scale": 1},
+    {"name": "x2", "type": "categorical", "levels": ["lo", "hi"], "reference": "lo"}
+  ]
+}

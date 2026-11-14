@@ -1,0 +1,1 @@
+{"terms":[{"kind":"intercept"},{"factor":"x"},{"factor":"x","power":2},{"factor":"g"}],"include_block_effect":false}

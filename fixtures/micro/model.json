@@ -1,0 +1,9 @@
+{
+  "terms": [
+    {"kind": "intercept"},
+    {"factor": "x1"},
+    {"factor": "x2"},
+    {"interaction": ["x1", "x2"]}
+  ],
+  "include_block_effect": true
+}
