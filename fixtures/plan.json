@@ -1,0 +1,74 @@
+{
+  "detectors": [
+    "FL1",
+    "FL2",
+    "FL3",
+    "FL4"
+  ],
+  "markers": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "spillover_rows_detectors_cols_markers": [
+    [
+      1.0,
+      0.18,
+      0.08,
+      0.02
+    ],
+    [
+      0.12,
+      1.0,
+      0.1,
+      0.04
+    ],
+    [
+      0.04,
+      0.12,
+      1.0,
+      0.15
+    ],
+    [
+      0.02,
+      0.04,
+      0.1,
+      1.0
+    ]
+  ],
+  "observation_model": "detector_vector = S @ nonnegative_marker_vector",
+  "saturation_value": 100,
+  "absolute_tolerance": 0.5,
+  "saturation_rule": "observed >=100 means true detector >=99.5, with no finite upper bound",
+  "normal_rule": "observed-0.5 <= true detector <= observed+0.5",
+  "feasibility_tolerance": 1e-07,
+  "gates": [
+    {
+      "id": "G1",
+      "parent": null,
+      "closed_bounds": {
+        "A": [
+          50,
+          null
+        ],
+        "B": [
+          null,
+          45
+        ]
+      }
+    },
+    {
+      "id": "G2",
+      "parent": "G1",
+      "closed_bounds": {
+        "C": [
+          30,
+          null
+        ]
+      }
+    }
+  ],
+  "proportion_denominator": "all feasible events; report infeasible events separately",
+  "event_identity": "zero-based row index in original FCS DATA segment"
+}
