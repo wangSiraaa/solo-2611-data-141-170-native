@@ -1,0 +1,10 @@
+#!/bin/sh
+# locate 命令包装:等价于 python -m locator locate
+# 优先使用项目 .venv(含 NumPy/SciPy),否则退回系统 python3。
+DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+if [ -x "$DIR/.venv/bin/python" ]; then
+    PY="$DIR/.venv/bin/python"
+else
+    PY=python3
+fi
+PYTHONPATH="$DIR${PYTHONPATH:+:$PYTHONPATH}" exec "$PY" -m locator locate "$@"

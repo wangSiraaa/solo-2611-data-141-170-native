@@ -1,0 +1,416 @@
+{
+  "case": "weak",
+  "model": {
+    "description": "arrival = origin_time + Euclidean_distance(source, station) / velocity[phase]",
+    "velocities_km_s": {
+      "P": 6.0,
+      "S": 3.5
+    },
+    "position_bounds_km": {
+      "x": [
+        -10.0,
+        10.0
+      ],
+      "y": [
+        -10.0,
+        10.0
+      ],
+      "depth": [
+        0.0,
+        15.0
+      ]
+    },
+    "origin_time_bounds_s": [
+      -5.0,
+      5.0
+    ],
+    "loss": {
+      "type": "huber",
+      "c": 1.5,
+      "definition": "cost = sum rho(r); rho(r)=r^2/2 (|r|<=c) else c|r|-c^2/2; r = (obs - t0 - dist/v)/sigma"
+    },
+    "support_score_delta": 4.0
+  },
+  "data_summary": {
+    "n_stations": 8,
+    "n_picks": 8,
+    "picks_by_phase": {
+      "P": 8
+    }
+  },
+  "best_solution": {
+    "x_km": 2.000000000722,
+    "y_km": -4.490882655712,
+    "depth_km": 4.983168973537,
+    "origin_time_s": 1.249999999592,
+    "cost": 0.0,
+    "rms_standardized_residual": 1.6236e-08,
+    "max_abs_standardized_residual": 2.5949e-08,
+    "rank": 1,
+    "within_support_delta": true
+  },
+  "n_distinct_minima": 12,
+  "competing_solutions": [
+    {
+      "x_km": 2.000000000722,
+      "y_km": -4.490882655712,
+      "depth_km": 4.983168973537,
+      "origin_time_s": 1.249999999592,
+      "cost": 0.0,
+      "rms_standardized_residual": 1.6236e-08,
+      "max_abs_standardized_residual": 2.5949e-08,
+      "rank": 1,
+      "within_support_delta": true
+    },
+    {
+      "x_km": 2.000000000722,
+      "y_km": 4.490882655712,
+      "depth_km": 4.983168973537,
+      "origin_time_s": 1.249999999592,
+      "cost": 0.0,
+      "rms_standardized_residual": 1.6236e-08,
+      "max_abs_standardized_residual": 2.5949e-08,
+      "rank": 2,
+      "within_support_delta": true
+    },
+    {
+      "x_km": 2.000000000722,
+      "y_km": 1.890860670238,
+      "depth_km": 6.436198099184,
+      "origin_time_s": 1.249999999592,
+      "cost": 0.0,
+      "rms_standardized_residual": 1.6236e-08,
+      "max_abs_standardized_residual": 2.5949e-08,
+      "rank": 3,
+      "within_support_delta": true
+    },
+    {
+      "x_km": 2.000000000722,
+      "y_km": -1.890860670238,
+      "depth_km": 6.436198099184,
+      "origin_time_s": 1.249999999592,
+      "cost": 0.0,
+      "rms_standardized_residual": 1.6236e-08,
+      "max_abs_standardized_residual": 2.5949e-08,
+      "rank": 4,
+      "within_support_delta": true
+    },
+    {
+      "x_km": 2.000000000722,
+      "y_km": -0.093297283938,
+      "depth_km": 6.70755511815,
+      "origin_time_s": 1.249999999592,
+      "cost": 0.0,
+      "rms_standardized_residual": 1.6236e-08,
+      "max_abs_standardized_residual": 2.5947e-08,
+      "rank": 5,
+      "within_support_delta": true
+    },
+    {
+      "x_km": 2.000000000722,
+      "y_km": 3.594217867104,
+      "depth_km": 5.66406196735,
+      "origin_time_s": 1.249999999592,
+      "cost": 0.0,
+      "rms_standardized_residual": 1.6236e-08,
+      "max_abs_standardized_residual": 2.5949e-08,
+      "rank": 6,
+      "within_support_delta": true
+    },
+    {
+      "x_km": 2.000000000722,
+      "y_km": -5.975261255632,
+      "depth_km": 3.048975725246,
+      "origin_time_s": 1.249999999592,
+      "cost": 0.0,
+      "rms_standardized_residual": 1.6236e-08,
+      "max_abs_standardized_residual": 2.5949e-08,
+      "rank": 7,
+      "within_support_delta": true
+    },
+    {
+      "x_km": 2.000000000722,
+      "y_km": 5.975261255632,
+      "depth_km": 3.048975725246,
+      "origin_time_s": 1.249999999592,
+      "cost": 0.0,
+      "rms_standardized_residual": 1.6236e-08,
+      "max_abs_standardized_residual": 2.5949e-08,
+      "rank": 8,
+      "within_support_delta": true
+    },
+    {
+      "x_km": 2.000000000722,
+      "y_km": -6.694250454118,
+      "depth_km": 0.432447573391,
+      "origin_time_s": 1.249999999592,
+      "cost": 0.0,
+      "rms_standardized_residual": 1.6236e-08,
+      "max_abs_standardized_residual": 2.5949e-08,
+      "rank": 9,
+      "within_support_delta": true
+    },
+    {
+      "x_km": 2.000000000722,
+      "y_km": 2.852642475497,
+      "depth_km": 6.071443893604,
+      "origin_time_s": 1.249999999592,
+      "cost": 0.0,
+      "rms_standardized_residual": 1.6236e-08,
+      "max_abs_standardized_residual": 2.5949e-08,
+      "rank": 10,
+      "within_support_delta": true
+    },
+    {
+      "x_km": 2.000000000722,
+      "y_km": -2.852642475497,
+      "depth_km": 6.071443893604,
+      "origin_time_s": 1.249999999592,
+      "cost": 0.0,
+      "rms_standardized_residual": 1.6236e-08,
+      "max_abs_standardized_residual": 2.5949e-08,
+      "rank": 11,
+      "within_support_delta": true
+    },
+    {
+      "x_km": 2.000000000722,
+      "y_km": 6.708203935942,
+      "depth_km": 9.8e-11,
+      "origin_time_s": 1.249999999592,
+      "cost": 0.0,
+      "rms_standardized_residual": 1.6236e-08,
+      "max_abs_standardized_residual": 2.5949e-08,
+      "rank": 12,
+      "within_support_delta": true
+    }
+  ],
+  "support_region": {
+    "delta": 4.0,
+    "n_voxels": 21,
+    "volume_km3": 21.0,
+    "extent_km": {
+      "x": [
+        2.0,
+        2.0
+      ],
+      "y": [
+        -7.0,
+        7.0
+      ],
+      "depth": [
+        0.0,
+        7.0
+      ]
+    },
+    "touches_boundary": [
+      "depth=0.0"
+    ],
+    "components": [
+      {
+        "id": 1,
+        "n_voxels": 21,
+        "min_cost": 0.0,
+        "min_location": {
+          "x_km": 2.0,
+          "y_km": -6.0,
+          "depth_km": 3.0,
+          "origin_time_s": 1.249999999906
+        },
+        "extent_km": {
+          "x": [
+            2.0,
+            2.0
+          ],
+          "y": [
+            -7.0,
+            7.0
+          ],
+          "depth": [
+            0.0,
+            7.0
+          ]
+        }
+      }
+    ],
+    "grid_min_cost": 0.0,
+    "definition": "网格代价 <= 网格最小代价 + support_score_delta;优化解代价可低于网格最小代价(解不必落在格点上)"
+  },
+  "depth_profile": [
+    {
+      "depth_km": 0.0,
+      "min_cost": 2.244362718688,
+      "x_km": 2.0,
+      "y_km": -7.0,
+      "origin_time_s": 1.222676941067
+    },
+    {
+      "depth_km": 1.0,
+      "min_cost": 3.455613099305,
+      "x_km": 2.0,
+      "y_km": -7.0,
+      "origin_time_s": 1.216148773508
+    },
+    {
+      "depth_km": 2.0,
+      "min_cost": 3.940891656986,
+      "x_km": 2.0,
+      "y_km": -6.0,
+      "origin_time_s": 1.284476702174
+    },
+    {
+      "depth_km": 3.0,
+      "min_cost": 0.0,
+      "x_km": 2.0,
+      "y_km": -6.0,
+      "origin_time_s": 1.249999999906
+    },
+    {
+      "depth_km": 4.0,
+      "min_cost": 2.506531593899,
+      "x_km": 2.0,
+      "y_km": -5.0,
+      "origin_time_s": 1.277916628844
+    },
+    {
+      "depth_km": 5.0,
+      "min_cost": 2.506531593899,
+      "x_km": 2.0,
+      "y_km": -4.0,
+      "origin_time_s": 1.277916628844
+    },
+    {
+      "depth_km": 6.0,
+      "min_cost": 0.0,
+      "x_km": 2.0,
+      "y_km": -3.0,
+      "origin_time_s": 1.249999999906
+    },
+    {
+      "depth_km": 7.0,
+      "min_cost": 2.244362718688,
+      "x_km": 2.0,
+      "y_km": 0.0,
+      "origin_time_s": 1.222676941067
+    },
+    {
+      "depth_km": 8.0,
+      "min_cost": 25.073417429088,
+      "x_km": 2.0,
+      "y_km": 0.0,
+      "origin_time_s": 1.136250441878
+    },
+    {
+      "depth_km": 9.0,
+      "min_cost": 49.961698595087,
+      "x_km": 2.0,
+      "y_km": 0.0,
+      "origin_time_s": 1.037161755392
+    },
+    {
+      "depth_km": 10.0,
+      "min_cost": 74.229447094429,
+      "x_km": 2.0,
+      "y_km": 0.0,
+      "origin_time_s": 0.922409826045
+    },
+    {
+      "depth_km": 11.0,
+      "min_cost": 97.430397217262,
+      "x_km": 2.0,
+      "y_km": 0.0,
+      "origin_time_s": 0.801754305447
+    },
+    {
+      "depth_km": 12.0,
+      "min_cost": 119.515234911482,
+      "x_km": 2.0,
+      "y_km": 0.0,
+      "origin_time_s": 0.678761152434
+    },
+    {
+      "depth_km": 13.0,
+      "min_cost": 140.471427954772,
+      "x_km": 2.0,
+      "y_km": 0.0,
+      "origin_time_s": 0.556513319525
+    },
+    {
+      "depth_km": 14.0,
+      "min_cost": 160.311961466728,
+      "x_km": 2.0,
+      "y_km": 0.0,
+      "origin_time_s": 0.430832840709
+    },
+    {
+      "depth_km": 15.0,
+      "min_cost": 179.067083174472,
+      "x_km": 2.0,
+      "y_km": 0.0,
+      "origin_time_s": 0.302061926551
+    }
+  ],
+  "degeneracy_analysis": {
+    "support_origin_time_range_s": [
+      1.216148773508,
+      1.284476702174
+    ],
+    "support_depth_range_km": [
+      0.0,
+      7.0
+    ],
+    "support_abs_y_range_km": [
+      0.0,
+      7.0
+    ],
+    "y2_plus_z2_mean_km2": 45.285714285714,
+    "y2_plus_z2_std_km2": 4.142036043425,
+    "corr_depth_abs_y": -0.926850924267
+  },
+  "local_curvature": {
+    "param_std": {
+      "x_km": 0.039994562978,
+      "y_km": 0.09190451984,
+      "depth_km": 0.101979006558,
+      "origin_time_s": 0.013793923861
+    },
+    "hessian_eigenvalues": [
+      0.0,
+      52.587397163735,
+      628.082047292868,
+      35862.54043208659
+    ],
+    "weakest_direction": {
+      "x": -0.0,
+      "y": 0.742846970832,
+      "depth": 0.669461259466,
+      "origin_time": -0.0
+    },
+    "condition_number": Infinity,
+    "note": "仅最优解处的局部线性化(稳健加权 J^T W J),不能替代网格多解检查;弱几何下本矩阵病态即局部不可分辩。"
+  },
+  "downweighted_picks": [],
+  "diagnostics": {
+    "grid_step_km": 1.0,
+    "grid_shape": [
+      21,
+      21,
+      16
+    ],
+    "n_grid_points": 7056,
+    "optimizer": "scipy.optimize.least_squares (trf, loss=huber, f_scale=1.5, x_scale=jac)",
+    "optimizer_tol": 1e-12,
+    "t0_irls_tol_s": 1e-10,
+    "t0_irls_max_iters_used": 59,
+    "cluster_pos_tol_km": 0.5,
+    "cluster_t0_tol_s": 0.5,
+    "n_starts": 27,
+    "n_refined": 27
+  },
+  "caveats": [
+    "支持区域(代价 <= 最小值 + delta)只是数值支持区域,不是已校准的置信水平。",
+    "local_curvature 来自最优解处的局部线性化 Hessian,不能替代多解检查;弱几何下它可能给出误导性的小椭球。",
+    "搜索盒以外区域未覆盖;若支持区域触及边界,盒外延续未知。",
+    "支持区域范围按 1 个体素量化(±半步长);网格之间的细节由局部优化补充。",
+    "代价采用 Huber 稳健损失;换用其他损失会改变支持区域口径,比较时需同一代价定义。"
+  ]
+}

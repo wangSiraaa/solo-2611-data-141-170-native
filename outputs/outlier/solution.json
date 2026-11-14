@@ -1,0 +1,286 @@
+{
+  "case": "outlier",
+  "model": {
+    "description": "arrival = origin_time + Euclidean_distance(source, station) / velocity[phase]",
+    "velocities_km_s": {
+      "P": 6.0,
+      "S": 3.5
+    },
+    "position_bounds_km": {
+      "x": [
+        -10.0,
+        10.0
+      ],
+      "y": [
+        -10.0,
+        10.0
+      ],
+      "depth": [
+        0.0,
+        15.0
+      ]
+    },
+    "origin_time_bounds_s": [
+      -5.0,
+      5.0
+    ],
+    "loss": {
+      "type": "huber",
+      "c": 1.5,
+      "definition": "cost = sum rho(r); rho(r)=r^2/2 (|r|<=c) else c|r|-c^2/2; r = (obs - t0 - dist/v)/sigma"
+    },
+    "support_score_delta": 4.0
+  },
+  "data_summary": {
+    "n_stations": 8,
+    "n_picks": 16,
+    "picks_by_phase": {
+      "P": 8,
+      "S": 8
+    }
+  },
+  "best_solution": {
+    "x_km": 1.947797951666,
+    "y_km": 2.981730752851,
+    "depth_km": 5.538345917627,
+    "origin_time_s": 1.281744920536,
+    "cost": 85.992613929778,
+    "rms_standardized_residual": 13.596293423104,
+    "max_abs_standardized_residual": 54.280317256479,
+    "rank": 1,
+    "within_support_delta": true
+  },
+  "n_distinct_minima": 1,
+  "competing_solutions": [
+    {
+      "x_km": 1.947797951666,
+      "y_km": 2.981730752851,
+      "depth_km": 5.538345917627,
+      "origin_time_s": 1.281744920536,
+      "cost": 85.992613929778,
+      "rms_standardized_residual": 13.596293423104,
+      "max_abs_standardized_residual": 54.280317256479,
+      "rank": 1,
+      "within_support_delta": true
+    }
+  ],
+  "support_region": {
+    "delta": 4.0,
+    "n_voxels": 2,
+    "volume_km3": 2.0,
+    "extent_km": {
+      "x": [
+        2.0,
+        2.0
+      ],
+      "y": [
+        3.0,
+        3.0
+      ],
+      "depth": [
+        5.0,
+        6.0
+      ]
+    },
+    "touches_boundary": [],
+    "components": [
+      {
+        "id": 1,
+        "n_voxels": 2,
+        "min_cost": 88.200831076365,
+        "min_location": {
+          "x_km": 2.0,
+          "y_km": 3.0,
+          "depth_km": 6.0,
+          "origin_time_s": 1.247682397386
+        },
+        "extent_km": {
+          "x": [
+            2.0,
+            2.0
+          ],
+          "y": [
+            3.0,
+            3.0
+          ],
+          "depth": [
+            5.0,
+            6.0
+          ]
+        }
+      }
+    ],
+    "grid_min_cost": 88.200831076365,
+    "definition": "网格代价 <= 网格最小代价 + support_score_delta;优化解代价可低于网格最小代价(解不必落在格点上)"
+  },
+  "depth_profile": [
+    {
+      "depth_km": 0.0,
+      "min_cost": 137.182869090456,
+      "x_km": 2.0,
+      "y_km": 3.0,
+      "origin_time_s": 1.473440322386
+    },
+    {
+      "depth_km": 1.0,
+      "min_cost": 134.915285377734,
+      "x_km": 2.0,
+      "y_km": 3.0,
+      "origin_time_s": 1.466555038955
+    },
+    {
+      "depth_km": 2.0,
+      "min_cost": 128.189154305085,
+      "x_km": 2.0,
+      "y_km": 3.0,
+      "origin_time_s": 1.445729075116
+    },
+    {
+      "depth_km": 3.0,
+      "min_cost": 117.326290395888,
+      "x_km": 2.0,
+      "y_km": 3.0,
+      "origin_time_s": 1.412981259526
+    },
+    {
+      "depth_km": 4.0,
+      "min_cost": 103.852343137604,
+      "x_km": 2.0,
+      "y_km": 3.0,
+      "origin_time_s": 1.371251303518
+    },
+    {
+      "depth_km": 5.0,
+      "min_cost": 91.322533190927,
+      "x_km": 2.0,
+      "y_km": 3.0,
+      "origin_time_s": 1.317069773422
+    },
+    {
+      "depth_km": 6.0,
+      "min_cost": 88.200831076365,
+      "x_km": 2.0,
+      "y_km": 3.0,
+      "origin_time_s": 1.247682397386
+    },
+    {
+      "depth_km": 7.0,
+      "min_cost": 105.899389884366,
+      "x_km": 2.0,
+      "y_km": 3.0,
+      "origin_time_s": 1.168451475175
+    },
+    {
+      "depth_km": 8.0,
+      "min_cost": 133.595186379915,
+      "x_km": 2.0,
+      "y_km": 3.0,
+      "origin_time_s": 1.085459649287
+    },
+    {
+      "depth_km": 9.0,
+      "min_cost": 165.491559119999,
+      "x_km": 2.0,
+      "y_km": 3.0,
+      "origin_time_s": 0.996842517415
+    },
+    {
+      "depth_km": 10.0,
+      "min_cost": 200.029355103857,
+      "x_km": 2.0,
+      "y_km": 3.0,
+      "origin_time_s": 0.903354151186
+    },
+    {
+      "depth_km": 11.0,
+      "min_cost": 236.814624626836,
+      "x_km": 2.0,
+      "y_km": 3.0,
+      "origin_time_s": 0.803457815053
+    },
+    {
+      "depth_km": 12.0,
+      "min_cost": 274.150708101688,
+      "x_km": 2.0,
+      "y_km": 4.0,
+      "origin_time_s": 0.672966111978
+    },
+    {
+      "depth_km": 13.0,
+      "min_cost": 310.813879149665,
+      "x_km": 2.0,
+      "y_km": 4.0,
+      "origin_time_s": 0.562976579876
+    },
+    {
+      "depth_km": 14.0,
+      "min_cost": 350.656525246283,
+      "x_km": 2.0,
+      "y_km": 4.0,
+      "origin_time_s": 0.445949441609
+    },
+    {
+      "depth_km": 15.0,
+      "min_cost": 388.775301140327,
+      "x_km": 3.0,
+      "y_km": 4.0,
+      "origin_time_s": 0.337647016446
+    }
+  ],
+  "degeneracy_analysis": {},
+  "local_curvature": {
+    "param_std": {
+      "x_km": 0.035080037939,
+      "y_km": 0.041061197779,
+      "depth_km": 0.245472547599,
+      "origin_time_s": 0.018465004864
+    },
+    "hessian_eigenvalues": [
+      16.395001236815,
+      733.801469345189,
+      881.19236762267,
+      44315.04863628316
+    ],
+    "weakest_direction": {
+      "x": -0.040030425177,
+      "y": -0.07385483377,
+      "depth": -0.993854334799,
+      "origin_time": 0.072087376085
+    },
+    "condition_number": 2702.960981593174,
+    "note": "仅最优解处的局部线性化(稳健加权 J^T W J),不能替代网格多解检查;弱几何下本矩阵病态即局部不可分辩。"
+  },
+  "downweighted_picks": [
+    {
+      "pick_id": "outlier-2-P",
+      "station_id": "s2",
+      "phase": "P",
+      "standardized_residual": 54.280317256479,
+      "robust_weight": 0.027634326323
+    }
+  ],
+  "diagnostics": {
+    "grid_step_km": 1.0,
+    "grid_shape": [
+      21,
+      21,
+      16
+    ],
+    "n_grid_points": 7056,
+    "optimizer": "scipy.optimize.least_squares (trf, loss=huber, f_scale=1.5, x_scale=jac)",
+    "optimizer_tol": 1e-12,
+    "t0_irls_tol_s": 1e-10,
+    "t0_irls_max_iters_used": 150,
+    "cluster_pos_tol_km": 0.5,
+    "cluster_t0_tol_s": 0.5,
+    "n_starts": 27,
+    "n_refined": 27
+  },
+  "caveats": [
+    "支持区域(代价 <= 最小值 + delta)只是数值支持区域,不是已校准的置信水平。",
+    "local_curvature 来自最优解处的局部线性化 Hessian,不能替代多解检查;弱几何下它可能给出误导性的小椭球。",
+    "搜索盒以外区域未覆盖;若支持区域触及边界,盒外延续未知。",
+    "支持区域范围按 1 个体素量化(±半步长);网格之间的细节由局部优化补充。",
+    "代价采用 Huber 稳健损失;换用其他损失会改变支持区域口径,比较时需同一代价定义。"
+  ]
+}
