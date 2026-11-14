@@ -1,0 +1,24 @@
+{
+  "name": "correlated_diagnostics",
+  "description": "Two tests are perfectly correlated given a state (joint cannot be rebuilt from marginals). Also contains an exact tie so the stable tie rule is exercised.",
+  "states": {
+    "broken": "1/2",
+    "fine": "1/2"
+  },
+  "test_order": ["a", "b"],
+  "tests": [
+    {"id": "a", "cost": 1, "requires": []},
+    {"id": "b", "cost": 1, "requires": []}
+  ],
+  "joint": [
+    {"state": "broken", "outcomes": "11", "probability": "1"},
+    {"state": "fine",   "outcomes": "00", "probability": "1"}
+  ],
+  "actions": {
+    "scrap":   {"broken": 10, "fine": 10},
+    "keep":    {"broken": 30, "fine": 0},
+    "inspect": {"broken": 12, "fine": 12}
+  },
+  "budget": 1,
+  "note": "P(a=1|broken)=1 and P(b=1|broken)=1, so a naive product-of-marginals would say the pair is redundant; in fact buying either one reveals the state completely."
+}
